@@ -147,7 +147,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 👥 Autores
 
-- Tu Nombre - [@tuusuario](https://github.com/686f6c61)
+- Tu Nombre - [@686f6c61](https://github.com/686f6c61)
 
 
 
