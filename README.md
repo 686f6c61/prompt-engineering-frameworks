@@ -71,7 +71,7 @@ Una aplicación web para generar prompts efectivos utilizando 30 frameworks espe
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/yourusername/prompt-engineering-frameworks.git
+git clone https://github.com/686f6c61/prompt-engineering-frameworks.git
 cd prompt-engineering-frameworks
 ```
 2. Crea y activa un entorno virtual:
