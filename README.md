@@ -145,9 +145,6 @@ Las contribuciones son bienvenidas. Por favor:
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 👥 Autores
-
-- Tu Nombre - [@686f6c61](https://github.com/686f6c61)
 
 
 
