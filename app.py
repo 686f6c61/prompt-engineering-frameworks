@@ -79,10 +79,22 @@ def recommend_framework():
     """
     data = request.json
     objective = data.get('objective', '')
+    
+    if not objective:
+        return jsonify({"success": False, "error": "Objetivo no proporcionado"}), 400
+    
     try:
-        recommendation = get_framework_recommendation(objective)
-        return jsonify({"success": True, "recommendation": recommendation})
+        # Obtener la recomendación como texto plano
+        recommendation_text = get_framework_recommendation(objective)
+        
+        # Verificar brevemente que el formato es válido
+        if "FRAMEWORK:" not in recommendation_text:
+            console.error("Formato de respuesta inválido")
+            return jsonify({"success": False, "error": "Formato de respuesta inválido"}), 400
+        
+        return jsonify({"success": True, "recommendation": recommendation_text})
     except Exception as e:
+        console.error("Error al obtener recomendación", str(e))
         return jsonify({"success": False, "error": str(e)}), 400
 
 @app.route('/api/generate', methods=['POST'])

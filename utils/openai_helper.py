@@ -22,10 +22,10 @@ AVAILABLE_FRAMEWORKS = [
 
 FRAMEWORK_EXAMPLES = {
     'peas': """
-Propósito: Lanzamiento boletín tecnológico
-Resultado Final: 1000 suscriptores en 3 meses
-Audiencia: Desarrolladores con experiencia
-Estilo: Técnico pero comprensible
+P: Propósito - Define el objetivo principal que se quiere lograr con la comunicación
+E: Resultado Final - Establece el resultado concreto y medible que se espera obtener
+A: Audiencia - Identifica las características del público al que va dirigido el mensaje
+S: Estilo - Determina el tono, formato y enfoque apropiado para la comunicación
 """,
     'star': """
 Situación: Migración sistema heredado a la nube
@@ -265,67 +265,67 @@ Features: Módulos de gestión y análisis
 Testing: Pruebas de aceptación con el cliente
 """,
     'scale': """
-Strategy: Expandir infraestructura en la nube
-Capabilities: Autoscaling y balanceo de carga
-Action: Configuración de clusters
-Learning: Monitoreo de métricas
-Evolution: Optimización continua
+Estrategia: Plan de escalabilidad cloud
+Capacidades: Autoescalado y redundancia
+Acción: Implementación de clusters K8s
+Aprendizaje: Monitoreo y telemetría
+Evolución: Mejora continua basada en datos
 """,
     'think': """
-Topic: Mercado internacional
-History: Estrategias previas
-Insights: Oportunidades emergentes
-NextSteps: Plan de acción regional
-Knowledge: Buenas prácticas globales
+Tema: Expansión mercado LATAM
+Historia: Análisis previos de mercado
+Insights: Oportunidades identificadas
+Siguientes Pasos: Plan de entrada Q2 2024
+Conocimiento: Regulaciones locales
 """,
     'quest': """
-Question: ¿Cómo aumentar la retención?
-Understanding: Análisis de churn
-Exploration: Investigación de causas
-Solution: Programa de lealtad
-Testing: Piloto con grupo de usuarios
+Pregunta: Optimización de conversión
+Entendimiento: Análisis de embudo actual
+Exploración: Test A/B de landing pages
+Solución: Rediseño basado en datos
+Pruebas: Grupo piloto de usuarios
 """,
     'drive': """
-Direction: Priorizar clientes estratégicos
-Resources: Equipo dedicado y presupuesto
-Implementation: Plan de despliegue
-Validation: Encuestas de satisfacción
-Evolution: Ajustes basados en feedback
+Dirección: Automatización de procesos
+Recursos: Equipo DevOps y herramientas
+Implementación: CI/CD y monitoreo
+Validación: Métricas de rendimiento
+Evolución: Iteraciones mensuales
 """,
     'shape': """
-Situation: Cultura organizacional estancada
-History: Cambios previos implementados
-Analysis: Diagnóstico interno
-Plan: Programa de transformación
-Execution: Talleres y coaching
+Situación: Modernización tecnológica
+Historia: Stack tecnológico actual
+Análisis: Evaluación de alternativas
+Plan: Migración por fases
+Ejecución: Sprints de 2 semanas
 """,
     'reach': """
-Requirements: Nuevos mercados objetivo
-Evaluation: Evaluación de viabilidad
-Approach: Estrategia de marketing
-Completion: Lanzamiento de campaña
-Handover: Transferencia al equipo local
+Requisitos: Sistema de gestión de inventario
+Evaluación: Análisis de requisitos y viabilidad
+Aproximación: Desarrollo iterativo con Scrum
+Completitud: Entregables y documentación
+Handover: Plan de capacitación y soporte
 """,
     'blend': """
-Baseline: Mezcla de metodologías actuales
-Learning: Buenas prácticas de Scrum y Kanban
-Evolution: Ajuste de procesos
-Navigation: Guía de adopción progresiva
-Delivery: Implementación en proyectos pilotos
+Base: Sistema actual de ventas
+Aprendizaje: Análisis de patrones de usuario
+Evolución: Mejoras incrementales
+Navegación: Interfaz intuitiva
+Entrega: Despliegue por fases
 """,
     'spark': """
-Strategy: Iniciativa de innovación abierta
-Planning: Talleres de ideación
-Action: Creación de prototipos
-Results: Demostraciones de concepto
-Knowledge: Lecciones aprendidas
+Estrategia: Modernización de plataforma
+Planificación: Roadmap técnico 6 meses
+Acción: Implementación por módulos
+Resultados: Métricas de rendimiento
+Conocimiento: Documentación y capacitación
 """,
     'pulse': """
-Purpose: Monitoreo de KPIs críticos
-Understanding: Identificación de indicadores clave
-Learning: Ajustes tras análisis de datos
-Strategy: Plan de mejora continua
-Evaluation: Reporte mensual de rendimiento
+Propósito: Optimización de procesos
+Entendimiento: Análisis de flujos actuales
+Aprendizaje: Mejores prácticas del sector
+Estrategia: Plan de implementación ágil
+Evaluación: KPIs de rendimiento
 """
 }
 
@@ -359,10 +359,10 @@ Steps: {steps}
 Expectation: {expectation}
 """,
     'peas': """
-Purpose: {purpose}
-EndResult: {endResult}
-Audience: {audience}
-Style: {style}
+P: {purpose}
+E: {endResult}
+A: {audience}
+S: {style}
 """,
     'star': """
 Situation: {situation}
@@ -581,67 +581,67 @@ Features: {features}
 Testing: {testing}
 """,
     'scale': """
-Strategy: {strategy}
-Capabilities: {capabilities}
-Action: {action}
-Learning: {learning}
-Evolution: {evolution}
+Estrategia: Plan de escalabilidad cloud
+Capacidades: Autoescalado y redundancia
+Acción: Implementación de clusters K8s
+Aprendizaje: Monitoreo y telemetría
+Evolución: Mejora continua basada en datos
 """,
     'think': """
-Topic: {topic}
-History: {history}
-Insights: {insights}
-NextSteps: {nextSteps}
-Knowledge: {knowledge}
+Tema: Expansión mercado LATAM
+Historia: Análisis previos de mercado
+Insights: Oportunidades identificadas
+Siguientes Pasos: Plan de entrada Q2 2024
+Conocimiento: Regulaciones locales
 """,
     'quest': """
-Question: {question}
-Understanding: {understanding}
-Exploration: {exploration}
-Solution: {solution}
-Testing: {testing}
+Pregunta: Optimización de conversión
+Entendimiento: Análisis de embudo actual
+Exploración: Test A/B de landing pages
+Solución: Rediseño basado en datos
+Pruebas: Grupo piloto de usuarios
 """,
     'drive': """
-Direction: {direction}
-Resources: {resources}
-Implementation: {implementation}
-Validation: {validation}
-Evolution: {evolution}
+Dirección: Automatización de procesos
+Recursos: Equipo DevOps y herramientas
+Implementación: CI/CD y monitoreo
+Validación: Métricas de rendimiento
+Evolución: Iteraciones mensuales
 """,
     'shape': """
-Situation: {situation}
-History: {history}
-Analysis: {analysis}
-Plan: {plan}
-Execution: {execution}
+Situación: Modernización tecnológica
+Historia: Stack tecnológico actual
+Análisis: Evaluación de alternativas
+Plan: Migración por fases
+Ejecución: Sprints de 2 semanas
 """,
     'reach': """
-Requirements: {requirements}
-Evaluation: {evaluation}
-Approach: {approach}
-Completion: {completion}
-Handover: {handover}
+Requisitos: Sistema de gestión de inventario
+Evaluación: Análisis de requisitos y viabilidad
+Aproximación: Desarrollo iterativo con Scrum
+Completitud: Entregables y documentación
+Handover: Plan de capacitación y soporte
 """,
     'blend': """
-Baseline: {baseline}
-Learning: {learning}
-Evolution: {evolution}
-Navigation: {navigation}
-Delivery: {delivery}
+Base: Sistema actual de ventas
+Aprendizaje: Análisis de patrones de usuario
+Evolución: Mejoras incrementales
+Navegación: Interfaz intuitiva
+Entrega: Despliegue por fases
 """,
     'spark': """
-Strategy: {strategy}
-Planning: {planning}
-Action: {action}
-Results: {results}
-Knowledge: {knowledge}
+Estrategia: Modernización de plataforma
+Planificación: Roadmap técnico 6 meses
+Acción: Implementación por módulos
+Resultados: Métricas de rendimiento
+Conocimiento: Documentación y capacitación
 """,
     'pulse': """
-Purpose: {purpose}
-Understanding: {understanding}
-Learning: {learning}
-Strategy: {strategy}
-Evaluation: {evaluation}
+Propósito: Optimización de procesos
+Entendimiento: Análisis de flujos actuales
+Aprendizaje: Mejores prácticas del sector
+Estrategia: Plan de implementación ágil
+Evaluación: KPIs de rendimiento
 """
 }
 
@@ -714,10 +714,12 @@ def count_tokens(text: str) -> int:
     )
     return response.usage.prompt_tokens
 
-def get_framework_recommendation(objective: str) -> dict:
-    system_message = '''Eres un experto en frameworks de prompts en español. Tu tarea es analizar el objetivo del usuario y recomendar el framework más adecuado entre los siguientes frameworks disponibles:
+def get_framework_recommendation(objective: str) -> str:
+    system_message = f'''Eres un experto en frameworks de prompts en español. Tu tarea es analizar el objetivo del usuario y recomendar ÚNICAMENTE uno de los siguientes frameworks disponibles. NO INVENTES FRAMEWORKS NUEVOS:
 
     RTF, TAG, BAB, CARE, RISE, PEAS, STAR, QCQA, AIDA, PARA, SMART, ERQ, CODE, PROS, TEAM, IDEA, FAST, LEAP, GROW, SPIN, DESIGN, VISION, IMPACT, MASTER, POWER, LOGIC, SCOPE, FOCUS, EXPERT, CLARITY, GUIDE, PATH, LEARN, SOLVE, PRIME, ADAPT, BUILD, CRAFT, SCALE, THINK, QUEST, DRIVE, SHAPE, REACH, BLEND, SPARK, PULSE
+
+    IMPORTANTE: SOLO PUEDES RECOMENDAR UNO DE LOS FRAMEWORKS LISTADOS ARRIBA. No inventes nuevos frameworks como "RECIPE" u otros.
 
     Considera:
     1. Tipo de tarea:
@@ -748,12 +750,26 @@ def get_framework_recommendation(objective: str) -> dict:
        - Corto vs Largo plazo: FAST vs VISION
        - Estratégico vs Táctico: MASTER vs LOGIC
 
-    Proporciona una recomendación detallada en formato JSON con:
-    {
-        "framework": "NOMBRE_FRAMEWORK",
-        "reason": "Explicación detallada de por qué este framework es el más adecuado para el objetivo específico, incluyendo ventajas clave y cómo se alinea con las necesidades",
-        "example": "Un ejemplo concreto y detallado de cómo usar el framework para este objetivo específico, incluyendo cada componente del framework"
-    }'''
+    Para cada framework, debes explicar qué significa cada componente en general, no dar un ejemplo específico.
+
+    Por ejemplo, para PEAS:
+    P: Propósito - Define el objetivo principal de la comunicación
+    E: Resultado Final - Establece el resultado concreto que se busca lograr
+    A: Audiencia - Identifica el público objetivo al que va dirigido
+    S: Estilo - Determina el tono y formato de la comunicación
+
+    Proporciona tu recomendación exactamente con este formato:
+
+    FRAMEWORK: [SOLO UN NOMBRE DE LOS FRAMEWORKS LISTADOS ARRIBA]
+
+    ¿Por qué este framework?
+
+    [Explicación detallada de por qué este framework es el más adecuado para el objetivo. Incluye sus ventajas específicas y cómo se alinea con las necesidades del usuario. Párrafo de 4-6 líneas.]
+
+    Ejemplo de uso:
+
+    [Explica qué significa cada letra del framework recomendado EN GENERAL, no un ejemplo concreto. Usa el formato exacto del framework con sus componentes explicando qué significa cada uno.]
+    '''
     
     response = openai_client.chat.completions.create(
         model="gpt-4o-mini",
@@ -761,9 +777,67 @@ def get_framework_recommendation(objective: str) -> dict:
             {"role": "system", "content": system_message},
             {"role": "user", "content": f"Objetivo del usuario: {objective}"}
         ],
-        response_format={"type": "json_object"},
         max_tokens=4096,
         temperature=0.7
     )
     
-    return response.choices[0].message.content
+    recommendation_text = response.choices[0].message.content
+    
+    # Verificar que la respuesta contiene el formato esperado
+    import re
+    framework_match = re.search(r'FRAMEWORK:\s*([^\n]+)', recommendation_text, re.IGNORECASE)
+    
+    if not framework_match:
+        # Si no tiene el formato esperado, usar formato genérico de PEAS
+        return """FRAMEWORK: PEAS
+
+¿Por qué este framework?
+
+El framework PEAS es ideal para estructurar cualquier tipo de comunicación de manera clara y efectiva. Este enfoque permite definir con precisión los cuatro elementos esenciales para transmitir un mensaje: propósito, resultado esperado, audiencia y estilo. PEAS es especialmente útil cuando necesitas asegurar que tu comunicación esté bien orientada, tenga objetivos claros y esté adaptada a quien va dirigida. La simplicidad y versatilidad de este framework lo hace aplicable a múltiples contextos, desde correos electrónicos hasta presentaciones o documentos técnicos.
+
+Ejemplo de uso:
+
+P: Propósito - Define el objetivo principal que se quiere lograr con la comunicación
+E: Resultado Final - Establece el resultado concreto y medible que se espera obtener
+A: Audiencia - Identifica las características del público al que va dirigido el mensaje
+S: Estilo - Determina el tono, formato y enfoque apropiado para la comunicación
+"""
+    
+    # Verificar que el framework recomendado está en la lista de frameworks disponibles
+    framework_name = framework_match.group(1).strip().lower()
+    if framework_name not in [f.lower() for f in AVAILABLE_FRAMEWORKS]:
+        # Si no es un framework válido, usar formato genérico
+        return """FRAMEWORK: PEAS
+
+¿Por qué este framework?
+
+El framework PEAS es ideal para estructurar cualquier tipo de comunicación de manera clara y efectiva. Este enfoque permite definir con precisión los cuatro elementos esenciales para transmitir un mensaje: propósito, resultado esperado, audiencia y estilo. PEAS es especialmente útil cuando necesitas asegurar que tu comunicación esté bien orientada, tenga objetivos claros y esté adaptada a quien va dirigida. La simplicidad y versatilidad de este framework lo hace aplicable a múltiples contextos, desde correos electrónicos hasta presentaciones o documentos técnicos.
+
+Ejemplo de uso:
+
+P: Propósito - Define el objetivo principal que se quiere lograr con la comunicación
+E: Resultado Final - Establece el resultado concreto y medible que se espera obtener
+A: Audiencia - Identifica las características del público al que va dirigido el mensaje
+S: Estilo - Determina el tono, formato y enfoque apropiado para la comunicación
+"""
+    
+    # Si es PEAS, asegurar que tiene el formato correcto de explicación
+    if framework_name == 'peas' and 'ejemplo de uso:' in recommendation_text.lower():
+        example_section = recommendation_text.lower().split('ejemplo de uso:')[1].strip()
+        if 'propósito' not in example_section.lower() and 'purpose' not in example_section.lower():
+            return """FRAMEWORK: PEAS
+
+¿Por qué este framework?
+
+El framework PEAS es ideal para estructurar cualquier tipo de comunicación de manera clara y efectiva. Este enfoque permite definir con precisión los cuatro elementos esenciales para transmitir un mensaje: propósito, resultado esperado, audiencia y estilo. PEAS es especialmente útil cuando necesitas asegurar que tu comunicación esté bien orientada, tenga objetivos claros y esté adaptada a quien va dirigida. La simplicidad y versatilidad de este framework lo hace aplicable a múltiples contextos, desde correos electrónicos hasta presentaciones o documentos técnicos.
+
+Ejemplo de uso:
+
+P: Propósito - Define el objetivo principal que se quiere lograr con la comunicación
+E: Resultado Final - Establece el resultado concreto y medible que se espera obtener
+A: Audiencia - Identifica las características del público al que va dirigido el mensaje
+S: Estilo - Determina el tono, formato y enfoque apropiado para la comunicación
+"""
+    
+    # Si la respuesta tiene el formato esperado, devolverla como está
+    return recommendation_text

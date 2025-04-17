@@ -675,32 +675,98 @@ function searchFramework() {
             objective: searchInput.value
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
     .then(data => {
         if (data.success) {
-            const recommendation = JSON.parse(data.recommendation);
-            
-            recommendedFramework.textContent = recommendation.framework;
-            recommendationReason.textContent = recommendation.reason;
-            recommendationExample.textContent = recommendation.example;
-            
-            recommendationContainer.classList.remove('d-none');
-            
-            // Highlight recommended framework card
-            document.querySelectorAll('.framework-card').forEach(card => {
-                card.classList.remove('recommended');
-            });
-            
-            const recommendedCard = document.querySelector(`.framework-card[data-framework="${recommendation.framework.toLowerCase()}"]`);
-            if (recommendedCard) {
-                recommendedCard.classList.add('recommended');
-                recommendedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            try {
+                const recommendationText = data.recommendation;
+                
+                // Extraer el framework usando expresiones regulares
+                const frameworkMatch = recommendationText.match(/FRAMEWORK:\s*([^\n]+)/i);
+                const framework = frameworkMatch ? frameworkMatch[1].trim() : "No disponible";
+                
+                // Extraer la explicación
+                const reasonStart = recommendationText.indexOf('¿Por qué este framework?');
+                const exampleStart = recommendationText.indexOf('Ejemplo de uso:');
+                
+                let reason = "No disponible";
+                if (reasonStart !== -1 && exampleStart !== -1) {
+                    reason = recommendationText.substring(
+                        reasonStart + '¿Por qué este framework?'.length, 
+                        exampleStart
+                    ).trim();
+                }
+                
+                // Extraer el ejemplo
+                let example = "No disponible";
+                if (exampleStart !== -1) {
+                    example = recommendationText.substring(exampleStart + 'Ejemplo de uso:'.length).trim();
+                }
+                
+                // Actualizar la interfaz
+                recommendedFramework.textContent = framework;
+                recommendationReason.textContent = reason;
+                
+                // Aplicar formato especial si es PEAS y contiene P:, E:, A:, S:
+                if (framework.toLowerCase() === 'peas' && example.includes('P:') && example.includes('A:')) {
+                    // Formatear el ejemplo PEAS para mejorar la visualización
+                    let formattedExample = example
+                        .replace(/P:/g, '<strong class="text-primary">P:</strong>')
+                        .replace(/E:/g, '<strong class="text-success">E:</strong>')
+                        .replace(/A:/g, '<strong class="text-danger">A:</strong>')
+                        .replace(/S:/g, '<strong class="text-info">S:</strong>')
+                        .replace(/(\d+\.)/g, '<strong>$1</strong>') // Números en negrita
+                        .replace(/\n\n/g, '<br><br>') // Respetar saltos de línea dobles
+                        .replace(/\n([^<])/g, '<br>$1'); // Saltos de línea simples
+                    
+                    recommendationExample.innerHTML = formattedExample;
+                } else {
+                    // Usar marked para otro contenido markdown
+                    try {
+                        if (typeof marked !== 'undefined') {
+                            recommendationExample.innerHTML = marked.parse(example);
+                        } else {
+                            // Formateo básico si marked no está disponible
+                            const formattedExample = example
+                                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Negrita
+                                .replace(/\n/g, '<br>'); // Saltos de línea
+                            recommendationExample.innerHTML = formattedExample;
+                        }
+                    } catch (markdownError) {
+                        console.error("Error al formatear markdown:", markdownError);
+                        recommendationExample.textContent = example;
+                    }
+                }
+                
+                recommendationContainer.classList.remove('d-none');
+                
+                // Highlight recommended framework card
+                document.querySelectorAll('.framework-card').forEach(card => {
+                    card.classList.remove('recommended');
+                });
+                
+                // Buscar el nombre del framework sin mayúsculas
+                const frameworkLower = framework.toLowerCase();
+                const recommendedCard = document.querySelector(`.framework-card[data-framework="${frameworkLower}"]`);
+                if (recommendedCard) {
+                    recommendedCard.classList.add('recommended');
+                    recommendedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            } catch (e) {
+                console.error("Error al procesar la recomendación:", e);
+                alert("Error al procesar la recomendación: " + e.message);
             }
         } else {
-            throw new Error(data.error);
+            throw new Error(data.error || 'Error al obtener la recomendación');
         }
     })
     .catch(error => {
+        console.error('Error:', error);
         alert('Error al buscar framework: ' + error.message);
     })
     .finally(() => {
@@ -725,7 +791,12 @@ function showFrameworkExample(framework) {
         },
         body: JSON.stringify({ framework })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
     .then(data => {
         if (data.success) {
             modalTitle.textContent = framework.toUpperCase();
@@ -744,10 +815,11 @@ function showFrameworkExample(framework) {
             
             new bootstrap.Modal(exampleModal).show();
         } else {
-            throw new Error(data.error);
+            throw new Error(data.error || 'Error al cargar el ejemplo');
         }
     })
     .catch(error => {
+        console.error('Error:', error);
         alert('Error al cargar ejemplo: ' + error.message);
     })
     .finally(() => {
