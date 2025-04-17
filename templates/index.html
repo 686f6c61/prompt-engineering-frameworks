@@ -6,6 +6,19 @@
     <div class="text-center my-5">
         <h1 class="display-4 mb-3">Prompt Engineering con +47 Frameworks</h1>
         <p class="lead text-muted">Selecciona el framework más adecuado para crear prompts efectivos y profesionales.</p>
+        
+        <!-- Indicador del modelo actual -->
+        <div class="mt-3">
+            <span class="badge {% if is_custom %}bg-warning text-dark{% else %}bg-success{% endif %} p-2">
+                <i class="bi {% if is_custom %}bi-stars{% else %}bi-lightning{% endif %} me-1"></i>
+                Usando {{ current_model }}
+                {% if is_custom %}(API Key personalizada){% else %}(Gratis){% endif %}
+            </span>
+            <a href="/configuracion" class="badge bg-primary p-2 text-decoration-none ms-2">
+                <i class="bi bi-gear me-1"></i>
+                Cambiar modelo
+            </a>
+        </div>
     </div>
 
     <!-- Search Form -->

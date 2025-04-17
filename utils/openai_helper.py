@@ -2,14 +2,48 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 from console import console
+from flask import session
 
 # Cargar variables de entorno
 load_dotenv()
 
-# Inicializar cliente de OpenAI
-openai_client = OpenAI(
-    api_key=os.getenv('OPENAI_API_KEY')
-)
+# Configuraciones de modelos
+DEFAULT_MODEL = "gpt-3.5-turbo"
+PREMIUM_MODEL = "gpt-4o-mini"
+MAX_TOKENS = {
+    "gpt-3.5-turbo": 4096,
+    "gpt-4o-mini": 4096
+}
+
+# Crear un cliente OpenAI con la API key por defecto
+def create_default_client():
+    return OpenAI(
+        api_key=os.getenv('OPENAI_API_KEY')
+    )
+
+# Crear un cliente OpenAI con una API key personalizada
+def create_custom_client(api_key):
+    return OpenAI(
+        api_key=api_key
+    )
+
+# Obtener el cliente OpenAI basado en la configuración actual
+def get_openai_client():
+    # Verificar si hay una API key personalizada en la sesión
+    if session.get('use_custom_api_key', False) and session.get('api_key'):
+        return create_custom_client(session.get('api_key'))
+    else:
+        return create_default_client()
+
+# Obtener el modelo a usar basado en la configuración
+def get_model_to_use():
+    if session.get('use_custom_api_key', False) and session.get('api_key'):
+        return PREMIUM_MODEL
+    else:
+        return DEFAULT_MODEL
+
+# Inicializar cliente por defecto para compatibilidad con código existente
+openai_client = create_default_client()
 
 AVAILABLE_FRAMEWORKS = [
     'rtf', 'tag', 'bab', 'care', 'rise', 'peas', 'star', 'qcqa', 
@@ -693,20 +727,20 @@ def optimize_prompt(framework: str, form_data: dict, frameworks: list = None) ->
     
     {raw_prompt}""".format(example=example, raw_prompt=raw_prompt)
 
-    response = openai_client.chat.completions.create(
-        model="gpt-4o-mini",
+    response = get_openai_client().chat.completions.create(
+        model=get_model_to_use(),
         messages=[
             {"role": "system", "content": formatted_message}
         ],
-        max_tokens=4096
+        max_tokens=MAX_TOKENS[get_model_to_use()]
     )
     
     return response.choices[0].message.content
 
 def count_tokens(text: str) -> int:
     """Count the number of tokens in a text using the OpenAI API."""
-    response = openai_client.chat.completions.create(
-        model="gpt-4o-mini",
+    response = get_openai_client().chat.completions.create(
+        model=get_model_to_use(),
         messages=[
             {"role": "user", "content": text}
         ],
@@ -771,13 +805,13 @@ def get_framework_recommendation(objective: str) -> str:
     [Explica qué significa cada letra del framework recomendado EN GENERAL, no un ejemplo concreto. Usa el formato exacto del framework con sus componentes explicando qué significa cada uno.]
     '''
     
-    response = openai_client.chat.completions.create(
-        model="gpt-4o-mini",
+    response = get_openai_client().chat.completions.create(
+        model=get_model_to_use(),
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": f"Objetivo del usuario: {objective}"}
         ],
-        max_tokens=4096,
+        max_tokens=MAX_TOKENS[get_model_to_use()],
         temperature=0.7
     )
     
