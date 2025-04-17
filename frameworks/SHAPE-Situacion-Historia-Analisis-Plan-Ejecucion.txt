@@ -1,0 +1,38 @@
+# Framework SHAPE (Situación-Historia-Análisis-Plan-Ejecución)
+
+## Componentes
+- **S - Situación**: Describe el contexto actual o escenario presente
+- **H - Historia**: Proporciona antecedentes, evolución o desarrollo histórico
+- **A - Análisis**: Evalúa opciones, alternativas y consideraciones clave
+- **P - Plan**: Establece la estrategia y acciones a seguir
+- **E - Ejecución**: Implementa el plan mediante acciones concretas
+
+## Descripción y propósito
+El framework SHAPE proporciona una metodología estructurada para la planificación e implementación de cambios significativos. Su enfoque único incorpora tanto la situación actual como el contexto histórico antes de proceder al análisis y planificación, asegurando que las decisiones estén fundamentadas en una comprensión completa. Este marco es particularmente valioso para proyectos de transformación organizacional, cambios tecnológicos importantes y cualquier iniciativa donde es crucial entender tanto el presente como el pasado para diseñar un futuro efectivo.
+
+## Ejemplo de uso
+```
+Situación: Modernización tecnológica
+Historia: Stack tecnológico actual
+Análisis: Evaluación de alternativas
+Plan: Migración por fases
+Ejecución: Sprints de 2 semanas
+```
+
+## Casos recomendados
+- Transformaciones organizacionales
+- Migraciones tecnológicas complejas
+- Reestructuración de procesos
+- Cambios estratégicos significativos
+- Modernización de plataformas heredadas
+- Fusiones e integraciones de sistemas
+- Implementación de cambios culturales
+
+## Ventajas
+- Equilibra la comprensión del presente con el contexto histórico
+- Proporciona una base sólida para el análisis y la toma de decisiones
+- Facilita transiciones complejas mediante un enfoque estructurado
+- Mejora la aceptación del cambio al reconocer la historia y el contexto
+- Conecta el análisis con acciones concretas de implementación
+- Promueve decisiones informadas basadas en una visión completa
+- Facilita la comunicación del cambio a diferentes audiencias 

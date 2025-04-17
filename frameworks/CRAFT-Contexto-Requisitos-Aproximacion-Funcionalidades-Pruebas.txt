@@ -1,0 +1,38 @@
+# Framework CRAFT (Contexto-Requisitos-Aproximación-Funcionalidades-Pruebas)
+
+## Componentes
+- **C - Contexto**: Describe el entorno, escenario o situación donde se aplicará la solución
+- **R - Requisitos (Requirements)**: Define las necesidades específicas y criterios a satisfacer
+- **A - Aproximación (Approach)**: Establece la metodología, estrategia o enfoque de desarrollo
+- **F - Funcionalidades (Features)**: Detalla las características, componentes y capacidades principales
+- **T - Pruebas (Testing)**: Especifica los métodos de validación y aseguramiento de calidad
+
+## Descripción y propósito
+El framework CRAFT está diseñado para el desarrollo de soluciones personalizadas y a medida. Su estructura enfatiza la importancia de comprender profundamente el contexto específico, definir requisitos detallados, establecer un enfoque adaptado, desarrollar funcionalidades precisas y validar rigurosamente. Este marco es particularmente valioso para proyectos que requieren alto grado de personalización, como desarrollo de software a medida, consultoría técnica especializada o soluciones para nichos específicos.
+
+## Ejemplo de uso
+```
+Contexto: Proyecto a medida para cliente X
+Requisitos: Funcionalidad específica A y B
+Aproximación: Diseño personalizado
+Funcionalidades: Módulos de gestión y análisis
+Pruebas: Pruebas de aceptación con el cliente
+```
+
+## Casos recomendados
+- Desarrollo de software a medida
+- Creación de soluciones específicas para clientes
+- Consultoría técnica especializada
+- Implementación de sistemas personalizados
+- Desarrollo de componentes técnicos especializados
+- Proyectos con requisitos altamente específicos
+- Soluciones para nichos o casos de uso únicos
+
+## Ventajas
+- Equilibra la comprensión profunda del contexto con la implementación práctica
+- Enfatiza la personalización y adaptación a necesidades específicas
+- Proporciona un marco completo desde el contexto hasta la validación
+- Facilita la comunicación con clientes y stakeholders sobre requisitos clave
+- Mejora la satisfacción del cliente mediante soluciones altamente ajustadas
+- Promueve un enfoque integral desde la comprensión hasta la entrega
+- Asegura la calidad mediante la inclusión explícita de estrategias de prueba 

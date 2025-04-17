@@ -1,0 +1,40 @@
+# Framework IMPACT (Intención-Mensaje-Propósito-Audiencia-Canal-Tiempo)
+
+## Componentes
+- **I - Intención**: Define el objetivo principal de la comunicación o iniciativa
+- **M - Mensaje**: Articula el contenido central y puntos clave a transmitir
+- **P - Propósito**: Establece el resultado esperado o cambio que se busca generar
+- **A - Audiencia**: Identifica el público objetivo con sus características específicas
+- **C - Canal**: Selecciona los medios y formatos más adecuados para la comunicación
+- **T - Tiempo (Timing)**: Determina el momento óptimo y la frecuencia de la comunicación
+
+## Descripción y propósito
+El framework IMPACT proporciona una estructura completa para diseñar estrategias de comunicación efectivas en entornos corporativos y técnicos. Considera todos los elementos esenciales de la comunicación estratégica, desde la intención inicial hasta el momento de entrega, asegurando que el mensaje sea relevante, llegue a la audiencia correcta a través del canal adecuado y en el momento oportuno. Este enfoque integral es particularmente valioso para comunicaciones corporativas, lanzamientos de productos o iniciativas de cambio.
+
+## Ejemplo de uso
+```
+Intención: Transformación digital
+Mensaje: Eficiencia operativa
+Propósito: Automatización de procesos
+Audiencia: Equipo de operaciones
+Canal: Intranet corporativa
+Tiempo: Lanzamiento primer trimestre 2024
+```
+
+## Casos recomendados
+- Estrategias de comunicación corporativa
+- Planes de lanzamiento de productos o servicios
+- Campañas de cambio organizacional
+- Comunicación de nuevas políticas o procedimientos
+- Estrategias de marketing interno
+- Difusión de innovaciones tecnológicas
+- Programas de adopción de nuevas herramientas
+
+## Ventajas
+- Proporciona un enfoque integral para todas las dimensiones de la comunicación
+- Asegura la alineación entre el objetivo, el mensaje y los resultados esperados
+- Optimiza la efectividad al considerar la audiencia y canales específicos
+- Mejora el impacto mediante la consideración estratégica del timing
+- Facilita la planificación de campañas de comunicación complejas
+- Ayuda a prevenir malentendidos o resistencia al cambio
+- Aumenta la probabilidad de lograr los resultados deseados de la comunicación 

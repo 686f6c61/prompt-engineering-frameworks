@@ -1,0 +1,36 @@
+# Framework GROW (Meta-Realidad-Opciones-Camino)
+
+## Componentes
+- **G - Meta (Goal)**: Define el objetivo final o estado deseado a alcanzar
+- **R - Realidad (Reality)**: Describe la situación actual con sus limitaciones y recursos
+- **O - Opciones (Options)**: Explora las diferentes alternativas o caminos posibles
+- **W - Camino (Way Forward)**: Establece el plan de acción concreto a seguir
+
+## Descripción y propósito
+El framework GROW, originalmente desarrollado para coaching, es extremadamente efectivo para la toma de decisiones y planificación estratégica en proyectos técnicos. Proporciona una estructura que parte de definir claramente el objetivo, evalúa la situación actual, explora todas las opciones disponibles y finalmente establece un plan de acción concreto. Este enfoque sistemático ayuda a tomar decisiones informadas y desarrollar planes de implementación realistas basados en un análisis completo.
+
+## Ejemplo de uso
+```
+Meta: Migrar monolito a microservicios
+Realidad: Sistema crítico en producción
+Opciones: Patrón estrangulador vs reescritura
+Camino: Migración incremental 6 meses
+```
+
+## Casos recomendados
+- Planificación de transformaciones tecnológicas
+- Toma de decisiones estratégicas en arquitectura
+- Planificación de migraciones de sistemas
+- Definición de roadmaps técnicos
+- Establecimiento de estrategias de modernización
+- Resolución de problemas complejos de implementación
+- Evaluación de caminos de evolución técnica
+
+## Ventajas
+- Proporciona un enfoque estructurado para la toma de decisiones
+- Equilibra la visión ideal con las restricciones prácticas
+- Promueve la consideración de múltiples alternativas antes de decidir
+- Conecta la planificación estratégica con acciones concretas
+- Facilita conversaciones productivas sobre cambios técnicos
+- Ayuda a anticipar obstáculos y desarrollar planes realistas
+- Mejora la alineación entre objetivos y planes de implementación 

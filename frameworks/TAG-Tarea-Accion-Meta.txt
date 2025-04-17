@@ -1,0 +1,32 @@
+# Framework TAG (Tarea-Acción-Meta)
+
+## Componentes
+- **T - Tarea**: Define específicamente qué trabajo debe realizarse
+- **A - Acción**: Detalla los pasos concretos y acciones a ejecutar
+- **G - Meta**: Establece el objetivo final y los resultados esperados
+
+## Descripción y propósito
+El framework TAG proporciona una estructura clara y orientada a la acción para asignar y ejecutar tareas con un propósito definido. Conecta lo que debe hacerse con cómo debe hacerse y el resultado esperado. Este framework es particularmente útil para la planificación de proyectos donde se requiere claridad en los objetivos y acciones específicas.
+
+## Ejemplo de uso
+```
+Tarea: Implementar autenticación OAuth2
+Acción: Desarrollar flujo de autorización completo
+Meta: Sistema seguro con múltiples proveedores
+```
+
+## Casos recomendados
+- Planificación de sprints en metodologías ágiles
+- Asignación de tareas a equipos de desarrollo
+- Definición de historias de usuario con criterios de aceptación
+- Especificación de requisitos técnicos
+- Documentación de procesos operativos
+- Planificación de proyectos con objetivos medibles
+- Delegación de responsabilidades con expectativas claras
+
+## Ventajas
+- Enfoque directo y orientado a resultados
+- Evita ambigüedades sobre qué se debe hacer y por qué
+- Facilita el seguimiento del progreso hacia objetivos específicos
+- Conecta las actividades diarias con los objetivos estratégicos
+- Mejora la motivación al proporcionar un propósito claro para cada acción 

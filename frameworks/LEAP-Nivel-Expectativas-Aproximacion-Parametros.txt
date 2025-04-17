@@ -1,0 +1,36 @@
+# Framework LEAP (Nivel-Expectativas-Aproximación-Parámetros)
+
+## Componentes
+- **L - Nivel**: Especifica el nivel de experiencia o conocimiento del equipo o audiencia
+- **E - Expectativas**: Define los resultados y estándares esperados del proyecto o entregable
+- **A - Aproximación**: Detalla el enfoque metodológico o técnico a utilizar
+- **P - Parámetros**: Establece criterios, métricas o limitaciones para evaluar el éxito
+
+## Descripción y propósito
+El framework LEAP está diseñado para establecer expectativas claras y alineadas en proyectos técnicos. Reconoce la importancia de considerar el nivel de experiencia del equipo, definir claramente las expectativas, acordar un enfoque y establecer parámetros medibles. Este marco resulta particularmente valioso para la planificación de proyectos técnicos donde es crucial adaptar las expectativas y metodologías al nivel de experiencia del equipo para lograr resultados exitosos.
+
+## Ejemplo de uso
+```
+Nivel: Equipo backend senior
+Expectativas: Arquitectura limpia
+Aproximación: Diseño guiado por dominio
+Parámetros: Rendimiento y escalabilidad
+```
+
+## Casos recomendados
+- Diseño de arquitecturas de software
+- Planificación de proyectos técnicos
+- Definición de estándares de calidad
+- Evaluación de capacidades de equipos
+- Planificación estratégica de desarrollo
+- Establecimiento de criterios de aceptación
+- Alineación de expectativas entre stakeholders y equipos técnicos
+
+## Ventajas
+- Adapta las expectativas al nivel real de experiencia del equipo
+- Establece claramente los criterios de éxito desde el inicio
+- Facilita la selección del enfoque técnico más apropiado
+- Proporciona métricas claras para evaluar el progreso y los resultados
+- Mejora la comunicación entre equipos técnicos y stakeholders
+- Ayuda a prevenir desajustes entre expectativas y capacidades
+- Fomenta la toma de decisiones técnicas fundamentadas en criterios definidos 

@@ -1,0 +1,33 @@
+# Framework BAB (Antes-Después-Puente)
+
+## Componentes
+- **B - Antes (Before)**: Describe la situación actual o el estado inicial
+- **A - Después (After)**: Presenta el estado deseado o la visión futura
+- **B - Puente (Bridge)**: Detalla el plan o estrategia para pasar del antes al después
+
+## Descripción y propósito
+El framework BAB es una poderosa herramienta para comunicar y planificar cambios y transformaciones. Permite contrastar claramente la situación actual con la visión futura, y lo más importante, proporciona un camino claro para llegar de un punto a otro. Es especialmente útil para proyectos de transformación, mejora continua o cuando se necesita justificar inversiones o cambios significativos.
+
+## Ejemplo de uso
+```
+Antes: Sistema de monolito PHP
+Después: Arquitectura de microservicios
+Puente: Plan de migración gradual 6 meses
+```
+
+## Casos recomendados
+- Presentaciones de proyectos de transformación digital
+- Propuestas de mejora de arquitectura tecnológica
+- Planes de migración de sistemas
+- Justificación de inversiones en tecnología
+- Comunicación de cambios organizacionales
+- Documentación de estrategias de evolución de productos
+- Propuestas de valor para clientes o inversores
+
+## Ventajas
+- Presenta una narrativa clara del cambio
+- Facilita la comprensión de la necesidad de transformación
+- Proporciona contexto completo: de dónde venimos, a dónde vamos y cómo llegaremos
+- Ayuda a obtener apoyo para los cambios propuestos
+- Ofrece una estructura clara para la planificación estratégica
+- Facilita la medición del progreso hacia el estado futuro deseado 

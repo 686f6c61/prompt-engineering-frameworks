@@ -1,0 +1,38 @@
+# Framework LOGIC (Diseño-Objetivo-Directrices-Implementación-Criterios)
+
+## Componentes
+- **L - Diseño (Layout)**: Establece la estructura o arquitectura general del sistema o solución
+- **O - Objetivo**: Define el propósito principal y las metas específicas a alcanzar
+- **G - Directrices (Guidelines)**: Especifica los principios, estándares o mejores prácticas a seguir
+- **I - Implementación**: Detalla cómo se construirá o desarrollará la solución técnicamente
+- **C - Criterios**: Establece los parámetros de evaluación y medidas de éxito
+
+## Descripción y propósito
+El framework LOGIC proporciona una estructura sistemática para el diseño y desarrollo de soluciones técnicas. Sigue un enfoque racional que comienza con el diseño de alto nivel, establece objetivos claros, define los estándares a seguir, detalla la implementación y establece criterios de éxito. Este marco es particularmente valioso para el desarrollo de sistemas, arquitecturas o componentes técnicos donde la consistencia, la calidad y el cumplimiento de estándares son críticos.
+
+## Ejemplo de uso
+```
+Diseño: Arquitectura de API
+Objetivo: Endpoints REST escalables
+Directrices: Especificación OpenAPI 3.0
+Implementación: Desarrollo en Node.js
+Criterios: 99.9% tiempo activo
+```
+
+## Casos recomendados
+- Diseño de arquitecturas de software
+- Desarrollo de APIs y servicios
+- Implementación de componentes técnicos
+- Establecimiento de estándares de desarrollo
+- Creación de productos tecnológicos
+- Definición de plataformas y frameworks
+- Planificación de sistemas distribuidos
+
+## Ventajas
+- Proporciona un enfoque estructurado para el diseño técnico
+- Asegura la alineación entre la arquitectura y los objetivos
+- Promueve la consistencia mediante directrices claras
+- Conecta el diseño conceptual con la implementación práctica
+- Facilita la evaluación objetiva mediante criterios definidos
+- Mejora la comunicación entre equipos técnicos
+- Equilibra la creatividad del diseño con el rigor de los estándares y criterios 

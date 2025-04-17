@@ -1,0 +1,36 @@
+# Framework AIDA (Atención-Interés-Deseo-Acción)
+
+## Componentes
+- **A - Atención**: Capta la atención del público con un dato o afirmación impactante
+- **I - Interés**: Genera interés profundizando en los beneficios o características relevantes
+- **D - Deseo**: Crea deseo demostrando cómo la solución resuelve un problema específico
+- **A - Acción**: Invita a una acción concreta y específica con un siguiente paso claro
+
+## Descripción y propósito
+El framework AIDA es un modelo clásico y efectivo para estructurar comunicaciones persuasivas y de marketing. Sigue una progresión psicológica natural: primero captar la atención, luego despertar el interés, generar un deseo hacia la solución y finalmente motivar a la acción. Este enfoque secuencial asegura que el mensaje no solo atraiga inicialmente, sino que también conduzca a resultados concretos y medibles.
+
+## Ejemplo de uso
+```
+Atención: 70% de aplicaciones tienen fallos de seguridad
+Interés: Nueva solución de seguridad integrada
+Deseo: Detección automática de vulnerabilidades
+Acción: Prueba gratuita por 14 días
+```
+
+## Casos recomendados
+- Campañas de marketing y ventas
+- Presentaciones comerciales y propuestas
+- Emails de prospección y seguimiento
+- Páginas de aterrizaje (landing pages)
+- Descripciones de productos o servicios
+- Comunicaciones para lanzamientos
+- Anuncios y publicidad digital
+
+## Ventajas
+- Estructura probada y efectiva para comunicaciones persuasivas
+- Enfoque orientado a la acción y resultados medibles
+- Sigue el recorrido natural del proceso de decisión del cliente
+- Facilita la creación de mensajes convincentes y enfocados
+- Aplicable a diferentes formatos y canales de comunicación
+- Ayuda a mantener el interés del público a lo largo del mensaje
+- Aumenta la probabilidad de conversión al incluir un llamado claro a la acción 

@@ -1,0 +1,36 @@
+# Framework RISE (Relevancia-Información-Solución-Evaluación)
+
+## Componentes
+- **R - Relevancia**: Establece la importancia y pertinencia del tema o problema
+- **I - Información**: Proporciona datos, hechos y contexto necesarios
+- **S - Solución**: Presenta las opciones o acciones recomendadas
+- **E - Evaluación**: Define cómo medir el éxito y los criterios de valoración
+
+## Descripción y propósito
+El framework RISE está diseñado para presentar soluciones basadas en datos de manera estructurada y convincente. Comienza estableciendo por qué el tema es importante, proporciona la información necesaria para entenderlo, ofrece soluciones concretas y establece cómo se evaluará el éxito. Es particularmente útil para presentaciones ejecutivas, informes técnicos y propuestas donde es crucial justificar las recomendaciones con datos.
+
+## Ejemplo de uso
+```
+Relevancia: Pérdida de usuarios en app móvil (25% en 3 meses)
+Información: Análisis de embudos muestra abandono en proceso de registro
+Solución: Simplificar flujo de registro reduciendo pasos de 5 a 3
+Evaluación: Meta de aumentar conversión en registro del 45% al 70%
+```
+
+## Casos recomendados
+- Presentaciones a stakeholders o comités ejecutivos
+- Informes de análisis de datos con recomendaciones
+- Propuestas de mejora de procesos o sistemas
+- Documentos de toma de decisiones basadas en datos
+- Reportes de consultoría con recomendaciones accionables
+- Planes estratégicos con métricas de éxito
+- Informes de investigación con aplicaciones prácticas
+
+## Ventajas
+- Estructura integral que conecta problema, datos y solución
+- Enfoque en la relevancia que ayuda a captar la atención
+- Basado en información para decisiones fundamentadas
+- Incluye criterios de evaluación para medir el impacto
+- Facilita la comunicación efectiva de soluciones complejas
+- Proporciona un marco completo desde la identificación del problema hasta la medición del éxito
+- Ayuda a priorizar iniciativas basándose en su relevancia e impacto potencial 

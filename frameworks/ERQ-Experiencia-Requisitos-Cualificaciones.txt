@@ -1,0 +1,34 @@
+# Framework ERQ (Experiencia-Requisitos-Cualificaciones)
+
+## Componentes
+- **E - Experiencia**: Detalla el nivel de experiencia o conocimiento previo requerido
+- **R - Requisitos**: Especifica las habilidades, tecnologías o competencias necesarias
+- **Q - Cualificaciones (Qualifications)**: Define las certificaciones, títulos o validaciones formales deseables
+
+## Descripción y propósito
+El framework ERQ está diseñado para definir claramente perfiles profesionales y requisitos de roles técnicos. Proporciona una estructura completa para especificar no solo la experiencia necesaria, sino también los requisitos técnicos específicos y las cualificaciones formales que validan las competencias. Este framework es especialmente útil en contextos de contratación, asignación de proyectos y evaluación de capacidades para tareas específicas.
+
+## Ejemplo de uso
+```
+Experiencia: 5 años en desarrollo Python/Django
+Requisitos: API REST, GraphQL, Servicios en la nube
+Cualificaciones: Certificación en arquitectura cloud
+```
+
+## Casos recomendados
+- Descripciones de puestos de trabajo y ofertas laborales
+- Definición de equipos para proyectos específicos
+- Evaluación de competencias técnicas
+- Planificación de capacitación y desarrollo profesional
+- Asignación de roles en proyectos técnicos
+- Autoevaluación de habilidades profesionales
+- Planificación de carreras técnicas
+
+## Ventajas
+- Proporciona criterios claros y objetivos para evaluar candidatos
+- Facilita la comunicación de expectativas técnicas
+- Ayuda a identificar brechas de habilidades y necesidades de formación
+- Mejora la asignación de personal a proyectos específicos
+- Estandariza la evaluación de competencias
+- Permite la comparación objetiva entre diferentes perfiles
+- Orienta el desarrollo profesional hacia competencias valoradas 

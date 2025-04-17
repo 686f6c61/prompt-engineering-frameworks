@@ -1,0 +1,38 @@
+# Framework SCOPE (Situación-Necesidad Core-Obstáculos-Plan-Evaluación)
+
+## Componentes
+- **S - Situación**: Describe el contexto actual y antecedentes relevantes
+- **C - Necesidad Core**: Identifica la necesidad fundamental o problema central a resolver
+- **O - Obstáculos**: Anticipa las dificultades, desafíos o barreras potenciales
+- **P - Plan**: Establece la estrategia y acciones para superar los obstáculos y satisfacer la necesidad
+- **E - Evaluación**: Define cómo se medirá el éxito y se evaluará el progreso
+
+## Descripción y propósito
+El framework SCOPE proporciona una estructura completa para abordar problemas complejos, particularmente en entornos de modernización y transformación. Su enfoque único incluye la identificación proactiva de obstáculos, lo que permite desarrollar planes más realistas y robustos. Este marco es especialmente valioso para proyectos de actualización de sistemas heredados, transformaciones tecnológicas y cualquier iniciativa que enfrente resistencia o complejidades significativas.
+
+## Ejemplo de uso
+```
+Situación: Sistema heredado crítico
+Necesidad Core: Modernización tecnológica
+Obstáculos: Deuda técnica acumulada
+Plan: Refactorización por fases
+Evaluación: Cobertura de pruebas
+```
+
+## Casos recomendados
+- Modernización de sistemas heredados
+- Transformaciones tecnológicas complejas
+- Proyectos con alta deuda técnica
+- Actualizaciones de plataformas críticas
+- Migraciones de sistemas con restricciones
+- Refinanciamiento de código y arquitecturas
+- Implementación de cambios en entornos resistentes
+
+## Ventajas
+- Anticipa proactivamente los obstáculos para evitar sorpresas durante la implementación
+- Proporciona un enfoque realista que reconoce las limitaciones y desafíos
+- Facilita la planificación de contingencias y estrategias adaptativas
+- Equilibra la identificación de problemas con soluciones accionables
+- Mejora la comunicación de riesgos y desafíos a stakeholders
+- Promueve expectativas realistas sobre los desafíos del proyecto
+- Establece un ciclo completo desde la comprensión del problema hasta la evaluación de resultados 

@@ -1,0 +1,36 @@
+# Framework CODE (Contexto-Objetivo-Detalles-Ejemplos)
+
+## Componentes
+- **C - Contexto**: Describe el entorno, antecedentes o situación actual relevante
+- **O - Objetivo**: Define el propósito principal o meta que se busca alcanzar
+- **D - Detalles**: Proporciona especificaciones técnicas, requisitos y parámetros necesarios
+- **E - Ejemplos**: Ofrece casos ilustrativos, muestras o referencias para clarificar
+
+## Descripción y propósito
+El framework CODE está diseñado específicamente para proyectos técnicos y de desarrollo, proporcionando una estructura completa que abarca desde el contexto hasta la implementación práctica. Este enfoque asegura que las especificaciones técnicas sean comprensibles, aterrizadas en un contexto real, y respaldadas por ejemplos concretos. Es especialmente valioso para documentación técnica, briefs de desarrollo y especificaciones de proyectos que requieren claridad tanto en los objetivos como en los detalles de implementación.
+
+## Ejemplo de uso
+```
+Contexto: Aplicación móvil de comercio electrónico
+Objetivo: Sistema de pagos integrado
+Detalles: API de pagos, webhooks, lógica de reintentos
+Ejemplos: Incluye código de manejo de errores
+```
+
+## Casos recomendados
+- Documentación técnica y especificaciones de sistemas
+- Briefs para desarrollo de software
+- Definición de historias de usuario detalladas
+- Especificaciones de APIs y servicios
+- Documentación de componentes y módulos
+- Guías técnicas y tutoriales
+- Requerimientos para integración de sistemas
+
+## Ventajas
+- Proporciona una visión integral desde el contexto hasta la implementación práctica
+- Facilita la comprensión técnica al incluir ejemplos concretos
+- Equilibra la visión general con detalles específicos de implementación
+- Mejora la comunicación entre stakeholders y equipos técnicos
+- Reduce ambigüedades con especificaciones claras y ejemplos ilustrativos
+- Facilita la estimación de esfuerzos al proporcionar detalles completos
+- Sirve como referencia completa a lo largo del ciclo de desarrollo 

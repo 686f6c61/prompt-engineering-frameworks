@@ -1,0 +1,38 @@
+# Framework BUILD (Línea Base-Entendimiento-Implementación-Aprendizaje-Entrega)
+
+## Componentes
+- **B - Línea Base (Baseline)**: Establece el punto de partida, estado actual o situación inicial
+- **U - Entendimiento (Understanding)**: Analiza las necesidades, requisitos y expectativas
+- **I - Implementación**: Desarrolla y construye la solución o producto
+- **L - Aprendizaje (Learning)**: Recopila insights, feedback y lecciones aprendidas
+- **D - Entrega (Delivery)**: Finaliza y entrega el producto o solución al usuario final
+
+## Descripción y propósito
+El framework BUILD proporciona una metodología completa para el desarrollo de productos y soluciones desde cero. Sigue un flujo natural que comienza estableciendo una línea base clara, profundiza en el entendimiento de las necesidades, implementa la solución, incorpora el aprendizaje continuo y culmina con la entrega de valor. Este enfoque es particularmente valioso para el desarrollo de nuevos productos, sistemas o funcionalidades donde es importante mantener el enfoque en las necesidades del usuario a lo largo de todo el ciclo.
+
+## Ejemplo de uso
+```
+Línea Base: Estado actual del sistema
+Entendimiento: Necesidades del usuario
+Implementación: Desarrollo incremental
+Aprendizaje: Feedback de usuarios
+Entrega: Versión final en producción
+```
+
+## Casos recomendados
+- Desarrollo de nuevos productos o sistemas
+- Implementación de nuevas funcionalidades
+- Proyectos de transformación digital
+- Creación de plataformas y servicios
+- Iniciativas de innovación y desarrollo
+- Actualización significativa de sistemas existentes
+- Proyectos centrados en el usuario
+
+## Ventajas
+- Proporciona un ciclo completo desde el estado inicial hasta la entrega final
+- Enfatiza la importancia del entendimiento profundo antes de la implementación
+- Incorpora el aprendizaje como componente esencial del proceso
+- Establece una referencia clara para medir el progreso y cambios
+- Mantiene el foco en la entrega de valor al usuario final
+- Facilita la comunicación del proceso a stakeholders
+- Equilibra la planificación con la adaptabilidad basada en aprendizajes 

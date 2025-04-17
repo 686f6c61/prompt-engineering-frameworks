@@ -1,0 +1,36 @@
+# Framework QCQA (Pregunta-Contexto-Calificación-Formato Respuesta)
+
+## Componentes
+- **Q - Pregunta (Question)**: Plantea la consulta principal o problema a resolver
+- **C - Contexto (Context)**: Proporciona información relevante, antecedentes o limitaciones
+- **Q - Calificación (Qualification)**: Especifica los requisitos, criterios o métricas relevantes
+- **A - Formato Respuesta (Answer Format)**: Define cómo debe estructurarse o presentarse la respuesta
+
+## Descripción y propósito
+El framework QCQA está diseñado para estructurar problemas complejos y asegurar respuestas precisas y útiles. Al definir no solo la pregunta sino también el contexto, las calificaciones y el formato esperado, QCQA facilita la obtención de soluciones relevantes y bien enfocadas. Es particularmente valioso para la resolución de problemas técnicos, consultas especializadas y cuando se buscan respuestas con un formato o estructura específica.
+
+## Ejemplo de uso
+```
+Pregunta: ¿Cómo mejorar el rendimiento de la API?
+Contexto: Sistema con 100 mil usuarios diarios
+Calificación: Tiempo de respuesta actual mayor a 500ms
+Formato Respuesta: Plan detallado con mediciones específicas
+```
+
+## Casos recomendados
+- Formulación de preguntas técnicas en entornos de desarrollo
+- Consultas a expertos o equipos especializados
+- Resolución estructurada de problemas complejos
+- Definición de criterios para evaluación de soluciones
+- Comunicación en entornos de soporte técnico
+- Documentación de requisitos para soluciones
+- Consultas que requieren respuestas específicas y detalladas
+
+## Ventajas
+- Mejora la calidad de las respuestas al proporcionar contexto completo
+- Reduce el tiempo de resolución al especificar claramente lo que se busca
+- Evita malentendidos sobre requisitos o criterios importantes
+- Facilita la comparación entre diferentes soluciones propuestas
+- Asegura que las respuestas cumplan con el formato y nivel de detalle necesarios
+- Optimiza la comunicación en equipos técnicos y multidisciplinarios
+- Permite evaluar objetivamente si una solución cumple con los criterios establecidos 

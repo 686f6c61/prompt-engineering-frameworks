@@ -1,0 +1,32 @@
+# Framework RTF (Rol-Tarea-Formato)
+
+## Componentes
+- **R - Rol**: Define quién está realizando la tarea (perfil, expertise, posición)
+- **T - Tarea**: Especifica qué se debe hacer exactamente
+- **F - Formato**: Establece cómo debe presentarse o entregarse el resultado
+
+## Descripción y propósito
+El framework RTF es un enfoque estructurado para crear instrucciones claras y específicas basadas en roles. Ayuda a definir claramente quién debe hacer qué y cómo debe presentarse el resultado final. Es especialmente útil cuando se necesita delegar tareas o especificar trabajos que requieren un formato de entrega particular.
+
+## Ejemplo de uso
+```
+Rol: Arquitecto de software senior
+Tarea: Diseñar sistema de alta disponibilidad
+Formato: Documento técnico detallado con diagramas
+```
+
+## Casos recomendados
+- Delegación de tareas a equipos técnicos
+- Especificación de entregables para consultores o contratistas
+- Documentación técnica y especificaciones de proyectos
+- Asignación de responsabilidades en equipos multidisciplinarios
+- Comunicación entre departamentos con diferentes especialidades
+- Creación de briefings para proyectos de desarrollo
+- Estructuración de documentos técnicos con requisitos específicos
+
+## Ventajas
+- Claridad en la asignación de responsabilidades
+- Expectativas bien definidas para todas las partes
+- Facilita la medición del éxito de la tarea
+- Reduce malentendidos sobre el alcance y formato del entregable
+- Permite una comunicación más eficiente entre diferentes roles en un equipo 

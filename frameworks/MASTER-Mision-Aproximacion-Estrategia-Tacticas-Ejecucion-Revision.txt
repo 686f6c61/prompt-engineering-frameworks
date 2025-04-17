@@ -1,0 +1,40 @@
+# Framework MASTER (Misión-Aproximación-Estrategia-Tácticas-Ejecución-Revisión)
+
+## Componentes
+- **M - Misión**: Define el objetivo principal y propósito fundamental del proyecto
+- **A - Aproximación**: Establece el enfoque general y principios guía a seguir
+- **S - Estrategia**: Desarrolla el plan de alto nivel para lograr la misión
+- **T - Tácticas**: Detalla las acciones específicas y métodos para implementar la estrategia
+- **E - Ejecución**: Implementa las tácticas con asignación de recursos y cronogramas
+- **R - Revisión**: Evalúa resultados, aprende y ajusta basándose en el desempeño
+
+## Descripción y propósito
+El framework MASTER proporciona una metodología completa para la gestión de proyectos complejos, abarcando desde la definición de objetivos hasta la evaluación de resultados. Sigue una progresión lógica que conecta la visión de alto nivel con la implementación detallada y el aprendizaje continuo. Este enfoque integral es particularmente valioso para proyectos tecnológicos de gran escala, transformaciones organizacionales o cualquier iniciativa que requiera una planificación rigurosa y multidimensional.
+
+## Ejemplo de uso
+```
+Misión: Migración a la nube
+Aproximación: Priorizar serverless
+Estrategia: Arquitectura de microservicios
+Tácticas: Pipeline de integración continua
+Ejecución: Sprints de 2 semanas
+Revisión: Métricas semanales
+```
+
+## Casos recomendados
+- Gestión de proyectos tecnológicos complejos
+- Implementación de transformaciones digitales
+- Desarrollo de nuevas plataformas o productos
+- Migraciones de sistemas críticos
+- Reestructuración de arquitecturas tecnológicas
+- Implementación de metodologías DevOps
+- Integración de sistemas empresariales
+
+## Ventajas
+- Proporciona un marco completo desde la visión hasta la implementación y mejora
+- Establece una jerarquía clara que conecta objetivos con acciones concretas
+- Facilita la comunicación y alineación entre diferentes niveles organizacionales
+- Promueve la mejora continua mediante ciclos estructurados de revisión
+- Equilibra la planificación estratégica con la implementación táctica
+- Ayuda a prevenir la desviación del propósito original durante la implementación
+- Fomenta una cultura de aprendizaje y adaptación basada en resultados medibles 

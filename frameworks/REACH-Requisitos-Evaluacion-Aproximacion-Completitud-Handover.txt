@@ -1,0 +1,38 @@
+# Framework REACH (Requisitos-Evaluación-Aproximación-Completitud-Handover)
+
+## Componentes
+- **R - Requisitos (Requirements)**: Define las necesidades, especificaciones y criterios a cumplir
+- **E - Evaluación**: Analiza la viabilidad, opciones y consideraciones técnicas
+- **A - Aproximación (Approach)**: Establece la metodología y estrategia de implementación
+- **C - Completitud (Completeness)**: Verifica que todos los entregables y criterios se cumplan
+- **H - Handover**: Planifica y ejecuta la transferencia formal del proyecto o solución
+
+## Descripción y propósito
+El framework REACH proporciona una metodología completa para la gestión de proyectos desde la definición de requisitos hasta la entrega final. Su enfoque único incluye explícitamente la fase de transferencia (handover), asegurando una transición efectiva del proyecto al equipo operativo o cliente. Este marco es particularmente valioso para proyectos con entregables claramente definidos, donde la transferencia de conocimiento y responsabilidad es crítica para el éxito a largo plazo.
+
+## Ejemplo de uso
+```
+Requisitos: Sistema de gestión de inventario
+Evaluación: Análisis de requisitos y viabilidad
+Aproximación: Desarrollo iterativo con Scrum
+Completitud: Entregables y documentación
+Handover: Plan de capacitación y soporte
+```
+
+## Casos recomendados
+- Desarrollo de sistemas para clientes
+- Implementación de soluciones empresariales
+- Proyectos con equipos de entrega y operación separados
+- Transición de sistemas de desarrollo a producción
+- Implementación de plataformas o aplicaciones
+- Proyectos con requisitos estrictos de documentación
+- Desarrollo de soluciones para terceros
+
+## Ventajas
+- Proporciona un marco completo desde los requisitos hasta la entrega
+- Enfatiza la importancia de la transferencia efectiva del conocimiento
+- Mejora la transición de proyectos de equipos de desarrollo a operaciones
+- Asegura que todos los entregables y criterios estén completos
+- Reduce problemas post-implementación mediante una entrega estructurada
+- Facilita la aceptación por parte del cliente o usuario final
+- Establece responsabilidades claras durante todo el ciclo del proyecto 
