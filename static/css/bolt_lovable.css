@@ -1,0 +1,138 @@
+/* Estilos específicos para la funcionalidad Bolt/Lovable */
+
+.search-container {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.prompt-area {
+    min-height: 300px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.markdown-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.markdown-content h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.markdown-content h3 {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.markdown-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.markdown-content ul, 
+.markdown-content ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.markdown-content li {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1rem;
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.markdown-content code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 0.9em;
+}
+
+.markdown-content pre {
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.markdown-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.markdown-content th,
+.markdown-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.markdown-content th {
+    background-color: #f5f5f5;
+}
+
+/* Estilos para los botones de acción */
+#generate-bolt-lovable-btn {
+    transition: all 0.3s ease;
+}
+
+#generate-bolt-lovable-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .prompt-area {
+        min-height: 200px;
+    }
+    
+    .markdown-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .markdown-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .markdown-content h3 {
+        font-size: 1.1rem;
+    }
+} 

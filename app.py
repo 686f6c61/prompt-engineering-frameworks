@@ -15,6 +15,7 @@ from utils.openai_helper import optimize_prompt, count_tokens, get_framework_rec
 from utils.openai_helper import DEFAULT_MODEL, PREMIUM_MODEL
 from utils.prompt_formatter import format_prompt_markdown
 from utils.rate_limiter import check_rate_limit, increment_usage, get_usage_info
+from utils.bolt_lovable_helper import generate_bolt_lovable_prompt
 from console import console
 
 # Inicialización de la aplicación Flask
@@ -268,6 +269,160 @@ def como_funciona():
         template: Renderiza como_funciona.html
     """
     return render_template('como_funciona.html')
+
+@app.route('/bolt-lovable')
+def bolt_lovable():
+    """
+    Ruta que renderiza la página de generación de prompts para Bolt/Lovable.
+    
+    Returns:
+        template: Renderiza bolt_lovable.html
+    """
+    # Obtener el modelo actual para mostrarlo en la interfaz
+    if session.get('use_custom_api_key', False):
+        current_model = PREMIUM_MODEL
+        is_custom = True
+    else:
+        current_model = DEFAULT_MODEL
+        is_custom = False
+        
+    return render_template('bolt_lovable.html', 
+                          current_model=current_model,
+                          is_custom=is_custom)
+
+# Endpoint para recomendar un framework web
+@app.route('/api/recommend-web-framework', methods=['POST'])
+def recommend_web_framework():
+    """
+    Endpoint para recomendar un framework web basado en la descripción del proyecto.
+    
+    Expects:
+        JSON: {
+            "description": string  # Descripción del proyecto web
+        }
+    
+    Returns:
+        JSON: {
+            "success": bool,
+            "framework": string,
+            "error": string (opcional)
+        }
+    """
+    data = request.json
+    description = data.get('description', '')
+    
+    if not description:
+        return jsonify({"success": False, "error": "Descripción no proporcionada"}), 400
+    
+    # Verificar límite de uso
+    is_limited, remaining, reset_time = check_rate_limit()
+    if is_limited:
+        return jsonify({
+            "success": False, 
+            "error": f"Has alcanzado el límite de {10} solicitudes por hora. Por favor, espera {reset_time} o usa tu propia API key."
+        }), 429
+    
+    try:
+        # Obtener la recomendación como texto plano
+        recommendation_text = get_framework_recommendation(description, context="web")
+        
+        # Incrementar contador de uso
+        remaining, reset_time = increment_usage()
+        
+        # Extraer el framework recomendado
+        framework = "code"  # Valor por defecto
+        
+        if "RTF" in recommendation_text or "rol-tarea-formato" in recommendation_text.lower():
+            framework = "rtf"
+        elif "CODE" in recommendation_text or "contexto-objetivo-detalles-ejemplos" in recommendation_text.lower():
+            framework = "code"
+        elif "GUIDE" in recommendation_text:
+            framework = "guide"
+        elif "CLARITY" in recommendation_text:
+            framework = "clarity"
+        
+        return jsonify({
+            "success": True, 
+            "framework": framework,
+            "recommendation": recommendation_text,
+            "usage": {
+                "remaining": remaining,
+                "reset_time": reset_time
+            }
+        })
+    except Exception as e:
+        console.error("Error al obtener recomendación", str(e))
+        return jsonify({"success": False, "error": str(e)}), 400
+
+# Endpoint para generar prompt para Bolt/Lovable
+@app.route('/api/generate-bolt-lovable', methods=['POST'])
+def generate_bolt_lovable():
+    """
+    Endpoint para generar prompts especializados para plataformas Bolt/Lovable.
+    
+    Expects:
+        JSON: {
+            "framework_type": string,   # Tipo de framework seleccionado
+            "form_data": dict           # Datos del formulario
+        }
+    
+    Returns:
+        JSON: {
+            "success": bool,
+            "prompt": string,           # Prompt formateado con Markdown
+            "raw_prompt": string,       # Prompt en texto plano
+            "token_count": int,         # Contador de tokens
+            "error": string (opcional)
+        }
+    """
+    data = request.json
+    framework_type = data.get('framework_type', '')
+    form_data = data.get('form_data', {})
+    
+    if not framework_type or not form_data:
+        return jsonify({
+            "success": False, 
+            "error": "Datos incompletos. Se requiere un framework y datos del formulario."
+        }), 400
+    
+    # Verificar límite de uso
+    is_limited, remaining, reset_time = check_rate_limit()
+    if is_limited:
+        return jsonify({
+            "success": False, 
+            "error": f"Has alcanzado el límite de {10} solicitudes por hora. Por favor, espera {reset_time} o usa tu propia API key."
+        }), 429
+    
+    try:
+        # Obtener la API key si el usuario usa la suya propia
+        user_api_key = session.get('api_key') if session.get('use_custom_api_key', False) else None
+        
+        # Generar el prompt para Bolt/Lovable
+        form_data['framework_type'] = framework_type
+        result = generate_bolt_lovable_prompt(form_data, user_api_key)
+        
+        if not result['success']:
+            return jsonify(result), 400
+        
+        # Incrementar contador de uso
+        remaining, reset_time = increment_usage()
+        
+        # Contar tokens
+        token_count = count_tokens(result['raw_prompt'])
+        
+        return jsonify({
+            "success": True,
+            "prompt": result['prompt'],
+            "raw_prompt": result['raw_prompt'],
+            "token_count": token_count,
+            "usage": {
+                "remaining": remaining,
+                "reset_time": reset_time
+            }
+        })
+    except Exception as e:
+        console.error("Error al generar prompt Bolt/Lovable", str(e))
+        return jsonify({"success": False, "error": str(e)}), 400
 
 # Nuevo endpoint para obtener información de límite de uso
 @app.route('/api/usage-info', methods=['GET'])

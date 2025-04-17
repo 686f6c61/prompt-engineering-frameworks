@@ -748,7 +748,7 @@ def count_tokens(text: str) -> int:
     )
     return response.usage.prompt_tokens
 
-def get_framework_recommendation(objective: str) -> str:
+def get_framework_recommendation(objective: str, context: str = "general") -> str:
     system_message = f'''Eres un experto en frameworks de prompts en español. Tu tarea es analizar el objetivo del usuario y recomendar ÚNICAMENTE uno de los siguientes frameworks disponibles. NO INVENTES FRAMEWORKS NUEVOS:
 
     RTF, TAG, BAB, CARE, RISE, PEAS, STAR, QCQA, AIDA, PARA, SMART, ERQ, CODE, PROS, TEAM, IDEA, FAST, LEAP, GROW, SPIN, DESIGN, VISION, IMPACT, MASTER, POWER, LOGIC, SCOPE, FOCUS, EXPERT, CLARITY, GUIDE, PATH, LEARN, SOLVE, PRIME, ADAPT, BUILD, CRAFT, SCALE, THINK, QUEST, DRIVE, SHAPE, REACH, BLEND, SPARK, PULSE
@@ -783,7 +783,21 @@ def get_framework_recommendation(objective: str) -> str:
        - Interno vs Externo: TEAM vs IMPACT
        - Corto vs Largo plazo: FAST vs VISION
        - Estratégico vs Táctico: MASTER vs LOGIC
-
+    '''
+    
+    # Añadir contexto específico para desarrollo web
+    if context.lower() == "web":
+        system_message += f'''
+    IMPORTANTE: El usuario está desarrollando un proyecto web, por lo que necesita un framework que se adapte específicamente a este contexto. 
+    
+    Considera prioritariamente los siguientes frameworks:
+    - RTF: Ideal para proyectos web con roles específicos y entregables estructurados
+    - CODE: Perfecto para documentación técnica y guías de desarrollo web
+    - CLARITY: Óptimo para proyectos web complejos con timeline y requisitos detallados
+    - GUIDE: Excelente para desarrollo de productos y servicios web enfocados al usuario
+    '''
+    
+    system_message += f'''
     Para cada framework, debes explicar qué significa cada componente en general, no dar un ejemplo específico.
 
     Por ejemplo, para PEAS:
@@ -822,8 +836,23 @@ def get_framework_recommendation(objective: str) -> str:
     framework_match = re.search(r'FRAMEWORK:\s*([^\n]+)', recommendation_text, re.IGNORECASE)
     
     if not framework_match:
-        # Si no tiene el formato esperado, usar formato genérico de PEAS
-        return """FRAMEWORK: PEAS
+        # Si no tiene el formato esperado, usar formato genérico apropiado al contexto
+        if context.lower() == "web":
+            return """FRAMEWORK: CODE
+
+¿Por qué este framework?
+
+El framework CODE es ideal para proyectos de desarrollo web ya que permite estructurar de manera clara y completa toda la información necesaria para crear un sitio o aplicación web efectiva. Este enfoque asegura que se cubran todos los aspectos fundamentales: el contexto del proyecto, los objetivos concretos que se buscan alcanzar, los detalles técnicos necesarios y ejemplos de referencia que ayudan a clarificar expectativas. CODE es particularmente valioso para equipos técnicos que necesitan especificaciones claras, documentación técnica organizada y referencias visuales para implementar correctamente la visión del cliente.
+
+Ejemplo de uso:
+
+C: Contexto - Define el entorno, situación actual y antecedentes relevantes del proyecto web
+O: Objetivo - Establece los resultados específicos y medibles que se esperan del desarrollo
+D: Detalles - Especifica los requisitos técnicos, funcionalidades y especificaciones necesarias
+E: Ejemplos - Proporciona referencias, inspiración o casos de uso que ilustran lo esperado
+"""
+        else:
+            return """FRAMEWORK: PEAS
 
 ¿Por qué este framework?
 
@@ -840,8 +869,23 @@ S: Estilo - Determina el tono, formato y enfoque apropiado para la comunicación
     # Verificar que el framework recomendado está en la lista de frameworks disponibles
     framework_name = framework_match.group(1).strip().lower()
     if framework_name not in [f.lower() for f in AVAILABLE_FRAMEWORKS]:
-        # Si no es un framework válido, usar formato genérico
-        return """FRAMEWORK: PEAS
+        # Si no es un framework válido, usar formato genérico apropiado al contexto
+        if context.lower() == "web":
+            return """FRAMEWORK: CODE
+
+¿Por qué este framework?
+
+El framework CODE es ideal para proyectos de desarrollo web ya que permite estructurar de manera clara y completa toda la información necesaria para crear un sitio o aplicación web efectiva. Este enfoque asegura que se cubran todos los aspectos fundamentales: el contexto del proyecto, los objetivos concretos que se buscan alcanzar, los detalles técnicos necesarios y ejemplos de referencia que ayudan a clarificar expectativas. CODE es particularmente valioso para equipos técnicos que necesitan especificaciones claras, documentación técnica organizada y referencias visuales para implementar correctamente la visión del cliente.
+
+Ejemplo de uso:
+
+C: Contexto - Define el entorno, situación actual y antecedentes relevantes del proyecto web
+O: Objetivo - Establece los resultados específicos y medibles que se esperan del desarrollo
+D: Detalles - Especifica los requisitos técnicos, funcionalidades y especificaciones necesarias
+E: Ejemplos - Proporciona referencias, inspiración o casos de uso que ilustran lo esperado
+"""
+        else:
+            return """FRAMEWORK: PEAS
 
 ¿Por qué este framework?
 
