@@ -9,6 +9,7 @@ Environment Variables:
 """
 
 import os
+import secrets
 from flask import Flask, render_template, request, jsonify
 from utils.openai_helper import optimize_prompt, count_tokens, get_framework_recommendation, FRAMEWORK_EXAMPLES
 from utils.prompt_formatter import format_prompt_markdown
@@ -16,7 +17,10 @@ from console import console
 
 # Inicialización de la aplicación Flask
 app = Flask(__name__)
-app.secret_key = os.environ.get("FLASK_SECRET_KEY") or "dev_key"
+
+# Configuración de seguridad
+# Usar variable de entorno FLASK_SECRET_KEY o generar una clave si no existe
+app.secret_key = os.environ.get('FLASK_SECRET_KEY', secrets.token_hex(16))
 
 @app.route('/')
 def index():
@@ -152,3 +156,13 @@ def como_funciona():
         template: Renderiza como_funciona.html
     """
     return render_template('como_funciona.html')
+
+
+# Configuración para ejecutar la aplicación en Render o localmente
+if __name__ == "__main__":
+    # Usar el puerto proporcionado por Render o el 5000 por defecto para desarrollo local
+    port = int(os.environ.get("PORT", 5000))
+    debug_mode = os.environ.get("FLASK_ENV", "development") != "production"
+    
+    # Ejecutar la aplicación
+    app.run(host="0.0.0.0", port=port, debug=debug_mode)
