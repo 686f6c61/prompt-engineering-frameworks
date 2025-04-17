@@ -878,9 +878,24 @@ async function copyMarkdown() {
     const promptText = promptPreview.getAttribute('data-raw-prompt') || promptPreview.textContent;
     
     try {
+        // Asegurar que copiamos el texto con formato markdown (headings, bold, etc.)
+        let markdownText = promptText;
+        
+        // Añadir formato a headings si no lo tienen ya (# para títulos, ## para subtítulos)
+        markdownText = markdownText.replace(/^([A-Z][^:]+):\s*(.+)$/gm, function(match, p1, p2) {
+            // Si la línea parece un título o subtítulo pero no tiene #, añadirlos
+            if (p1.length < 25) { // Probablemente un título/encabezado si es corto
+                return `## ${p1}\n\n${p2}`;
+            }
+            return match;
+        });
+        
+        // Asegurar que los elementos en negrita permanecen con formato markdown
+        markdownText = markdownText.replace(/\*\*([^*]+)\*\*/g, '**$1**');
+        
         // Método alternativo de copiado
         const textArea = document.createElement('textarea');
-        textArea.value = promptText;
+        textArea.value = markdownText;
         document.body.appendChild(textArea);
         textArea.select();
         document.execCommand('copy');
@@ -1078,7 +1093,7 @@ function updateUsageDisplay(data) {
             message = `Usos disponibles de GPT-3.5: ${data.remaining}/10 para esta hora.`;
         }
         
-        usageContainer.innerHTML = `<div class="alert ${messageClass}"><i class="bi ${icon}"></i>${message}</div>`;
+        usageContainer.innerHTML = `<div class="row"><div class="col-12 col-md-10 col-lg-8 mx-auto"><div class="alert ${messageClass}"><i class="bi ${icon}"></i>${message}</div></div></div>`;
         usageContainer.style.display = 'block';
     } else {
         usageContainer.style.display = 'none';

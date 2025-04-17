@@ -11,7 +11,13 @@ from console import console
 
 # Estructura de prompt para Bolt/Lovable basada en los frameworks existentes
 BOLT_LOVABLE_TEMPLATE = """
-# Proyecto Web Detallado: {title}
+# {project_name}
+
+## Información del Proyecto
+- **Nombre del Proyecto**: {project_name}
+- **Título Descriptivo**: {title}
+- **Código/Identificador del Proyecto**: {project_id}
+- **Fecha Estimada de Lanzamiento**: {launch_date}
 
 ## Resumen Ejecutivo
 {summary}
@@ -19,8 +25,20 @@ BOLT_LOVABLE_TEMPLATE = """
 ## Objetivos del Proyecto
 {goals}
 
-## Público Objetivo
-{target_audience}
+## Análisis de Audiencia
+{audience_analysis}
+
+## Especificaciones Visuales Detalladas
+{visual_specs}
+
+## Interacciones y Comportamientos
+{interactions}
+
+## Componentes Específicos
+{components}
+
+## Responsive y Adaptación
+{responsive}
 
 ## Alcance del Proyecto
 {scope}
@@ -28,35 +46,23 @@ BOLT_LOVABLE_TEMPLATE = """
 ## Requisitos Funcionales
 {functional_requirements}
 
-## Requisitos No Funcionales
-{non_functional_requirements}
+## Arquitectura de Contenido
+{content_architecture}
 
-## Diseño y Experiencia de Usuario
-{ux_design}
+## Especificaciones Técnicas
+{tech_specs}
 
-## Tecnologías y Stack
-{tech_stack}
+## Funcionalidades Interactivas Específicas
+{interactive_features}
 
-## Integraciones Necesarias
-{integrations}
+## Análisis Competitivo
+{competitive_analysis}
 
-## Calendario y Plazos
-{timeline}
+## SEO y Estrategia de Visibilidad
+{seo_strategy}
 
-## Presupuesto Estimado
-{budget}
-
-## Métricas de Éxito
-{success_metrics}
-
-## Consideraciones Adicionales
-{additional_considerations}
-
-## Estructura de Contenido
-{content_structure}
-
-## Referencias y Competencia
-{references}
+## Contenido Textual y Multimedia
+{content}
 """
 
 def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
@@ -84,32 +90,216 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
                 
         # Objetivo de desarrollo web para el sistema Bolt/Lovable
         prompt_context = f"""
-        Tu tarea es transformar la siguiente información de proyecto en un prompt completo y 
-        estructurado para una plataforma de desarrollo web llamada Bolt/Lovable.
-        
+        # Prompt Generador de Especificaciones para Bolt/Lovable
+
+        Tu tarea es transformar la siguiente información de proyecto en un prompt completo y estructurado para una plataforma de desarrollo web llamada Bolt/Lovable.
+
         {framework_context}
+
+        ## Instrucciones Generales
+        - Sé extremadamente detallado y específico en cada sección
+        - Proporciona ejemplos visuales concretos (URLs o descripciones precisas)
+        - Define comportamientos exactos para cada elemento interactivo
+        - Incluye medidas precisas (en px, rem, vh/vw) para los componentes principales
+        - Especifica animaciones y transiciones deseadas con su timing
+
+        ## Estructura del Documento
+
+        ### 1. Información del Proyecto
+        - **Nombre del Proyecto**: [Nombre corto y memorable]
+        - **Título Descriptivo**: [Título que explique claramente el propósito del proyecto]
+        - **Código/Identificador del Proyecto**: [Si aplica]
+        - **Fecha Estimada de Lanzamiento**: [Fecha objetivo]
+
+        ### 2. Resumen Ejecutivo
+        - Proporciona 2-3 párrafos concisos que expliquen:
+          - El propósito principal del proyecto
+          - El problema que resuelve
+          - La propuesta de valor única
+          - Resultados esperados medibles
+
+        ### 3. Objetivos del Proyecto
+        - Lista mínimo 5 objetivos SMART (Específicos, Medibles, Alcanzables, Relevantes y con Tiempo definido)
+        - Para cada objetivo, define:
+          - Métrica de éxito concreta
+          - Plazo de tiempo para alcanzarlo
+          - Prioridad (Alta/Media/Baja)
+
+        ### 4. Análisis de Audiencia
+        - **Perfil Demográfico Detallado**: Edad, ubicación, ocupación, nivel de ingresos
+        - **Perfiles de Usuario Primarios**: Mínimo 2 personas ficticias con nombres, historias y necesidades
+        - **Comportamientos Digitales**: Dispositivos utilizados, tiempo en línea, preferencias técnicas
+        - **Puntos de Dolor**: Problemas específicos que el proyecto resuelve para esta audiencia
+        - **Expectativas del Usuario**: Lo que esperan lograr con el producto/servicio
+
+        ### 5. Especificaciones Visuales Detalladas
+        - **Estilo Visual Principal**: 
+          - Minimalista/Maximalista/Flat/Neomorfismo/etc.
+          - Referencias visuales exactas (URLs o imágenes)
+          - Ejemplos de sitios con estética similar
+        - **Paleta de Colores**: 
+          - Color primario: [código HEX] - Usar en [elementos específicos]
+          - Color secundario: [código HEX] - Usar en [elementos específicos]
+          - Color de acento: [código HEX] - Usar en [elementos específicos]
+          - Colores de fondo: [códigos HEX] - Usar en [secciones específicas]
+          - Gradientes específicos: [de-a] - Usar en [elementos específicos]
+        - **Tipografía**:
+          - Fuente para títulos: [nombre exacto] - Tamaños: [H1: Xpx, H2: Ypx, etc.]
+          - Fuente para texto: [nombre exacto] - Tamaño: [Xpx] - Interlineado: [Ypx]
+          - Jerarquía tipográfica completa con ejemplos
+          - Peso de fuente para cada elemento (400, 500, 700, etc.)
+        - **Espaciado y Grid**:
+          - Sistema de grid: [12 columnas/otro] - Gutters: [Xpx]
+          - Márgenes exteriores: [Xpx en móvil, Ypx en desktop]
+          - Padding de secciones: [Xpx en móvil, Ypx en desktop]
+          - Espaciado entre elementos: [sistema específico]
+        - **Elementos UI**:
+          - Botones: [dimensiones exactas, estados, bordes, sombras]
+          - Campos de formulario: [altura, estilos de borde, comportamiento focus]
+          - Tarjetas/Cards: [dimensiones, sombras, bordes]
+          - Iconografía: [estilo, tamaños, consistencia]
+          - Imágenes: [proporciones, tratamiento, filtros]
+
+        ### 6. Interacciones y Comportamientos
+        - **Navegación Principal**:
+          - Tipo: [sticky/fixed/estándar]
+          - Comportamiento en scroll: [descripción exacta]
+          - Menú móvil: [tipo de animación, comportamiento]
+          - Estados activos: [descripción visual]
+        - **Animaciones y Transiciones**:
+          - Animaciones de entrada: [para cada sección o elemento]
+          - Hover states: [comportamiento específico para links, botones, cards]
+          - Transiciones entre páginas: [tipo, duración, easing]
+          - Micro-interacciones: [detalles específicos]
+        - **Scrolling**:
+          - Comportamiento de scroll: [suave/estándar]
+          - Efectos parallax: [en qué elementos, intensidad]
+          - Scroll snapping: [si aplica, en qué secciones]
+          - Animaciones basadas en scroll: [descripción detallada]
+        - **Formularios**:
+          - Validación: [visual, timing, mensajes]
+          - Comportamiento de envío: [animación, feedback]
+          - Estados de error: [visualización específica]
+          - Autocompletado: [comportamiento deseado]
+
+        ### 7. Componentes Específicos
+        - **Hero Section**:
+          - Altura: [Xvh en desktop, Yvh en móvil]
+          - Contenido: [texto, imagen, video, animación]
+          - Comportamiento: [parallax, video autoplay, slider]
+          - Call to action: [ubicación, estilo, animación]
+        - **Navegación**:
+          - Estructura exacta del menú
+          - Comportamiento en diferentes breakpoints
+          - Animaciones de despliegue
+          - Elementos interactivos (dropdowns, mega-menús)
+        - **Footer**:
+          - Secciones y distribución
+          - Elementos interactivos
+          - Adaptación responsiva
+          - Tratamiento visual específico
+        - **Listados de Contenido**:
+          - Formato de visualización (grid, lista, masonry)
+          - Número de columnas por breakpoint
+          - Paginación/Carga infinita/Load more
+          - Filtrado y ordenación
+        - **Páginas de Detalle**:
+          - Estructura específica
+          - Elementos destacados
+          - Navegación interna
+          - Secciones relacionadas
+
+        ### 8. Responsive y Adaptación
+        - **Breakpoints Específicos**:
+          - Mobile: [Xpx] - Comportamiento: [descripción]
+          - Tablet: [Xpx] - Comportamiento: [descripción]
+          - Desktop: [Xpx] - Comportamiento: [descripción]
+          - Large Desktop: [Xpx] - Comportamiento: [descripción]
+        - **Adaptaciones por Dispositivo**:
+          - Elementos que cambian/desaparecen en móvil
+          - Reorganización de secciones
+          - Cambios de navegación
+          - Optimización de imágenes
+        - **Touch vs. Mouse**:
+          - Consideraciones específicas para tactil
+          - Tamaños de áreas táctiles
+          - Gestos específicos soportados
+          - Hover states alternos para móvil
+
+        ### 9. Alcance del Proyecto
+        - **Incluido en el Alcance**: Lista detallada de componentes, páginas y funcionalidades
+        - **Explícitamente Fuera del Alcance**: Lo que NO se desarrollará en esta fase
+        - **Fases de Implementación**: Si aplica, división del proyecto en etapas con entregables específicos
+        - **Dependencias Críticas**: Sistemas externos, APIs o servicios necesarios
+
+        ### 10. Requisitos Funcionales
+        - Lista mínimo 8 requisitos funcionales numerados y priorizados
+        - Para cada requisito específica:
+          - Descripción detallada del comportamiento esperado
+          - Criterios de aceptación medibles
+          - Casos de uso principales
+          - Dependencias técnicas
+          - Nivel de complejidad estimado (Bajo/Medio/Alto)
+
+        ### 11. Arquitectura de Contenido
+        - **Mapa del Sitio**: Estructura jerárquica completa de páginas y secciones
+        - **Tipos de Contenido**: Definición de cada tipo (blogs, productos, servicios, etc.)
+        - **Modelos de Datos**: Campos y relaciones entre diferentes tipos de contenido
+        - **Estrategia de Contenido**: Frecuencia de actualización, directrices editoriales
+        - **Estructura de URL**: Patrones específicos para cada tipo de contenido
+
+        ### 12. Especificaciones Técnicas
+        - **Stack Tecnológico Preferido**: Frameworks, lenguajes, bibliotecas específicas
+        - **Integraciones Requeridas**: APIs, servicios externos, sistemas de pago, CRMs, etc.
+        - **Consideraciones de Hosting**: Requisitos de servidor, CDN, balanceo de carga
+        - **Arquitectura del Sistema**: Diagrama o descripción de componentes técnicos principales
+        - **Rendimiento**: Métricas específicas (LCP, CLS, FID)
+
+        ### 13. Funcionalidades Interactivas Específicas
+        - **Carruseles/Sliders**:
+          - Comportamiento exacto (velocidad, tipo de transición)
+          - Controles (ubicación, estilo, comportamiento)
+          - Autoplay [sí/no] - Intervalo [X segundos]
+          - Comportamiento responsivo
+        - **Modales/Popups**:
+          - Triggers específicos
+          - Animación de entrada/salida
+          - Comportamiento de overlay
+          - Accesibilidad y keyboard navigation
+        - **Acordeones/Tabs**:
+          - Estilo visual específico
+          - Comportamiento de transición
+          - Estados activos/inactivos
+          - Configuración inicial (abierto/cerrado)
+        - **Mapas y Ubicaciones**:
+          - Proveedor (Google Maps, Mapbox, etc.)
+          - Estilo visual del mapa
+          - Markers personalizados
+          - Interactividad y zoom
+
+        ### 14. Análisis Competitivo
+        - **Competidores Directos**: Mínimo 3 con URLs y análisis de fortalezas/debilidades
+        - **Benchmarks de la Industria**: Estándares a alcanzar o superar
+        - **Diferenciadores Clave**: Ventajas competitivas específicas a destacar
+        - **Oportunidades Identificadas**: Brechas en el mercado que el proyecto puede aprovechar
+        - **Elementos Visuales Inspiradores**: Específicamente de la competencia
+
+        ### 15. SEO y Estrategia de Visibilidad
+        - **Palabras Clave Primarias**: Lista priorizada con volumen de búsqueda
+        - **Palabras Clave Secundarias**: Términos de apoyo y variaciones
+        - **Meta Etiquetas**: Ejemplos para páginas principales (título, descripción, OG tags)
+        - **Estructura de URLs**: Patrón recomendado
+        - **Consideraciones Técnicas SEO**: Requisitos específicos de esquemas, velocidad, etc.
+        - **Etiquetas de Estructura**: H1, H2, etc. y su uso específico
+
+        ### 16. Contenido Textual y Multimedia
+        - **Mensajes Clave**: Puntos de comunicación principales
+        - **Textos para Secciones Críticas**: Copys exactos para homepage, landing pages, CTAs
+        - **Tono de Voz**: Directrices específicas sobre cómo debe comunicarse la marca
+        - **Terminología**: Glosario de términos específicos del sector o marca
+        - **Contenido Multimedia**: Especificaciones para fotos, videos, audio (formatos, dimensiones, duración)
         
-        Crea un documento estructurado y detallado que incluya TODOS los siguientes elementos:
-        
-        1. Título claro y descriptivo del proyecto
-        2. Resumen ejecutivo (1-2 párrafos)
-        3. Objetivos específicos del proyecto (mínimo 3)
-        4. Descripción detallada del público objetivo
-        5. Alcance exacto del proyecto (qué incluye y qué no)
-        6. Requisitos funcionales completos (mínimo 5)
-        7. Requisitos no funcionales (rendimiento, seguridad, accesibilidad)
-        8. Diseño y experiencia de usuario deseada (estilo, sensación, referencias)
-        9. Stack tecnológico recomendado
-        10. Integraciones necesarias con otros sistemas
-        11. Calendario y plazos de desarrollo realistas
-        12. Presupuesto estimado con desglose
-        13. Métricas para medir el éxito del proyecto
-        14. Consideraciones especiales o requisitos únicos
-        15. Estructura de contenido propuesta
-        16. Referencias de sitios competidores o inspiración
-        
-        Sé extremadamente detallado y específico en cada sección. No utilices generalidades.
-        Incluye datos concretos, números y especificaciones siempre que sea posible.
+        Asegúrate de adaptar cada sección a las necesidades específicas del proyecto y proporcionar ejemplos concretos siempre que sea posible. El documento final debe servir como una guía completa y autónoma para el equipo de desarrollo de Bolt/Lovable, con énfasis especial en los aspectos visuales e interactivos que definirán la experiencia del usuario.
         """
         
         console.info(f"Generando prompt Bolt/Lovable usando el modelo {model}")

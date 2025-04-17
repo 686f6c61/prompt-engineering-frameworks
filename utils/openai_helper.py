@@ -54,6 +54,58 @@ AVAILABLE_FRAMEWORKS = [
     'guide', 'path', 'learn', 'solve', 'prime', 'adapt', 'build', 'craft', 'scale', 'think', 'quest', 'drive', 'shape', 'reach', 'blend', 'spark', 'pulse', 'bolt_lovable'
 ]
 
+# Definición de plantillas para cada framework
+framework_templates = {
+    'rtf': "Rol: {role}\nTarea: {task}\nFormato: {format}",
+    'tag': "Tarea: {task}\nAcción: {action}\nMeta: {goal}",
+    'bab': "Antes: {before}\nDespués: {after}\nPuente: {bridge}",
+    'care': "Contexto: {context}\nAcción: {action}\nResultado: {result}\nEjemplo: {example}",
+    'rise': "Relevancia: {relevance}\nInformación: {information}\nSolución: {solution}\nEvaluación: {evaluation}",
+    'peas': "Propósito: {purpose}\nResultado Final: {end_result}\nAudiencia: {audience}\nEstilo: {style}",
+    'star': "Situación: {situation}\nTarea: {task}\nAcción: {action}\nResultado: {result}",
+    'qcqa': "Pregunta: {question}\nContexto: {context}\nCalificación: {qualification}\nFormato Respuesta: {answer_format}",
+    'aida': "Atención: {attention}\nInterés: {interest}\nDeseo: {desire}\nAcción: {action}",
+    'para': "Problema: {problem}\nAproximación: {approach}\nRazón: {reason}\nAcción: {action}",
+    'smart': "Específico: {specific}\nMedible: {measurable}\nAlcanzable: {achievable}\nRelevante: {relevant}\nTemporal: {time_bound}",
+    'erq': "Experiencia: {experience}\nRequisitos: {requirements}\nCualificaciones: {qualifications}",
+    'code': "Contexto: {context}\nObjetivo: {objective}\nDetalles: {details}\nEjemplos: {examples}",
+    'pros': "Perspectiva: {perspective}\nRequisitos: {requirements}\nResultado: {outcome}\nSolución: {solution}",
+    'team': "Tarea: {task}\nEntorno: {environment}\nAproximación: {approach}\nMétricas: {metrics}",
+    'idea': "Identificar: {identify}\nDefinir: {define}\nEjecutar: {execute}\nAnalizar: {analyze}",
+    'fast': "Enfoque: {focus}\nAudiencia: {audience}\nAlcance: {scope}\nTono: {tone}",
+    'leap': "Nivel: {level}\nExpectativas: {expectations}\nAproximación: {approach}\nParámetros: {parameters}",
+    'grow': "Meta: {goal}\nRealidad: {reality}\nOpciones: {options}\nCamino: {way_forward}",
+    'spin': "Situación: {situation}\nProblema: {problem}\nImplicación: {implication}\nNecesidad-Beneficio: {need_payoff}",
+    'design': "Definir: {define}\nExplorar: {explore}\nAlcance: {scope}\nIdear: {ideate}\nGuiar: {guide}\nReducir: {reduce}",
+    'vision': "Visualizar: {visualize}\nIdentificar: {identify}\nEstructurar: {structure}\nImplementar: {implement}\nOptimizar: {optimize}\nNavegar: {navigate}",
+    'impact': "Intención: {intention}\nMensaje: {message}\nPropósito: {purpose}\nAudiencia: {audience}\nCanal: {channel}\nTiempo: {timing}",
+    'master': "Misión: {mission}\nAproximación: {approach}\nEstrategia: {strategy}\nTácticas: {tactics}\nEjecución: {execution}\nRevisión: {review}",
+    'power': "Problema: {problem}\nResultado: {outcome}\nPor qué: {why}\nEjecución: {execution}\nRecursos: {resources}",
+    'logic': "Diseño: {design}\nObjetivo: {objective}\nDirectrices: {guidelines}\nImplementación: {implementation}\nCriterios: {criteria}",
+    'scope': "Situación: {situation}\nNecesidad Core: {core_need}\nObstáculos: {obstacles}\nPlan: {plan}\nEvaluación: {evaluation}",
+    'focus': "Marco: {framework}\nObjetivo: {objective}\nRestricciones: {constraints}\nComprensión: {understanding}\nSolución: {solution}",
+    'expert': "Experiencia: {experience}\nContexto: {context}\nPropósito: {purpose}\nEjecución: {execution}\nResultados: {results}\nPruebas: {tests}",
+    'clarity': "Contexto: {context}\nLimitaciones: {limitations}\nAproximación: {approach}\nRequisitos: {requirements}\nImplementación: {implementation}\nCronograma: {timeline}\nRendimiento: {performance}",
+    'guide': "Meta: {goal}\nUsuario: {user}\nImplementación: {implementation}\nEntrega: {delivery}\nEvaluación: {evaluation}",
+    'path': "Propósito: {purpose}\nAproximación: {approach}\nObjetivo: {target}\nHorizonte: {horizon}",
+    'learn': "Nivel: {level}\nExperiencia: {experience}\nAproximación: {approach}\nRecursos: {resources}\nSiguientesPasos: {next_steps}",
+    'solve': "Situación: {situation}\nOpciones: {options}\nLimitaciones: {limitations}\nVerificación: {verification}\nEjecución: {execution}",
+    'prime': "Problema: {problem}\nInvestigación: {research}\nImplementación: {implementation}\nMonitoreo: {monitoring}\nEvaluación: {evaluation}",
+    'adapt': "Análisis: {analysis}\nDiseño: {design}\nAproximación: {approach}\nProgreso: {progress}\nPruebas: {testing}",
+    'build': "Línea Base: {baseline}\nEntendimiento: {understanding}\nImplementación: {implementation}\nAprendizaje: {learning}\nEntrega: {delivery}",
+    'craft': "Contexto: {context}\nRequisitos: {requirements}\nAproximación: {approach}\nFuncionalidades: {features}\nPruebas: {testing}",
+    'scale': "Estrategia: {strategy}\nCapacidades: {capabilities}\nAcción: {action}\nAprendizaje: {learning}\nEvolución: {evolution}",
+    'think': "Tema: {topic}\nHistoria: {history}\nInsights: {insights}\nSiguientesPasos: {next_steps}\nConocimiento: {knowledge}",
+    'quest': "Pregunta: {question}\nEntendimiento: {understanding}\nExploración: {exploration}\nSolución: {solution}\nPruebas: {testing}",
+    'drive': "Dirección: {direction}\nRecursos: {resources}\nImplementación: {implementation}\nValidación: {validation}\nEvolución: {evolution}",
+    'shape': "Situación: {situation}\nHistoria: {history}\nAnálisis: {analysis}\nPlan: {plan}\nEjecución: {execution}",
+    'reach': "Requisitos: {requirements}\nEvaluación: {evaluation}\nAproximación: {approach}\nCompletitud: {completeness}\nHandover: {handover}",
+    'blend': "Base: {base}\nAprendizaje: {learning}\nEvolución: {evolution}\nNavegación: {navigation}\nEntrega: {delivery}",
+    'spark': "Estrategia: {strategy}\nPlanificación: {planning}\nAcción: {action}\nResultados: {results}\nConocimiento: {knowledge}",
+    'pulse': "Propósito: {purpose}\nEntendimiento: {understanding}\nAprendizaje: {learning}\nEstrategia: {strategy}\nEvaluación: {evaluation}",
+    'bolt_lovable': "{context}"
+}
+
 FRAMEWORK_EXAMPLES = {
     'peas': """
 P: Propósito - Define el objetivo principal que se quiere lograr con la comunicación

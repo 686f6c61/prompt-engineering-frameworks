@@ -15,6 +15,19 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 4. **Ejemplos prácticos**: Obtén ejemplos específicos para tu caso
 5. **Generación guiada**: Asistencia paso a paso para crear tu prompt
 
+### ⚡❤️ Generador Bolt/Lovable
+
+<div align="center">
+  <img src="static/img/bolt-lovable.png" alt="Generador Bolt/Lovable" width="600">
+</div>
+
+1. **Especificaciones detalladas**: Genera documentos completos para desarrollos web en plataformas Bolt/Lovable
+2. **Diseño visual preciso**: Incluye paletas de colores, tipografía, espaciado y elementos UI
+3. **Interacciones y animaciones**: Define comportamientos exactos para cada elemento interactivo
+4. **Arquitectura de contenido**: Establece estructura jerárquica de páginas y secciones
+5. **SEO y estrategia**: Incluye palabras clave, meta etiquetas y estructura recomendada
+6. **Resultados profesionales**: Se aconseja usar API Key propia para resultados óptimos, aunque también funciona excelentemente con la versión gratuita
+
 ### 🧠 Modelos de IA disponibles
 - **GPT-3.5 Turbo (Gratis)**: Disponible para todos los usuarios sin coste
   - Recomendaciones de frameworks básicas
@@ -148,14 +161,19 @@ python main.py
 - **static/**: Directorio para archivos estáticos
   - **css/**: Hojas de estilo personalizadas
   - **js/**: Scripts de JavaScript para la interactividad
+    - **main.js**: Funcionalidad principal para los 47 frameworks
+    - **bolt_lovable.js**: Lógica específica para el generador Bolt/Lovable
   - **img/**: Recursos gráficos
 - **templates/**: Plantillas HTML de Jinja2
   - **base.html**: Plantilla base con estructura común
   - **index.html**: Página principal con los frameworks
+  - **bolt_lovable.html**: Interfaz para el generador de especificaciones Bolt/Lovable
   - **como_funciona.html**: Documentación y guía de uso
 - **utils/**: Módulos de utilidad
   - **openai_helper.py**: Funciones para interactuar con la API de OpenAI
-
+  - **bolt_lovable_helper.py**: Funciones específicas para generar especificaciones detalladas para Bolt/Lovable
+  - **prompt_formatter.py**: Utilidades para formatear los prompts generados
+  - **rate_limiter.py**: Control de límites de uso de la API
 
 ## 🔧 Configuración
 
@@ -187,6 +205,23 @@ Para usar el sistema sin limitaciones:
 2. Selecciona la opción "Usar GPT-4o-mini con mi API Key"
 3. Introduce tu API Key de OpenAI
 4. Confirma para eliminar las restricciones de uso
+
+### 👨‍💻 Generador Bolt/Lovable para proyectos web
+
+<div align="center">
+  <img src="static/img/bolt-lovable.png" alt="Generador Bolt/Lovable" width="600">
+</div>
+
+Para crear especificaciones detalladas de proyectos web:
+
+1. Haz clic en el botón "⚡❤️ Bolt/Lovable" en la barra de navegación
+2. Escribe una descripción de tu proyecto web en el campo correspondiente
+3. Haz clic en "Recomendar Framework" para obtener una sugerencia basada en tu descripción
+4. Completa los campos del framework recomendado con los detalles de tu proyecto
+5. Genera el prompt detallado haciendo clic en "Generar Prompt Bolt/Lovable"
+6. Copia el resultado en formato Markdown o formateado según tus necesidades
+
+Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada en la sección "Configuración", aunque también se obtienen excelentes resultados con la versión gratuita (GPT-3.5).
 
 ## 🤝 Contribuciones
 
