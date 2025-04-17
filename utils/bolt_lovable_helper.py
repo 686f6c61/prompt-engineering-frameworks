@@ -115,7 +115,7 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
         console.info(f"Generando prompt Bolt/Lovable usando el modelo {model}")
         
         # Generar contenido para cada sección del template
-        generated_content = optimize_prompt("bolt_lovable", {"context": prompt_context}, format_type="structured")
+        generated_content = optimize_prompt("bolt_lovable", {"context": prompt_context})
         
         # Formatear el contenido generado en markdown
         formatted_result = format_prompt_markdown(generated_content)
