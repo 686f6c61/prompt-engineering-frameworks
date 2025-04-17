@@ -16,7 +16,8 @@ AVAILABLE_FRAMEWORKS = [
     'aida', 'para', 'smart', 'erq', 'code', 'pros', 'team', 
     'idea', 'fast', 'leap', 'grow', 'spin',
     'design', 'vision', 'impact', 'master', 'power',
-    'logic', 'scope', 'focus', 'expert', 'clarity'
+    'logic', 'scope', 'focus', 'expert', 'clarity',
+    'guide', 'path', 'learn', 'solve', 'prime', 'adapt', 'build', 'craft', 'scale', 'think', 'quest', 'drive', 'shape', 'reach', 'blend', 'spark', 'pulse'
 ]
 
 FRAMEWORK_EXAMPLES = {
@@ -207,6 +208,124 @@ Contexto: Aplicación crítica financiera
 Acción: Implementar sistema de respaldos
 Resultado: Recuperación en menos de 15 minutos
 Ejemplo: Proceso detallado de restauración
+""",
+    'guide': """
+Goal: Lanzar MVP en 2 meses
+User: Equipo de desarrollo
+Implementation: Definir requisitos y prototipos
+Delivery: Desplegar versión beta
+Evaluation: Recoger feedback y métricas de uso
+""",
+    'path': """
+Purpose: Clarificar visión estratégica
+Approach: Análisis de mercado
+Target: 3 áreas clave
+Horizon: 6 meses
+""",
+    'learn': """
+Level: Principiante
+Experience: Sin experiencia previa
+Approach: Curso interactivo
+Resources: Videos y documentación
+NextSteps: Realizar ejercicios prácticos
+""",
+    'solve': """
+Situation: Alto tiempo de respuesta
+Options: Optimización de consultas o caching
+Limitations: Presupuesto limitado
+Verification: Pruebas de carga
+Execution: Despliegue gradual
+""",
+    'prime': """
+Problem: Baja tasa de conversión
+Research: Análisis de datos de usuarios
+Implementation: Mejoras en el funnel
+Monitoring: KPIs de conversión
+Evaluation: Informe de resultados
+""",
+    'adapt': """
+Analysis: Evaluación de cambios de requisitos
+Design: Arquitectura modular
+Approach: Desarrollo iterativo
+Progress: Revisión semanal
+Testing: Pruebas unitarias y de integración
+""",
+    'build': """
+Baseline: Estado actual del sistema
+Understanding: Necesidades del usuario
+Implementation: Desarrollo incremental
+Learning: Feedback de usuarios
+Delivery: Versión final en producción
+""",
+    'craft': """
+Context: Proyecto a medida para cliente X
+Requirements: Funcionalidad específica A y B
+Approach: Diseño personalizado
+Features: Módulos de gestión y análisis
+Testing: Pruebas de aceptación con el cliente
+""",
+    'scale': """
+Strategy: Expandir infraestructura en la nube
+Capabilities: Autoscaling y balanceo de carga
+Action: Configuración de clusters
+Learning: Monitoreo de métricas
+Evolution: Optimización continua
+""",
+    'think': """
+Topic: Mercado internacional
+History: Estrategias previas
+Insights: Oportunidades emergentes
+NextSteps: Plan de acción regional
+Knowledge: Buenas prácticas globales
+""",
+    'quest': """
+Question: ¿Cómo aumentar la retención?
+Understanding: Análisis de churn
+Exploration: Investigación de causas
+Solution: Programa de lealtad
+Testing: Piloto con grupo de usuarios
+""",
+    'drive': """
+Direction: Priorizar clientes estratégicos
+Resources: Equipo dedicado y presupuesto
+Implementation: Plan de despliegue
+Validation: Encuestas de satisfacción
+Evolution: Ajustes basados en feedback
+""",
+    'shape': """
+Situation: Cultura organizacional estancada
+History: Cambios previos implementados
+Analysis: Diagnóstico interno
+Plan: Programa de transformación
+Execution: Talleres y coaching
+""",
+    'reach': """
+Requirements: Nuevos mercados objetivo
+Evaluation: Evaluación de viabilidad
+Approach: Estrategia de marketing
+Completion: Lanzamiento de campaña
+Handover: Transferencia al equipo local
+""",
+    'blend': """
+Baseline: Mezcla de metodologías actuales
+Learning: Buenas prácticas de Scrum y Kanban
+Evolution: Ajuste de procesos
+Navigation: Guía de adopción progresiva
+Delivery: Implementación en proyectos pilotos
+""",
+    'spark': """
+Strategy: Iniciativa de innovación abierta
+Planning: Talleres de ideación
+Action: Creación de prototipos
+Results: Demostraciones de concepto
+Knowledge: Lecciones aprendidas
+""",
+    'pulse': """
+Purpose: Monitoreo de KPIs críticos
+Understanding: Identificación de indicadores clave
+Learning: Ajustes tras análisis de datos
+Strategy: Plan de mejora continua
+Evaluation: Reporte mensual de rendimiento
 """
 }
 
@@ -405,6 +524,124 @@ Requirements: {requirements}
 Implementation: {implementation}
 Timeline: {timeline}
 Yield: {yield}
+""",
+    'guide': """
+Goal: {goal}
+User: {user}
+Implementation: {implementation}
+Delivery: {delivery}
+Evaluation: {evaluation}
+""",
+    'path': """
+Purpose: {purpose}
+Approach: {approach}
+Target: {target}
+Horizon: {horizon}
+""",
+    'learn': """
+Level: {level}
+Experience: {experience}
+Approach: {approach}
+Resources: {resources}
+NextSteps: {nextSteps}
+""",
+    'solve': """
+Situation: {situation}
+Options: {options}
+Limitations: {limitations}
+Verification: {verification}
+Execution: {execution}
+""",
+    'prime': """
+Problem: {problem}
+Research: {research}
+Implementation: {implementation}
+Monitoring: {monitoring}
+Evaluation: {evaluation}
+""",
+    'adapt': """
+Analysis: {analysis}
+Design: {design}
+Approach: {approach}
+Progress: {progress}
+Testing: {testing}
+""",
+    'build': """
+Baseline: {baseline}
+Understanding: {understanding}
+Implementation: {implementation}
+Learning: {learning}
+Delivery: {delivery}
+""",
+    'craft': """
+Context: {context}
+Requirements: {requirements}
+Approach: {approach}
+Features: {features}
+Testing: {testing}
+""",
+    'scale': """
+Strategy: {strategy}
+Capabilities: {capabilities}
+Action: {action}
+Learning: {learning}
+Evolution: {evolution}
+""",
+    'think': """
+Topic: {topic}
+History: {history}
+Insights: {insights}
+NextSteps: {nextSteps}
+Knowledge: {knowledge}
+""",
+    'quest': """
+Question: {question}
+Understanding: {understanding}
+Exploration: {exploration}
+Solution: {solution}
+Testing: {testing}
+""",
+    'drive': """
+Direction: {direction}
+Resources: {resources}
+Implementation: {implementation}
+Validation: {validation}
+Evolution: {evolution}
+""",
+    'shape': """
+Situation: {situation}
+History: {history}
+Analysis: {analysis}
+Plan: {plan}
+Execution: {execution}
+""",
+    'reach': """
+Requirements: {requirements}
+Evaluation: {evaluation}
+Approach: {approach}
+Completion: {completion}
+Handover: {handover}
+""",
+    'blend': """
+Baseline: {baseline}
+Learning: {learning}
+Evolution: {evolution}
+Navigation: {navigation}
+Delivery: {delivery}
+""",
+    'spark': """
+Strategy: {strategy}
+Planning: {planning}
+Action: {action}
+Results: {results}
+Knowledge: {knowledge}
+""",
+    'pulse': """
+Purpose: {purpose}
+Understanding: {understanding}
+Learning: {learning}
+Strategy: {strategy}
+Evaluation: {evaluation}
 """
 }
 
@@ -478,7 +715,7 @@ def count_tokens(text: str) -> int:
 def get_framework_recommendation(objective: str) -> dict:
     system_message = '''Eres un experto en frameworks de prompts en español. Tu tarea es analizar el objetivo del usuario y recomendar el framework más adecuado entre los siguientes frameworks disponibles:
 
-    RTF, TAG, BAB, CARE, RISE, PEAS, STAR, QCQA, AIDA, PARA, SMART, ERQ, CODE, PROS, TEAM, IDEA, FAST, LEAP, GROW, SPIN, DESIGN, VISION, IMPACT, MASTER, POWER, LOGIC, SCOPE, FOCUS, EXPERT, CLARITY
+    RTF, TAG, BAB, CARE, RISE, PEAS, STAR, QCQA, AIDA, PARA, SMART, ERQ, CODE, PROS, TEAM, IDEA, FAST, LEAP, GROW, SPIN, DESIGN, VISION, IMPACT, MASTER, POWER, LOGIC, SCOPE, FOCUS, EXPERT, CLARITY, GUIDE, PATH, LEARN, SOLVE, PRIME, ADAPT, BUILD, CRAFT, SCALE, THINK, QUEST, DRIVE, SHAPE, REACH, BLEND, SPARK, PULSE
 
     Considera:
     1. Tipo de tarea:

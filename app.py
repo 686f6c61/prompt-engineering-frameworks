@@ -11,6 +11,7 @@ Environment Variables:
 import os
 from flask import Flask, render_template, request, jsonify
 from utils.openai_helper import optimize_prompt, count_tokens, get_framework_recommendation, FRAMEWORK_EXAMPLES
+from utils.prompt_formatter import format_prompt_markdown
 from console import console
 
 # Inicialización de la aplicación Flask
@@ -109,7 +110,11 @@ def generate_prompt():
             result = optimize_prompt("combined", form_data, frameworks)
         else:
             result = optimize_prompt(frameworks[0], form_data)
-        return jsonify({"success": True, "prompt": result})
+        
+        # Format the prompt with Markdown formatting
+        formatted_result = format_prompt_markdown(result)
+        
+        return jsonify({"success": True, "prompt": formatted_result, "raw_prompt": result})
     except Exception as e:
         return jsonify({"success": False, "error": f"Error al generar el prompt: {str(e)}"}), 400
 

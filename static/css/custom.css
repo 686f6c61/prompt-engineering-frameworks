@@ -784,6 +784,38 @@ function updateFormFields(framework) {
     font-family: monospace;
 }
 
+/* Modal de ejemplo */
+#framework-example {
+    white-space: pre-wrap;
+    font-family: var(--bs-font-sans-serif);
+    line-height: 1.6;
+}
+
+/* Estilos para mejorar la presentación de los ejemplos formateados */
+#framework-example ol,
+#framework-example ul {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#framework-example p {
+    margin-bottom: 1rem;
+}
+
+#framework-example strong {
+    font-weight: 600;
+}
+
+#framework-example h1, 
+#framework-example h2, 
+#framework-example h3, 
+#framework-example h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
 .framework-count {
     display: block;
     margin-top: 1rem;

@@ -122,7 +122,24 @@ const frameworks = {
     'scope': ['situation', 'coreNeed', 'obstacles', 'plan', 'evaluation'],
     'focus': ['frame', 'objective', 'constraints', 'understanding', 'solution'],
     'expert': ['expertise', 'context', 'purpose', 'execution', 'results', 'testing'],
-    'clarity': ['context', 'limitations', 'approach', 'requirements', 'implementation', 'timeline', 'yield']
+    'clarity': ['context', 'limitations', 'approach', 'requirements', 'implementation', 'timeline', 'yield'],
+    'guide': ['goal', 'user', 'implementation', 'delivery', 'evaluation'],
+    'path': ['purpose', 'approach', 'target', 'horizon'],
+    'learn': ['level', 'experience', 'approach', 'resources', 'nextSteps'],
+    'solve': ['situation', 'options', 'limitations', 'verification', 'execution'],
+    'prime': ['problem', 'research', 'implementation', 'monitoring', 'evaluation'],
+    'adapt': ['analysis', 'design', 'approach', 'progress', 'testing'],
+    'build': ['baseline', 'understanding', 'implementation', 'learning', 'delivery'],
+    'craft': ['context', 'requirements', 'approach', 'features', 'testing'],
+    'scale': ['strategy', 'capabilities', 'action', 'learning', 'evolution'],
+    'think': ['topic', 'history', 'insights', 'nextSteps', 'knowledge'],
+    'quest': ['question', 'understanding', 'exploration', 'solution', 'testing'],
+    'drive': ['direction', 'resources', 'implementation', 'validation', 'evolution'],
+    'shape': ['situation', 'history', 'analysis', 'plan', 'execution'],
+    'reach': ['requirements', 'evaluation', 'approach', 'completion', 'handover'],
+    'blend': ['baseline', 'learning', 'evolution', 'navigation', 'delivery'],
+    'spark': ['strategy', 'planning', 'action', 'results', 'knowledge'],
+    'pulse': ['purpose', 'understanding', 'learning', 'strategy', 'evaluation']
 };
 
 // Placeholders for each framework
@@ -320,6 +337,124 @@ const frameworkPlaceholders = {
         implementation: "Ej: Plan de implementación",
         timeline: "Ej: Cronograma detallado",
         yield: "Ej: Beneficios esperados"
+    },
+    'guide': {
+        goal: "Ej: Objetivo principal",
+        user: "Ej: Usuario objetivo",
+        implementation: "Ej: Plan de implementación",
+        delivery: "Ej: Entrega de resultados",
+        evaluation: "Ej: Evaluación de resultados"
+    },
+    'path': {
+        purpose: "Ej: Propósito del proyecto",
+        approach: "Ej: Enfoque metodológico",
+        target: "Ej: Objetivo específico",
+        horizon: "Ej: Plazo de entrega"
+    },
+    'learn': {
+        level: "Ej: Nivel de complejidad",
+        experience: "Ej: Experiencia previa",
+        approach: "Ej: Enfoque de aprendizaje",
+        resources: "Ej: Recursos disponibles",
+        nextSteps: "Ej: Próximos pasos"
+    },
+    'solve': {
+        situation: "Ej: Situación actual",
+        options: "Ej: Alternativas disponibles",
+        limitations: "Ej: Limitaciones identificadas",
+        verification: "Ej: Verificación de soluciones",
+        execution: "Ej: Plan de ejecución"
+    },
+    'prime': {
+        problem: "Ej: Problema a resolver",
+        research: "Ej: Investigación previa",
+        implementation: "Ej: Plan de implementación",
+        monitoring: "Ej: Monitoreo de resultados",
+        evaluation: "Ej: Evaluación de resultados"
+    },
+    'adapt': {
+        analysis: "Ej: Análisis de la situación",
+        design: "Ej: Diseño de la solución",
+        approach: "Ej: Enfoque de implementación",
+        progress: "Ej: Monitoreo del progreso",
+        testing: "Ej: Pruebas de la solución"
+    },
+    'build': {
+        baseline: "Ej: Línea base del proyecto",
+        understanding: "Ej: Comprensión del problema",
+        implementation: "Ej: Plan de implementación",
+        learning: "Ej: Aprendizaje durante el proyecto",
+        delivery: "Ej: Entrega de resultados"
+    },
+    'craft': {
+        context: "Ej: Contexto del proyecto",
+        requirements: "Ej: Requisitos específicos",
+        approach: "Ej: Enfoque de implementación",
+        features: "Ej: Características de la solución",
+        testing: "Ej: Pruebas de la solución"
+    },
+    'scale': {
+        strategy: "Ej: Estrategia de escalabilidad",
+        capabilities: "Ej: Capacidades del equipo",
+        action: "Ej: Plan de acción",
+        learning: "Ej: Aprendizaje durante el proyecto",
+        evolution: "Ej: Evolución del proyecto"
+    },
+    'think': {
+        topic: "Ej: Tema de investigación",
+        history: "Ej: Historia del tema",
+        insights: "Ej: Conocimientos adquiridos",
+        nextSteps: "Ej: Próximos pasos",
+        knowledge: "Ej: Conocimientos aplicados"
+    },
+    'quest': {
+        question: "Ej: Pregunta de investigación",
+        understanding: "Ej: Comprensión del tema",
+        exploration: "Ej: Exploración de alternativas",
+        solution: "Ej: Solución propuesta",
+        testing: "Ej: Pruebas de la solución"
+    },
+    'drive': {
+        direction: "Ej: Dirección del proyecto",
+        resources: "Ej: Recursos disponibles",
+        implementation: "Ej: Plan de implementación",
+        validation: "Ej: Validación de resultados",
+        evolution: "Ej: Evolución del proyecto"
+    },
+    'shape': {
+        situation: "Ej: Situación actual",
+        history: "Ej: Historia del proyecto",
+        analysis: "Ej: Análisis de la situación",
+        plan: "Ej: Plan de acción",
+        execution: "Ej: Plan de ejecución"
+    },
+    'reach': {
+        requirements: "Ej: Requisitos específicos",
+        evaluation: "Ej: Evaluación de resultados",
+        approach: "Ej: Enfoque de implementación",
+        completion: "Ej: Finalización del proyecto",
+        handover: "Ej: Entrega de resultados"
+    },
+    'blend': {
+        baseline: "Ej: Línea base del proyecto",
+        learning: "Ej: Aprendizaje durante el proyecto",
+        evolution: "Ej: Evolución del proyecto",
+        navigation: "Ej: Navegación del proyecto",
+        delivery: "Ej: Entrega de resultados"
+    },
+    'spark': {
+        strategy: "Ej: Estrategia del proyecto",
+        planning: "Ej: Planificación del proyecto",
+        action: "Ej: Plan de acción",
+        results: "Ej: Resultados esperados",
+        knowledge: "Ej: Conocimientos aplicados"
+    },
+    'pulse': {
+        purpose: "Ej: Propósito del proyecto",
+        understanding: "Ej: Comprensión del problema",
+        learning: "Ej: Aprendizaje durante el proyecto",
+        strategy: "Ej: Estrategia del proyecto",
+        evaluation: "Ej: Evaluación de resultados"
     }
 };
 
@@ -378,7 +513,13 @@ async function generatePrompt() {
         }
 
         if (data.success) {
-            document.getElementById('prompt-preview').textContent = data.prompt;
+            const promptPreview = document.getElementById('prompt-preview');
+            // Display the formatted prompt with HTML instead of plain text
+            promptPreview.innerHTML = marked.parse(data.prompt);
+            
+            // Store the raw text version for copying as plain markdown
+            promptPreview.setAttribute('data-raw-prompt', data.raw_prompt);
+            
             updateTokenCount();
         } else {
             throw new Error(data.error);
@@ -588,7 +729,19 @@ function showFrameworkExample(framework) {
     .then(data => {
         if (data.success) {
             modalTitle.textContent = framework.toUpperCase();
-            exampleContent.textContent = data.example;
+            
+            // Almacenar el texto sin formato como atributo para poder copiarlo después
+            exampleContent.setAttribute('data-raw-example', data.example);
+            
+            // Procesar el texto para mejorar formato Markdown con números seguidos de puntos
+            let processedExample = data.example;
+            
+            // Reemplazar patrones como "1. Texto" por "1. Texto\n" para asegurar saltos de línea
+            processedExample = processedExample.replace(/(\d+\.)\s+([^\n]+)/g, '$1 $2\n');
+            
+            // Convertir el markdown a HTML para mostrarlo formateado
+            exampleContent.innerHTML = marked.parse(processedExample);
+            
             new bootstrap.Modal(exampleModal).show();
         } else {
             throw new Error(data.error);
@@ -641,7 +794,10 @@ function getFieldPlaceholder(framework, field) {
 
 // Función para copiar texto en Markdown
 async function copyMarkdown() {
-    const promptText = document.getElementById('prompt-preview').textContent;
+    const promptPreview = document.getElementById('prompt-preview');
+    // Get the raw markdown version from the data attribute
+    const promptText = promptPreview.getAttribute('data-raw-prompt') || promptPreview.textContent;
+    
     try {
         // Método alternativo de copiado
         const textArea = document.createElement('textarea');
@@ -666,10 +822,11 @@ async function copyMarkdown() {
 
 // Función para copiar texto formateado
 async function copyFormatted() {
-    const promptText = document.getElementById('prompt-preview').textContent;
+    const promptPreview = document.getElementById('prompt-preview');
+    
     try {
-        // Convertir Markdown a HTML
-        const htmlContent = marked.parse(promptText);
+        // Usar directamente el contenido ya formateado en HTML
+        const htmlContent = promptPreview.innerHTML;
         
         // Crear elemento temporal y añadir estilos básicos
         const tempDiv = document.createElement('div');
@@ -695,7 +852,9 @@ async function copyFormatted() {
         console.error('Error al copiar texto formateado:', err);
         // Intenta copiar al menos el texto plano si falla el formato
         try {
-            await navigator.clipboard.writeText(promptText);
+            // Get raw text as fallback
+            const plainText = promptPreview.getAttribute('data-raw-prompt') || promptPreview.textContent;
+            await navigator.clipboard.writeText(plainText);
             showCopyConfirmation('¡Texto copiado (sin formato)!');
         } catch (err2) {
             showAnnouncement('Error', 'No se pudo copiar el texto formateado');
@@ -705,16 +864,49 @@ async function copyFormatted() {
 
 // Función para mostrar confirmación de copiado
 function showCopyConfirmation(message) {
-    const copyModal = document.getElementById('copyModal');
-    const modalBody = copyModal.querySelector('.modal-body p');
-    modalBody.textContent = message;
-    const modal = new bootstrap.Modal(copyModal);
-    modal.show();
+    const modal = document.getElementById('copyModal');
+    const modalInstance = new bootstrap.Modal(modal);
+    modal.querySelector('.modal-body p').textContent = message;
+    modalInstance.show();
     
-    // Ocultar automáticamente después de 1.5 segundos
+    // Auto-close after a short time
     setTimeout(() => {
-        modal.hide();
+        modalInstance.hide();
     }, 1500);
+}
+
+// Función para copiar el texto de ejemplo del framework
+function copyExampleText() {
+    const exampleElement = document.getElementById('framework-example');
+    // Usar el texto sin formato almacenado en el atributo data-raw-example
+    const exampleText = exampleElement.getAttribute('data-raw-example') || exampleElement.textContent;
+    const copyConfirmation = document.getElementById('copy-confirmation');
+    
+    navigator.clipboard.writeText(exampleText)
+        .then(() => {
+            // Mostrar mensaje de confirmación dentro del modal
+            copyConfirmation.classList.remove('d-none');
+            
+            // Ocultar el mensaje después de 3 segundos
+            setTimeout(() => {
+                copyConfirmation.classList.add('d-none');
+            }, 3000);
+        })
+        .catch(err => {
+            console.error('Error al copiar el ejemplo:', err);
+            // Método alternativo de copiado si falla el clipboard API
+            const textarea = document.createElement('textarea');
+            textarea.value = exampleText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            
+            copyConfirmation.classList.remove('d-none');
+            setTimeout(() => {
+                copyConfirmation.classList.add('d-none');
+            }, 3000);
+        });
 }
 
 // Configurar marked
@@ -737,49 +929,28 @@ function smoothScrollTo(element, offset = 50) {
 // DOM Content Loaded Event Handler
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize tooltips
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(tooltipTriggerEl => {
+        new bootstrap.Tooltip(tooltipTriggerEl);
     });
-
-    // Framework card click event
-    document.querySelectorAll('.framework-card').forEach(card => {
-        card.addEventListener('click', function() {
-            // Desactivar todas las tarjetas
-            document.querySelectorAll('.framework-card').forEach(c => {
-                c.classList.remove('active');
-            });
-            
-            // Activar solo la tarjeta seleccionada
-            this.classList.add('active');
-            
-            // Limpiar el prompt anterior
-            document.getElementById('prompt-preview').textContent = '';
-            document.getElementById('token-count').textContent = '0';
-            
-            // Actualizar formulario
-            updateFormFields(this.dataset.framework);
-
-            // Scroll suave hasta el formulario con un pequeño retraso para que se vea la animación
-            setTimeout(() => {
-                const formFields = document.getElementById('form-fields');
-                smoothScrollTo(formFields);
-            }, 100);
-        });
-    });
+    
+    // Get DOM elements
+    const searchBtn = document.getElementById('search-btn');
+    const generateBtn = document.getElementById('generate-btn');
+    const copyBtn = document.getElementById('copy-btn');
+    const copyMarkdownBtn = document.getElementById('copy-markdown-btn');
+    const copyFormattedBtn = document.getElementById('copy-formatted-btn');
+    const copyExampleBtn = document.getElementById('copy-example-btn');
 
     // Event listeners for buttons
-    const generateBtn = document.getElementById('generate-btn');
     if (generateBtn) {
         generateBtn.addEventListener('click', generatePrompt);
     }
 
-    const copyBtn = document.getElementById('copy-btn');
     if (copyBtn) {
         copyBtn.addEventListener('click', copyPrompt);
     }
 
-    const searchBtn = document.getElementById('search-btn');
     if (searchBtn) {
         searchBtn.addEventListener('click', searchFramework);
     }
@@ -793,6 +964,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Add event listener to copy example button
+    if (copyExampleBtn) {
+        copyExampleBtn.addEventListener('click', copyExampleText);
+    }
+
+    // Event listeners para los botones de copiado
+    if (copyMarkdownBtn) {
+        copyMarkdownBtn.addEventListener('click', copyMarkdown);
+    }
+
+    if (copyFormattedBtn) {
+        copyFormattedBtn.addEventListener('click', copyFormatted);
+    }
+
+    // Add event listener to each framework card
+    document.querySelectorAll('.framework-card').forEach(card => {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.framework-card').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Limpiar el prompt anterior
+            document.getElementById('prompt-preview').textContent = '';
+            document.getElementById('token-count').textContent = '0';
+            
+            updateFormFields(this.dataset.framework);
+            
+            // Scroll suave hasta el formulario con un pequeño retraso para que se vea la animación
+            setTimeout(() => {
+                const formFields = document.getElementById('form-fields');
+                smoothScrollTo(formFields);
+            }, 100);
+        });
+    });
+    
     // Example button event listeners
     document.querySelectorAll('.view-example-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
@@ -801,16 +1006,4 @@ document.addEventListener('DOMContentLoaded', function() {
             showFrameworkExample(this.dataset.framework);
         });
     });
-
-    // Event listeners para los botones de copiado
-    const copyMarkdownBtn = document.getElementById('copy-markdown-btn');
-    if (copyMarkdownBtn) {
-        copyMarkdownBtn.addEventListener('click', copyMarkdown);
-    }
-
-    const copyFormattedBtn = document.getElementById('copy-formatted-btn');
-    if (copyFormattedBtn) {
-        copyFormattedBtn.addEventListener('click', copyFormatted);
-    }
 });
-

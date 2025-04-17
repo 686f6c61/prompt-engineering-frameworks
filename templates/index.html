@@ -4,7 +4,7 @@
 <div class="container">
     <!-- Header principal -->
     <div class="text-center my-5">
-        <h1 class="display-4 mb-3">Prompt Engineering con +40 Frameworks</h1>
+        <h1 class="display-4 mb-3">Prompt Engineering con +47 Frameworks</h1>
         <p class="lead text-muted">Selecciona el framework más adecuado para crear prompts efectivos y profesionales.</p>
     </div>
 
@@ -13,7 +13,7 @@
         <div class="col-12 col-md-10 col-lg-8 mx-auto">
             <div class="search-container p-3 bg-light rounded">
                 <h4 class="text-center mb-2">Describe o define tu objetivo</h4>
-                <p class="text-muted text-center mb-3">Encontraremos el mejor Framework para tu Prompt entre los +40 que tenemos disponibles.</p>
+                <p class="text-muted text-center mb-3">Encontraremos el mejor Framework para tu Prompt entre los +47 que tenemos disponibles.</p>
                 <div class="d-flex flex-column flex-md-row align-items-stretch gap-3">
                     <input type="text" id="framework-search" class="form-control form-control-lg" placeholder="Describe tu objetivo para encontrar el mejor framework" aria-label="Buscar objetivo para framework">
                     <button id="search-btn" class="btn btn-primary btn-lg mt-2 mt-md-0 d-flex align-items-center gap-2" aria-label="Buscar framework">
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <h2 class="text-center mb-4">Selecciona entre los +40 Framework para desarrollar tu Prompt</h2>
+    <h2 class="text-center mb-4">Elige entre los +47 Framework para desarrollar tu prompting</h2>
     <p class="text-center text-muted mb-4">Haz clic en el framework que quieres usar. Podrás ver ejemplos en cada uno de ellos.</p>
     
     <div class="row mb-4">
@@ -70,14 +70,31 @@
             ('scope', 'S-C-O-P-E', 'Framework Situation-Core Need-Obstacles-Plan-Evaluation', 'Ideal para definición de alcance'),
             ('focus', 'F-O-C-U-S', 'Framework Frame-Objective-Constraints-Understanding-Solution', 'Perfecto para análisis de problemas'),
             ('expert', 'E-X-P-E-R-T', 'Framework Expertise-Context-Purpose-Execution-Results-Testing', 'Óptimo para documentación técnica'),
-            ('clarity', 'C-L-A-R-I-T-Y', 'Framework Context-Limitations-Approach-Requirements-Implementation-Timeline-Yield', 'Ideal para planificación detallada')
+            ('clarity', 'C-L-A-R-I-T-Y', 'Framework Context-Limitations-Approach-Requirements-Implementation-Timeline-Yield', 'Ideal para planificación detallada'),
+            ('guide', 'G-U-I-D-E', 'Framework Goal-User-Implementation-Delivery-Evaluation para desarrollo de productos y servicios', 'Ideal para desarrollo de productos y servicios'),
+            ('path', 'P-A-T-H', 'Framework Purpose-Approach-Target-Horizon para planificación estratégica', 'Ideal para planificación estratégica'),
+            ('learn', 'L-E-A-R-N', 'Framework Level-Experience-Approach-Resources-Next steps para planes de formación y desarrollo', 'Ideal para planes de formación y desarrollo'),
+            ('solve', 'S-O-L-V-E', 'Framework Situation-Options-Limitations-Verification-Execution para resolución de problemas complejos', 'Ideal para resolución de problemas complejos'),
+            ('prime', 'P-R-I-M-E', 'Framework Problem-Research-Implementation-Monitoring-Evaluation para proyectos de investigación y desarrollo', 'Ideal para proyectos de investigación y desarrollo'),
+            ('adapt', 'A-D-A-P-T', 'Framework Analysis-Design-Approach-Progress-Testing para proyectos adaptativos y ágiles', 'Ideal para proyectos adaptativos y ágiles'),
+            ('build', 'B-U-I-L-D', 'Framework Baseline-Understanding-Implementation-Learning-Delivery para desarrollo de nuevos productos o servicios', 'Ideal para desarrollo de nuevos productos o servicios'),
+            ('craft', 'C-R-A-F-T', 'Framework Context-Requirements-Approach-Features-Testing para desarrollo de soluciones a medida', 'Ideal para desarrollo de soluciones a medida'),
+            ('scale', 'S-C-A-L-E', 'Framework Strategy-Capabilities-Action-Learning-Evolution para escalamiento de proyectos y operaciones', 'Ideal para escalamiento de proyectos y operaciones'),
+            ('think', 'T-H-I-N-K', 'Framework Topic-History-Insights-Next steps-Knowledge para análisis estratégico y toma de decisiones', 'Ideal para análisis estratégico y toma de decisiones'),
+            ('quest', 'Q-U-E-S-T', 'Framework Question-Understanding-Exploration-Solution-Testing para investigación y resolución de problemas', 'Ideal para investigación y resolución de problemas'),
+            ('drive', 'D-R-I-V-E', 'Framework Direction-Resources-Implementation-Validation-Evolution para gestión de proyectos innovadores', 'Ideal para gestión de proyectos innovadores'),
+            ('shape', 'S-H-A-P-E', 'Framework Situation-History-Analysis-Plan-Execution para transformación organizacional', 'Ideal para transformación organizacional'),
+            ('reach', 'R-E-A-C-H', 'Framework Requirements-Evaluation-Approach-Completion-Handover para gestión de proyectos end-to-end', 'Ideal para gestión de proyectos end-to-end'),
+            ('blend', 'B-L-E-N-D', 'Framework Baseline-Learning-Evolution-Navigation-Delivery para proyectos híbridos y metodologías mixtas', 'Ideal para proyectos híbridos y metodologías mixtas'),
+            ('spark', 'S-P-A-R-K', 'Framework Strategy-Planning-Action-Results-Knowledge para iniciativas de innovación', 'Ideal para iniciativas de innovación'),
+            ('pulse', 'P-U-L-S-E', 'Framework Purpose-Understanding-Learning-Strategy-Evaluation para monitoreo y mejora continua', 'Ideal para monitoreo y mejora continua')
         ] %}
         <div class="col-md-4 mb-3">
-            <div class="card framework-card" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                <div class="card-body">
+            <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                <div class="card-body d-flex flex-column">
                     <h5 class="card-title">{{ framework[1] }}</h5>
                     <p class="card-text">{{ framework[2] }}</p>
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="mt-auto">
                         <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                             <i class="bi bi-eye"></i> Ver Ejemplo
                         </button>
@@ -132,9 +149,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Mensaje de confirmación de copiado dentro del modal -->
+                    <div id="copy-confirmation" class="alert alert-success mb-3 d-none">
+                        <i class="bi bi-check-circle me-2"></i>
+                        <span>¡Ejemplo copiado con éxito!</span>
+                    </div>
                     <pre id="framework-example" class="bg-light p-3 rounded"></pre>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer d-flex justify-content-between">
+                    <button id="copy-example-btn" type="button" class="btn btn-primary">
+                        <i class="bi bi-clipboard me-2"></i>Copiar Ejemplo
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
