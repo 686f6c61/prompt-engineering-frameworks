@@ -1,0 +1,14 @@
+services:
+  # Servicio web para la aplicación de Prompt Engineering Frameworks
+  - type: web
+    name: prompt-engineering-frameworks
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: sh render.sh
+    envVars:
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+    healthCheckPath: /
+    autoDeploy: true
