@@ -1,15 +1,31 @@
 # 🚀 Prompt engineering framework generator
 
+<div align="center">
+  <img src="static/img/Frameworks-Prompt.png" alt="Frameworks Prompt" width="500">
+</div>
+
 Una aplicación web para generar prompts efectivos utilizando 47 frameworks especializados de prompt engineering.
 
 ## 🌟 Características
 
 ### 🤖 Sistema de recomendación inteligente
-1. **Análisis de objetivo**: Escribe tu objetivo y o4-mini-2025-04-16 lo analiza (hasta 4096 tokens)
-2. **Selección  inteligente**: El sistema determina el framework más adecuado
+1. **Análisis de objetivo**: Escribe tu objetivo y el sistema lo analiza automáticamente
+2. **Selección inteligente**: El sistema determina el framework más adecuado
 3. **Explicación detallada**: Recibe el por qué se eligió ese framework
 4. **Ejemplos prácticos**: Obtén ejemplos específicos para tu caso
 5. **Generación guiada**: Asistencia paso a paso para crear tu prompt
+
+### 🧠 Modelos de IA disponibles
+- **GPT-3.5 Turbo (Gratis)**: Disponible para todos los usuarios sin costo
+  - Recomendaciones de frameworks básicas
+  - Respuestas rápidas
+  - Hasta 4096 tokens por consulta
+- **GPT-4o-mini (API Key propia)**: Para usuarios que desean resultados premium
+  - Recomendaciones más precisas y detalladas
+  - Mayor comprensión del contexto
+  - Requiere tu propia API Key de OpenAI
+  - Configuración simple a través del panel de configuración
+  - La API Key nunca se almacena en el servidor, solo en la sesión del navegador
 
 ### 📚 Frameworks disponibles
 
@@ -68,13 +84,15 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 - **Exportación flexible**: Opciones para copiar en markdown o texto formateado
 - **Contador de tokens**: Monitorización en tiempo real del uso de tokens
 - **Interfaz responsiva**: Diseño adaptable para cualquier dispositivo
+- **Selección de modelos**: Opción para usar GPT-3.5 Turbo (gratis) o GPT-4o-mini (con API key propia)
 - **Almacenamiento local**: Guarda tus prompts favoritos
 - **Ejemplos interactivos**: Biblioteca de casos de uso para cada framework
+- **Configuración de privacidad**: Las API Keys nunca se almacenan en el servidor, solo en la sesión del navegador
 
 ## 🛠️ Tecnologías
 
 - **Backend**: Python 3.9+ con Flask
-- **IA**: OpenAI o4-mini-2025-04-16 (4096 tokens)
+- **IA**: OpenAI GPT-3.5 Turbo (gratis) o GPT-4o-mini (con API key propia)
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Estilos**: Bootstrap 5
 - **Documentación**: Markdown
