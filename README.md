@@ -44,55 +44,57 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 
 ### 📚 Frameworks disponibles
 
+> Todos los frameworks están disponibles como archivos de texto en la carpeta `frameworks/` del repositorio, donde se encuentran detallados con ejemplos y estructuras completas.
+
 | Framework | Componentes | Ideal para |
 |-----------|-------------|------------|
-| **RTF**   | Role, Task, Format | Generación de contenido estructurado y tareas específicas. |
-| **PARA**  | Purpose, Action, Result, Assessment | Planificación y evaluación de proyectos. |
-| **SMART** | Specific, Measurable, Achievable, Relevant, Time‑bound | Definición de objetivos y metas. |
-| **ERQ**   | Experience, Requirements, Qualifiers | Definición de perfiles y requisitos. |
-| **CODE**  | Context, Objective, Details, Examples | Documentación técnica y guías. |
-| **PROS**  | Perspective, Requirements, Outcome, Scope | Planificación de proyectos. |
-| **TEAM**  | Task, Environment, Approach, Metrics | Trabajo en equipo y colaboración. |
-| **IDEA**  | Identify, Define, Execute, Assess | Resolución de problemas. |
-| **CARE**  | Context, Action, Result, Example | Instrucciones detalladas y aprendizaje. |
-| **RISE**  | Role, Input, Steps, Expectation | Procesos y flujos de trabajo. |
-| **LOGIC** | Layout, Objective, Guidelines, Implementation, Criteria | Desarrollo de sistemas y procesos. |
-| **SCOPE** | Situation, Core Need, Obstacles, Plan, Evaluation | Definición y gestión de alcance. |
-| **FOCUS** | Frame, Objective, Constraints, Understanding, Solution | Resolución estructurada de problemas. |
-| **CLARITY** | Context, Limitations, Approach, Requirements, Implementation, Timeline, Yield | Gestión de proyectos complejos y migraciones. |
-| **EXPERT** | Expertise, Context, Purpose, Execution, Results, Testing | Proyectos técnicos especializados. |
-| **GUIDE** | Goal, User, Implementation, Delivery, Evaluation | Desarrollo de productos y servicios. |
-| **PATH**  | Purpose, Approach, Target, Horizon | Planificación estratégica. |
-| **LEARN** | Level, Experience, Approach, Resources, Next steps | Planes de formación y desarrollo. |
-| **SOLVE** | Situation, Options, Limitations, Verification, Execution | Resolución de problemas complejos. |
-| **PRIME** | Problem, Research, Implementation, Monitoring, Evaluation | Proyectos de investigación y desarrollo. |
-| **ADAPT** | Analysis, Design, Approach, Progress, Testing | Proyectos adaptativos y ágiles. |
-| **BUILD** | Baseline, Understanding, Implementation, Learning, Delivery | Desarrollo de nuevos productos o servicios. |
-| **CRAFT** | Context, Requirements, Approach, Features, Testing | Desarrollo de soluciones a medida. |
-| **SCALE** | Strategy, Capabilities, Action, Learning, Evolution | Escalamiento de proyectos y operaciones. |
-| **THINK** | Topic, History, Insights, Next steps, Knowledge | Análisis estratégico y toma de decisiones. |
-| **GROW**  | Goal, Reality, Options, Way Forward | Coaching y desarrollo personal. |
-| **QUEST** | Question, Understanding, Exploration, Solution, Testing | Investigación y resolución de problemas. |
-| **DRIVE** | Direction, Resources, Implementation, Validation, Evolution | Gestión de proyectos innovadores. |
-| **SHAPE** | Situation, History, Analysis, Plan, Execution | Transformación organizacional. |
-| **REACH** | Requirements, Evaluation, Approach, Completion, Handover | Gestión de proyectos end-to-end. |
-| **BLEND** | Baseline, Learning, Evolution, Navigation, Delivery | Proyectos híbridos y metodologías mixtas. |
-| **SPARK** | Strategy, Planning, Action, Results, Knowledge | Iniciativas de innovación. |
-| **PULSE** | Purpose, Understanding, Learning, Strategy, Evaluation | Monitoreo y mejora continua. |
-| **FAST**  | Focus, Audience, Scope, Tone | Documentación técnica y guías de usuario. |
-| **T-A-G** | Tarea, Acción, Meta | Proyectos con objetivos medibles y acciones concretas. |
-| **B-A-B** | Antes, Después, Puente | Mostrar cambios y mejoras con un plan claro. |
-| **P-E-A-S** | Propósito, Resultado, Audiencia, Estilo | Estrategias de comunicación y marketing. |
-| **S-T-A-R** | Situación, Tarea, Acción, Resultado | Documentar logros y experiencias. |
-| **Q-C-Q-A** | Pregunta, Contexto, Calificación, Respuesta | Consultas estructuradas para resolver problemas paso a paso. |
-| **A-I-D-A** | Atención, Interés, Deseo, Acción | Marketing persuasivo y creación de campañas. |
-| **L-E-A-P** | Nivel, Expectativas, Enfoque, Parámetros | Planificación estratégica. |
-| **S-P-I-N** | Situación, Problema, Implicación, Necesidad | Ventas consultivas y negociación. |
-| **D-E-S-I-G-N** | Define, Explore, Scope, Ideate, Guide, Narrow | Procesos de diseño y desarrollo. |
-| **V-I-S-I-O-N** | Visualize, Identify, Structure, Implement, Optimize, Navigate | Planificación estratégica. |
-| **I-M-P-A-C-T** | Intent, Message, Purpose, Audience, Channel, Timing | Estrategias de comunicación. |
-| **M-A-S-T-E-R** | Mission, Approach, Strategy, Tactics, Execution, Review | Gestión de proyectos. |
-| **P-O-W-E-R** | Problem, Outcome, Why, Execution, Resources | Resolución de problemas. |
+| **[RTF](frameworks/RTF-Rol-Tarea-Formato.txt)**   | Role, Task, Format | Generación de contenido estructurado y tareas específicas. |
+| **[PARA](frameworks/PARA-Problema-Aproximacion-Razon-Accion.txt)**  | Purpose, Action, Result, Assessment | Planificación y evaluación de proyectos. |
+| **[SMART](frameworks/SMART-Especifico-Medible-Alcanzable-Relevante-Temporal.txt)** | Specific, Measurable, Achievable, Relevant, Time‑bound | Definición de objetivos y metas. |
+| **[ERQ](frameworks/ERQ-Experiencia-Requisitos-Cualificaciones.txt)**   | Experience, Requirements, Qualifiers | Definición de perfiles y requisitos. |
+| **[CODE](frameworks/CODE-Contexto-Objetivo-Detalles-Ejemplos.txt)**  | Context, Objective, Details, Examples | Documentación técnica y guías. |
+| **[PROS](frameworks/PROS-Perspectiva-Requisitos-Resultado-Solucion.txt)**  | Perspective, Requirements, Outcome, Scope | Planificación de proyectos. |
+| **[TEAM](frameworks/TEAM-Tarea-Entorno-Aproximacion-Metricas.txt)**  | Task, Environment, Approach, Metrics | Trabajo en equipo y colaboración. |
+| **[IDEA](frameworks/IDEA-Identificar-Definir-Ejecutar-Analizar.txt)**  | Identify, Define, Execute, Assess | Resolución de problemas. |
+| **[CARE](frameworks/CARE-Contexto-Accion-Resultado-Ejemplo.txt)**  | Context, Action, Result, Example | Instrucciones detalladas y aprendizaje. |
+| **[RISE](frameworks/RISE-Relevancia-Informacion-Solucion-Evaluacion.txt)**  | Role, Input, Steps, Expectation | Procesos y flujos de trabajo. |
+| **[LOGIC](frameworks/LOGIC-Diseno-Objetivo-Directrices-Implementacion-Criterios.txt)** | Layout, Objective, Guidelines, Implementation, Criteria | Desarrollo de sistemas y procesos. |
+| **[SCOPE](frameworks/SCOPE-Situacion-Necesidad-Obstaculos-Plan-Evaluacion.txt)** | Situation, Core Need, Obstacles, Plan, Evaluation | Definición y gestión de alcance. |
+| **[FOCUS](frameworks/FOCUS-Marco-Objetivo-Restricciones-Comprension-Solucion.txt)** | Frame, Objective, Constraints, Understanding, Solution | Resolución estructurada de problemas. |
+| **[CLARITY](frameworks/CLARITY-Contexto-Limitaciones-Aproximacion-Requisitos-Implementacion-Cronograma-Rendimiento.txt)** | Context, Limitations, Approach, Requirements, Implementation, Timeline, Yield | Gestión de proyectos complejos y migraciones. |
+| **[EXPERT](frameworks/EXPERT-Experiencia-Contexto-Proposito-Ejecucion-Resultados-Pruebas.txt)** | Expertise, Context, Purpose, Execution, Results, Testing | Proyectos técnicos especializados. |
+| **[GUIDE](frameworks/GUIDE-Meta-Usuario-Implementacion-Entrega-Evaluacion.txt)** | Goal, User, Implementation, Delivery, Evaluation | Desarrollo de productos y servicios. |
+| **[PATH](frameworks/PATH-Proposito-Aproximacion-Objetivo-Horizonte.txt)**  | Purpose, Approach, Target, Horizon | Planificación estratégica. |
+| **[LEARN](frameworks/LEARN-Nivel-Experiencia-Aproximacion-Recursos-SiguientesPasos.txt)** | Level, Experience, Approach, Resources, Next steps | Planes de formación y desarrollo. |
+| **[SOLVE](frameworks/SOLVE-Situacion-Opciones-Limitaciones-Verificacion-Ejecucion.txt)** | Situation, Options, Limitations, Verification, Execution | Resolución de problemas complejos. |
+| **[PRIME](frameworks/PRIME-Problema-Investigacion-Implementacion-Monitoreo-Evaluacion.txt)** | Problem, Research, Implementation, Monitoring, Evaluation | Proyectos de investigación y desarrollo. |
+| **[ADAPT](frameworks/ADAPT-Analisis-Diseno-Aproximacion-Progreso-Pruebas.txt)** | Analysis, Design, Approach, Progress, Testing | Proyectos adaptativos y ágiles. |
+| **[BUILD](frameworks/BUILD-LineaBase-Entendimiento-Implementacion-Aprendizaje-Entrega.txt)** | Baseline, Understanding, Implementation, Learning, Delivery | Desarrollo de nuevos productos o servicios. |
+| **[CRAFT](frameworks/CRAFT-Contexto-Requisitos-Aproximacion-Funcionalidades-Pruebas.txt)** | Context, Requirements, Approach, Features, Testing | Desarrollo de soluciones a medida. |
+| **[SCALE](frameworks/SCALE-Estrategia-Capacidades-Accion-Aprendizaje-Evolucion.txt)** | Strategy, Capabilities, Action, Learning, Evolution | Escalamiento de proyectos y operaciones. |
+| **[THINK](frameworks/THINK-Tema-Historia-Insights-SiguientesPasos-Conocimiento.txt)** | Topic, History, Insights, Next steps, Knowledge | Análisis estratégico y toma de decisiones. |
+| **[GROW](frameworks/GROW-Meta-Realidad-Opciones-Camino.txt)**  | Goal, Reality, Options, Way Forward | Coaching y desarrollo personal. |
+| **[QUEST](frameworks/QUEST-Pregunta-Entendimiento-Exploracion-Solucion-Pruebas.txt)** | Question, Understanding, Exploration, Solution, Testing | Investigación y resolución de problemas. |
+| **[DRIVE](frameworks/DRIVE-Direccion-Recursos-Implementacion-Validacion-Evolucion.txt)** | Direction, Resources, Implementation, Validation, Evolution | Gestión de proyectos innovadores. |
+| **[SHAPE](frameworks/SHAPE-Situacion-Historia-Analisis-Plan-Ejecucion.txt)** | Situation, History, Analysis, Plan, Execution | Transformación organizacional. |
+| **[REACH](frameworks/REACH-Requisitos-Evaluacion-Aproximacion-Completitud-Handover.txt)** | Requirements, Evaluation, Approach, Completion, Handover | Gestión de proyectos end-to-end. |
+| **[BLEND](frameworks/BLEND-Base-Aprendizaje-Evolucion-Navegacion-Entrega.txt)** | Baseline, Learning, Evolution, Navigation, Delivery | Proyectos híbridos y metodologías mixtas. |
+| **[SPARK](frameworks/SPARK-Estrategia-Planificacion-Accion-Resultados-Conocimiento.txt)** | Strategy, Planning, Action, Results, Knowledge | Iniciativas de innovación. |
+| **[PULSE](frameworks/PULSE-Proposito-Entendimiento-Aprendizaje-Estrategia-Evaluacion.txt)** | Purpose, Understanding, Learning, Strategy, Evaluation | Monitoreo y mejora continua. |
+| **[FAST](frameworks/FAST-Enfoque-Audiencia-Alcance-Tono.txt)**  | Focus, Audience, Scope, Tone | Documentación técnica y guías de usuario. |
+| **[T-A-G](frameworks/TAG-Tarea-Accion-Meta.txt)** | Tarea, Acción, Meta | Proyectos con objetivos medibles y acciones concretas. |
+| **[B-A-B](frameworks/BAB-Antes-Despues-Puente.txt)** | Antes, Después, Puente | Mostrar cambios y mejoras con un plan claro. |
+| **[P-E-A-S](frameworks/PEAS-Proposito-Resultado-Audiencia-Estilo.txt)** | Propósito, Resultado, Audiencia, Estilo | Estrategias de comunicación y marketing. |
+| **[S-T-A-R](frameworks/STAR-Situacion-Tarea-Accion-Resultado.txt)** | Situación, Tarea, Acción, Resultado | Documentar logros y experiencias. |
+| **[Q-C-Q-A](frameworks/QCQA-Pregunta-Contexto-Calificacion-Formato.txt)** | Pregunta, Contexto, Calificación, Respuesta | Consultas estructuradas para resolver problemas paso a paso. |
+| **[A-I-D-A](frameworks/AIDA-Atencion-Interes-Deseo-Accion.txt)** | Atención, Interés, Deseo, Acción | Marketing persuasivo y creación de campañas. |
+| **[L-E-A-P](frameworks/LEAP-Nivel-Expectativas-Aproximacion-Parametros.txt)** | Nivel, Expectativas, Enfoque, Parámetros | Planificación estratégica. |
+| **[S-P-I-N](frameworks/SPIN-Situacion-Problema-Implicacion-Necesidad.txt)** | Situación, Problema, Implicación, Necesidad | Ventas consultivas y negociación. |
+| **[D-E-S-I-G-N](frameworks/DESIGN-Definir-Explorar-Alcance-Idear-Guiar-Reducir.txt)** | Define, Explore, Scope, Ideate, Guide, Narrow | Procesos de diseño y desarrollo. |
+| **[V-I-S-I-O-N](frameworks/VISION-Visualizar-Identificar-Estructurar-Implementar-Optimizar-Navegar.txt)** | Visualize, Identify, Structure, Implement, Optimize, Navigate | Planificación estratégica. |
+| **[I-M-P-A-C-T](frameworks/IMPACT-Intencion-Mensaje-Proposito-Audiencia-Canal-Tiempo.txt)** | Intent, Message, Purpose, Audience, Channel, Timing | Estrategias de comunicación. |
+| **[M-A-S-T-E-R](frameworks/MASTER-Mision-Aproximacion-Estrategia-Tacticas-Ejecucion-Revision.txt)** | Mission, Approach, Strategy, Tactics, Execution, Review | Gestión de proyectos. |
+| **[P-O-W-E-R](frameworks/POWER-Problema-Resultado-PorQue-Ejecucion-Recursos.txt)** | Problem, Outcome, Why, Execution, Resources | Resolución de problemas. |
 
 ### 🛠️ Características técnicas
 - **Generación de prompts**: Creación automática según el framework seleccionado
