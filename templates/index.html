@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Header principal -->
+    <div class="text-center my-5">
+        <h1 class="display-4 mb-3">Prompt Engineering con +40 Frameworks</h1>
+        <p class="lead text-muted">Selecciona el framework más adecuado para crear prompts efectivos y profesionales.</p>
+    </div>
+
+    <!-- Search Form -->
+    <div class="row mb-5">
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+            <div class="search-container p-3 bg-light rounded">
+                <h4 class="text-center mb-2">Describe o define tu objetivo</h4>
+                <p class="text-muted text-center mb-3">Encontraremos el mejor Framework para tu Prompt entre los +40 que tenemos disponibles.</p>
+                <div class="d-flex flex-column flex-md-row align-items-stretch gap-3">
+                    <input type="text" id="framework-search" class="form-control form-control-lg" placeholder="Describe tu objetivo para encontrar el mejor framework" aria-label="Buscar objetivo para framework">
+                    <button id="search-btn" class="btn btn-primary btn-lg mt-2 mt-md-0 d-flex align-items-center gap-2" aria-label="Buscar framework">
+                        <i class="bi bi-search"></i>
+                        Buscar Framework
+                    </button>
+                </div>
+                <div id="recommendation-container" class="mt-3 d-none">
+                    <div class="alert alert-info">
+                        <h5 class="alert-heading">Framework Recomendado:</h5>
+                        <p id="recommended-framework" class="mb-2 fw-bold"></p>
+                        <hr>
+                        <p class="mb-2"><strong>¿Por qué este framework?</strong></p>
+                        <p id="recommendation-reason" class="mb-3"></p>
+                        <p class="mb-2"><strong>Ejemplo de uso:</strong></p>
+                        <div id="recommendation-example" class="bg-white p-3 rounded"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mb-4">Selecciona entre los +40 Framework para desarrollar tu Prompt</h2>
+    <p class="text-center text-muted mb-4">Haz clic en el framework que quieres usar. Podrás ver ejemplos en cada uno de ellos.</p>
+    
+    <div class="row mb-4">
+        {% for framework in [
+            ('rtf', 'R-T-F', 'Framework Rol-Tarea-Formato para instrucciones claras basadas en roles', 'Ideal para definir tareas específicas con roles claros y entregables estructurados'),
+            ('tag', 'T-A-G', 'Framework Tarea-Acción-Meta para prompts orientados a objetivos', 'Perfecto para proyectos con objetivos medibles y acciones concretas'),
+            ('bab', 'B-A-B', 'Framework Antes-Después-Puente para escenarios de transformación', 'Excelente para mostrar cambios y mejoras con un plan claro'),
+            ('care', 'C-A-R-E', 'Framework Contexto-Acción-Resultado-Ejemplo para planificación detallada', 'Óptimo para proyectos que requieren contexto completo y ejemplos'),
+            ('rise', 'R-I-S-E', 'Framework Rol-Entrada-Pasos-Expectativa para tareas basadas en procesos', 'Ideal para procesos paso a paso con resultados esperados claros'),
+            ('peas', 'P-E-A-S', 'Framework Propósito-Resultado-Audiencia-Estilo para comunicación efectiva', 'Perfecto para estrategias de comunicación y marketing'),
+            ('star', 'S-T-A-R', 'Framework Situación-Tarea-Acción-Resultado para casos de éxito', 'Excelente para documentar logros y experiencias'),
+            ('qcqa', 'Q-C-Q-A', 'Framework Pregunta-Contexto-Calificación-Respuesta para consultas estructuradas', 'Ideal para resolver problemas complejos paso a paso'),
+            ('aida', 'A-I-D-A', 'Framework Atención-Interés-Deseo-Acción para marketing persuasivo', 'Perfecto para crear contenido persuasivo y campañas'),
+            ('para', 'P-A-R-A', 'Framework Problema-Enfoque-Razón-Plan para resolución estructurada', 'Óptimo para solución de problemas y planificación'),
+            ('smart', 'S-M-A-R-T', 'Framework Específico-Medible-Alcanzable-Relevante-Temporal para objetivos', 'Ideal para establecer objetivos claros y medibles'),
+            ('erq', 'E-R-Q', 'Framework Experiencia-Requisitos-Calificadores para perfiles específicos', 'Perfecto para definir roles y requisitos'),
+            ('code', 'C-O-D-E', 'Framework Contexto-Objetivo-Detalles-Ejemplos para instrucciones claras', 'Excelente para documentación y guías paso a paso'),
+            ('pros', 'P-R-O-S', 'Framework Perspectiva-Requisitos-Resultado-Alcance para proyectos', 'Óptimo para definición y alcance de proyectos'),
+            ('team', 'T-E-A-M', 'Framework Tarea-Entorno-Aproximación-Métricas para trabajo en equipo', 'Ideal para proyectos colaborativos'),
+            ('idea', 'I-D-E-A', 'Framework Identificar-Definir-Ejecutar-Evaluar para solución de problemas', 'Perfecto para procesos de mejora continua'),
+            ('fast', 'F-A-S-T', 'Framework Enfoque-Audiencia-Alcance-Tono para comunicación efectiva', 'Excelente para estrategias de comunicación'),
+            ('leap', 'L-E-A-P', 'Framework Nivel-Expectativas-Enfoque-Parámetros para planificación', 'Óptimo para planificación estratégica'),
+            ('grow', 'G-R-O-W', 'Framework Meta-Realidad-Opciones-Camino para desarrollo personal', 'Ideal para coaching y desarrollo'),
+            ('spin', 'S-P-I-N', 'Framework Situación-Problema-Implicación-Necesidad para ventas consultivas', 'Perfecto para ventas y negociación'),
+            ('design', 'D-E-S-I-G-N', 'Framework Define-Explore-Scope-Ideate-Guide-Narrow para diseño', 'Ideal para procesos de diseño y desarrollo'),
+            ('vision', 'V-I-S-I-O-N', 'Framework Visualize-Identify-Structure-Implement-Optimize-Navigate', 'Perfecto para planificación estratégica'),
+            ('impact', 'I-M-P-A-C-T', 'Framework Intent-Message-Purpose-Audience-Channel-Timing', 'Óptimo para estrategias de comunicación'),
+            ('master', 'M-A-S-T-E-R', 'Framework Mission-Approach-Strategy-Tactics-Execution-Review', 'Ideal para gestión de proyectos'),
+            ('power', 'P-O-W-E-R', 'Framework Problem-Outcome-Why-Execution-Resources', 'Perfecto para resolución de problemas'),
+            ('logic', 'L-O-G-I-C', 'Framework Layout-Objective-Guidelines-Implementation-Criteria', 'Óptimo para desarrollo estructurado'),
+            ('scope', 'S-C-O-P-E', 'Framework Situation-Core Need-Obstacles-Plan-Evaluation', 'Ideal para definición de alcance'),
+            ('focus', 'F-O-C-U-S', 'Framework Frame-Objective-Constraints-Understanding-Solution', 'Perfecto para análisis de problemas'),
+            ('expert', 'E-X-P-E-R-T', 'Framework Expertise-Context-Purpose-Execution-Results-Testing', 'Óptimo para documentación técnica'),
+            ('clarity', 'C-L-A-R-I-T-Y', 'Framework Context-Limitations-Approach-Requirements-Implementation-Timeline-Yield', 'Ideal para planificación detallada')
+        ] %}
+        <div class="col-md-4 mb-3">
+            <div class="card framework-card" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ framework[1] }}</h5>
+                    <p class="card-text">{{ framework[2] }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                            <i class="bi bi-eye"></i> Ver Ejemplo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="form-container mb-4">
+        <form id="framework-form" autocomplete="off">
+            <div id="form-fields" class="fade-in">
+                <p class="text-center text-muted">Selecciona un framework para comenzar</p>
+            </div>
+        </form>
+    </div>
+
+    <div class="text-center mb-4 mt-4 d-flex flex-column flex-md-row justify-content-center gap-3">
+        <button id="generate-btn" class="btn btn-primary px-4 py-2 btn-lg d-flex align-items-center justify-content-center gap-2" aria-label="Generar prompt">
+            <i class="bi bi-magic"></i>
+            Generar Prompt
+        </button>
+    </div>
+
+    <div class="prompt-preview mt-4 mx-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Prompt generado</h5>
+            <span>Tokens: <span id="token-count" class="token-counter">0</span>/3000</span>
+        </div>
+        <div class="prompt-content bg-white p-3 rounded border mb-3">
+            <p id="prompt-preview" class="mb-0"></p>
+        </div>
+        <div class="copy-buttons d-flex flex-column flex-md-row gap-2 gap-md-3 justify-content-end align-items-center mt-2">
+            <button id="copy-markdown-btn" class="btn btn-outline-primary d-flex align-items-center" aria-label="Copiar como Markdown">
+                <i class="bi bi-markdown me-2"></i>
+                Copiar Markdown
+            </button>
+            <button id="copy-formatted-btn" class="btn btn-outline-primary d-flex align-items-center" aria-label="Copiar formateado">
+                <i class="bi bi-file-text me-2"></i>
+                Copiar Formateado
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal para ejemplos -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ejemplo de Framework</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre id="framework-example" class="bg-light p-3 rounded"></pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de copiado -->
+    <div class="modal fade" id="copyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <i class="bi bi-check-circle text-success fs-1 mb-3"></i>
+                    <p class="mb-0">¡Prompt copiado con éxito!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de anuncios -->
+    <div class="modal fade" id="announcementModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="announcementTitle">Aviso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="announcementMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Añadir el footer -->
+
+{% endblock %}
