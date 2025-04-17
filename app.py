@@ -14,6 +14,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 from utils.openai_helper import optimize_prompt, count_tokens, get_framework_recommendation, FRAMEWORK_EXAMPLES
 from utils.openai_helper import DEFAULT_MODEL, PREMIUM_MODEL
 from utils.prompt_formatter import format_prompt_markdown
+from utils.rate_limiter import check_rate_limit, increment_usage, get_usage_info
 from console import console
 
 # Inicialización de la aplicación Flask
@@ -145,16 +146,34 @@ def recommend_framework():
     if not objective:
         return jsonify({"success": False, "error": "Objetivo no proporcionado"}), 400
     
+    # Verificar límite de uso
+    is_limited, remaining, reset_time = check_rate_limit()
+    if is_limited:
+        return jsonify({
+            "success": False, 
+            "error": f"Has alcanzado el límite de {10} solicitudes por hora. Por favor, espera {reset_time} o usa tu propia API key."
+        }), 429
+    
     try:
         # Obtener la recomendación como texto plano
         recommendation_text = get_framework_recommendation(objective)
+        
+        # Incrementar contador de uso
+        remaining, reset_time = increment_usage()
         
         # Verificar brevemente que el formato es válido
         if "FRAMEWORK:" not in recommendation_text:
             console.error("Formato de respuesta inválido")
             return jsonify({"success": False, "error": "Formato de respuesta inválido"}), 400
         
-        return jsonify({"success": True, "recommendation": recommendation_text})
+        return jsonify({
+            "success": True, 
+            "recommendation": recommendation_text,
+            "usage": {
+                "remaining": remaining,
+                "reset_time": reset_time
+            }
+        })
     except Exception as e:
         console.error("Error al obtener recomendación", str(e))
         return jsonify({"success": False, "error": str(e)}), 400
@@ -183,16 +202,35 @@ def generate_prompt():
     form_data = data.get('formData', {})
     is_combined = data.get('isCombined', False)
     
+    # Verificar límite de uso
+    is_limited, remaining, reset_time = check_rate_limit()
+    if is_limited:
+        return jsonify({
+            "success": False, 
+            "error": f"Has alcanzado el límite de {10} solicitudes por hora. Por favor, espera {reset_time} o usa tu propia API key."
+        }), 429
+    
     try:
         if is_combined:
             result = optimize_prompt("combined", form_data, frameworks)
         else:
             result = optimize_prompt(frameworks[0], form_data)
         
+        # Incrementar contador de uso
+        remaining, reset_time = increment_usage()
+        
         # Format the prompt with Markdown formatting
         formatted_result = format_prompt_markdown(result)
         
-        return jsonify({"success": True, "prompt": formatted_result, "raw_prompt": result})
+        return jsonify({
+            "success": True, 
+            "prompt": formatted_result, 
+            "raw_prompt": result,
+            "usage": {
+                "remaining": remaining,
+                "reset_time": reset_time
+            }
+        })
     except Exception as e:
         return jsonify({"success": False, "error": f"Error al generar el prompt: {str(e)}"}), 400
 
@@ -231,6 +269,21 @@ def como_funciona():
     """
     return render_template('como_funciona.html')
 
+# Nuevo endpoint para obtener información de límite de uso
+@app.route('/api/usage-info', methods=['GET'])
+def get_usage_limit_info():
+    """
+    Endpoint para obtener información sobre el límite de uso actual.
+    
+    Returns:
+        JSON: Información detallada sobre el uso y límites
+    """
+    try:
+        usage_info = get_usage_info()
+        return jsonify({"success": True, "usage_info": usage_info})
+    except Exception as e:
+        console.error("Error al obtener información de uso", str(e))
+        return jsonify({"success": False, "error": str(e)}), 400
 
 # Configuración para ejecutar la aplicación en Render o localmente
 if __name__ == "__main__":

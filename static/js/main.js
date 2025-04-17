@@ -521,6 +521,9 @@ async function generatePrompt() {
             promptPreview.setAttribute('data-raw-prompt', data.raw_prompt);
             
             updateTokenCount();
+            
+            // Actualizar información de uso
+            updateUsageInfoFromResponse(data);
         } else {
             throw new Error(data.error);
         }
@@ -532,6 +535,7 @@ async function generatePrompt() {
         generateBtn.disabled = false;
     }
 }
+
 // Función para actualizar el conteo de tokens
 async function updateTokenCount() {
     const promptText = document.getElementById('prompt-preview').textContent;
@@ -757,6 +761,9 @@ function searchFramework() {
                     recommendedCard.classList.add('recommended');
                     recommendedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
+                
+                // Actualizar información de uso
+                updateUsageInfoFromResponse(data);
             } catch (e) {
                 console.error("Error al procesar la recomendación:", e);
                 alert("Error al procesar la recomendación: " + e.message);
@@ -998,6 +1005,91 @@ function smoothScrollTo(element, offset = 50) {
     });
 }
 
+// Función para obtener y mostrar información de límite de uso
+function updateUsageInfo() {
+    fetch('/api/usage-info')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const usageInfo = data.usage_info;
+                
+                // Usar updateUsageDisplay para mantener consistencia en el formato
+                updateUsageDisplay({
+                    remaining: usageInfo.remaining,
+                    reset_time: usageInfo.reset_time,
+                    limited: usageInfo.limited
+                });
+            }
+        })
+        .catch(error => console.error('Error al obtener información de uso:', error));
+}
+
+// Manejar información de uso en respuestas
+function updateUsageInfoFromResponse(data) {
+    if (data && data.usage) {
+        updateUsageDisplay({
+            remaining: data.usage.remaining,
+            reset_time: data.usage.reset_time,
+            limited: data.usage.remaining <= 0
+        });
+    }
+}
+
+// Función para verificar el límite de uso
+function checkUsageLimit() {
+    fetch('/api/usage-info')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const usageInfo = data.usage_info;
+                updateUsageDisplay({
+                    remaining: usageInfo.remaining,
+                    reset_time: usageInfo.reset_time,
+                    limited: usageInfo.limited
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error al verificar el límite de uso:', error);
+        });
+}
+
+// Función para actualizar la información de uso en la interfaz
+function updateUsageDisplay(data) {
+    const usageContainer = document.getElementById('usage-info-container');
+    
+    if (!usageContainer) return;
+    
+    if (data.remaining !== undefined) {
+        let messageClass = 'alert-info';
+        let message = '';
+        let icon = 'bi-info-circle';
+        
+        if (data.limited || data.remaining <= 0) {
+            messageClass = 'alert-danger';
+            icon = 'bi-exclamation-triangle';
+            message = `Has alcanzado el límite de 10 usos por hora para GPT-3.5. Podrás realizar más solicitudes en: ${data.reset_time}`;
+        } else if (data.remaining <= 3) {
+            messageClass = 'alert-warning';
+            icon = 'bi-exclamation-circle';
+            message = `Atención: Te quedan solo ${data.remaining} usos de GPT-3.5 para esta hora.`;
+        } else {
+            icon = 'bi-lightning';
+            message = `Usos disponibles de GPT-3.5: ${data.remaining}/10 para esta hora.`;
+        }
+        
+        usageContainer.innerHTML = `<div class="alert ${messageClass}"><i class="bi ${icon}"></i>${message}</div>`;
+        usageContainer.style.display = 'block';
+    } else {
+        usageContainer.style.display = 'none';
+    }
+}
+
+// Actualizar el contador después de cada generación con GPT-3.5
+function updateUsageCounter() {
+    checkUsageLimit();
+}
+
 // DOM Content Loaded Event Handler
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize tooltips
@@ -1078,4 +1170,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showFrameworkExample(this.dataset.framework);
         });
     });
+
+    // Cargar información de uso
+    checkUsageLimit();
 });

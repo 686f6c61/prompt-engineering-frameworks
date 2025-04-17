@@ -1,0 +1,50 @@
+/* Estilos para la información de uso */
+.usage-info {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 0 15px;
+}
+
+/* Nuevo estilo compacto para el contenedor de información de uso */
+#usage-info-container {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+#usage-info-container .alert {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+#usage-info-container .alert i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.alert-info {
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    color: #0d47a1;
+}
+
+.alert-danger {
+    background-color: #ffebee;
+    border: 1px solid #ffcdd2;
+    color: #b71c1c;
+}
+
+.alert-warning {
+    background-color: #fff8e1;
+    border: 1px solid #ffecb3;
+    color: #ff6f00;
+} 

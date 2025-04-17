@@ -16,14 +16,16 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 5. **Generación guiada**: Asistencia paso a paso para crear tu prompt
 
 ### 🧠 Modelos de IA disponibles
-- **GPT-3.5 Turbo (Gratis)**: Disponible para todos los usuarios sin costo
+- **GPT-3.5 Turbo (Gratis)**: Disponible para todos los usuarios sin coste
   - Recomendaciones de frameworks básicas
   - Respuestas rápidas
   - Hasta 4096 tokens por consulta
+  - Limitado a 10 solicitudes por hora (para uso gratuito)
 - **GPT-4o-mini (API Key propia)**: Para usuarios que desean resultados premium
   - Recomendaciones más precisas y detalladas
   - Mayor comprensión del contexto
   - Requiere tu propia API Key de OpenAI
+  - Sin límites de uso (depende de tu plan de OpenAI)
   - Configuración simple a través del panel de configuración
   - La API Key nunca se almacena en el servidor, solo en la sesión del navegador
 
@@ -83,6 +85,7 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 - **Generación de prompts**: Creación automática según el framework seleccionado
 - **Exportación flexible**: Opciones para copiar en markdown o texto formateado
 - **Contador de tokens**: Monitorización en tiempo real del uso de tokens
+- **Sistema de limitación de tasa**: Control de uso para el modelo gratuito (10 solicitudes/hora)
 - **Interfaz responsiva**: Diseño adaptable para cualquier dispositivo
 - **Selección de modelos**: Opción para usar GPT-3.5 Turbo (gratis) o GPT-4o-mini (con API key propia)
 - **Almacenamiento local**: Guarda tus prompts favoritos
@@ -168,6 +171,22 @@ La aplicación utiliza las siguientes variables de entorno:
 2. Describe tu objetivo o selecciona un framework
 3. Completa los campos según el framework elegido
 4. Genera y copia tu prompt optimizado
+
+### 📊 Sistema de limitación de uso (Rate Limiting)
+
+El sistema implementa un control de uso para el modelo gratuito GPT-3.5 Turbo:
+
+- **Límite estándar**: 10 solicitudes por hora por usuario
+- **Contador visual**: Muestra las solicitudes restantes en la interfaz
+- **Temporizador de reinicio**: Indica cuándo se restablecerá el contador
+- **Uso ilimitado**: Disponible al configurar tu propia API Key de OpenAI
+- **Almacenamiento en sesión**: El contador se mantiene en la sesión del navegador
+
+Para usar el sistema sin limitaciones:
+1. Haz clic en "Cambiar modelo" en la barra superior
+2. Selecciona la opción "Usar GPT-4o-mini con mi API Key"
+3. Introduce tu API Key de OpenAI
+4. Confirma para eliminar las restricciones de uso
 
 ## 🤝 Contribuciones
 
