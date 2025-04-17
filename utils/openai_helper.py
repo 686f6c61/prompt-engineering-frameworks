@@ -1,13 +1,15 @@
 import os
 from dotenv import load_dotenv
-import openai
+from openai import OpenAI
 from console import console
 
 # Cargar variables de entorno
 load_dotenv()
 
 # Inicializar cliente de OpenAI
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai_client = OpenAI(
+    api_key=os.getenv('OPENAI_API_KEY')
+)
 
 AVAILABLE_FRAMEWORKS = [
     'rtf', 'tag', 'bab', 'care', 'rise', 'peas', 'star', 'qcqa', 
@@ -691,21 +693,23 @@ def optimize_prompt(framework: str, form_data: dict, frameworks: list = None) ->
     
     {raw_prompt}""".format(example=example, raw_prompt=raw_prompt)
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = openai_client.chat.completions.create(
+        model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": formatted_message},
+            {"role": "system", "content": formatted_message}
         ],
-        max_tokens=3000
+        max_tokens=4096
     )
     
-    return response.choices[0].message['content']
+    return response.choices[0].message.content
 
 def count_tokens(text: str) -> int:
     """Count the number of tokens in a text using the OpenAI API."""
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": text}],
+    response = openai_client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "user", "content": text}
+        ],
         max_tokens=100
     )
     return response.usage.prompt_tokens
@@ -751,14 +755,15 @@ def get_framework_recommendation(objective: str) -> dict:
         "example": "Un ejemplo concreto y detallado de cómo usar el framework para este objetivo específico, incluyendo cada componente del framework"
     }'''
     
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = openai_client.chat.completions.create(
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": f"Objetivo del usuario: {objective}"}
         ],
+        response_format={"type": "json_object"},
         max_tokens=4096,
         temperature=0.7
     )
     
-    return response.choices[0].message['content']
+    return response.choices[0].message.content
