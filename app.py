@@ -20,6 +20,7 @@ from console import console
 import os.path  # Importar os.path para manejar rutas de archivos
 import io
 import zipfile
+import requests  # Para hacer solicitudes a la API de Resend
 
 # Inicialización de la aplicación Flask
 app = Flask(__name__)
@@ -510,6 +511,91 @@ def download_frameworks_zip():
         as_attachment=True,
         download_name='prompt-frameworks.zip'
     )
+
+# Endpoint para enviar correos con Resend
+@app.route('/api/enviar-correo', methods=['POST'])
+def enviar_correo():
+    """
+    Endpoint para enviar correos utilizando la API de Resend.
+    
+    Expects:
+        JSON: {
+            "nombre": string,   # Nombre del remitente
+            "email": string,    # Email del remitente
+            "asunto": string,   # Asunto del correo
+            "mensaje": string   # Contenido del mensaje
+        }
+    
+    Returns:
+        JSON: {
+            "success": bool,
+            "message": string,
+            "error": string (opcional)
+        }
+    """
+    # API Key de Resend
+    RESEND_API_KEY = 're_Jfjmq92S_BVWgMMYaJictt1E696WJNdHN'
+    
+    # Obtener datos del formulario
+    data = request.json
+    nombre = data.get('nombre', '')
+    email = data.get('email', '')
+    asunto = data.get('asunto', '')
+    mensaje = data.get('mensaje', '')
+    
+    # Validar que todos los campos estén presentes
+    if not all([nombre, email, asunto, mensaje]):
+        return jsonify({
+            "success": False,
+            "error": "Por favor completa todos los campos del formulario."
+        }), 400
+    
+    try:
+        # Configurar la solicitud a la API de Resend
+        headers = {
+            'Authorization': f'Bearer {RESEND_API_KEY}',
+            'Content-Type': 'application/json'
+        }
+        
+        payload = {
+            'from': 'Prompt Agent <hola@promptagent.dev>',
+            'to': ['hola@promptagent.dev'],  # Correo destino 
+            'subject': f'[Formulario de contacto] {asunto}',
+            'reply_to': email,
+            'html': f"""
+            <h2>Nuevo mensaje desde el formulario de contacto</h2>
+            <p><strong>Nombre:</strong> {nombre}</p>
+            <p><strong>Email:</strong> {email}</p>
+            <p><strong>Asunto:</strong> {asunto}</p>
+            <p><strong>Mensaje:</strong></p>
+            <p>{mensaje}</p>
+            """
+        }
+        
+        # Enviar la solicitud a la API de Resend
+        response = requests.post('https://api.resend.com/emails', 
+                                headers=headers, 
+                                json=payload)
+        
+        if response.status_code == 200 or response.status_code == 201:
+            console.info(f"Correo enviado correctamente desde {email}")
+            return jsonify({
+                "success": True,
+                "message": "Tu mensaje ha sido enviado correctamente. Te responderemos lo antes posible."
+            })
+        else:
+            console.error(f"Error al enviar correo: {response.text}")
+            return jsonify({
+                "success": False,
+                "error": "Error al enviar el mensaje. Por favor intenta de nuevo más tarde."
+            }), 500
+            
+    except Exception as e:
+        console.error(f"Error al enviar correo: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": f"Error al enviar el mensaje: {str(e)}"
+        }), 500
 
 # Configuración para ejecutar la aplicación en Render o localmente
 if __name__ == "__main__":

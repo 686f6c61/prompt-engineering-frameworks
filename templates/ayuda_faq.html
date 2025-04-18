@@ -283,17 +283,54 @@ document.addEventListener('DOMContentLoaded', function() {
             mensaje: document.getElementById('mensaje').value
         };
         
-        // Aquí iría la lógica para enviar el formulario con Resend
-        // Por ahora solo simulamos una respuesta exitosa
+        // Deshabilitar el botón de envío y mostrar indicador de carga
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
         
-        // Mostrar mensaje de éxito (simulado)
-        document.getElementById('mensajeExito').classList.remove('d-none');
-        form.reset();
-        form.classList.remove('was-validated');
+        // Ocultar mensajes previos
+        document.getElementById('mensajeExito').classList.add('d-none');
+        document.getElementById('mensajeError').classList.add('d-none');
         
-        // Generar nuevo captcha después del envío
-        generarCaptcha();
-        document.getElementById('captchaAnswer').value = '';
+        // Enviar datos al endpoint
+        fetch('/api/enviar-correo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Mostrar mensaje de éxito
+                document.getElementById('mensajeExito').textContent = data.message || 'Tu mensaje ha sido enviado correctamente. Te responderemos lo antes posible.';
+                document.getElementById('mensajeExito').classList.remove('d-none');
+                
+                // Reiniciar formulario
+                form.reset();
+                form.classList.remove('was-validated');
+                
+                // Generar nuevo captcha
+                generarCaptcha();
+                document.getElementById('captchaAnswer').value = '';
+            } else {
+                // Mostrar mensaje de error
+                document.getElementById('mensajeError').textContent = data.error || 'Ha ocurrido un error al enviar el mensaje. Por favor intenta nuevamente más tarde.';
+                document.getElementById('mensajeError').classList.remove('d-none');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('mensajeError').textContent = 'Ha ocurrido un error al procesar tu solicitud. Por favor intenta más tarde.';
+            document.getElementById('mensajeError').classList.remove('d-none');
+        })
+        .finally(() => {
+            // Restaurar botón
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+        });
     });
     
     // Restablecer estado del captcha cuando se modifica
