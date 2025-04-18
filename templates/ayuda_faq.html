@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="display-4 text-center mb-5">Ayuda y Preguntas Frecuentes</h1>
+    
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="alert alert-info">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-info-circle-fill me-2 fs-4"></i>
+                    <div>
+                        <strong>Soporte técnico:</strong> Si no encuentras respuesta a tu pregunta, utiliza el formulario de contacto al final de esta página.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sección de FAQ -->
+    <div class="row mb-5">
+        <div class="col-lg-10 mx-auto">
+            <div class="accordion" id="accordionFAQ">
+                <!-- Grupo 1: Preguntas sobre versión gratuita -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="bi bi-patch-check text-success me-2"></i> Versión Gratuita
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <div class="mb-4">
+                                <h5>¿Qué limitaciones tiene la versión gratuita?</h5>
+                                <p>La versión gratuita utiliza el modelo GPT-3.5 Turbo y está limitada a 10 solicitudes por hora por usuario. Esta versión es perfecta para usuarios ocasionales que quieren mejorar sus prompts sin necesidad de una API key propia.</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5>¿Necesito crear una cuenta para usar la versión gratuita?</h5>
+                                <p>No, Prompt Agent no requiere registro ni creación de cuenta para la versión gratuita. Simplemente accede a la web y comienza a generar prompts estructurados inmediatamente.</p>
+                            </div>
+                            
+                            <div>
+                                <h5>¿Cómo se cuentan las 10 solicitudes por hora?</h5>
+                                <p>Cada vez que generas un prompt completo o solicitas una recomendación de framework, se cuenta como una solicitud. El contador se reinicia automáticamente cada hora. Puedes ver tu uso actual en la interfaz de la aplicación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grupo 2: Preguntas sobre o4-mini -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="bi bi-stars text-warning me-2"></i> Modelo Premium (o4-mini)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <div class="mb-4">
+                                <h5>¿Qué ventajas ofrece el modelo o4-mini?</h5>
+                                <p>El modelo premium o4-mini-2025-04-16 ofrece una calidad superior en la generación de prompts, con mayor precisión, contexto y creatividad. Además, al usar tu propia API key, no tienes limitaciones en el número de solicitudes que puedes realizar por hora.</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5>¿Cómo puedo acceder al modelo premium?</h5>
+                                <p>Para utilizar el modelo premium, necesitas configurar tu propia API key de OpenAI. Ve a la sección de "Configuración" en el menú principal, selecciona la opción "Usar API key personal" e introduce tu clave. Esta configuración se guarda en tu navegador durante 30 días.</p>
+                            </div>
+                            
+                            <div>
+                                <h5>¿Puedo alternar entre la versión gratuita y premium?</h5>
+                                <p>Sí, puedes cambiar entre ambos modelos en cualquier momento desde la sección de "Configuración". Si decides volver a la versión gratuita, simplemente selecciona esa opción y tu API key se eliminará de la sesión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grupo 3: Preguntas sobre privacidad de API key -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="bi bi-shield-lock text-primary me-2"></i> Privacidad de API Key
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <div class="mb-4">
+                                <h5>¿Es seguro proporcionar mi API key?</h5>
+                                <p>Tu API key se almacena exclusivamente en la sesión de tu navegador mediante cookies cifradas y nunca se envía a nuestros servidores. Prompt Agent utiliza un enfoque de "client-side" para manejar las solicitudes a la API de OpenAI directamente desde tu navegador.</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5>¿Por qué no pueden acceder a mi API key aunque la introduzca en la aplicación?</h5>
+                                <p><strong>Explicación técnica:</strong> Utilizamos un patrón de arquitectura que separa completamente el manejo de la API key del servidor. Cuando introduces tu clave, esta se almacena mediante <code>sessionStorage</code> en tu navegador y se cifra con una clave generada localmente. Las solicitudes a OpenAI se realizan directamente desde tu navegador mediante peticiones CORS, sin pasar por nuestros servidores. Además, implementamos una política de Content Security Policy (CSP) estricta que impide cualquier filtración de datos a dominios no autorizados.</p>
+                            </div>
+                            
+                            <div>
+                                <h5>¿Dónde se guardan mis prompts generados?</h5>
+                                <p>Los prompts generados se procesan localmente en tu navegador y no se almacenan en nuestros servidores. Toda la información generada permanece en tu dispositivo a menos que decidas exportarla manualmente. Nuestro sistema está diseñado para maximizar la privacidad y seguridad de tus datos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grupo 4: Preguntas sobre frameworks -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <i class="bi bi-grid-3x3-gap text-danger me-2"></i> Frameworks
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <div class="mb-4">
+                                <h5>¿Cómo se seleccionan los frameworks para mi objetivo?</h5>
+                                <p>Prompt Agent analiza tu objetivo utilizando algoritmos de procesamiento de lenguaje natural para identificar patrones, intenciones y contexto. Basándose en este análisis, el sistema selecciona el framework más adecuado de nuestra biblioteca de 47+ frameworks especializados para diferentes tipos de tareas.</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5>¿Puedo combinar varios frameworks en un solo prompt?</h5>
+                                <p>Sí, Prompt Agent permite combinar hasta 3 frameworks diferentes para crear prompts híbridos que aprovechan las fortalezas de cada estructura. Esta característica es especialmente útil para objetivos complejos que abarcan múltiples dimensiones.</p>
+                            </div>
+                            
+                            <div>
+                                <h5>¿Puedo descargar todos los frameworks para estudiarlos?</h5>
+                                <p>Sí, ofrecemos la opción de descargar la colección completa de frameworks en formato ZIP desde la sección "¿Cómo funciona?". Esto te permite estudiar cada estructura en detalle y aplicarlas manualmente si lo prefieres.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo 5: Preguntas generales -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <i class="bi bi-question-circle text-success me-2"></i> Preguntas generales
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <div class="mb-4">
+                                <h5>¿Cómo funciona el generador Bolt/Lovable?</h5>
+                                <p>El generador Bolt/Lovable es una herramienta especializada para crear documentación técnica y especificaciones para proyectos web. Utiliza frameworks optimizados para plataformas de desarrollo como Bolt y Lovable, generando prompts detallados que incluyen contexto del proyecto, requisitos técnicos, estructura de componentes y estrategias de implementación.</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5>¿Con qué frecuencia se añaden nuevos frameworks?</h5>
+                                <p>Actualizamos nuestra biblioteca de frameworks regularmente, añadiendo nuevas estructuras a medida que evolucionan las mejores prácticas en prompt engineering. Realizamos actualizaciones aproximadamente cada 2-3 meses, pero también incorporamos frameworks específicos cuando identificamos necesidades emergentes.</p>
+                            </div>
+                            
+                            <div>
+                                <h5>¿Puedo sugerir un nuevo framework para incluir?</h5>
+                                <p>¡Absolutamente! Valoramos las contribuciones de la comunidad. Puedes sugerir nuevos frameworks utilizando el formulario de contacto al final de esta página, o a través de nuestro repositorio de GitHub si prefieres un enfoque más técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Formulario de contacto -->
+    <div class="row mt-5 pt-4">
+        <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h4 mb-4 text-center">Formulario de contacto</h2>
+                    
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                <div class="invalid-feedback">
+                                    Por favor introduce tu nombre
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">
+                                    Por favor introduce un email válido
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="asunto" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="asunto" name="asunto" required>
+                                <div class="invalid-feedback">
+                                    Por favor introduce el asunto
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor introduce tu mensaje
+                                </div>
+                            </div>
+                            
+                            <!-- Captcha simple matemático -->
+                            <div class="col-12 mt-3">
+                                <div class="captcha-container p-3 bg-light rounded">
+                                    <label class="form-label">Verificación de seguridad</label>
+                                    <div class="captcha-question" id="captchaQuestion">
+                                        ¿Cuánto es <span id="num1">3</span> + <span id="num2">5</span>?
+                                    </div>
+                                    <input type="number" class="form-control mt-2" id="captchaAnswer" required>
+                                    <div class="invalid-feedback">
+                                        Por favor resuelve la operación matemática
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="bi bi-send me-2"></i>Enviar mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Mensaje de éxito (oculto por defecto) -->
+                    <div class="alert alert-success mt-4 d-none" id="mensajeExito">
+                        <i class="bi bi-check-circle me-2"></i>
+                        Tu mensaje ha sido enviado correctamente. Te responderemos lo antes posible.
+                    </div>
+                    
+                    <!-- Mensaje de error (oculto por defecto) -->
+                    <div class="alert alert-danger mt-4 d-none" id="mensajeError">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Ha ocurrido un error al enviar el mensaje. Por favor intenta nuevamente más tarde.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Generar captcha aleatorio
+    function generarCaptcha() {
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        document.getElementById('num1').textContent = num1;
+        document.getElementById('num2').textContent = num2;
+        // Guardar la respuesta correcta como atributo de datos
+        document.getElementById('captchaQuestion').dataset.correctAnswer = num1 + num2;
+    }
+    
+    // Generar captcha al cargar la página
+    generarCaptcha();
+    
+    // Validación del formulario
+    const form = document.getElementById('contactForm');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Verificar captcha
+        const captchaAnswer = parseInt(document.getElementById('captchaAnswer').value);
+        const correctAnswer = parseInt(document.getElementById('captchaQuestion').dataset.correctAnswer);
+        
+        if (captchaAnswer !== correctAnswer) {
+            document.getElementById('captchaAnswer').classList.add('is-invalid');
+            return;
+        }
+        
+        // Validar el resto del formulario
+        if (!form.checkValidity()) {
+            event.stopPropagation();
+            form.classList.add('was-validated');
+            return;
+        }
+        
+        // Si todo es válido, procesar el formulario
+        const formData = {
+            nombre: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            asunto: document.getElementById('asunto').value,
+            mensaje: document.getElementById('mensaje').value
+        };
+        
+        // Aquí iría la lógica para enviar el formulario con Resend
+        // Por ahora solo simulamos una respuesta exitosa
+        
+        // Mostrar mensaje de éxito (simulado)
+        document.getElementById('mensajeExito').classList.remove('d-none');
+        form.reset();
+        form.classList.remove('was-validated');
+        
+        // Generar nuevo captcha después del envío
+        generarCaptcha();
+        document.getElementById('captchaAnswer').value = '';
+    });
+    
+    // Restablecer estado del captcha cuando se modifica
+    document.getElementById('captchaAnswer').addEventListener('input', function() {
+        this.classList.remove('is-invalid');
+    });
+});
+</script>
+{% endblock %} 

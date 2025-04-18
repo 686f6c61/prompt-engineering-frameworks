@@ -273,6 +273,16 @@ def como_funciona():
     """
     return render_template('como_funciona.html')
 
+@app.route('/ayuda-faq')
+def ayuda_faq():
+    """
+    Ruta que renderiza la página de ayuda y preguntas frecuentes.
+    
+    Returns:
+        template: Renderiza ayuda_faq.html
+    """
+    return render_template('ayuda_faq.html')
+
 @app.route('/bolt-lovable')
 def bolt_lovable():
     """
