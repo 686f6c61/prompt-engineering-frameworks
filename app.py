@@ -556,7 +556,7 @@ def download_frameworks_zip():
         memory_file,
         mimetype='application/zip',
         as_attachment=True,
-        download_name='prompt-frameworks.zip'
+        download_name='frameworks.zip'
     )
 
 # Endpoint para enviar correos con Resend

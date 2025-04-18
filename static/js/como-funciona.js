@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const downloadCsvBtn = document.getElementById('downloadCsvBtn');
   if (downloadCsvBtn) {
     downloadCsvBtn.addEventListener('click', function() {
-      exportTableToCSV('frameworks.csv');
+      exportTableToCSV('/static/frameworks/frameworks.csv');
     });
   }
 });
