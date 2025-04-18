@@ -613,13 +613,21 @@ def enviar_correo():
             'Content-Type': 'application/json'
         }
         
-        # Usar variables de entorno para las direcciones de correo
-        email_from = os.environ.get('EMAIL_FROM', 'Prompt Agent <hola@promptagent.info>')
-        email_to = os.environ.get('EMAIL_TO', 'reg@00b.tech')
+        # Obtener variables de entorno para las direcciones de correo
+        email_from = os.environ.get('EMAIL_FROM')
+        email_to = os.environ.get('EMAIL_TO')
+        
+        # Verificar que las direcciones de correo estén configuradas
+        if not email_from or not email_to:
+            console.error("Error: Variables de entorno EMAIL_FROM o EMAIL_TO no configuradas")
+            return jsonify({
+                "success": False,
+                "error": "Error en la configuración del servidor. Por favor contacta al administrador."
+            }), 500
         
         payload = {
             'from': email_from,
-            'to': [email_to],  # Correo destino desde variable de entorno
+            'to': [email_to],
             'subject': f'[Formulario de contacto] {asunto}',
             'reply_to': email,
             'html': f"""
