@@ -17,6 +17,7 @@ from utils.prompt_formatter import format_prompt_markdown
 from utils.rate_limiter import check_rate_limit, increment_usage, get_usage_info
 from utils.bolt_lovable_helper import generate_bolt_lovable_prompt
 from console import console
+import os.path  # Importar os.path para manejar rutas de archivos
 
 # Inicialización de la aplicación Flask
 app = Flask(__name__)
@@ -439,6 +440,31 @@ def get_usage_limit_info():
     except Exception as e:
         console.error("Error al obtener información de uso", str(e))
         return jsonify({"success": False, "error": str(e)}), 400
+
+@app.route('/frameworks/<framework_name>')
+def serve_framework(framework_name):
+    """
+    Ruta para servir archivos de frameworks directamente.
+    
+    Args:
+        framework_name: Nombre del archivo de framework (incluyendo extensión)
+    
+    Returns:
+        file: Archivo de framework solicitado
+    """
+    # Construir la ruta del archivo
+    framework_path = os.path.join('frameworks', framework_name)
+    
+    # Verificar si el archivo existe
+    if not os.path.isfile(framework_path):
+        return "Framework no encontrado", 404
+    
+    # Leer y retornar el contenido del archivo
+    with open(framework_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Devolver el contenido como texto plano
+    return content, 200, {'Content-Type': 'text/plain; charset=utf-8'}
 
 # Configuración para ejecutar la aplicación en Render o localmente
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container py-5">
-    <h1 class="display-4 text-center mb-5">¿Cómo Funciona?</h1>
+    <h1 class="display-4 text-center mb-5">¿Cómo funciona Prompt Agent?</h1>
     <div class="text-center mb-4">
         <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#infoCollapse" aria-expanded="false" aria-controls="infoCollapse">
             <i class="bi bi-info-circle me-1"></i> Más info
@@ -11,8 +11,8 @@
     <div class="collapse" id="infoCollapse">
         <div class="text-center mb-5">
             <p class="lead description-text">
-                <span class="highlight-text">Utilizamos <strong>o4-mini-2025-04-16</strong> (OpenAI)</span>
-                <span class="token-badge">4096 Tokens</span>
+                <span class="highlight-text">Por defecto: <strong>GPT-3.5 Turbo</strong> (Gratuito) | Con API Key: <strong>o4-mini-2025-04-16</strong> (OpenAI)</span>
+                <span class="token-badge">4096 Tokens máximos</span>
                 <span class="badge bg-info text-dark ms-2">Temperatura: 0.7</span>
                 <span class="emoji-wrapper">🚀</span>
                 <br>
@@ -40,8 +40,9 @@
         <div class="alert alert-info d-flex align-items-start gap-3 mb-4" role="alert">
             <i class="bi bi-lightning-charge display-6 mt-1"></i>
             <div>
-                <strong>Sobre el modelo <span class="text-primary">o4-mini-2025-04-16</span>:</strong><br>
-                Este es el modelo más reciente y eficiente de OpenAI, ideal para generación y comprensión de texto a gran velocidad y bajo coste. Más información en la <a href="https://platform.openai.com/docs/models/o4-mini" target="_blank" rel="noopener">documentación oficial</a>.
+                <strong>Sobre los modelos disponibles:</strong><br>
+                <span class="fw-bold text-primary">GPT-3.5 Turbo (Gratuito):</span> Modelo por defecto con buena relación rendimiento/coste. Limitado a 10 solicitudes por hora.<br>
+                <span class="fw-bold text-primary">o4-mini-2025-04-16:</span> Modelo premium más reciente de OpenAI con mejor rendimiento. Requiere API Key personal, sin límites de uso. Más información en la <a href="https://platform.openai.com/docs/models/o4-mini" target="_blank" rel="noopener">documentación oficial</a>.
             </div>
         </div>
 
@@ -82,6 +83,7 @@
                         <h3 class="h5 card-title">1. RTF (Role, Task, Format)</h3>
                         <p class="card-text">Framework para estructurar prompts definiendo el rol del AI, la tarea específica y el formato deseado de respuesta.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Generación de contenido estructurado y tareas específicas.</small></p>
+                        <button class="btn btn-outline-primary btn-sm framework-details" data-framework="RTF-Rol-Tarea-Formato"><i class="bi bi-eye"></i></button>
                     </div>
                 </div>
             </div>
@@ -93,6 +95,7 @@
                         <h3 class="h5 card-title">2. PARA (Purpose, Action, Result, Assessment)</h3>
                         <p class="card-text">Define propósito, acciones necesarias, resultados esperados y métodos de evaluación.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Planificación y evaluación de proyectos.</small></p>
+                        <button class="btn btn-outline-primary btn-sm framework-details" data-framework="PARA-Problema-Aproximacion-Razon-Accion"><i class="bi bi-eye"></i></button>
                     </div>
                 </div>
             </div>
@@ -104,6 +107,7 @@
                         <h3 class="h5 card-title">3. SMART (Specific, Measurable, Achievable, Relevant, Time-bound)</h3>
                         <p class="card-text">Marco para establecer objetivos claros, medibles y alcanzables en un tiempo determinado.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Definición de objetivos y metas.</small></p>
+                        <button class="btn btn-outline-primary btn-sm framework-details" data-framework="SMART-Especifico-Medible-Alcanzable-Relevante-Temporal"><i class="bi bi-eye"></i></button>
                     </div>
                 </div>
             </div>
@@ -115,6 +119,7 @@
                         <h3 class="h5 card-title">4. ERQ (Experience, Requirements, Qualifiers)</h3>
                         <p class="card-text">Framework para definir experiencia necesaria, requisitos específicos y calificadores del proyecto.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Definición de perfiles y requisitos.</small></p>
+                        <button class="btn btn-outline-primary btn-sm framework-details" data-framework="ERQ-Experiencia-Requisitos-Cualificaciones"><i class="bi bi-eye"></i></button>
                     </div>
                 </div>
             </div>
@@ -126,6 +131,7 @@
                         <h3 class="h5 card-title">5. CODE (Context, Objective, Details, Examples)</h3>
                         <p class="card-text">Estructura para proporcionar contexto completo, objetivos claros, detalles específicos y ejemplos ilustrativos.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Documentación técnica y guías.</small></p>
+                        <button class="btn btn-outline-primary btn-sm framework-details" data-framework="CODE-Contexto-Objetivo-Detalles-Ejemplos"><i class="bi bi-eye"></i></button>
                     </div>
                 </div>
             </div>
@@ -357,7 +363,6 @@
                         <h3 class="h5 card-title">26. GROW (Goal, Reality, Options, Way Forward)</h3>
                         <p class="card-text">Marco para coaching y desarrollo personal enfocado en objetivos y acciones.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Coaching y desarrollo personal.</small></p>
-<a href="https://www.google.com/search?q=GROW%20(Goal%2C%20Reality%2C%20Options%2C%20Way%20Forward)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -369,7 +374,6 @@
                         <h3 class="h5 card-title">27. QUEST (Question, Understanding, Exploration, Solution, Testing)</h3>
                         <p class="card-text">Framework para exploración y resolución de problemas complejos.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Investigación y resolución de problemas.</small></p>
-<a href="https://www.google.com/search?q=QUEST%20(Question%2C%20Understanding%2C%20Exploration%2C%20Solution%2C%20Testing)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -381,7 +385,6 @@
                         <h3 class="h5 card-title">28. DRIVE (Direction, Resources, Implementation, Validation, Evolution)</h3>
                         <p class="card-text">Marco para impulsar proyectos con enfoque en recursos y validación continua.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Gestión de proyectos innovadores.</small></p>
-<a href="https://www.google.com/search?q=DRIVE%20(Direction%2C%20Resources%2C%20Implementation%2C%20Validation%2C%20Evolution)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -393,7 +396,6 @@
                         <h3 class="h5 card-title">29. SHAPE (Situation, History, Analysis, Plan, Execution)</h3>
                         <p class="card-text">Framework para dar forma a proyectos considerando contexto histórico y análisis.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Transformación organizacional.</small></p>
-<a href="https://www.google.com/search?q=SHAPE%20(Situation%2C%20History%2C%20Analysis%2C%20Plan%2C%20Execution)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -405,7 +407,6 @@
                         <h3 class="h5 card-title">30. REACH (Requirements, Evaluation, Approach, Completion, Handover)</h3>
                         <p class="card-text">Marco para llevar proyectos desde requisitos hasta entrega final.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Gestión de proyectos end-to-end.</small></p>
-<a href="https://www.google.com/search?q=REACH%20(Requirements%2C%20Evaluation%2C%20Approach%2C%20Completion%2C%20Handover)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -417,7 +418,6 @@
                         <h3 class="h5 card-title">31. BLEND (Baseline, Learning, Evolution, Navigation, Delivery)</h3>
                         <p class="card-text">Framework para integrar diferentes enfoques y metodologías en un proyecto.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Proyectos híbridos y metodologías mixtas.</small></p>
-<a href="https://www.google.com/search?q=BLEND%20(Baseline%2C%20Learning%2C%20Evolution%2C%20Navigation%2C%20Delivery)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -429,7 +429,6 @@
                         <h3 class="h5 card-title">32. SPARK (Strategy, Planning, Action, Results, Knowledge)</h3>
                         <p class="card-text">Marco para iniciar y catalizar proyectos innovadores con resultados medibles.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Iniciativas de innovación.</small></p>
-<a href="https://www.google.com/search?q=SPARK%20(Strategy%2C%20Planning%2C%20Action%2C%20Results%2C%20Knowledge)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -441,7 +440,6 @@
                         <h3 class="h5 card-title">33. PULSE (Purpose, Understanding, Learning, Strategy, Evaluation)</h3>
                         <p class="card-text">Framework para monitorear y mantener la vitalidad de proyectos continuos.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Monitoreo y mejora continua.</small></p>
-<a href="https://www.google.com/search?q=PULSE%20(Purpose%2C%20Understanding%2C%20Learning%2C%20Strategy%2C%20Evaluation)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -453,7 +451,6 @@
                         <h3 class="h5 card-title">34. FAST (Focus, Audience, Scope, Tone)</h3>
                         <p class="card-text">Framework para crear documentación técnica clara y efectiva según la audiencia objetivo.</p>
                         <p class="card-text"><small class="text-muted">Ideal para: Documentación técnica y guías de usuario.</small></p>
-<a href="https://www.google.com/search?q=FAST%20(Focus%2C%20Audience%2C%20Scope%2C%20Tone)" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-2 d-inline-flex align-items-center gap-1"><i class="bi bi-search"></i>Ver más</a>
                     </div>
                 </div>
             </div>
@@ -611,59 +608,84 @@
                     <th><i class="bi bi-grid me-1"></i>Framework</th>
                     <th><i class="bi bi-list-ul me-1"></i>Componentes</th>
                     <th><i class="bi bi-star me-1"></i>Ideal para</th>
+                    <th><i class="bi bi-info-circle me-1"></i>Acción</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>RTF</strong></td><td>Role, Task, Format</td><td>Generación de contenido estructurado y tareas específicas.</td></tr>
-                <tr><td><strong>PARA</strong></td><td>Purpose, Action, Result, Assessment</td><td>Planificación y evaluación de proyectos.</td></tr>
-                <tr><td><strong>SMART</strong></td><td>Specific, Measurable, Achievable, Relevant, Time‑bound</td><td>Definición de objetivos y metas.</td></tr>
-                <tr><td><strong>ERQ</strong></td><td>Experience, Requirements, Qualifiers</td><td>Definición de perfiles y requisitos.</td></tr>
-                <tr><td><strong>CODE</strong></td><td>Context, Objective, Details, Examples</td><td>Documentación técnica y guías.</td></tr>
-                <tr><td><strong>PROS</strong></td><td>Perspective, Requirements, Outcome, Scope</td><td>Planificación de proyectos.</td></tr>
-                <tr><td><strong>TEAM</strong></td><td>Task, Environment, Approach, Metrics</td><td>Trabajo en equipo y colaboración.</td></tr>
-                <tr><td><strong>IDEA</strong></td><td>Identify, Define, Execute, Assess</td><td>Resolución de problemas.</td></tr>
-                <tr><td><strong>CARE</strong></td><td>Context, Action, Result, Example</td><td>Instrucciones detalladas y aprendizaje.</td></tr>
-                <tr><td><strong>RISE</strong></td><td>Role, Input, Steps, Expectation</td><td>Procesos y flujos de trabajo.</td></tr>
-                <tr><td><strong>LOGIC</strong></td><td>Layout, Objective, Guidelines, Implementation, Criteria</td><td>Desarrollo de sistemas y procesos.</td></tr>
-                <tr><td><strong>SCOPE</strong></td><td>Situation, Core Need, Obstacles, Plan, Evaluation</td><td>Definición y gestión de alcance.</td></tr>
-                <tr><td><strong>FOCUS</strong></td><td>Frame, Objective, Constraints, Understanding, Solution</td><td>Resolución estructurada de problemas.</td></tr>
-                <tr><td><strong>CLARITY</strong></td><td>Context, Limitations, Approach, Requirements, Implementation, Timeline, Yield</td><td>Gestión de proyectos complejos y migraciones.</td></tr>
-                <tr><td><strong>EXPERT</strong></td><td>Expertise, Context, Purpose, Execution, Results, Testing</td><td>Proyectos técnicos especializados.</td></tr>
-                <tr><td><strong>GUIDE</strong></td><td>Goal, User, Implementation, Delivery, Evaluation</td><td>Desarrollo de productos y servicios.</td></tr>
-                <tr><td><strong>PATH</strong></td><td>Purpose, Approach, Target, Horizon</td><td>Planificación estratégica.</td></tr>
-                <tr><td><strong>LEARN</strong></td><td>Level, Experience, Approach, Resources, Next steps</td><td>Planes de formación y desarrollo.</td></tr>
-                <tr><td><strong>SOLVE</strong></td><td>Situation, Options, Limitations, Verification, Execution</td><td>Resolución de problemas complejos.</td></tr>
-                <tr><td><strong>PRIME</strong></td><td>Problem, Research, Implementation, Monitoring, Evaluation</td><td>Proyectos de investigación y desarrollo.</td></tr>
-                <tr><td><strong>ADAPT</strong></td><td>Analysis, Design, Approach, Progress, Testing</td><td>Proyectos adaptativos y ágiles.</td></tr>
-                <tr><td><strong>BUILD</strong></td><td>Baseline, Understanding, Implementation, Learning, Delivery</td><td>Desarrollo de nuevos productos o servicios.</td></tr>
-                <tr><td><strong>CRAFT</strong></td><td>Context, Requirements, Approach, Features, Testing</td><td>Desarrollo de soluciones a medida.</td></tr>
-                <tr><td><strong>SCALE</strong></td><td>Strategy, Capabilities, Action, Learning, Evolution</td><td>Escalamiento de proyectos y operaciones.</td></tr>
-                <tr><td><strong>THINK</strong></td><td>Topic, History, Insights, Next steps, Knowledge</td><td>Análisis estratégico y toma de decisiones.</td></tr>
-                <tr><td><strong>GROW</strong></td><td>Goal, Reality, Options, Way Forward</td><td>Coaching y desarrollo personal.</td></tr>
-                <tr><td><strong>QUEST</strong></td><td>Question, Understanding, Exploration, Solution, Testing</td><td>Investigación y resolución de problemas.</td></tr>
-                <tr><td><strong>DRIVE</strong></td><td>Direction, Resources, Implementation, Validation, Evolution</td><td>Gestión de proyectos innovadores.</td></tr>
-                <tr><td><strong>SHAPE</strong></td><td>Situation, History, Analysis, Plan, Execution</td><td>Transformación organizacional.</td></tr>
-                <tr><td><strong>REACH</strong></td><td>Requirements, Evaluation, Approach, Completion, Handover</td><td>Gestión de proyectos end‑to‑end.</td></tr>
-                <tr><td><strong>BLEND</strong></td><td>Baseline, Learning, Evolution, Navigation, Delivery</td><td>Proyectos híbridos y metodologías mixtas.</td></tr>
-                <tr><td><strong>SPARK</strong></td><td>Strategy, Planning, Action, Results, Knowledge</td><td>Iniciativas de innovación.</td></tr>
-                <tr><td><strong>PULSE</strong></td><td>Purpose, Understanding, Learning, Strategy, Evaluation</td><td>Monitoreo y mejora continua.</td></tr>
-                <tr><td><strong>FAST</strong></td><td>Focus, Audience, Scope, Tone</td><td>Documentación técnica y guías de usuario.</td></tr>
-                <tr><td><strong>T-A-G</strong></td><td>Tarea, Acción, Meta</td><td>Proyectos con objetivos medibles y acciones concretas.</td></tr>
-                <tr><td><strong>B-A-B</strong></td><td>Antes, Después, Puente</td><td>Mostrar cambios y mejoras con un plan claro.</td></tr>
-                <tr><td><strong>P-E-A-S</strong></td><td>Propósito, Resultado, Audiencia, Estilo</td><td>Estrategias de comunicación y marketing.</td></tr>
-                <tr><td><strong>S-T-A-R</strong></td><td>Situación, Tarea, Acción, Resultado</td><td>Documentar logros y experiencias.</td></tr>
-                <tr><td><strong>Q-C-Q-A</strong></td><td>Pregunta, Contexto, Calificación, Respuesta</td><td>Consultas estructuradas para resolver problemas paso a paso.</td></tr>
-                <tr><td><strong>A-I-D-A</strong></td><td>Atención, Interés, Deseo, Acción</td><td>Marketing persuasivo y creación de campañas.</td></tr>
-                <tr><td><strong>L-E-A-P</strong></td><td>Nivel, Expectativas, Enfoque, Parámetros</td><td>Planificación estratégica.</td></tr>
-                <tr><td><strong>S-P-I-N</strong></td><td>Situación, Problema, Implicación, Necesidad</td><td>Ventas consultivas y negociación.</td></tr>
-                <tr><td><strong>D-E-S-I-G-N</strong></td><td>Define, Explore, Scope, Ideate, Guide, Narrow</td><td>Procesos de diseño y desarrollo.</td></tr>
-                <tr><td><strong>V-I-S-I-O-N</strong></td><td>Visualize, Identify, Structure, Implement, Optimize, Navigate</td><td>Planificación estratégica.</td></tr>
-                <tr><td><strong>I-M-P-A-C-T</strong></td><td>Intent, Message, Purpose, Audience, Channel, Timing</td><td>Estrategias de comunicación.</td></tr>
-                <tr><td><strong>M-A-S-T-E-R</strong></td><td>Mission, Approach, Strategy, Tactics, Execution, Review</td><td>Gestión de proyectos.</td></tr>
-                <tr><td><strong>P-O-W-E-R</strong></td><td>Problem, Outcome, Why, Execution, Resources</td><td>Resolución de problemas.</td></tr>
+                <tr><td><strong>RTF</strong></td><td>Role, Task, Format</td><td>Generación de contenido estructurado y tareas específicas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="RTF-Rol-Tarea-Formato"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>PARA</strong></td><td>Purpose, Action, Result, Assessment</td><td>Planificación y evaluación de proyectos.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="PARA-Problema-Aproximacion-Razon-Accion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>SMART</strong></td><td>Specific, Measurable, Achievable, Relevant, Time‑bound</td><td>Definición de objetivos y metas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="SMART-Especifico-Medible-Alcanzable-Relevante-Temporal"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>ERQ</strong></td><td>Experience, Requirements, Qualifiers</td><td>Definición de perfiles y requisitos.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="ERQ-Experiencia-Requisitos-Cualificaciones"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>CODE</strong></td><td>Context, Objective, Details, Examples</td><td>Documentación técnica y guías.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="CODE-Contexto-Objetivo-Detalles-Ejemplos"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>PROS</strong></td><td>Perspective, Requirements, Outcome, Scope</td><td>Planificación de proyectos.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="PROS-Perspectiva-Requisitos-Resultado-Solucion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>TEAM</strong></td><td>Task, Environment, Approach, Metrics</td><td>Trabajo en equipo y colaboración.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="TEAM-Tarea-Entorno-Aproximacion-Metricas"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>IDEA</strong></td><td>Identify, Define, Execute, Assess</td><td>Resolución de problemas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="IDEA-Identificar-Definir-Ejecutar-Analizar"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>CARE</strong></td><td>Context, Action, Result, Example</td><td>Instrucciones detalladas y aprendizaje.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="CARE-Contexto-Accion-Resultado-Ejemplo"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>RISE</strong></td><td>Role, Input, Steps, Expectation</td><td>Procesos y flujos de trabajo.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="RISE-Relevancia-Informacion-Solucion-Evaluacion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>LOGIC</strong></td><td>Layout, Objective, Guidelines, Implementation, Criteria</td><td>Desarrollo de sistemas y procesos.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="LOGIC-Diseno-Objetivo-Directrices-Implementacion-Criterios"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>SCOPE</strong></td><td>Situation, Core Need, Obstacles, Plan, Evaluation</td><td>Definición y gestión de alcance.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="SCOPE-Situacion-Necesidad-Obstaculos-Plan-Evaluacion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>FOCUS</strong></td><td>Frame, Objective, Constraints, Understanding, Solution</td><td>Resolución estructurada de problemas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="FOCUS-Marco-Objetivo-Restricciones-Comprension-Solucion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>CLARITY</strong></td><td>Context, Limitations, Approach, Requirements, Implementation, Timeline, Yield</td><td>Gestión de proyectos complejos y migraciones.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="CLARITY-Contexto-Limitaciones-Aproximacion-Requisitos-Implementacion-Cronograma-Rendimiento"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>EXPERT</strong></td><td>Expertise, Context, Purpose, Execution, Results, Testing</td><td>Proyectos técnicos especializados.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="EXPERT-Experiencia-Contexto-Proposito-Ejecucion-Resultados-Pruebas"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>GUIDE</strong></td><td>Goal, User, Implementation, Delivery, Evaluation</td><td>Desarrollo de productos y servicios.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="GUIDE-Meta-Usuario-Implementacion-Entrega-Evaluacion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>PATH</strong></td><td>Purpose, Approach, Target, Horizon</td><td>Planificación estratégica.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="PATH-Proposito-Aproximacion-Objetivo-Horizonte"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>LEARN</strong></td><td>Level, Experience, Approach, Resources, Next steps</td><td>Planes de formación y desarrollo.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="LEARN-Nivel-Experiencia-Aproximacion-Recursos-SiguientesPasos"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>SOLVE</strong></td><td>Situation, Options, Limitations, Verification, Execution</td><td>Resolución de problemas complejos.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="SOLVE-Situacion-Opciones-Limitaciones-Verificacion-Ejecucion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>PRIME</strong></td><td>Problem, Research, Implementation, Monitoring, Evaluation</td><td>Proyectos de investigación y desarrollo.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="PRIME-Problema-Investigacion-Implementacion-Monitoreo-Evaluacion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>ADAPT</strong></td><td>Analysis, Design, Approach, Progress, Testing</td><td>Proyectos adaptativos y ágiles.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="ADAPT-Analisis-Diseno-Aproximacion-Progreso-Pruebas"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>BUILD</strong></td><td>Baseline, Understanding, Implementation, Learning, Delivery</td><td>Desarrollo de nuevos productos o servicios.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="BUILD-LineaBase-Entendimiento-Implementacion-Aprendizaje-Entrega"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>CRAFT</strong></td><td>Context, Requirements, Approach, Features, Testing</td><td>Desarrollo de soluciones a medida.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="CRAFT-Contexto-Requisitos-Aproximacion-Funcionalidades-Pruebas"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>SCALE</strong></td><td>Strategy, Capabilities, Action, Learning, Evolution</td><td>Escalamiento de proyectos y operaciones.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="SCALE-Estrategia-Capacidades-Accion-Aprendizaje-Evolucion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>THINK</strong></td><td>Topic, History, Insights, Next steps, Knowledge</td><td>Análisis estratégico y toma de decisiones.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="THINK-Tema-Historia-Insights-SiguientesPasos-Conocimiento"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>GROW</strong></td><td>Goal, Reality, Options, Way Forward</td><td>Coaching y desarrollo personal.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="GROW-Meta-Realidad-Opciones-Camino"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>QUEST</strong></td><td>Question, Understanding, Exploration, Solution, Testing</td><td>Investigación y resolución de problemas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="QUEST-Pregunta-Entendimiento-Exploracion-Solucion-Pruebas"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>DRIVE</strong></td><td>Direction, Resources, Implementation, Validation, Evolution</td><td>Gestión de proyectos innovadores.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="DRIVE-Direccion-Recursos-Implementacion-Validacion-Evolucion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>SHAPE</strong></td><td>Situation, History, Analysis, Plan, Execution</td><td>Transformación organizacional.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="SHAPE-Situacion-Historia-Analisis-Plan-Ejecucion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>REACH</strong></td><td>Requirements, Evaluation, Approach, Completion, Handover</td><td>Gestión de proyectos end‑to‑end.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="REACH-Requisitos-Evaluacion-Aproximacion-Completitud-Handover"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>BLEND</strong></td><td>Baseline, Learning, Evolution, Navigation, Delivery</td><td>Proyectos híbridos y metodologías mixtas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="BLEND-Base-Aprendizaje-Evolucion-Navegacion-Entrega"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>SPARK</strong></td><td>Strategy, Planning, Action, Results, Knowledge</td><td>Iniciativas de innovación.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="SPARK-Estrategia-Planificacion-Accion-Resultados-Conocimiento"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>PULSE</strong></td><td>Purpose, Understanding, Learning, Strategy, Evaluation</td><td>Monitoreo y mejora continua.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="PULSE-Proposito-Entendimiento-Aprendizaje-Estrategia-Evaluacion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>FAST</strong></td><td>Focus, Audience, Scope, Tone</td><td>Documentación técnica y guías de usuario.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="FAST-Enfoque-Audiencia-Alcance-Tono"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>T-A-G</strong></td><td>Tarea, Acción, Meta</td><td>Proyectos con objetivos medibles y acciones concretas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="TAG-Tarea-Accion-Meta"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>B-A-B</strong></td><td>Antes, Después, Puente</td><td>Mostrar cambios y mejoras con un plan claro.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="BAB-Antes-Despues-Puente"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>P-E-A-S</strong></td><td>Propósito, Resultado, Audiencia, Estilo</td><td>Estrategias de comunicación y marketing.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="PEAS-Proposito-Resultado-Audiencia-Estilo"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>S-T-A-R</strong></td><td>Situación, Tarea, Acción, Resultado</td><td>Documentar logros y experiencias.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="STAR-Situacion-Tarea-Accion-Resultado"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>Q-C-Q-A</strong></td><td>Pregunta, Contexto, Calificación, Respuesta</td><td>Consultas estructuradas para resolver problemas paso a paso.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="QCQA-Pregunta-Contexto-Calificacion-Formato"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>A-I-D-A</strong></td><td>Atención, Interés, Deseo, Acción</td><td>Marketing persuasivo y creación de campañas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="AIDA-Atencion-Interes-Deseo-Accion"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>L-E-A-P</strong></td><td>Nivel, Expectativas, Enfoque, Parámetros</td><td>Planificación estratégica.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="LEAP-Nivel-Expectativas-Aproximacion-Parametros"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>S-P-I-N</strong></td><td>Situación, Problema, Implicación, Necesidad</td><td>Ventas consultivas y negociación.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="SPIN-Situacion-Problema-Implicacion-Necesidad"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>D-E-S-I-G-N</strong></td><td>Define, Explore, Scope, Ideate, Guide, Narrow</td><td>Procesos de diseño y desarrollo.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="DESIGN-Definir-Explorar-Alcance-Idear-Guiar-Reducir"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>V-I-S-I-O-N</strong></td><td>Visualize, Identify, Structure, Implement, Optimize, Navigate</td><td>Planificación estratégica.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="VISION-Visualizar-Identificar-Estructurar-Implementar-Optimizar-Navegar"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>I-M-P-A-C-T</strong></td><td>Intent, Message, Purpose, Audience, Channel, Timing</td><td>Estrategias de comunicación.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="IMPACT-Intencion-Mensaje-Proposito-Audiencia-Canal-Tiempo"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>M-A-S-T-E-R</strong></td><td>Mission, Approach, Strategy, Tactics, Execution, Review</td><td>Gestión de proyectos.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="MASTER-Mision-Aproximacion-Estrategia-Tacticas-Ejecucion-Revision"><i class="bi bi-eye"></i></button></td></tr>
+                <tr><td><strong>P-O-W-E-R</strong></td><td>Problem, Outcome, Why, Execution, Resources</td><td>Resolución de problemas.</td><td><button class="btn btn-outline-primary btn-sm framework-details" data-framework="POWER-Problema-Resultado-PorQue-Ejecucion-Recursos"><i class="bi bi-eye"></i></button></td></tr>
             </tbody>
         </table>
     </div>
+
+    <!-- Modal para mostrar detalles del framework -->
+    <div class="modal fade" id="frameworkModal" tabindex="-1" aria-labelledby="frameworkModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="frameworkModalLabel">Detalles del Framework</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="frameworkContent" class="p-2">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                        <p class="text-center">Cargando información del framework...</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Load page-specific JS -->
     <script src="{{ url_for('static', filename='js/como-funciona.js') }}"></script>
 </div>

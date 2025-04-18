@@ -18,8 +18,8 @@ MAX_TOKENS = {
 # Crear un cliente OpenAI con la API key por defecto
 def create_default_client():
     return OpenAI(
-        api_key=os.getenv('OPENAI_API_KEY')
-    )
+    api_key=os.getenv('OPENAI_API_KEY')
+)
 
 # Crear un cliente OpenAI con una API key personalizada
 def create_custom_client(api_key):
