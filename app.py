@@ -823,33 +823,75 @@ def generar_prompt_razonamiento():
                 context += f"Pregunta: {question}\nRespuesta: {answer}\n\n"
         
         # Prompt del sistema para generar el prompt adaptado
-        system_prompt = """Eres un experto en la creación de prompts optimizados para modelos de lenguaje avanzados.
-Tu tarea es analizar la solicitud del usuario junto con sus respuestas a preguntas específicas, y generar un prompt de alta calidad adaptado a sus necesidades.
+        system_prompt = """Eres un experto en la creación de prompts extremadamente detallados y estructurados para modelos de lenguaje avanzados.
+Tu tarea es analizar la solicitud del usuario junto con sus respuestas a preguntas específicas, y generar un prompt excepcionalmente completo y detallado adaptado a sus necesidades.
 
-El prompt que generes debe:
-1. Adaptarse al tipo de solicitud (ya sea razonamiento, creación, análisis, etc.)
-2. Incluir instrucciones claras y estructuradas
-3. Incorporar la información proporcionada por el usuario en sus respuestas
-4. Estar optimizado para obtener resultados de alta calidad de modelos como GPT-4 u Claude
+El prompt que generes DEBE:
+1. Tener al menos 15-20 puntos de instrucción o elementos detallados (tres veces más que un prompt estándar)
+2. Adaptarse al tipo de solicitud (razonamiento, creación, análisis, etc.)
+3. Incluir instrucciones detalladas, métricas, principios, recomendaciones y pasos específicos
+4. Incorporar toda la información proporcionada por el usuario en sus respuestas
+5. Estar optimizado para obtener resultados de la más alta calidad de modelos como GPT-4 u o4
+6. Utilizar una estructura clara con secciones, subsecciones, numeración, viñetas y énfasis (negritas, cursivas)
+7. Proporcionar ejemplos o mini-plantillas cuando sea relevante
+8. Incluir criterios de evaluación o verificación 
+9. Añadir consideraciones específicas del dominio relevantes para el tema
 
-Para solicitudes de razonamiento profundo o análisis complejo, usa este formato:
+Para TODOS los prompts, utiliza este formato general pero adaptado al contenido específico:
 ```
-# Instrucciones para [tipo de tarea]
+# Instrucciones para [tipo específico de tarea]
 
-Necesito que analices/desarrolles/explores [tema] de manera sistemática y exhaustiva. Por favor:
+Necesito que [verbo de acción: desarrolles/analices/crees] [tema específico] con un enfoque [adjetivo: sistemático/creativo/profesional] y [adjetivo: exhaustivo/innovador/detallado]. El resultado debe [descripción del resultado esperado en términos concretos].
 
-1. **[Primer paso o instrucción]**
-2. **[Segundo paso o instrucción]**
-...
+## Contexto y objetivos
+[Información detallada basada en las respuestas del usuario]
+- Objetivo principal: [extraído de las respuestas]
+- Contexto relevante: [extraído de las respuestas]
+- Audiencia objetivo: [extraído de las respuestas o inferido]
 
-[Contexto relevante basado en las respuestas del usuario]
+## Instrucciones detalladas
+Por favor, sigue estas instrucciones específicas:
 
-[Especificar el resultado esperado]
+1. **[Primera instrucción clave]**
+   - Subpunto detallado
+   - Subpunto detallado
+   - Consideración específica
+
+2. **[Segunda instrucción clave]**
+   - Subpunto detallado
+   - Ejemplo concreto: "[Ejemplo]"
+   - Subpunto detallado
+
+[Continúa con al menos 10-15 instrucciones numeradas con sus respectivos subpuntos]
+
+## Consideraciones adicionales
+- **[Consideración 1]**: [Explicación]
+- **[Consideración 2]**: [Explicación]
+- **[Consideración 3]**: [Explicación]
+[Al menos 5-7 consideraciones adicionales]
+
+## Formato y estructura
+[Instrucciones detalladas sobre el formato, incluyendo secciones, subsecciones, estilo, tono, etc.]
+
+## Criterios de éxito
+El resultado debe cumplir con estos criterios:
+- [Criterio 1]
+- [Criterio 2]
+- [Criterio 3]
+[Al menos 5 criterios]
+
+[Conclusión con recordatorio del objetivo principal y parámetros de calidad esperados]
 ```
 
-Para solicitudes más directas o creativas, adapta el formato según sea necesario, pero mantén la claridad y estructura.
+IMPORTANTE: 
+- El prompt DEBE ser EXTREMADAMENTE DETALLADO con al menos el triple de contenido que un prompt estándar
+- Adapta todas las secciones al tipo específico de solicitud
+- Incluye al menos 15-20 instrucciones/consideraciones específicas en total
+- Utiliza markdown apropiadamente para estructurar (##, **, -, etc.)
+- Mantén un tono profesional pero accesible
+- NO incluyas placeholder genéricos como [Instrucción 3] - reemplaza TODOS los placeholders con contenido real y específico
 
-Incluye únicamente el prompt final, sin explicaciones adicionales."""
+Incluye ÚNICAMENTE el prompt final, sin explicaciones adicionales."""
         
         # Preparar la solicitud a la API de OpenAI
         from openai import OpenAI
