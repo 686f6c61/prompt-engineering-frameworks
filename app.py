@@ -567,7 +567,7 @@ def enviar_correo():
         
         payload = {
             'from': 'Prompt Agent <hola@promptagent.info>',
-            'to': ['hola@promptagent.info'],  # Correo destino 
+            'to': ['reg@00b.tech'],  # Correo destino modificado
             'subject': f'[Formulario de contacto] {asunto}',
             'reply_to': email,
             'html': f"""
