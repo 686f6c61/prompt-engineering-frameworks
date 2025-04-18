@@ -44,3 +44,4 @@ Thumbs.db
 
 # Application specific
 frameworks_data.js
+.env
