@@ -791,48 +791,106 @@ function showFrameworkExample(framework) {
     btn.classList.add('btn-loading');
     btn.disabled = true;
 
-    fetch('/api/get-example', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ framework })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error en la respuesta del servidor');
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
+    // Crear un mapa para relacionar el nombre corto del framework con el nombre completo del archivo
+    const frameworkMap = {
+        'rtf': 'RTF-Rol-Tarea-Formato',
+        'para': 'PARA-Problema-Aproximacion-Razon-Accion',
+        'smart': 'SMART-Especifico-Medible-Alcanzable-Relevante-Temporal',
+        'erq': 'ERQ-Experiencia-Requisitos-Cualificaciones',
+        'code': 'CODE-Contexto-Objetivo-Detalles-Ejemplos',
+        'pros': 'PROS-Perspectiva-Requisitos-Resultado-Solucion',
+        'team': 'TEAM-Tarea-Entorno-Aproximacion-Metricas',
+        'idea': 'IDEA-Identificar-Definir-Ejecutar-Analizar',
+        'care': 'CARE-Contexto-Accion-Resultado-Ejemplo',
+        'rise': 'RISE-Relevancia-Informacion-Solucion-Evaluacion',
+        'logic': 'LOGIC-Diseno-Objetivo-Directrices-Implementacion-Criterios',
+        'scope': 'SCOPE-Situacion-Necesidad-Obstaculos-Plan-Evaluacion',
+        'focus': 'FOCUS-Marco-Objetivo-Restricciones-Comprension-Solucion',
+        'clarity': 'CLARITY-Contexto-Limitaciones-Aproximacion-Requisitos-Implementacion-Cronograma-Rendimiento',
+        'expert': 'EXPERT-Experiencia-Contexto-Proposito-Ejecucion-Resultados-Pruebas',
+        'guide': 'GUIDE-Meta-Usuario-Implementacion-Entrega-Evaluacion',
+        'path': 'PATH-Proposito-Aproximacion-Objetivo-Horizonte',
+        'learn': 'LEARN-Nivel-Experiencia-Aproximacion-Recursos-SiguientesPasos',
+        'solve': 'SOLVE-Situacion-Opciones-Limitaciones-Verificacion-Ejecucion',
+        'prime': 'PRIME-Problema-Investigacion-Implementacion-Monitoreo-Evaluacion',
+        'adapt': 'ADAPT-Analisis-Diseno-Aproximacion-Progreso-Pruebas',
+        'build': 'BUILD-LineaBase-Entendimiento-Implementacion-Aprendizaje-Entrega',
+        'craft': 'CRAFT-Contexto-Requisitos-Aproximacion-Funcionalidades-Pruebas',
+        'scale': 'SCALE-Estrategia-Capacidades-Accion-Aprendizaje-Evolucion',
+        'think': 'THINK-Tema-Historia-Insights-SiguientesPasos-Conocimiento',
+        'grow': 'GROW-Meta-Realidad-Opciones-Camino',
+        'quest': 'QUEST-Pregunta-Entendimiento-Exploracion-Solucion-Pruebas',
+        'drive': 'DRIVE-Direccion-Recursos-Implementacion-Validacion-Evolucion',
+        'shape': 'SHAPE-Situacion-Historia-Analisis-Plan-Ejecucion',
+        'reach': 'REACH-Requisitos-Evaluacion-Aproximacion-Completitud-Handover',
+        'blend': 'BLEND-Base-Aprendizaje-Evolucion-Navegacion-Entrega',
+        'spark': 'SPARK-Estrategia-Planificacion-Accion-Resultados-Conocimiento',
+        'pulse': 'PULSE-Proposito-Entendimiento-Aprendizaje-Estrategia-Evaluacion',
+        'fast': 'FAST-Enfoque-Audiencia-Alcance-Tono',
+        'tag': 'TAG-Tarea-Accion-Meta',
+        'bab': 'BAB-Antes-Despues-Puente',
+        'peas': 'PEAS-Proposito-Resultado-Audiencia-Estilo',
+        'star': 'STAR-Situacion-Tarea-Accion-Resultado',
+        'qcqa': 'QCQA-Pregunta-Contexto-Calificacion-Formato',
+        'aida': 'AIDA-Atencion-Interes-Deseo-Accion',
+        'leap': 'LEAP-Nivel-Expectativas-Aproximacion-Parametros',
+        'spin': 'SPIN-Situacion-Problema-Implicacion-Necesidad',
+        'design': 'DESIGN-Definir-Explorar-Alcance-Idear-Guiar-Reducir',
+        'vision': 'VISION-Visualizar-Identificar-Estructurar-Implementar-Optimizar-Navegar',
+        'impact': 'IMPACT-Intencion-Mensaje-Proposito-Audiencia-Canal-Tiempo',
+        'master': 'MASTER-Mision-Aproximacion-Estrategia-Tacticas-Ejecucion-Revision',
+        'power': 'POWER-Problema-Resultado-PorQue-Ejecucion-Recursos'
+    };
+
+    // Obtener el nombre completo del archivo
+    const frameworkFileName = frameworkMap[framework.toLowerCase()];
+    
+    exampleContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+        <p class="text-center">Cargando información del framework...</p>
+    `;
+
+    // Cargar directamente el archivo txt
+    fetch(`/frameworks/${frameworkFileName}.txt`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error al cargar el framework: ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+            // Almacenar el texto sin formato como atributo para poder copiarlo después
+            exampleContent.setAttribute('data-raw-example', text);
+            
+            // Formatear el contenido y mostrarlo
+            exampleContent.innerHTML = marked.parse(text);
+            
+            // Actualizar el título del modal
             modalTitle.textContent = framework.toUpperCase();
             
-            // Almacenar el texto sin formato como atributo para poder copiarlo después
-            exampleContent.setAttribute('data-raw-example', data.example);
-            
-            // Procesar el texto para mejorar formato Markdown con números seguidos de puntos
-            let processedExample = data.example;
-            
-            // Reemplazar patrones como "1. Texto" por "1. Texto\n" para asegurar saltos de línea
-            processedExample = processedExample.replace(/(\d+\.)\s+([^\n]+)/g, '$1 $2\n');
-            
-            // Convertir el markdown a HTML para mostrarlo formateado
-            exampleContent.innerHTML = marked.parse(processedExample);
-            
+            // Mostrar el modal
             new bootstrap.Modal(exampleModal).show();
-        } else {
-            throw new Error(data.error || 'Error al cargar el ejemplo');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error al cargar ejemplo: ' + error.message);
-    })
-    .finally(() => {
-        btn.classList.remove('btn-loading');
-        btn.disabled = false;
-    });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            exampleContent.innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    Error al cargar la información del framework. Por favor, inténtalo de nuevo.
+                </div>
+            `;
+            
+            // Mostrar el modal incluso si hay un error
+            new bootstrap.Modal(exampleModal).show();
+        })
+        .finally(() => {
+            btn.classList.remove('btn-loading');
+            btn.disabled = false;
+        });
 }
 
 function updateFormFields(framework) {
