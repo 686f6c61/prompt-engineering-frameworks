@@ -1134,24 +1134,35 @@ function updateUsageDisplay(data) {
     if (!usageContainer) return;
     
     if (data.remaining !== undefined) {
-        let messageClass = 'alert-info';
+        let statusClass = 'text-info';
         let message = '';
         let icon = 'bi-info-circle';
+        let bgClass = 'bg-light';
         
         if (data.limited || data.remaining <= 0) {
-            messageClass = 'alert-danger';
+            statusClass = 'text-danger';
             icon = 'bi-exclamation-triangle';
             message = `Has alcanzado el límite de 10 usos por hora para GPT-3.5. Podrás realizar más solicitudes en: ${data.reset_time}`;
         } else if (data.remaining <= 3) {
-            messageClass = 'alert-warning';
+            statusClass = 'text-warning';
             icon = 'bi-exclamation-circle';
             message = `Atención: Te quedan solo ${data.remaining} usos de GPT-3.5 para esta hora.`;
         } else {
+            statusClass = 'text-success';
             icon = 'bi-lightning';
             message = `Usos disponibles de GPT-3.5: ${data.remaining}/10 para esta hora.`;
         }
         
-        usageContainer.innerHTML = `<div class="row"><div class="col-12 col-md-10 col-lg-8 mx-auto"><div class="alert ${messageClass}"><i class="bi ${icon}"></i>${message}</div></div></div>`;
+        usageContainer.innerHTML = `
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                    <div class="usage-status-container py-2 px-3 ${bgClass} rounded-pill d-inline-flex align-items-center border">
+                        <i class="bi ${icon} ${statusClass} me-2"></i>
+                        <span class="fw-medium">${message}</span>
+                    </div>
+                </div>
+            </div>
+        `;
         usageContainer.style.display = 'block';
     } else {
         usageContainer.style.display = 'none';
