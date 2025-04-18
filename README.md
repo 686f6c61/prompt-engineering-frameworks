@@ -28,6 +28,30 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 5. **SEO y estrategia**: Incluye palabras clave, meta etiquetas y estructura recomendada
 6. **Resultados profesionales**: Se aconseja usar API Key propia para resultados óptimos, aunque también funciona excelentemente con la versión gratuita
 
+### 🧠 Razonadores para modelos avanzados
+
+<div align="center">
+  <img src="static/img/razonadores.png" alt="Razonadores para modelos avanzados" width="600">
+</div>
+
+La sección de Razonadores está diseñada para crear prompts extremadamente detallados y estructurados que potencian las capacidades de razonamiento profundo de modelos de lenguaje avanzados como GPT-4o y Gemini.
+
+1. **Análisis detallado de temas**: Proporciona un tema y el sistema generará automáticamente preguntas personalizadas para extraer información crucial
+2. **Preguntas de refinamiento**: Responde a preguntas específicas generadas por la IA para clarificar detalles clave sobre tu tema
+3. **Prompt ultradetallado**: Obtén un prompt con 15-20 puntos de instrucción (tres veces más completo que un prompt estándar)
+4. **Estructura optimizada**: El prompt generado incluye secciones, subsecciones, numeración, viñetas y énfasis (negritas, cursivas)
+5. **Criterios de evaluación**: Cada prompt incluye métricas específicas para evaluar la calidad de la respuesta
+6. **Razonamiento sistemático**: Diseñado para extraer el razonamiento paso a paso de los modelos más avanzados
+
+El modo Razonador funciona siguiendo estos pasos:
+1. Ingresa el tema o problema sobre el que necesitas un análisis profundo
+2. El sistema analiza el tema y genera preguntas personalizadas para obtener más contexto
+3. Responde a estas preguntas para proporcionar información crucial
+4. El sistema genera un prompt ultradetallado optimizado para obtener el mejor razonamiento posible
+5. Utiliza este prompt con modelos avanzados para obtener análisis sistemáticos y profundos
+
+Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada para acceder a modelos más potentes como GPT-4o, aunque también funciona con GPT-3.5.
+
 ### 🧠 Modelos de IA disponibles
 - **GPT-3.5 Turbo (Gratis)**: Disponible para todos los usuarios sin coste
   - Recomendaciones de frameworks básicas

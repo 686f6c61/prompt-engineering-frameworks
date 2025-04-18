@@ -1,8 +1,27 @@
+"""
+Módulo auxiliar para interactuar con la API de OpenAI.
+
+Este módulo proporciona funcionalidades para:
+1. Gestión de clientes de OpenAI (por defecto y personalizados)
+2. Selección automática de modelos según configuración del usuario
+3. Optimización de prompts basados en frameworks predefinidos
+4. Conteo de tokens en textos
+5. Recomendación de frameworks adecuados según objetivos
+
+El diseño permite alternar fácilmente entre el modelo gratuito (DEFAULT_MODEL)
+y un modelo premium (PREMIUM_MODEL) cuando el usuario proporciona su propia API key.
+Además, incluye un amplio catálogo de frameworks de prompting y sus plantillas.
+"""
+
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
 from console import console
 from flask import session
+
+# ===================================
+# CONFIGURACIÓN INICIAL
+# ===================================
 
 # Cargar variables de entorno
 load_dotenv()
@@ -15,28 +34,68 @@ MAX_TOKENS = {
     "gpt-4o-mini": 4096
 }
 
-# Crear un cliente OpenAI con la API key por defecto
+# ===================================
+# GESTIÓN DE CLIENTES DE OPENAI
+# ===================================
+
 def create_default_client():
+    """
+    Crea un cliente OpenAI utilizando la API key por defecto del sistema.
+    
+    La API key se obtiene de las variables de entorno cargadas por dotenv.
+    Esta función se utiliza cuando el usuario no ha proporcionado su propia API key.
+    
+    Returns:
+        OpenAI: Cliente configurado con la API key por defecto
+    """
     return OpenAI(
     api_key=os.getenv('OPENAI_API_KEY')
 )
 
-# Crear un cliente OpenAI con una API key personalizada
 def create_custom_client(api_key):
+    """
+    Crea un cliente OpenAI utilizando una API key personalizada.
+    
+    Esta función permite a los usuarios proporcionar su propia API key
+    para acceder a modelos premium o evitar limitaciones de uso.
+    
+    Args:
+        api_key (str): API key personal proporcionada por el usuario
+        
+    Returns:
+        OpenAI: Cliente configurado con la API key personalizada
+    """
     return OpenAI(
         api_key=api_key
     )
 
-# Obtener el cliente OpenAI basado en la configuración actual
 def get_openai_client():
+    """
+    Obtiene el cliente OpenAI apropiado basado en la configuración actual.
+    
+    Verifica si hay una API key personalizada en la sesión del usuario y,
+    en caso afirmativo, crea un cliente personalizado. De lo contrario,
+    utiliza el cliente con la API key por defecto del sistema.
+    
+    Returns:
+        OpenAI: Cliente de OpenAI configurado según la sesión actual
+    """
     # Verificar si hay una API key personalizada en la sesión
     if session.get('use_custom_api_key', False) and session.get('api_key'):
         return create_custom_client(session.get('api_key'))
     else:
         return create_default_client()
 
-# Obtener el modelo a usar basado en la configuración
 def get_model_to_use():
+    """
+    Determina qué modelo de OpenAI usar según la configuración de la sesión.
+    
+    Si el usuario está utilizando su propia API key, se selecciona el modelo premium.
+    De lo contrario, se utiliza el modelo por defecto (gratuito).
+    
+    Returns:
+        str: Identificador del modelo a utilizar (DEFAULT_MODEL o PREMIUM_MODEL)
+    """
     if session.get('use_custom_api_key', False) and session.get('api_key'):
         return PREMIUM_MODEL
     else:
@@ -45,6 +104,14 @@ def get_model_to_use():
 # Inicializar cliente por defecto para compatibilidad con código existente
 openai_client = create_default_client()
 
+# ===================================
+# FRAMEWORKS Y PLANTILLAS
+# ===================================
+
+"""
+Lista de todos los frameworks de prompting disponibles en el sistema.
+Cada framework tiene un formato específico y está diseñado para diferentes tipos de solicitudes.
+"""
 AVAILABLE_FRAMEWORKS = [
     'rtf', 'tag', 'bab', 'care', 'rise', 'peas', 'star', 'qcqa', 
     'aida', 'para', 'smart', 'erq', 'code', 'pros', 'team', 
@@ -54,7 +121,11 @@ AVAILABLE_FRAMEWORKS = [
     'guide', 'path', 'learn', 'solve', 'prime', 'adapt', 'build', 'craft', 'scale', 'think', 'quest', 'drive', 'shape', 'reach', 'blend', 'spark', 'pulse', 'bolt_lovable'
 ]
 
-# Definición de plantillas para cada framework
+"""
+Plantillas para cada framework que definen su estructura básica.
+Cada plantilla contiene marcadores de posición (placeholders) que serán 
+reemplazados con los datos específicos proporcionados por el usuario.
+"""
 framework_templates = {
     'rtf': "Rol: {role}\nTarea: {task}\nFormato: {format}",
     'tag': "Tarea: {task}\nAcción: {action}\nMeta: {goal}",
@@ -106,6 +177,10 @@ framework_templates = {
     'bolt_lovable': "{context}"
 }
 
+"""
+Ejemplos predefinidos para cada framework, que sirven como referencia
+y son utilizados para guiar la generación de nuevos prompts optimizados.
+"""
 FRAMEWORK_EXAMPLES = {
     'peas': """
 P: Propósito - Define el objetivo principal que se quiere lograr con la comunicación
@@ -433,11 +508,34 @@ No incluye: Aplicación móvil nativa, integración con puntos físicos.
 """
 }
 
+# ===================================
+# FUNCIONES DE OPTIMIZACIÓN DE PROMPTS
+# ===================================
+
 def optimize_prompt(framework: str, form_data: dict, frameworks: list = None) -> str:
+    """
+    Optimiza un prompt básico utilizando uno de los frameworks predefinidos.
+    
+    Esta función toma los datos proporcionados por el usuario y los estructura
+    según el framework elegido, luego envía este prompt base al modelo de OpenAI
+    para que lo enriquezca con detalles, métricas y mejores prácticas específicas.
+    
+    Args:
+        framework (str): Identificador del framework a utilizar (ej: 'rtf', 'peas')
+        form_data (dict): Datos del formulario con los valores específicos para el framework
+        frameworks (list, optional): Lista alternativa de frameworks disponibles
+        
+    Returns:
+        str: Prompt optimizado y enriquecido por el modelo de OpenAI
+        
+    Raises:
+        ValueError: Si el framework no está disponible o faltan datos requeridos
+    """
     console.debug("DEBUG - Templates disponibles:", list(framework_templates.keys()))
     console.debug("DEBUG - Framework recibido:", framework)
     console.debug("DEBUG - Datos del formulario:", form_data)
     
+    # Convertir a minúsculas para evitar problemas de coincidencia
     framework = framework.lower()
     if framework not in framework_templates:
         raise ValueError(f"No hay plantilla disponible para el framework '{framework}'")
@@ -446,12 +544,15 @@ def optimize_prompt(framework: str, form_data: dict, frameworks: list = None) ->
         raise ValueError(f"No hay ejemplo disponible para el framework '{framework}'")
         
     try:
+        # Generar el prompt básico usando la plantilla del framework y los datos del formulario
         raw_prompt = framework_templates[framework].format(**form_data)
     except KeyError as e:
         raise ValueError(f"Campo requerido faltante: {str(e)}")
         
+    # Obtener el ejemplo para el framework seleccionado
     example = FRAMEWORK_EXAMPLES[framework]
     
+    # Construir el mensaje para el modelo, definiendo su rol y objetivos
     formatted_message = """Eres un experto en optimización de prompts en español, especializado en:
     1. Análisis detallado de objetivos y contexto
     2. Identificación de métricas clave y KPIs relevantes
@@ -481,6 +582,7 @@ def optimize_prompt(framework: str, form_data: dict, frameworks: list = None) ->
     
     {raw_prompt}""".format(example=example, raw_prompt=raw_prompt)
 
+    # Enviar la solicitud al modelo de OpenAI
     response = get_openai_client().chat.completions.create(
         model=get_model_to_use(),
         messages=[
@@ -489,10 +591,22 @@ def optimize_prompt(framework: str, form_data: dict, frameworks: list = None) ->
         max_tokens=MAX_TOKENS[get_model_to_use()]
     )
     
+    # Devolver el contenido optimizado generado por el modelo
     return response.choices[0].message.content
 
 def count_tokens(text: str) -> int:
-    """Count the number of tokens in a text using the OpenAI API."""
+    """
+    Cuenta el número de tokens en un texto utilizando la API de OpenAI.
+    
+    Esta función es útil para estimar el costo de una solicitud a la API
+    o para verificar si un texto excede los límites de tokens de un modelo.
+    
+    Args:
+        text (str): El texto cuyo conteo de tokens se desea conocer
+        
+    Returns:
+        int: Número de tokens en el texto
+    """
     response = get_openai_client().chat.completions.create(
         model=get_model_to_use(),
         messages=[
@@ -503,6 +617,22 @@ def count_tokens(text: str) -> int:
     return response.usage.prompt_tokens
 
 def get_framework_recommendation(objective: str, context: str = "general") -> str:
+    """
+    Recomienda un framework de prompt basado en el objetivo del usuario.
+    
+    Analiza el objetivo proporcionado por el usuario y determina cuál
+    de los frameworks disponibles es más adecuado para estructurar su prompt.
+    Considera factores como el tipo de tarea, complejidad, enfoque principal
+    y contexto específico.
+    
+    Args:
+        objective (str): Descripción del objetivo o necesidad del usuario
+        context (str, optional): Contexto específico, por ejemplo "web" para desarrollo web
+        
+    Returns:
+        str: Recomendación formateada con el framework elegido, explicación y ejemplo de uso
+    """
+    # Mensaje del sistema que guía al modelo en su tarea de recomendación
     system_message = f'''Eres un experto en frameworks de prompts en español. Tu tarea es analizar el objetivo del usuario y recomendar ÚNICAMENTE uno de los siguientes frameworks disponibles. NO INVENTES FRAMEWORKS NUEVOS:
 
     RTF, TAG, BAB, CARE, RISE, PEAS, STAR, QCQA, AIDA, PARA, SMART, ERQ, CODE, PROS, TEAM, IDEA, FAST, LEAP, GROW, SPIN, DESIGN, VISION, IMPACT, MASTER, POWER, LOGIC, SCOPE, FOCUS, EXPERT, CLARITY, GUIDE, PATH, LEARN, SOLVE, PRIME, ADAPT, BUILD, CRAFT, SCALE, THINK, QUEST, DRIVE, SHAPE, REACH, BLEND, SPARK, PULSE
@@ -539,7 +669,7 @@ def get_framework_recommendation(objective: str, context: str = "general") -> st
        - Estratégico vs Táctico: MASTER vs LOGIC
     '''
     
-    # Añadir contexto específico para desarrollo web
+    # Añadir contexto específico para desarrollo web si aplica
     if context.lower() == "web":
         system_message += f'''
     IMPORTANTE: El usuario está desarrollando un proyecto web, por lo que necesita un framework que se adapte específicamente a este contexto. 
@@ -551,6 +681,7 @@ def get_framework_recommendation(objective: str, context: str = "general") -> st
     - GUIDE: Excelente para desarrollo de productos y servicios web enfocados al usuario
     '''
     
+    # Instrucciones sobre el formato de respuesta esperado
     system_message += f'''
     Para cada framework, debes explicar qué significa cada componente en general, no dar un ejemplo específico.
 
@@ -573,6 +704,7 @@ def get_framework_recommendation(objective: str, context: str = "general") -> st
     [Explica qué significa cada letra del framework recomendado EN GENERAL, no un ejemplo concreto. Usa el formato exacto del framework con sus componentes explicando qué significa cada uno.]
     '''
     
+    # Generar la recomendación utilizando el modelo de OpenAI
     response = get_openai_client().chat.completions.create(
         model=get_model_to_use(),
         messages=[
@@ -589,8 +721,8 @@ def get_framework_recommendation(objective: str, context: str = "general") -> st
     import re
     framework_match = re.search(r'FRAMEWORK:\s*([^\n]+)', recommendation_text, re.IGNORECASE)
     
+    # Si no tiene el formato esperado, usar formato genérico apropiado al contexto
     if not framework_match:
-        # Si no tiene el formato esperado, usar formato genérico apropiado al contexto
         if context.lower() == "web":
             return """FRAMEWORK: CODE
 
