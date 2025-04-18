@@ -2,6 +2,16 @@
 Módulo para la generación de prompts especializados para plataformas Bolt/Lovable.
 Contiene funciones para transformar contenido de frameworks en prompts estructurados
 para conseguir los mejores resultados en estas plataformas.
+
+Este módulo proporciona:
+1. Una plantilla de prompt estructurada para proyectos Bolt/Lovable
+2. Funciones para generar prompts completos basados en los frameworks existentes
+3. Funcionalidad para analizar y extraer secciones de los prompts generados
+4. Transformación de datos de frameworks a formatos optimizados para desarrollo web
+
+Implementa un sistema de dos etapas:
+- Primero convierte los datos del framework a un contexto estructurado
+- Luego usa ese contexto para generar un prompt completo y detallado
 """
 
 from utils.openai_helper import optimize_prompt, DEFAULT_MODEL, PREMIUM_MODEL
@@ -9,7 +19,36 @@ from utils.prompt_formatter import format_prompt_markdown
 import os
 from console import console
 
-# Estructura de prompt para Bolt/Lovable basada en los frameworks existentes
+# ===================================
+# PLANTILLAS Y CONSTANTES
+# ===================================
+
+"""
+Estructura de prompt para Bolt/Lovable basada en los frameworks existentes.
+Esta plantilla define las secciones principales que debe contener un prompt
+completo para desarrollo web utilizando plataformas Bolt/Lovable.
+
+Variables de la plantilla:
+- project_name: Nombre del proyecto web
+- title: Título descriptivo del proyecto
+- project_id: Identificador único del proyecto
+- launch_date: Fecha estimada de lanzamiento
+- summary: Resumen ejecutivo del proyecto
+- goals: Objetivos SMART del proyecto
+- audience_analysis: Análisis detallado del público objetivo
+- visual_specs: Especificaciones visuales (colores, tipografías, etc)
+- interactions: Definición de interacciones y comportamientos
+- components: Especificación de componentes UI principales
+- responsive: Estrategia responsive y breakpoints
+- scope: Alcance y límites del proyecto
+- functional_requirements: Requisitos funcionales detallados
+- content_architecture: Estructura de contenido y navegación
+- tech_specs: Especificaciones técnicas y stack
+- interactive_features: Funcionalidades interactivas especiales
+- competitive_analysis: Análisis de competidores
+- seo_strategy: Estrategia SEO y palabras clave
+- content: Directrices de contenido textual y multimedia
+"""
 BOLT_LOVABLE_TEMPLATE = """
 # {project_name}
 
@@ -65,30 +104,50 @@ BOLT_LOVABLE_TEMPLATE = """
 {content}
 """
 
+# ===================================
+# FUNCIONES PRINCIPALES
+# ===================================
+
 def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
     """
     Genera un prompt completo y estructurado para plataformas Bolt/Lovable
     basado en los datos de un framework existente.
     
+    Esta función transforma información de frameworks genéricos en un prompt
+    altamente especializado para desarrollo web con Bolt/Lovable, incluyendo
+    especificaciones visuales, de interacción, y técnicas detalladas.
+    
     Args:
-        framework_data (dict): Datos del framework seleccionado
-        user_api_key (str, optional): API key del usuario para usar el modelo premium
+        framework_data (dict): Datos del framework seleccionado con campos como
+                               role, task, format, context, etc. según el framework
+        user_api_key (str, optional): API key del usuario para usar el modelo premium.
+                                      Si no se proporciona, se usa el modelo por defecto.
         
     Returns:
-        dict: Contiene el prompt generado, éxito de la operación y posibles errores
+        dict: Diccionario con los siguientes campos:
+            - success (bool): Indica si la generación fue exitosa
+            - prompt (str): Prompt formateado en markdown listo para usar
+            - raw_prompt (str): Versión sin formato del prompt generado
+            - error (str, optional): Mensaje de error si success es False
+            
+    Raises:
+        Exception: Si ocurre algún error durante la generación del prompt
     """
     try:
-        # Determinar modelo a usar
+        # Determinar modelo a usar basado en si el usuario proporcionó su API key
         model = PREMIUM_MODEL if user_api_key else DEFAULT_MODEL
         api_key = user_api_key or os.environ.get('OPENAI_API_KEY')
         
         # Crear contexto para la generación basado en el framework proporcionado
+        # Extraemos todos los campos excepto framework_type para usarlos como input
         framework_context = "Datos del framework seleccionado:\n"
         for key, value in framework_data.items():
             if key != 'framework_type':
                 framework_context += f"- {key}: {value}\n"
                 
         # Objetivo de desarrollo web para el sistema Bolt/Lovable
+        # Este prompt extenso define la estructura y expectativas para 
+        # un prompt de desarrollo web completo y detallado
         prompt_context = f"""
         # Prompt Generador de Especificaciones para Bolt/Lovable
 
@@ -305,9 +364,12 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
         console.info(f"Generando prompt Bolt/Lovable usando el modelo {model}")
         
         # Generar contenido para cada sección del template
+        # Utilizamos la función optimize_prompt del módulo openai_helper para
+        # obtener resultados optimizados basados en el contexto proporcionado
         generated_content = optimize_prompt("bolt_lovable", {"context": prompt_context})
         
         # Formatear el contenido generado en markdown
+        # Esto mejora la presentación y legibilidad del prompt
         formatted_result = format_prompt_markdown(generated_content)
         
         return {
@@ -325,13 +387,40 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
 
 def parse_bolt_lovable_sections(prompt_text):
     """
-    Analiza un texto de prompt y extrae las secciones estructuradas
+    Analiza un texto de prompt y extrae las secciones estructuradas.
+    
+    Esta función toma un prompt completo y lo descompone en secciones
+    basadas en los encabezados markdown (## para secciones y # para título).
+    El resultado es un diccionario donde las claves son los nombres de las
+    secciones y los valores son los contenidos correspondientes.
     
     Args:
-        prompt_text (str): Texto del prompt generado
+        prompt_text (str): Texto del prompt generado en formato markdown
         
     Returns:
-        dict: Diccionario con las secciones extraídas
+        dict: Diccionario con las secciones extraídas, donde:
+            - Las claves son los nombres de las secciones (sin ##)
+            - Los valores son los contenidos de texto de cada sección
+            - La clave 'title' contiene el título principal del documento (con #)
+            
+    Ejemplo:
+        Para un prompt como:
+        ```
+        # Mi Proyecto
+        
+        ## Sección 1
+        Contenido 1
+        
+        ## Sección 2
+        Contenido 2
+        ```
+        
+        Retornará:
+        {
+            'title': 'Mi Proyecto',
+            'Sección 1': 'Contenido 1',
+            'Sección 2': 'Contenido 2'
+        }
     """
     sections = {}
     current_section = None
