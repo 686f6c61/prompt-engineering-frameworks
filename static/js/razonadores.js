@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const editPromptBtn = document.getElementById('edit-prompt-btn');
     const regenerateBtn = document.getElementById('regenerate-btn');
     const usageInfoContainer = document.getElementById('usage-info-container');
+    const infoRazonadores = document.getElementById('infoRazonadores');
     
     // Variables para almacenar datos
     let currentTopic = '';
@@ -53,6 +54,16 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
     
     // Cargar información de uso
     loadUsageInfo();
+    
+    // Mostrar información de modelos razonadores por defecto al cargar la página
+    if (infoRazonadores) {
+        // Abrir el panel de información automáticamente después de un breve retraso
+        setTimeout(() => {
+            new bootstrap.Collapse(infoRazonadores, {
+                show: true
+            });
+        }, 500);
+    }
     
     // Evento para analizar el tema
     analyzeTopicBtn.addEventListener('click', function() {

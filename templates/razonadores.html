@@ -23,6 +23,60 @@
         </div>
     </div>
 
+    <!-- Sección informativa sobre modelos razonadores -->
+    <div class="row mb-4">
+        <div class="col-12 col-lg-10 mx-auto">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
+                            <i class="bi bi-brain fs-4 text-primary"></i>
+                        </div>
+                        <h4 class="mb-0">¿Qué son los modelos razonadores?</h4>
+                        <button class="btn btn-link ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#infoRazonadores" aria-expanded="false" aria-controls="infoRazonadores">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="collapse" id="infoRazonadores">
+                        <div class="row g-4">
+                            <div class="col-12 col-md-6">
+                                <h5 class="fw-bold"><i class="bi bi-stars me-2 text-primary"></i>Características principales</h5>
+                                <p>Los modelos razonadores son LLMs especializados en descomponer problemas complejos en pasos lógicos, mostrando explícitamente su cadena de pensamiento (chain-of-thought).</p>
+                                
+                                <h5 class="fw-bold mt-4"><i class="bi bi-magic me-2 text-primary"></i>¿Por qué necesitan prompts especiales?</h5>
+                                <p>Para aprovechar al máximo su capacidad de razonamiento, estos modelos requieren prompts estructurados que:</p>
+                                <ul class="mb-0">
+                                    <li>Descompongan claramente los problemas en pasos</li>
+                                    <li>Soliciten explícitamente un análisis paso a paso</li>
+                                    <li>Especifiquen las metodologías de razonamiento a utilizar</li>
+                                    <li>Definan criterios de evaluación claros</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-12 col-md-6">
+                                <h5 class="fw-bold"><i class="bi bi-graph-up me-2 text-primary"></i>Expectativas y costes</h5>
+                                <p>Al usar modelos razonadores debes considerar:</p>
+                                <ul>
+                                    <li><strong>Mayor consumo de tokens</strong> — Las respuestas son más extensas debido al razonamiento detallado</li>
+                                    <li><strong>Mayor latencia</strong> — El procesamiento profundo requiere más tiempo</li>
+                                    <li><strong>Mayor precisión</strong> — Obtienen mejores resultados en tareas complejas</li>
+                                    <li><strong>Transparencia mejorada</strong> — Permiten verificar el proceso de razonamiento</li>
+                                </ul>
+                                
+                                <div class="d-grid mt-3">
+                                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#modelosRazonadoresModal">
+                                        <i class="bi bi-list-check me-2"></i>Ver listado de modelos razonadores
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Contenedor para mostrar información de uso -->
     <div id="usage-info-container" class="mb-3"></div>
 
@@ -175,7 +229,156 @@
         padding: 10px;
         border-radius: 5px;
     }
+    
+    .modelo-card {
+        border-left: 4px solid #0d6efd;
+        padding: 15px;
+        margin-bottom: 16px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+    }
+    
+    .modelo-badge {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 50rem;
+        margin-right: 0.5rem;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
 </style>
+
+<!-- Modal de listado de modelos razonadores -->
+<div class="modal fade" id="modelosRazonadoresModal" tabindex="-1" aria-labelledby="modelosRazonadoresLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modelosRazonadoresLabel">Listado de modelos razonadores disponibles</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted mb-4">Esta lista incluye los principales modelos optimizados para tareas de razonamiento, disponibles a través de diferentes proveedores.</p>
+                
+                <!-- OpenAI -->
+                <h5 class="mb-3"><i class="bi bi-stars me-2"></i>OpenAI</h5>
+                
+                <div class="modelo-card">
+                    <div>
+                        <span class="modelo-badge bg-success text-white">Flagship</span>
+                        <span class="modelo-badge bg-primary bg-opacity-10 text-primary">Diciembre 2024</span>
+                    </div>
+                    <h6 class="mb-1">o1-preview & o1</h6>
+                    <p class="mb-0">Modelo de razonamiento de primera generación, con capacidad de mostrar cadenas de pensamiento explícitas; preview en septiembre 2024 y versión final en diciembre 2024.</p>
+                </div>
+                
+                <div class="modelo-card">
+                    <div>
+                        <span class="modelo-badge bg-info text-white">Segunda Gen</span>
+                    </div>
+                    <h6 class="mb-1">o3 & o3-mini</h6>
+                    <p class="mb-0">Segunda generación optimizada para razonamiento multimodal y uso de herramientas, lanzada tras o1.</p>
+                </div>
+                
+                <div class="modelo-card">
+                    <div>
+                        <span class="modelo-badge bg-success text-white">Actual</span>
+                        <span class="modelo-badge bg-primary bg-opacity-10 text-primary">Abril 2025</span>
+                    </div>
+                    <h6 class="mb-1">o4-mini & o4-mini-high</h6>
+                    <p class="mb-0">Modelos más pequeños y rápidos que o3, con razonamiento integrado y menor latencia; disponibles desde abril 2025.</p>
+                </div>
+                
+                <!-- Google -->
+                <h5 class="mt-4 mb-3"><i class="bi bi-google me-2"></i>Google</h5>
+                
+                <div class="modelo-card">
+                    <div>
+                        <span class="modelo-badge bg-warning text-dark">Vista previa</span>
+                    </div>
+                    <h6 class="mb-1">Gemini 2.5 Flash</h6>
+                    <p class="mb-0">Ofrece un "presupuesto de razonamiento" para ajustar calidad vs. costo en tareas complejas, actualmente en vista previa.</p>
+                </div>
+                
+                <div class="modelo-card">
+                    <div>
+                        <span class="modelo-badge bg-success text-white">Disponible</span>
+                    </div>
+                    <h6 class="mb-1">Gemini 2.0 Flash Thinking</h6>
+                    <p class="mb-0">Entrenado para descomponer prompts en pasos lógicos, destacando en matemáticas, ciencia y razonamiento multimodal.</p>
+                </div>
+                
+                <!-- Anthropic -->
+                <h5 class="mt-4 mb-3"><i class="bi bi-circle-half me-2"></i>Anthropic</h5>
+                
+                <div class="modelo-card">
+                    <div>
+                        <span class="modelo-badge bg-success text-white">Flagship</span>
+                    </div>
+                    <h6 class="mb-1">Claude 3.7 Sonnet</h6>
+                    <p class="mb-0">Primer modelo híbrido de razonamiento que alterna entre respuestas rápidas y pensamiento extendido paso a paso.</p>
+                </div>
+                
+                <div class="modelo-card">
+                    <div>
+                        <span class="modelo-badge bg-success text-white">Disponible</span>
+                    </div>
+                    <h6 class="mb-1">Claude 3.5 Sonnet</h6>
+                    <p class="mb-0">Introdujo razonamiento visual y de código con un potente "chain-of-thought" para tareas complejas.</p>
+                </div>
+                
+                <!-- Otros proveedores -->
+                <h5 class="mt-4 mb-3"><i class="bi bi-globe me-2"></i>Otros proveedores</h5>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="modelo-card h-100">
+                            <div>
+                                <span class="modelo-badge bg-secondary text-white">DeepSeek</span>
+                            </div>
+                            <h6 class="mb-1">DeepSeek R1</h6>
+                            <p class="mb-0">Compite con o1 a menor costo, incorpora reflexión automática y estrategias de escalado en tiempo de prueba.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="modelo-card h-100">
+                            <div>
+                                <span class="modelo-badge bg-secondary text-white">xAI</span>
+                            </div>
+                            <h6 class="mb-1">Grok 3</h6>
+                            <p class="mb-0">Modelo de razonamiento de Elon Musk que destaca en interpretación de lenguaje y resolución de problemas complejos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="modelo-card h-100">
+                            <div>
+                                <span class="modelo-badge bg-secondary text-white">Alibaba</span>
+                            </div>
+                            <h6 class="mb-1">QvQ-72B-Preview & QwQ-32B-Preview</h6>
+                            <p class="mb-0">Modelos experimentales de razonamiento multimodal con énfasis en análisis paso a paso.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="modelo-card h-100">
+                            <div>
+                                <span class="modelo-badge bg-success bg-opacity-25 text-success">Open Source</span>
+                            </div>
+                            <h6 class="mb-1">QwQ & Sky-T1</h6>
+                            <p class="mb-0">Modelos de código abierto optimizados para análisis lógico, metafórico y con scaling para tareas difíciles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block extra_scripts %}
