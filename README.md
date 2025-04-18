@@ -106,6 +106,8 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 - **Almacenamiento local**: Guarda tus prompts favoritos
 - **Ejemplos interactivos**: Biblioteca de casos de uso para cada framework
 - **Configuración de privacidad**: Las API Keys nunca se almacenan en el servidor, solo en la sesión del navegador
+- **Formulario de contacto**: Sistema de contacto integrado usando Resend para el envío de emails
+- **Analítica web**: Seguimiento de uso mediante Google Analytics para mejorar la experiencia
 
 ## 🛠️ Tecnologías
 
@@ -182,8 +184,37 @@ python main.py
 La aplicación utiliza las siguientes variables de entorno:
 
 - `OPENAI_API_KEY`: Tu clave de API de OpenAI
+- `FLASK_SECRET_KEY`: Clave secreta para la seguridad de Flask
+- `RESEND_API_KEY`: Clave de API de Resend para el envío de correos
 - `FLASK_ENV`: Entorno de Flask (development/production)
-- `FLASK_DEBUG`: Modo debug (1/0)
+- `PORT`: Puerto para el servidor (por defecto 8000)
+
+### Configuración del seguimiento analítico
+
+La aplicación incluye por defecto el código de Google Analytics. Si deseas usar tu propio código:
+
+1. Localiza en el archivo `templates/base.html` el siguiente bloque:
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYM5KDT6C6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BYM5KDT6C6');
+</script>
+```
+
+2. Sustituye el ID `G-BYM5KDT6C6` por tu propio ID de Google Analytics
+
+### Configuración del sistema de contacto
+
+El formulario de contacto utiliza Resend para enviar correos electrónicos:
+
+1. Regístrate en [Resend](https://resend.com) y obtén tu API key
+2. Añade tu API key en el archivo `.env`: `RESEND_API_KEY=tu_clave_aqui`
+3. Modifica el dominio y dirección de correo en `app.py` si deseas usar tu propio dominio
 
 ## 🚀 Uso
 
