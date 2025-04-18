@@ -534,7 +534,15 @@ def enviar_correo():
         }
     """
     # API Key de Resend
-    RESEND_API_KEY = 're_Jfjmq92S_BVWgMMYaJictt1E696WJNdHN'
+    RESEND_API_KEY = os.environ.get('RESEND_API_KEY')
+    
+    # Verificar que la API key existe
+    if not RESEND_API_KEY:
+        console.error("Error: RESEND_API_KEY no configurada en variables de entorno")
+        return jsonify({
+            "success": False,
+            "error": "Error en la configuración del servidor. Por favor contacta al administrador."
+        }), 500
     
     # Obtener datos del formulario
     data = request.json
