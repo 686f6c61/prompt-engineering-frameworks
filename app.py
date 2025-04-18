@@ -513,7 +513,7 @@ def serve_framework(framework_name):
         file: Archivo de framework solicitado
     """
     # Construir la ruta del archivo
-    framework_path = os.path.join('frameworks', framework_name)
+    framework_path = os.path.join('static/frameworks/prompt-frameworks', framework_name)
     
     # Verificar si el archivo existe
     if not os.path.isfile(framework_path):
@@ -536,14 +536,15 @@ def download_frameworks_zip():
         file: Archivo ZIP con todos los frameworks
     """
     # Verificar que el directorio de frameworks existe
-    if not os.path.isdir('frameworks'):
+    frameworks_dir = 'static/frameworks/prompt-frameworks'
+    if not os.path.isdir(frameworks_dir):
         return "Directorio de frameworks no encontrado", 404
     
     # Crear un archivo ZIP en memoria
     memory_file = io.BytesIO()
     with zipfile.ZipFile(memory_file, 'w', zipfile.ZIP_DEFLATED) as zipf:
         # Recorrer todos los archivos en el directorio frameworks
-        for root, dirs, files in os.walk('frameworks'):
+        for root, dirs, files in os.walk(frameworks_dir):
             for file in files:
                 if file.endswith('.txt'):
                     file_path = os.path.join(root, file)
