@@ -168,4 +168,105 @@ document.addEventListener('DOMContentLoaded', function() {
       frameworkModal.show();
     });
   });
+
+  // Función para exportar tabla a CSV
+  const downloadCsvBtn = document.getElementById('downloadCsvBtn');
+  if (downloadCsvBtn) {
+    downloadCsvBtn.addEventListener('click', function() {
+      exportTableToCSV('frameworks.csv');
+    });
+  }
 });
+
+// Función para mostrar detalles del framework en modal
+function showFrameworkDetails(frameworkFile) {
+  const frameworkModal = new bootstrap.Modal(document.getElementById('frameworkModal'));
+  const frameworkContent = document.getElementById('frameworkContent');
+  
+  // Mostrar estado de carga
+  frameworkContent.innerHTML = `
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+    <p class="text-center">Cargando información del framework...</p>
+  `;
+  
+  frameworkModal.show();
+  
+  // Cargar el contenido del framework
+  fetch(`/frameworks/${frameworkFile}.txt`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error al cargar el framework: ${response.statusText}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      // Formatear el contenido como Markdown
+      frameworkContent.innerHTML = marked.parse(text);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      frameworkContent.innerHTML = `
+        <div class="alert alert-danger" role="alert">
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          Error al cargar la información del framework. Por favor, inténtalo de nuevo.
+        </div>
+      `;
+    });
+}
+
+// Función para exportar tabla a CSV
+function exportTableToCSV(filename) {
+  const table = document.getElementById('frameworksTable');
+  if (!table) return;
+  
+  let csvContent = [];
+  
+  // Obtener encabezados
+  const headers = [];
+  const headerCells = table.querySelectorAll('thead th');
+  headerCells.forEach(cell => {
+    // Quitar los iconos y obtener solo el texto
+    let headerText = cell.textContent.trim();
+    // Quitar el último encabezado (columna de acciones)
+    if (headerText !== 'Acción') {
+      headers.push(headerText);
+    }
+  });
+  csvContent.push(headers.join(','));
+  
+  // Obtener datos de las filas
+  const rows = table.querySelectorAll('tbody tr');
+  rows.forEach(row => {
+    const rowData = [];
+    const cells = row.querySelectorAll('td');
+    // Ignorar la última celda (botón de acción)
+    for (let i = 0; i < cells.length - 1; i++) {
+      // Limpiar el texto y formatear correctamente para CSV
+      let cellText = cells[i].textContent.trim();
+      // Agregar comillas si contiene comas
+      if (cellText.includes(',')) {
+        cellText = `"${cellText}"`;
+      }
+      rowData.push(cellText);
+    }
+    csvContent.push(rowData.join(','));
+  });
+  
+  // Crear y descargar el archivo CSV
+  const csvString = csvContent.join('\n');
+  const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  
+  link.setAttribute('href', url);
+  link.setAttribute('download', filename);
+  link.style.visibility = 'hidden';
+  
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}

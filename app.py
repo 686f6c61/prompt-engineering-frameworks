@@ -10,7 +10,7 @@ Environment Variables:
 
 import os
 import secrets
-from flask import Flask, render_template, request, jsonify, redirect, url_for, session
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session, send_file
 from utils.openai_helper import optimize_prompt, count_tokens, get_framework_recommendation, FRAMEWORK_EXAMPLES
 from utils.openai_helper import DEFAULT_MODEL, PREMIUM_MODEL
 from utils.prompt_formatter import format_prompt_markdown
@@ -18,6 +18,8 @@ from utils.rate_limiter import check_rate_limit, increment_usage, get_usage_info
 from utils.bolt_lovable_helper import generate_bolt_lovable_prompt
 from console import console
 import os.path  # Importar os.path para manejar rutas de archivos
+import io
+import zipfile
 
 # Inicialización de la aplicación Flask
 app = Flask(__name__)
@@ -465,6 +467,39 @@ def serve_framework(framework_name):
     
     # Devolver el contenido como texto plano
     return content, 200, {'Content-Type': 'text/plain; charset=utf-8'}
+
+# Ruta para descargar todos los frameworks como ZIP
+@app.route('/download/frameworks')
+def download_frameworks_zip():
+    """
+    Ruta para descargar todos los frameworks en un archivo ZIP.
+    
+    Returns:
+        file: Archivo ZIP con todos los frameworks
+    """
+    # Verificar que el directorio de frameworks existe
+    if not os.path.isdir('frameworks'):
+        return "Directorio de frameworks no encontrado", 404
+    
+    # Crear un archivo ZIP en memoria
+    memory_file = io.BytesIO()
+    with zipfile.ZipFile(memory_file, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        # Recorrer todos los archivos en el directorio frameworks
+        for root, dirs, files in os.walk('frameworks'):
+            for file in files:
+                if file.endswith('.txt'):
+                    file_path = os.path.join(root, file)
+                    # Añadir archivo al ZIP
+                    zipf.write(file_path, arcname=file)
+    
+    # Preparar el archivo para descarga
+    memory_file.seek(0)
+    return send_file(
+        memory_file,
+        mimetype='application/zip',
+        as_attachment=True,
+        download_name='prompt-frameworks.zip'
+    )
 
 # Configuración para ejecutar la aplicación en Render o localmente
 if __name__ == "__main__":
