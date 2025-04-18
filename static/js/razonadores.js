@@ -1,6 +1,28 @@
+/**
+ * @file razonadores.js
+ * @description Controlador para la página de generación de prompts de razonamiento avanzado
+ * @version 1.0.0
+ * 
+ * Este módulo implementa la funcionalidad para crear prompts optimizados para
+ * razonamiento profundo con modelos avanzados. Proporciona:
+ * 
+ * 1. Análisis de temas específicos para generar preguntas de refinamiento
+ * 2. Recolección estructurada de respuestas del usuario
+ * 3. Generación de prompts altamente detallados para razonamiento
+ * 4. Edición, copia y exportación de prompts generados
+ * 5. Gestión de limitaciones de uso y manejo de errores
+ */
+
 // Razonadores.js - Lógica de la página de razonamiento
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos del DOM
+    // ===================================
+    // INICIALIZACIÓN DE ELEMENTOS DOM
+    // ===================================
+    
+    /**
+     * Referencias a elementos DOM clave
+     * @description Cacheamos referencias para optimizar rendimiento y legibilidad
+     */
     const initialForm = document.getElementById('initial-form-container');
     const refinementQuestions = document.getElementById('refinement-questions-container');
     const resultContainer = document.getElementById('result-container');
@@ -19,14 +41,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const usageInfoContainer = document.getElementById('usage-info-container');
     const infoRazonadores = document.getElementById('infoRazonadores');
     
-    // Variables para almacenar datos
+    // ===================================
+    // VARIABLES DE ESTADO
+    // ===================================
+    
+    /**
+     * Variables para almacenar el estado de la aplicación
+     * @description Mantienen los datos en memoria durante la sesión del usuario
+     */
     let currentTopic = '';
     let currentQuestions = [];
     let currentAnswers = {};
     let currentPrompt = '';
     let formattedPrompt = '';
     
-    // Ejemplo de prompt base para razonamiento profundo
+    /**
+     * Plantilla base para prompts de razonamiento
+     * @constant {string}
+     * @description Template markdown con instrucciones estructuradas para análisis profundo
+     */
     const basePromptTemplate = `# Instrucciones para razonamiento profundo
 
 Necesito que analices el siguiente problema de manera sistemática y exhaustiva. Por favor:
@@ -52,7 +85,14 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
 
 [PROBLEMA]`;
     
-    // Cargar información de uso
+    // ===================================
+    // INICIALIZACIÓN Y CONFIGURACIÓN
+    // ===================================
+    
+    /**
+     * Inicialización de la aplicación
+     * @description Carga información inicial y configura elementos visuales
+     */
     loadUsageInfo();
     
     // Mostrar información de modelos razonadores por defecto al cargar la página
@@ -65,7 +105,14 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         }, 500);
     }
     
-    // Evento para analizar el tema
+    // ===================================
+    // EVENTOS Y LISTENERS
+    // ===================================
+    
+    /**
+     * Evento para analizar el tema ingresado
+     * @description Procesa el tema del usuario y genera preguntas relevantes
+     */
     analyzeTopicBtn.addEventListener('click', function() {
         if (!reasoningTopic.value.trim()) {
             showAlert('Por favor, ingresa un tema o problema para analizar.');
@@ -86,13 +133,19 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         }, 1500);
     });
     
-    // Evento para volver al formulario inicial
+    /**
+     * Evento para volver al formulario inicial
+     * @description Permite al usuario regresar a la pantalla de ingreso de tema
+     */
     backToTopicBtn.addEventListener('click', function() {
         refinementQuestions.classList.add('d-none');
         initialForm.classList.remove('d-none');
     });
     
-    // Evento para generar el prompt
+    /**
+     * Evento para generar el prompt final
+     * @description Recolecta respuestas y genera un prompt estructurado
+     */
     generatePromptBtn.addEventListener('click', function() {
         // Recolectar todas las respuestas
         const allAnswered = collectAnswers();
@@ -115,7 +168,10 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         }, 2000);
     });
     
-    // Eventos para botones de acción del prompt
+    /**
+     * Eventos para botones de acción del prompt
+     * @description Configuración de listeners para interactuar con el prompt generado
+     */
     copyMarkdownBtn.addEventListener('click', function() {
         copyToClipboard(currentPrompt);
         showCopyConfirmation();
@@ -138,7 +194,16 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         regeneratePrompt();
     });
     
-    // Función para generar preguntas basadas en el tema
+    // ===================================
+    // FUNCIONES PRINCIPALES
+    // ===================================
+    
+    /**
+     * Genera preguntas basadas en el tema
+     * @function generateQuestions
+     * @param {string} topic - Tema principal ingresado por el usuario
+     * @description Solicita al servidor preguntas contextuales para refinar el prompt
+     */
     function generateQuestions(topic) {
         // Mostrar indicador de carga
         questionsContainer.innerHTML = `
@@ -199,7 +264,12 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         });
     }
     
-    // Función para renderizar las preguntas en el DOM
+    /**
+     * Renderiza las preguntas en el DOM
+     * @function renderQuestions
+     * @param {Array} questions - Array de preguntas a mostrar
+     * @description Genera elementos HTML para cada pregunta
+     */
     function renderQuestions(questions) {
         questionsContainer.innerHTML = '';
         
@@ -214,7 +284,12 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         });
     }
     
-    // Función para recolectar las respuestas
+    /**
+     * Recolecta las respuestas del usuario
+     * @function collectAnswers
+     * @returns {boolean} - Indica si todas las preguntas fueron respondidas
+     * @description Valida y almacena las respuestas ingresadas
+     */
     function collectAnswers() {
         const answerElements = document.querySelectorAll('.question-answer');
         let allAnswered = true;
@@ -234,7 +309,11 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         return allAnswered;
     }
     
-    // Función para generar el prompt de razonamiento
+    /**
+     * Genera el prompt de razonamiento
+     * @function generateReasoningPrompt
+     * @description Solicita al servidor la creación de un prompt optimizado
+     */
     function generateReasoningPrompt() {
         // Mostrar indicador de carga
         promptPreview.innerHTML = `
@@ -290,7 +369,11 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         });
     }
     
-    // Función para generar un prompt de respaldo en caso de error
+    /**
+     * Genera un prompt de respaldo en caso de error
+     * @function generateFallbackPrompt
+     * @description Crea un prompt básico usando la plantilla predefinida
+     */
     function generateFallbackPrompt() {
         // Construir el prompt basado en el tema y las respuestas
         let contextSection = `# Contexto\n\n`;
@@ -317,7 +400,11 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         tokenCount.textContent = Math.floor(currentPrompt.length / 4);
     }
     
-    // Función para regenerar el prompt
+    /**
+     * Regenera el prompt con los mismos datos
+     * @function regeneratePrompt
+     * @description Solicita una nueva versión del prompt manteniendo la misma información
+     */
     function regeneratePrompt() {
         regenerateBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Regenerando...';
         regenerateBtn.disabled = true;
@@ -330,7 +417,16 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         }, 1500);
     }
     
-    // Función para abrir el modal de edición
+    // ===================================
+    // FUNCIONES DE UTILIDAD
+    // ===================================
+    
+    /**
+     * Abre el modal para editar el prompt
+     * @function openEditModal
+     * @param {string} prompt - Contenido actual del prompt
+     * @description Permite al usuario editar manualmente el prompt generado
+     */
     function openEditModal(prompt) {
         const modal = new bootstrap.Modal(document.getElementById('editPromptModal'));
         const textarea = document.getElementById('edit-prompt-textarea');
@@ -349,7 +445,11 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         };
     }
     
-    // Función para mostrar la confirmación de copiado
+    /**
+     * Muestra la confirmación de copiado
+     * @function showCopyConfirmation
+     * @description Presenta feedback visual al copiar al portapapeles
+     */
     function showCopyConfirmation() {
         const modal = new bootstrap.Modal(document.getElementById('copyModal'));
         modal.show();
@@ -358,7 +458,12 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         }, 1500);
     }
     
-    // Función para copiar al portapapeles
+    /**
+     * Copia texto al portapapeles
+     * @function copyToClipboard
+     * @param {string} text - Texto a copiar
+     * @description Utiliza la API del navegador para copiar contenido
+     */
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).catch(err => {
             console.error('Error al copiar: ', err);
@@ -366,7 +471,13 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         });
     }
     
-    // Función para descargar archivo de texto
+    /**
+     * Descarga el prompt como archivo de texto
+     * @function downloadText
+     * @param {string} text - Contenido a descargar
+     * @param {string} filename - Nombre del archivo
+     * @description Crea y descarga un archivo de texto con el prompt
+     */
     function downloadText(text, filename) {
         const element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -377,14 +488,23 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
         document.body.removeChild(element);
     }
     
-    // Función para mostrar alertas
+    /**
+     * Muestra alertas al usuario
+     * @function showAlert
+     * @param {string} message - Mensaje a mostrar
+     * @description Presenta información importante en un modal
+     */
     function showAlert(message) {
         const modal = new bootstrap.Modal(document.getElementById('announcementModal'));
         document.getElementById('announcementMessage').textContent = message;
         modal.show();
     }
     
-    // Función para cargar información de uso
+    /**
+     * Carga información sobre limitaciones de uso
+     * @function loadUsageInfo
+     * @description Obtiene datos del servidor sobre el estado de uso del usuario
+     */
     function loadUsageInfo() {
         fetch('/api/usage-info')
             .then(response => response.json())
@@ -398,7 +518,12 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
             });
     }
     
-    // Función para renderizar información de uso
+    /**
+     * Renderiza información de uso en la interfaz
+     * @function renderUsageInfo
+     * @param {Object} usageInfo - Datos de uso del usuario
+     * @description Presenta la información sobre límites de uso en la UI
+     */
     function renderUsageInfo(usageInfo) {
         if (!usageInfo.is_limited && !usageInfo.using_custom_key) {
             usageInfoContainer.innerHTML = `
