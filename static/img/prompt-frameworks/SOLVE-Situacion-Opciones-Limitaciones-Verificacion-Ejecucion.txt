@@ -1,0 +1,38 @@
+# Framework SOLVE (Situación-Opciones-Limitaciones-Verificación-Ejecución)
+
+## Componentes
+- **S - Situación (Situation)**: Describe el contexto actual, problema o desafío a resolver
+- **O - Opciones (Options)**: Explora las diferentes alternativas o soluciones posibles
+- **L - Limitaciones (Limitations)**: Identifica restricciones, obstáculos o condicionantes
+- **V - Verificación (Verification)**: Establece los criterios y métodos para validar la solución
+- **E - Ejecución (Execution)**: Detalla el plan de implementación de la solución seleccionada
+
+## Descripción y propósito
+El framework SOLVE proporciona una metodología estructurada para la resolución efectiva de problemas técnicos. Su enfoque sistemático comienza con la comprensión profunda del problema, explora múltiples soluciones, considera las limitaciones reales, establece métodos de verificación y finaliza con un plan de ejecución concreto. Este marco es particularmente valioso para equipos técnicos que enfrentan desafíos complejos donde es crucial considerar tanto las alternativas como las restricciones antes de implementar una solución.
+
+## Ejemplo de uso
+```
+Situación: Alto tiempo de respuesta
+Opciones: Optimización de consultas o caching
+Limitaciones: Presupuesto limitado
+Verificación: Pruebas de carga
+Ejecución: Despliegue gradual
+```
+
+## Casos recomendados
+- Resolución de problemas de rendimiento en sistemas
+- Diagnóstico y solución de incidencias técnicas
+- Evaluación de alternativas tecnológicas
+- Planificación de mejoras de infraestructura
+- Optimización de aplicaciones y plataformas
+- Desarrollo de soluciones con restricciones específicas
+- Implementación de cambios en sistemas críticos
+
+## Ventajas
+- Proporciona un enfoque estructurado y completo para la resolución de problemas
+- Fomenta la consideración de múltiples alternativas antes de decidir
+- Reconoce explícitamente las limitaciones para desarrollar soluciones realistas
+- Incorpora verificación para asegurar la efectividad de la solución
+- Equilibra la exploración de alternativas con la implementación práctica
+- Facilita la comunicación clara del proceso de solución de problemas
+- Mejora la calidad de las decisiones técnicas al considerar todos los factores clave 

@@ -1,0 +1,38 @@
+# Framework GUIDE (Meta-Usuario-Implementación-Entrega-Evaluación)
+
+## Componentes
+- **G - Meta (Goal)**: Define el objetivo principal y los resultados deseados
+- **U - Usuario**: Identifica a los usuarios o stakeholders y sus necesidades específicas
+- **I - Implementación**: Detalla cómo se desarrollará o construirá la solución
+- **D - Entrega (Delivery)**: Especifica cómo se desplegará o entregará el producto final
+- **E - Evaluación**: Establece cómo se medirá el éxito y se recogerá feedback
+
+## Descripción y propósito
+El framework GUIDE proporciona una estructura centrada en el usuario para el desarrollo y entrega de productos y servicios. Sigue un flujo natural que comienza con la definición de objetivos, pone énfasis en las necesidades de los usuarios, detalla la implementación, planifica la entrega y establece mecanismos de evaluación. Este enfoque es particularmente valioso para el desarrollo de productos o servicios donde la satisfacción del usuario y la usabilidad son críticas para el éxito.
+
+## Ejemplo de uso
+```
+Meta: Lanzar MVP en 2 meses
+Usuario: Equipo de desarrollo
+Implementación: Definir requisitos y prototipos
+Entrega: Desplegar versión beta
+Evaluación: Recoger feedback y métricas de uso
+```
+
+## Casos recomendados
+- Desarrollo de productos centrados en el usuario
+- Lanzamiento de nuevas funcionalidades o servicios
+- Proyectos de mejora de experiencia de usuario
+- Implementación de herramientas internas para equipos
+- Actualización de plataformas con enfoque en usabilidad
+- Desarrollo de MVPs y productos en etapas iniciales
+- Optimización de procesos basada en feedback de usuarios
+
+## Ventajas
+- Mantiene el foco en las necesidades reales de los usuarios
+- Proporciona un enfoque equilibrado entre objetivos, implementación y evaluación
+- Establece un ciclo completo desde la definición hasta el feedback
+- Facilita la iteración basada en evaluaciones de usuarios reales
+- Mejora la adopción al considerar explícitamente la experiencia de entrega
+- Promueve una cultura de mejora continua basada en métricas
+- Ayuda a alinear las decisiones técnicas con las necesidades de los usuarios 

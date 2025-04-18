@@ -1,0 +1,38 @@
+# Framework THINK (Tema-Historia-Insights-SiguientesPasos-Conocimiento)
+
+## Componentes
+- **T - Tema (Topic)**: Define el asunto principal o área de enfoque
+- **H - Historia (History)**: Proporciona antecedentes, contexto histórico o evolución
+- **I - Insights**: Presenta descubrimientos clave, patrones o conclusiones relevantes
+- **N - Siguientes Pasos (Next Steps)**: Establece las acciones futuras recomendadas
+- **K - Conocimiento (Knowledge)**: Identifica el conocimiento esencial o especializado necesario
+
+## Descripción y propósito
+El framework THINK está diseñado para el análisis estratégico y la generación de conocimiento aplicable. Proporciona una estructura que combina la comprensión contextual e histórica con insights analíticos, orienta hacia acciones concretas y reconoce el conocimiento especializado necesario. Este enfoque es particularmente valioso para análisis de tendencias, investigación aplicada y planificación estratégica donde es crucial conectar la historia y el contexto con insights accionables y conocimiento especializado.
+
+## Ejemplo de uso
+```
+Tema: Expansión mercado LATAM
+Historia: Análisis previos de mercado
+Insights: Oportunidades identificadas
+Siguientes Pasos: Plan de entrada Q2 2024
+Conocimiento: Regulaciones locales
+```
+
+## Casos recomendados
+- Análisis de tendencias tecnológicas
+- Investigación de mercados y oportunidades
+- Planificación estratégica basada en datos
+- Evaluación de expansión a nuevos segmentos
+- Desarrollo de estrategias de innovación
+- Análisis competitivo y posicionamiento
+- Documentación de conocimiento organizacional
+
+## Ventajas
+- Equilibra el análisis contextual con la acción orientada al futuro
+- Conecta el conocimiento histórico con insights prácticos
+- Proporciona un marco completo para el análisis estratégico
+- Facilita la transición desde el análisis hasta la acción
+- Reconoce explícitamente la importancia del conocimiento especializado
+- Mejora la toma de decisiones al incorporar tanto el contexto como insights
+- Estructura el pensamiento analítico de manera aplicable a la acción 

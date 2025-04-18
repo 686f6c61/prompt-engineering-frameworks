@@ -1,0 +1,36 @@
+# Framework CARE (Contexto-Acción-Resultado-Ejemplo)
+
+## Componentes
+- **C - Contexto**: Describe la situación, entorno o problema específico
+- **A - Acción**: Define las acciones concretas que se deben tomar
+- **R - Resultado**: Especifica los resultados esperados o logrados
+- **E - Ejemplo**: Proporciona un caso o escenario ilustrativo y detallado
+
+## Descripción y propósito
+El framework CARE es una estructura completa para comunicar y documentar soluciones o procesos. Al incluir tanto el contexto como ejemplos prácticos, CARE asegura que la información sea comprensible y aplicable en situaciones reales. Este framework es particularmente valioso cuando se necesita no solo indicar qué hacer, sino también ilustrar cómo se aplica en la práctica.
+
+## Ejemplo de uso
+```
+Contexto: Aplicación crítica financiera
+Acción: Implementar sistema de respaldos
+Resultado: Recuperación en menos de 15 minutos
+Ejemplo: Proceso detallado de restauración
+```
+
+## Casos recomendados
+- Documentación técnica y manuales de procedimientos
+- Capacitación de personal técnico
+- Comunicación de mejores prácticas
+- Diseño de casos de uso detallados
+- Redacción de políticas con guías de implementación
+- Creación de guías de resolución de problemas
+- Documentación de procesos de recuperación ante desastres
+
+## Ventajas
+- Proporciona información completa incluyendo el "por qué" y el "cómo"
+- Facilita la aplicación práctica mediante ejemplos concretos
+- Mejora la comprensión conectando teoría y práctica
+- Anticipa preguntas al cubrir el contexto completo
+- Ayuda a visualizar la implementación real mediante ejemplos
+- Facilita la replicación de soluciones en diferentes escenarios
+- Mejora la transferencia de conocimiento entre equipos 

@@ -1,0 +1,38 @@
+# Framework PULSE (Propósito-Entendimiento-Aprendizaje-Estrategia-Evaluación)
+
+## Componentes
+- **P - Propósito (Purpose)**: Define el objetivo fundamental o razón de ser
+- **U - Entendimiento (Understanding)**: Analiza el contexto, situación actual y flujos
+- **L - Aprendizaje (Learning)**: Identifica mejores prácticas, estándares y conocimiento relevante
+- **S - Estrategia (Strategy)**: Desarrolla el plan de acción e implementación
+- **E - Evaluación**: Establece métricas, indicadores y métodos de medición del éxito
+
+## Descripción y propósito
+El framework PULSE proporciona una metodología integral para la mejora y optimización de procesos con un enfoque en el monitoreo continuo. Comienza estableciendo un propósito claro, profundiza en el entendimiento de la situación actual, incorpora aprendizajes externos, desarrolla estrategias específicas y define métodos de evaluación continua. Este enfoque es particularmente valioso para iniciativas de mejora de procesos, optimización de flujos de trabajo y cualquier proyecto donde es crucial mantener el pulso o monitoreo constante del desempeño.
+
+## Ejemplo de uso
+```
+Propósito: Optimización de procesos
+Entendimiento: Análisis de flujos actuales
+Aprendizaje: Mejores prácticas del sector
+Estrategia: Plan de implementación ágil
+Evaluación: KPIs de rendimiento
+```
+
+## Casos recomendados
+- Optimización de procesos existentes
+- Programas de mejora continua
+- Implementación de métricas de rendimiento
+- Iniciativas de transformación de operaciones
+- Proyectos de automatización de procesos
+- Implementación de metodologías ágiles
+- Sistemas de monitoreo y evaluación continua
+
+## Ventajas
+- Enfoca los esfuerzos en un propósito claro y compartido
+- Equilibra el entendimiento interno con el aprendizaje externo
+- Conecta la estrategia directamente con la medición de resultados
+- Proporciona un marco completo para la mejora y optimización
+- Facilita el monitoreo continuo y la detección temprana de desviaciones
+- Promueve la integración de mejores prácticas en los procesos
+- Establece una cultura de mejora basada en datos y evaluación continua 

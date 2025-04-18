@@ -1,0 +1,38 @@
+# Framework PRIME (Problema-Investigación-Implementación-Monitoreo-Evaluación)
+
+## Componentes
+- **P - Problema**: Identifica y define claramente el problema o desafío a resolver
+- **R - Investigación (Research)**: Analiza datos, antecedentes y posibles soluciones
+- **I - Implementación**: Ejecuta la solución desarrollada mediante acciones concretas
+- **M - Monitoreo (Monitoring)**: Realiza seguimiento continuo del desempeño y resultados
+- **E - Evaluación**: Valora la efectividad de la solución e identifica mejoras
+
+## Descripción y propósito
+El framework PRIME proporciona un ciclo completo para la resolución de problemas basada en datos. Sigue una metodología que comienza con la identificación clara del problema, continúa con una fase de investigación rigurosa, implementa soluciones fundamentadas, establece mecanismos de monitoreo continuo, y concluye con una evaluación sistemática de resultados. Este enfoque es particularmente valioso para la mejora de procesos, optimización de sistemas y cualquier iniciativa donde el análisis de datos y la medición de resultados son críticos para el éxito.
+
+## Ejemplo de uso
+```
+Problema: Baja tasa de conversión
+Investigación: Análisis de datos de usuarios
+Implementación: Mejoras en el funnel
+Monitoreo: KPIs de conversión
+Evaluación: Informe de resultados
+```
+
+## Casos recomendados
+- Optimización de procesos y sistemas
+- Mejora de experiencia de usuario basada en datos
+- Resolución de problemas de rendimiento
+- Implementación de cambios en plataformas digitales
+- Proyectos de analítica y ciencia de datos
+- Iniciativas de mejora continua
+- Experimentos A/B y pruebas de hipótesis
+
+## Ventajas
+- Enfoque basado en datos para la toma de decisiones
+- Ciclo completo desde la identificación del problema hasta la evaluación
+- Énfasis en el monitoreo continuo para ajustes oportunos
+- Incorpora la investigación como fase clave antes de la implementación
+- Facilita la medición objetiva de resultados y mejoras
+- Promueve la mejora continua mediante ciclos iterativos
+- Equilibra la profundidad del análisis con la practicidad de la implementación 

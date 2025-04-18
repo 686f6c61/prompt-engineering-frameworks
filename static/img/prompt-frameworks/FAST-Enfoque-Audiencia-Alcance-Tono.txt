@@ -1,0 +1,36 @@
+# Framework FAST (Enfoque-Audiencia-Alcance-Tono)
+
+## Componentes
+- **F - Enfoque (Focus)**: Define el tema principal o propósito central del contenido
+- **A - Audiencia**: Identifica el público objetivo y sus características específicas
+- **S - Alcance (Scope)**: Establece los límites y extensión de la información a incluir
+- **T - Tono**: Determina el estilo de comunicación y enfoque lingüístico apropiado
+
+## Descripción y propósito
+El framework FAST está diseñado para crear contenido técnico y documentación efectiva. Proporciona un enfoque estructurado que asegura que el contenido esté bien dirigido, tenga un alcance apropiado y utilice un tono coherente con las necesidades de la audiencia. Esta metodología es particularmente valiosa para la creación de documentación técnica, guías de usuario, especificaciones de API y cualquier tipo de contenido donde la claridad y relevancia son críticas.
+
+## Ejemplo de uso
+```
+Enfoque: Documentación de API
+Audiencia: Desarrolladores frontend
+Alcance: Endpoints REST versión 2
+Tono: Técnico y conciso
+```
+
+## Casos recomendados
+- Creación de documentación técnica
+- Diseño de guías de usuario
+- Redacción de manuales de referencia
+- Desarrollo de tutoriales y guías de aprendizaje
+- Especificaciones de APIs y servicios
+- Documentación de código y funcionalidades
+- Creación de estándares y mejores prácticas
+
+## Ventajas
+- Centra el contenido en las necesidades específicas de la audiencia
+- Establece límites claros que evitan la sobrecarga de información
+- Asegura un tono y estilo consistente en toda la documentación
+- Mejora la eficacia de la comunicación técnica
+- Facilita la planeación y organización de contenidos extensos
+- Ayuda a priorizar qué información incluir y cuál omitir
+- Aumenta la utilidad del contenido al alinearlo con el propósito y audiencia 

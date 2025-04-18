@@ -1,0 +1,36 @@
+# Framework STAR (Situación-Tarea-Acción-Resultado)
+
+## Componentes
+- **S - Situación**: Describe el contexto, el escenario o el desafío enfrentado
+- **T - Tarea**: Especifica la responsabilidad o el objetivo asignado
+- **A - Acción**: Detalla los pasos y medidas concretas que se tomaron
+- **R - Resultado**: Presenta los logros, métricas o beneficios obtenidos
+
+## Descripción y propósito
+El framework STAR es una metodología estructurada para documentar experiencias y logros de manera clara y medible. Proporciona un formato para narrar situaciones complejas, destacando las acciones específicas tomadas y los resultados cuantificables obtenidos. Es especialmente valioso para comunicar logros profesionales, demostrar competencias y documentar casos de éxito con un enfoque en resultados.
+
+## Ejemplo de uso
+```
+Situación: Migración sistema heredado a la nube
+Tarea: Modernizar arquitectura monolítica
+Acción: Implementar microservicios y despliegue continuo
+Resultado: 40% mejora en tiempo de implementación
+```
+
+## Casos recomendados
+- Entrevistas de trabajo y evaluaciones de desempeño
+- Documentación de casos de éxito de proyectos
+- Informes de resultados de iniciativas
+- Comunicación de logros a stakeholders
+- Redacción de currículos y perfiles profesionales
+- Documentación de mejores prácticas
+- Creación de portfolios de proyectos
+
+## Ventajas
+- Estructura narrativa clara y orientada a resultados
+- Proporciona contexto completo de los logros
+- Destaca la contribución individual o del equipo
+- Fácil de seguir y comprender para cualquier audiencia
+- Enfatiza resultados medibles y cuantificables
+- Demuestra de manera objetiva el impacto de las acciones
+- Facilita la comparación de diferentes experiencias o proyectos 

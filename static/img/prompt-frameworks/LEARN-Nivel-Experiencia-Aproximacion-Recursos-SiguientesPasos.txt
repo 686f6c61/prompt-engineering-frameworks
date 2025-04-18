@@ -1,0 +1,38 @@
+# Framework LEARN (Nivel-Experiencia-Aproximación-Recursos-SiguientesPasos)
+
+## Componentes
+- **L - Nivel (Level)**: Define el nivel de complejidad o profundidad del aprendizaje
+- **E - Experiencia (Experience)**: Describe el conocimiento o habilidades previas necesarias
+- **A - Aproximación (Approach)**: Establece la metodología de enseñanza o aprendizaje
+- **R - Recursos (Resources)**: Especifica los materiales, herramientas o documentación necesarios
+- **N - Siguientes Pasos (Next Steps)**: Define la progresión o camino a seguir tras este aprendizaje
+
+## Descripción y propósito
+El framework LEARN está diseñado para estructurar procesos de aprendizaje y desarrollo de habilidades técnicas. Proporciona un enfoque integral que considera el punto de partida del aprendiz, adapta la metodología a su nivel, especifica los recursos necesarios y establece un camino claro de progresión. Este marco es particularmente valioso para el diseño de programas de capacitación técnica, documentación de aprendizaje y planificación de desarrollo profesional en entornos tecnológicos.
+
+## Ejemplo de uso
+```
+Nivel: Principiante
+Experiencia: Sin experiencia previa
+Aproximación: Curso interactivo
+Recursos: Videos y documentación
+SiguientesPasos: Realizar ejercicios prácticos
+```
+
+## Casos recomendados
+- Diseño de programas de formación técnica
+- Documentación para onboarding de nuevos equipos
+- Planificación de desarrollo de habilidades
+- Creación de manuales de capacitación
+- Estructuración de cursos o tutoriales técnicos
+- Planes de desarrollo profesional
+- Documentación de procesos de aprendizaje organizacional
+
+## Ventajas
+- Adapta el aprendizaje al nivel específico de los participantes
+- Establece expectativas claras sobre conocimientos previos necesarios
+- Proporciona una estructura completa desde el inicio hasta los siguientes pasos
+- Facilita la selección de metodologías apropiadas según el contexto
+- Asegura la disponibilidad de recursos adecuados para el aprendizaje
+- Crea caminos claros de progresión para el desarrollo continuo
+- Mejora la efectividad del aprendizaje al considerar todos los factores clave 

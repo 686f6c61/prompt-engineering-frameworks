@@ -1,0 +1,38 @@
+# Framework QUEST (Pregunta-Entendimiento-Exploración-Solución-Pruebas)
+
+## Componentes
+- **Q - Pregunta (Question)**: Formula la pregunta central o problema a investigar
+- **U - Entendimiento (Understanding)**: Analiza a fondo el contexto, datos y factores relevantes
+- **E - Exploración**: Investiga posibles enfoques, alternativas o hipótesis
+- **S - Solución**: Desarrolla la respuesta o solución propuesta basada en la exploración
+- **T - Pruebas (Testing)**: Valida la solución mediante experimentación o verificación
+
+## Descripción y propósito
+El framework QUEST proporciona una metodología estructurada para la investigación y resolución de problemas basada en preguntas. Sigue un proceso que comienza con la formulación clara de la pregunta, profundiza en el entendimiento del problema, explora diversas posibilidades, desarrolla una solución fundamentada y finalmente valida mediante pruebas. Este enfoque es particularmente valioso para proyectos de investigación aplicada, optimización basada en datos y cualquier iniciativa donde es importante explorar múltiples hipótesis antes de llegar a una solución.
+
+## Ejemplo de uso
+```
+Pregunta: Optimización de conversión
+Entendimiento: Análisis de embudo actual
+Exploración: Test A/B de landing pages
+Solución: Rediseño basado en datos
+Pruebas: Grupo piloto de usuarios
+```
+
+## Casos recomendados
+- Optimización de experiencia de usuario
+- Investigación basada en datos
+- Desarrollo de estrategias de crecimiento
+- Resolución de problemas de producto
+- Mejora de métricas clave de negocio
+- Experimentación controlada
+- Análisis de comportamiento de usuarios
+
+## Ventajas
+- Estructura el proceso de investigación de manera sistemática
+- Enfatiza la importancia de la comprensión profunda antes de la exploración
+- Promueve la consideración de múltiples hipótesis o enfoques
+- Incorpora la validación como parte integral del proceso
+- Equilibra la investigación rigurosa con resultados prácticos
+- Facilita la documentación del proceso de resolución de problemas
+- Mejora la calidad de las soluciones mediante un enfoque basado en datos 

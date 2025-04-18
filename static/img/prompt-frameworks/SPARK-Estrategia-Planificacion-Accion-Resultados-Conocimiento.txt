@@ -1,0 +1,38 @@
+# Framework SPARK (Estrategia-Planificación-Acción-Resultados-Conocimiento)
+
+## Componentes
+- **S - Estrategia (Strategy)**: Define el enfoque de alto nivel y dirección estratégica
+- **P - Planificación (Planning)**: Desarrolla el plan detallado, hitos y cronograma
+- **A - Acción**: Implementa las actividades y tareas planificadas
+- **R - Resultados (Results)**: Mide y evalúa los resultados y el impacto obtenido
+- **K - Conocimiento (Knowledge)**: Documenta aprendizajes y comparte conocimiento adquirido
+
+## Descripción y propósito
+El framework SPARK proporciona una metodología integral para la gestión de iniciativas de innovación y transformación. Sigue un enfoque sistemático que conecta la estrategia de alto nivel con la planificación detallada, implementación práctica, medición de resultados y gestión del conocimiento. Este marco es particularmente valioso para proyectos de innovación, transformación tecnológica o cualquier iniciativa donde es crucial mantener la alineación estratégica mientras se genera y captura nuevo conocimiento.
+
+## Ejemplo de uso
+```
+Estrategia: Modernización de plataforma
+Planificación: Roadmap técnico 6 meses
+Acción: Implementación por módulos
+Resultados: Métricas de rendimiento
+Conocimiento: Documentación y capacitación
+```
+
+## Casos recomendados
+- Programas de innovación tecnológica
+- Iniciativas de transformación digital
+- Desarrollo de nuevas plataformas o servicios
+- Implementación de cambios estratégicos
+- Lanzamiento de nuevos productos o funcionalidades
+- Proyectos de mejora con captura de conocimiento
+- Iniciativas con componente significativo de aprendizaje
+
+## Ventajas
+- Conecta directamente la estrategia con la acción y los resultados
+- Enfatiza la importancia de la documentación y transferencia de conocimiento
+- Proporciona un marco completo desde la visión hasta el aprendizaje
+- Facilita la comunicación entre diferentes niveles organizacionales
+- Mejora la sostenibilidad de las iniciativas mediante la captura de conocimiento
+- Asegura que las acciones estén alineadas con objetivos estratégicos
+- Promueve una cultura de mejora continua basada en resultados y aprendizajes 

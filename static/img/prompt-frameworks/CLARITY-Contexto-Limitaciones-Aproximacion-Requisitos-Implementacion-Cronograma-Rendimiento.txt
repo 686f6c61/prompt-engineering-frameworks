@@ -1,0 +1,42 @@
+# Framework CLARITY (Contexto-Limitaciones-Aproximación-Requisitos-Implementación-Cronograma-Rendimiento)
+
+## Componentes
+- **C - Contexto**: Describe la situación, antecedentes y entorno relevante
+- **L - Limitaciones**: Identifica restricciones, condicionantes o limitaciones a considerar
+- **A - Aproximación**: Establece el enfoque metodológico o estratégico a seguir
+- **R - Requisitos**: Detalla las especificaciones técnicas y funcionales necesarias
+- **I - Implementación**: Explica cómo se construirá o desarrollará la solución
+- **T - Cronograma (Timeline)**: Define el marco temporal, fases e hitos del proyecto
+- **Y - Rendimiento (Yield)**: Especifica cómo se medirá el éxito y los resultados esperados
+
+## Descripción y propósito
+El framework CLARITY proporciona un enfoque exhaustivo para la planificación y documentación de proyectos técnicos complejos. Su estructura ampliada de siete componentes asegura que todos los aspectos críticos, desde el contexto hasta la medición del rendimiento, estén claramente definidos y alineados. Este marco es particularmente valioso para proyectos con múltiples restricciones, plazos ajustados o requisitos complejos, donde la claridad en todos los aspectos es esencial para el éxito.
+
+## Ejemplo de uso
+```
+Contexto: Migración de datos críticos
+Limitaciones: Ventana de 4 horas
+Aproximación: Despliegue azul-verde
+Requisitos: Cero pérdida de datos
+Implementación: Procesamiento por lotes
+Cronograma: Fin de semana
+Rendimiento: Validación post-migración
+```
+
+## Casos recomendados
+- Migraciones de sistemas críticos
+- Implementación de proyectos con restricciones temporales estrictas
+- Desarrollo de sistemas con altos requisitos de fiabilidad
+- Planificación de actualizaciones con tiempo de inactividad limitado
+- Documentación de proyectos técnicos complejos
+- Comunicación de planes técnicos a stakeholders
+- Desarrollo de soluciones en entornos altamente regulados
+
+## Ventajas
+- Proporciona una estructura integral que abarca todos los aspectos críticos del proyecto
+- Reconoce explícitamente las limitaciones, facilitando planes más realistas
+- Incluye elementos temporales y de medición de rendimiento a menudo omitidos
+- Mejora la alineación entre requisitos, implementación y medición de resultados
+- Facilita la comunicación clara entre equipos técnicos y no técnicos
+- Reduce riesgos al considerar sistemáticamente todos los aspectos clave
+- Establece expectativas realistas sobre plazos y resultados esperados 

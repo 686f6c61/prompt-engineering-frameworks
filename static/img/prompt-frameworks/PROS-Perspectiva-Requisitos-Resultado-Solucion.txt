@@ -1,0 +1,36 @@
+# Framework PROS (Perspectiva-Requisitos-Resultado-Solución)
+
+## Componentes
+- **P - Perspectiva**: Establece el enfoque y punto de vista desde el que se aborda el problema
+- **R - Requisitos**: Define las necesidades, condiciones y restricciones específicas
+- **O - Resultado (Outcome)**: Especifica los objetivos y resultados esperados
+- **S - Solución**: Detalla la propuesta o implementación recomendada
+
+## Descripción y propósito
+El framework PROS es una estructura efectiva para planificar y documentar soluciones técnicas con un enfoque integral. Comienza estableciendo la perspectiva o contexto, define claramente los requisitos, establece los resultados deseados y finalmente propone una solución específica. Esta metodología asegura que las soluciones propuestas estén alineadas con las expectativas y consideren todas las restricciones relevantes, lo que la hace particularmente valiosa para proyectos técnicos y de infraestructura.
+
+## Ejemplo de uso
+```
+Perspectiva: Modernización de infraestructura
+Requisitos: Despliegue sin interrupciones
+Resultado: 99.99% de disponibilidad
+Solución: Despliegue azul-verde
+```
+
+## Casos recomendados
+- Planificación de arquitecturas de sistemas
+- Propuestas de soluciones de infraestructura
+- Documentación de estrategias de despliegue
+- Diseño de soluciones tecnológicas
+- Evaluación de alternativas técnicas
+- Planificación de migraciones de sistemas
+- Especificaciones para mejoras de rendimiento
+
+## Ventajas
+- Ofrece una visión equilibrada entre requisitos y resultados
+- Establece claramente el contexto antes de presentar soluciones
+- Facilita la evaluación objetiva de diferentes propuestas
+- Asegura que las soluciones respondan a requisitos específicos
+- Mejora la comunicación entre equipos técnicos y stakeholders
+- Proporciona un marco completo para la documentación técnica
+- Ayuda a mantener el enfoque en los resultados esperados durante la implementación 

@@ -1,0 +1,38 @@
+# Framework SMART (Específico-Medible-Alcanzable-Relevante-Temporal)
+
+## Componentes
+- **S - Específico (Specific)**: Define con precisión y claridad qué se quiere lograr
+- **M - Medible (Measurable)**: Establece criterios cuantitativos para evaluar el progreso y éxito
+- **A - Alcanzable (Achievable)**: Asegura que el objetivo sea realista y posible de lograr
+- **R - Relevante (Relevant)**: Confirma que el objetivo esté alineado con metas más amplias y sea importante
+- **T - Temporal (Time-bound)**: Fija un plazo o fecha límite definida para el cumplimiento
+
+## Descripción y propósito
+El framework SMART es una metodología probada para establecer objetivos efectivos y accionables. Proporciona criterios para asegurar que los objetivos sean claros, cuantificables, realistas, alineados con propósitos más amplios y con plazos definidos. Esta estructura mejora significativamente la probabilidad de éxito al transformar ideas vagas en metas concretas con parámetros bien definidos para su seguimiento y evaluación.
+
+## Ejemplo de uso
+```
+Específico: Reducir tiempo de compilación
+Medible: De 15 minutos a 5 minutos
+Alcanzable: Pruebas en paralelo
+Relevante: Mejora productividad desarrolladores
+Temporal: Próximo sprint (2 semanas)
+```
+
+## Casos recomendados
+- Planificación de proyectos y gestión de tareas
+- Establecimiento de objetivos personales y profesionales
+- Definición de KPIs y metas departamentales
+- Planificación estratégica de corto y mediano plazo
+- Evaluación de desempeño individual y de equipos
+- Definición de entregables de proyectos
+- Establecimiento de hitos en desarrollo de productos
+
+## Ventajas
+- Proporciona claridad y elimina ambigüedades en los objetivos
+- Facilita la medición del progreso y el éxito
+- Aumenta la motivación al establecer metas alcanzables
+- Asegura que los esfuerzos se dirijan a objetivos significativos
+- Crea urgencia y enfoque con plazos definidos
+- Mejora la planificación y asignación de recursos
+- Facilita la comunicación y expectativas claras entre equipos 

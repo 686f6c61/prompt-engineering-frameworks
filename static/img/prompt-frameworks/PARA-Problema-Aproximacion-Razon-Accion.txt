@@ -1,0 +1,36 @@
+# Framework PARA (Problema-Aproximación-Razón-Acción)
+
+## Componentes
+- **P - Problema**: Identifica y describe claramente el problema o desafío
+- **A - Aproximación**: Detalla el enfoque o estrategia propuesta para la solución
+- **R - Razón**: Explica el fundamento o justificación de la aproximación elegida
+- **A - Acción**: Especifica los pasos concretos a seguir para implementar la solución
+
+## Descripción y propósito
+El framework PARA es una estructura efectiva para la resolución de problemas y toma de decisiones. A diferencia de otros frameworks, PARA enfatiza no solo en identificar el problema y la solución, sino también en justificar el enfoque elegido y detallar un plan de acción concreto. Esto lo hace especialmente valioso para entornos organizacionales y técnicos donde es importante no solo proponer soluciones, sino también fundamentar por qué son las más adecuadas.
+
+## Ejemplo de uso
+```
+Problema: Baja velocidad de desarrollo
+Aproximación: Implementar desarrollo en rama principal
+Razón: Reduce conflictos de fusión y acelera integración
+Acción: Migración gradual por equipos de desarrollo
+```
+
+## Casos recomendados
+- Propuestas de soluciones técnicas
+- Documentación de cambios en procesos o sistemas
+- Planes de mejora continua
+- Justificación de cambios metodológicos
+- Comunicación de decisiones estratégicas
+- Planificación de proyectos de optimización
+- Documentación de resolución de incidentes
+
+## Ventajas
+- Proporciona un marco completo desde el problema hasta la implementación
+- Asegura que las soluciones sean justificadas con fundamentos sólidos
+- Facilita la evaluación de diferentes enfoques al exigir explicación de razones
+- Conecta la identificación del problema con acciones concretas
+- Mejora la comunicación de decisiones técnicas a diferentes niveles
+- Ayuda a evitar soluciones improvisadas sin fundamento
+- Proporciona un camino claro hacia la implementación 

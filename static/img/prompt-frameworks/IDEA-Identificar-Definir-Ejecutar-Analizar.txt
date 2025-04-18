@@ -1,0 +1,36 @@
+# Framework IDEA (Identificar-Definir-Ejecutar-Analizar)
+
+## Componentes
+- **I - Identificar**: Reconoce y delimita el problema, oportunidad o área de mejora
+- **D - Definir**: Establece los objetivos, alcance y criterios de éxito
+- **E - Ejecutar**: Implementa el plan de acción o solución propuesta
+- **A - Analizar**: Evalúa los resultados y extrae conclusiones para futuras iteraciones
+
+## Descripción y propósito
+El framework IDEA proporciona un ciclo completo para la resolución de problemas y mejora continua. Sigue una secuencia lógica que comienza con la identificación clara del problema, continúa con la definición precisa de objetivos, prosigue con la ejecución disciplinada de la solución, y concluye con el análisis riguroso de los resultados. Este enfoque sistemático es particularmente valioso para optimizaciones y mejoras en sistemas o procesos existentes.
+
+## Ejemplo de uso
+```
+Identificar: Cuellos de botella en rendimiento
+Definir: Objetivos de optimización
+Ejecutar: Estrategia de caché
+Analizar: Tiempo de respuesta y capacidad
+```
+
+## Casos recomendados
+- Proyectos de optimización de rendimiento
+- Iniciativas de mejora continua
+- Resolución de problemas técnicos
+- Planificación de actualizaciones de sistemas
+- Desarrollo de nuevas funcionalidades
+- Diagnóstico y solución de incidencias
+- Experimentos y pruebas A/B
+
+## Ventajas
+- Proporciona un enfoque estructurado y cíclico para la resolución de problemas
+- Equilibra la identificación del problema con la implementación de soluciones
+- Incluye la fase de análisis para garantizar aprendizaje y mejora continua
+- Facilita la documentación del proceso completo de mejora
+- Ayuda a evitar soluciones apresuradas sin definición clara del problema
+- Establece un marco para la iteración y mejora incremental
+- Fomenta el pensamiento crítico en todas las fases del proceso 

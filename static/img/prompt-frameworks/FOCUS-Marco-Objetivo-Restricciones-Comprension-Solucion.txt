@@ -1,0 +1,38 @@
+# Framework FOCUS (Marco-Objetivo-Restricciones-Comprensión-Solución)
+
+## Componentes
+- **F - Marco (Framework)**: Establece el contexto, enfoque o metodología general a utilizar
+- **O - Objetivo**: Define la meta principal y los resultados específicos a lograr
+- **C - Restricciones (Constraints)**: Identifica las limitaciones, requisitos o condiciones a considerar
+- **U - Comprensión (Understanding)**: Analiza a fondo el problema, usuarios o datos relevantes
+- **S - Solución**: Desarrolla la respuesta o implementación que cumple con todos los elementos anteriores
+
+## Descripción y propósito
+El framework FOCUS proporciona una estructura metódica para el desarrollo de soluciones técnicas dentro de limitaciones conocidas. Su enfoque único incluye tanto la comprensión profunda del problema como el reconocimiento explícito de las restricciones, lo que resulta en soluciones más viables y adaptadas a la realidad. Este marco es particularmente valioso para proyectos con limitaciones técnicas, legales o de recursos, donde es crucial balancear los objetivos ideales con las restricciones prácticas.
+
+## Ejemplo de uso
+```
+Marco: Diseño móvil primero
+Objetivo: Aumentar conversión 30%
+Restricciones: Soporte navegadores antiguos
+Comprensión: Análisis de datos usuarios
+Solución: Aplicación web progresiva
+```
+
+## Casos recomendados
+- Desarrollo de productos con limitaciones técnicas
+- Proyectos con restricciones de compatibilidad
+- Soluciones para entornos con recursos limitados
+- Desarrollo con requisitos regulatorios específicos
+- Optimización de sistemas existentes con restricciones
+- Innovación dentro de parámetros técnicos definidos
+- Diseño de experiencias multiplataforma
+
+## Ventajas
+- Equilibra de manera efectiva objetivos ambiciosos con restricciones reales
+- Promueve soluciones pragmáticas basadas en la comprensión profunda
+- Reduce riesgos al considerar las limitaciones desde el principio
+- Facilita expectativas realistas entre stakeholders y equipos técnicos
+- Mejora la viabilidad de las soluciones al considerar el contexto completo
+- Evita enfoques teóricos que no funcionan en la práctica
+- Proporciona un marco para la innovación dentro de limitaciones conocidas 

@@ -1,0 +1,36 @@
+# Framework PEAS (Propósito-Resultado-Audiencia-Estilo)
+
+## Componentes
+- **P - Propósito**: Define el objetivo principal que se quiere lograr con la comunicación
+- **E - Resultado Final (End Result)**: Establece el resultado concreto y medible que se espera obtener
+- **A - Audiencia**: Identifica las características del público al que va dirigido el mensaje
+- **S - Estilo**: Determina el tono, formato y enfoque apropiado para la comunicación
+
+## Descripción y propósito
+El framework PEAS está diseñado para crear comunicaciones efectivas y orientadas a objetivos. Proporciona una estructura que asegura que cada comunicación tenga un propósito claro, un resultado definido, esté adaptada a su audiencia específica y utilice el estilo más adecuado. Es especialmente útil para estrategias de comunicación, marketing y cualquier situación donde se necesite transmitir mensajes con precisión y efectividad.
+
+## Ejemplo de uso
+```
+Propósito: Informar sobre nueva política de seguridad informática
+Resultado Final: 100% del personal comprende y cumple las nuevas normas
+Audiencia: Empleados no técnicos con acceso a datos sensibles
+Estilo: Claro, conciso, con ejemplos prácticos e infografías
+```
+
+## Casos recomendados
+- Planificación de campañas de marketing y comunicación
+- Desarrollo de contenidos comerciales o educativos
+- Comunicación corporativa interna y externa
+- Diseño de materiales de capacitación
+- Creación de presentaciones ejecutivas
+- Elaboración de documentación de usuario
+- Estrategias de comunicación en redes sociales
+
+## Ventajas
+- Enfoca la comunicación en objetivos concretos
+- Adapta los mensajes específicamente a la audiencia objetivo
+- Asegura coherencia entre el propósito y el estilo utilizado
+- Mejora la efectividad de la comunicación al considerar todos los elementos clave
+- Facilita la medición del éxito de la comunicación
+- Optimiza recursos al dirigir el mensaje adecuado a la audiencia correcta
+- Proporciona una estructura clara para evaluar y mejorar comunicaciones existentes 

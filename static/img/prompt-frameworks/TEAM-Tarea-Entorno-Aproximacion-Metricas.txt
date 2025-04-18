@@ -1,0 +1,36 @@
+# Framework TEAM (Tarea-Entorno-Aproximación-Métricas)
+
+## Componentes
+- **T - Tarea**: Define el objetivo específico o actividad a realizar por el equipo
+- **E - Entorno**: Describe el contexto, infraestructura o ecosistema donde se desarrolla la tarea
+- **A - Aproximación**: Detalla la metodología, estrategia o enfoque a utilizar
+- **M - Métricas**: Establece los indicadores de éxito y sistemas de medición del progreso
+
+## Descripción y propósito
+El framework TEAM está diseñado específicamente para la gestión y documentación de proyectos colaborativos en entornos técnicos. Proporciona una estructura clara que define no solo qué debe hacerse, sino también el contexto operativo, la metodología a seguir y cómo se medirá el éxito. Este enfoque integral facilita la coordinación entre miembros del equipo y asegura que todos comprendan el alcance, enfoque y criterios de éxito del proyecto.
+
+## Ejemplo de uso
+```
+Tarea: Implementar banderas de características
+Entorno: Microservicios en Kubernetes
+Aproximación: Despliegues progresivos
+Métricas: Presupuesto de errores, tasa de adopción
+```
+
+## Casos recomendados
+- Planificación de proyectos técnicos colaborativos
+- Documentación de implementaciones en equipo
+- Briefings para equipos de desarrollo
+- Gestión de iniciativas de DevOps
+- Planificación de lanzamientos de características
+- Coordinación de equipos distribuidos
+- Diseño de experimentos de producto
+
+## Ventajas
+- Proporciona un marco completo para la planificación de proyectos en equipo
+- Facilita la alineación y comprensión compartida entre miembros del equipo
+- Enfatiza la importancia del contexto operativo en el éxito del proyecto
+- Establece indicadores claros para monitorear el progreso
+- Mejora la toma de decisiones basada en datos con métricas definidas
+- Equilibra la definición de tareas con los métodos de implementación
+- Ayuda a anticipar posibles desafíos al considerar el entorno específico 

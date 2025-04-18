@@ -1,0 +1,36 @@
+# Framework SPIN (Situación-Problema-Implicación-Necesidad)
+
+## Componentes
+- **S - Situación**: Describe el contexto actual o escenario de partida
+- **P - Problema**: Identifica la dificultad, desafío o área problemática específica
+- **I - Implicación**: Analiza las consecuencias o impactos negativos del problema
+- **N - Necesidad-Beneficio (Need-Payoff)**: Establece la solución y sus beneficios concretos
+
+## Descripción y propósito
+El framework SPIN, originalmente desarrollado para ventas consultivas, es altamente efectivo para presentar soluciones técnicas de manera persuasiva. Este enfoque sigue una progresión lógica que comienza estableciendo la situación actual, identifica claramente el problema, explora las implicaciones negativas de no resolverlo, y finalmente presenta la solución destacando sus beneficios específicos. Es particularmente valioso cuando se necesita justificar inversiones en tecnología o cambios significativos en sistemas.
+
+## Ejemplo de uso
+```
+Situación: Sistema heredado en Java 8
+Problema: Alto coste de mantenimiento
+Implicación: Riesgo de seguridad
+Necesidad-Beneficio: Actualización a Java 17
+```
+
+## Casos recomendados
+- Propuestas de modernización tecnológica
+- Justificación de inversiones en nuevos sistemas
+- Presentaciones de soluciones arquitectónicas
+- Documentación de necesidades de cambio
+- Argumentación para la adopción de nuevas tecnologías
+- Comunicación de mejoras técnicas a stakeholders
+- Análisis de casos de negocio para cambios técnicos
+
+## Ventajas
+- Estructura lógica que facilita la persuasión basada en hechos
+- Enfatiza las consecuencias de no actuar, motivando la acción
+- Presenta las soluciones como respuesta a necesidades identificadas
+- Conecta problemas técnicos con impactos de negocio
+- Ayuda a priorizar problemas basados en sus implicaciones
+- Facilita la comunicación técnica a audiencias no técnicas
+- Transforma características técnicas en beneficios comprensibles 

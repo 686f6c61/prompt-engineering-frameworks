@@ -1,0 +1,40 @@
+# Framework DESIGN (Definir-Explorar-Alcance-Idear-Guiar-Reducir)
+
+## Componentes
+- **D - Definir**: Establece claramente los objetivos y propósito del proyecto
+- **E - Explorar**: Investiga las necesidades de los usuarios y requisitos del mercado
+- **S - Alcance (Scope)**: Determina los límites y alcance del proyecto
+- **I - Idear**: Genera soluciones creativas y posibles enfoques
+- **G - Guiar**: Establece principios y directrices para el desarrollo
+- **N - Reducir (Narrow)**: Prioriza y selecciona las mejores ideas para implementar
+
+## Descripción y propósito
+El framework DESIGN proporciona una metodología completa para el proceso de diseño y desarrollo de productos y servicios. Sigue una secuencia lógica que abarca desde la comprensión y definición inicial hasta la priorización final, pasando por la exploración, delimitación, ideación y establecimiento de directrices. Este enfoque integral es particularmente valioso para equipos multidisciplinarios que trabajan en el desarrollo de nuevos productos, plataformas o servicios.
+
+## Ejemplo de uso
+```
+Definir: Objetivos del producto web
+Explorar: Necesidades del usuario final
+Alcance: Funcionalidades clave del MVP
+Idear: Soluciones innovadoras
+Guiar: Marco de desarrollo ágil
+Reducir: Prioridades primer sprint
+```
+
+## Casos recomendados
+- Desarrollo de nuevos productos digitales
+- Rediseño de plataformas existentes
+- Planificación de proyectos de UX/UI
+- Definición de MVPs y productos mínimos viables
+- Elaboración de roadmaps de producto
+- Procesos de innovación y desarrollo
+- Transformación digital de productos o servicios
+
+## Ventajas
+- Proporciona un proceso completo desde la concepción hasta la implementación
+- Equilibra la exploración creativa con la priorización práctica
+- Fomenta la alineación entre el equipo y los stakeholders
+- Asegura que las soluciones respondan a necesidades reales de los usuarios
+- Establece límites claros que facilitan la gestión del alcance
+- Promueve la innovación a través de fases dedicadas a la ideación
+- Facilita la toma de decisiones informada mediante priorización estructurada 

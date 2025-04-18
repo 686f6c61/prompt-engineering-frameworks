@@ -1,0 +1,36 @@
+# Framework PATH (Propósito-Aproximación-Objetivo-Horizonte)
+
+## Componentes
+- **P - Propósito (Purpose)**: Define la razón fundamental y visión que impulsa la iniciativa
+- **A - Aproximación (Approach)**: Establece la metodología o estrategia a seguir
+- **T - Objetivo (Target)**: Especifica las metas concretas a alcanzar
+- **H - Horizonte (Horizon)**: Define el marco temporal y la perspectiva a futuro
+
+## Descripción y propósito
+El framework PATH está diseñado para la planificación estratégica con un enfoque claro en el propósito y la visión a largo plazo. Proporciona una estructura que conecta el "por qué" fundamental con el "cómo" estratégico y el "qué" específico, todo dentro de un horizonte temporal definido. Este marco es particularmente valioso para la planificación de iniciativas estratégicas, desarrollos a largo plazo y comunicación de visión directiva donde es crucial mantener la claridad sobre el propósito mientras se avanza en objetivos concretos.
+
+## Ejemplo de uso
+```
+Propósito: Clarificar visión estratégica
+Aproximación: Análisis de mercado
+Objetivo: 3 áreas clave
+Horizonte: 6 meses
+```
+
+## Casos recomendados
+- Planificación estratégica de iniciativas tecnológicas
+- Definición de visión y misión para proyectos
+- Comunicación de estrategias a equipos y stakeholders
+- Establecimiento de prioridades a mediano plazo
+- Alineación de objetivos tácticos con propósitos estratégicos
+- Formulación de planes de desarrollo de productos
+- Orientación de equipos en entornos de cambio rápido
+
+## Ventajas
+- Mantiene el foco en el propósito fundamental de las iniciativas
+- Equilibra la visión a largo plazo con objetivos específicos
+- Proporciona claridad sobre el horizonte temporal de las expectativas
+- Facilita la comunicación de estrategias complejas de manera sencilla
+- Ayuda a prevenir la desviación de propósito durante la implementación
+- Conecta la planificación estratégica con la ejecución táctica
+- Promueve la alineación entre diferentes niveles organizacionales 
