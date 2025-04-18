@@ -129,17 +129,63 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
     
     // Función para generar preguntas basadas en el tema
     function generateQuestions(topic) {
-        // Ejemplo de preguntas generadas (esto debe reemplazarse con una llamada a la API)
-        const questions = [
-            '¿Cuál es el objetivo principal de tu análisis sobre este tema?',
-            '¿Qué aspectos específicos te gustaría explorar en profundidad?',
-            '¿Hay algún contexto particular o antecedentes relevantes que debamos considerar?',
-            '¿Prefieres un enfoque más teórico o práctico para este análisis?',
-            '¿Existen limitaciones de datos o información que debamos tener en cuenta?'
-        ];
+        // Mostrar indicador de carga
+        questionsContainer.innerHTML = `
+            <div class="text-center py-4">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <p class="mt-2">Analizando tu tema y generando preguntas relevantes...</p>
+            </div>
+        `;
         
-        currentQuestions = questions;
-        renderQuestions(questions);
+        // Realizar llamada a la API para generar preguntas específicas
+        fetch('/api/generar-preguntas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ topic: topic })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                currentQuestions = data.questions;
+                renderQuestions(data.questions);
+            } else {
+                // En caso de error, mostrar mensaje y utilizar preguntas predeterminadas
+                console.error('Error al generar preguntas:', data.error);
+                showAlert('Hubo un problema al generar preguntas específicas. Utilizando preguntas estándar.');
+                
+                // Preguntas de respaldo en caso de error
+                const defaultQuestions = [
+                    '¿Cuál es el objetivo principal de tu solicitud?',
+                    '¿Qué aspectos específicos te gustaría incluir?',
+                    '¿Hay algún contexto particular o requisitos importantes que debamos considerar?',
+                    '¿Prefieres un enfoque más teórico o práctico para este tema?',
+                    '¿Tienes alguna restricción o limitación que debamos tener en cuenta?'
+                ];
+                
+                currentQuestions = defaultQuestions;
+                renderQuestions(defaultQuestions);
+            }
+        })
+        .catch(error => {
+            console.error('Error en la solicitud:', error);
+            showAlert('Error al comunicarse con el servidor. Utilizando preguntas estándar.');
+            
+            // Preguntas de respaldo en caso de error
+            const defaultQuestions = [
+                '¿Cuál es el objetivo principal de tu solicitud?',
+                '¿Qué aspectos específicos te gustaría incluir?',
+                '¿Hay algún contexto particular o requisitos importantes que debamos considerar?',
+                '¿Prefieres un enfoque más teórico o práctico para este tema?',
+                '¿Tienes alguna restricción o limitación que debamos tener en cuenta?'
+            ];
+            
+            currentQuestions = defaultQuestions;
+            renderQuestions(defaultQuestions);
+        });
     }
     
     // Función para renderizar las preguntas en el DOM
@@ -179,14 +225,73 @@ Por favor, proporciona tu análisis más riguroso y completo del siguiente probl
     
     // Función para generar el prompt de razonamiento
     function generateReasoningPrompt() {
+        // Mostrar indicador de carga
+        promptPreview.innerHTML = `
+            <div class="text-center py-4">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <p class="mt-2">Generando el prompt óptimo para tu solicitud...</p>
+            </div>
+        `;
+        
+        // Construir el contexto con las respuestas
+        let contextData = {
+            topic: currentTopic,
+            answers: currentAnswers,
+            questions: currentQuestions
+        };
+        
+        // Enviar al servidor para generar el prompt adaptado
+        fetch('/api/generar-prompt-razonamiento', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(contextData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Actualizar con el prompt generado por el servidor
+                currentPrompt = data.prompt;
+                formattedPrompt = data.prompt;
+                
+                // Renderizar en el preview
+                promptPreview.innerHTML = marked.parse(currentPrompt);
+                
+                // Actualizar contador de tokens
+                tokenCount.textContent = data.token_count || Math.floor(currentPrompt.length / 4);
+            } else {
+                console.error('Error al generar prompt:', data.error);
+                showAlert('Hubo un problema al generar el prompt. Por favor, intenta de nuevo.');
+                
+                // Generar un prompt de respaldo usando la plantilla base
+                generateFallbackPrompt();
+            }
+        })
+        .catch(error => {
+            console.error('Error en la solicitud:', error);
+            showAlert('Error al comunicarse con el servidor. Generando prompt básico.');
+            
+            // Generar un prompt de respaldo usando la plantilla base
+            generateFallbackPrompt();
+        });
+    }
+    
+    // Función para generar un prompt de respaldo en caso de error
+    function generateFallbackPrompt() {
         // Construir el prompt basado en el tema y las respuestas
         let contextSection = `# Contexto\n\n`;
         contextSection += `**Tema principal**: ${currentTopic}\n\n`;
-        contextSection += `**Objetivos del análisis**: ${currentAnswers[0]}\n\n`;
-        contextSection += `**Aspectos a explorar**: ${currentAnswers[1]}\n\n`;
-        contextSection += `**Contexto relevante**: ${currentAnswers[2]}\n\n`;
-        contextSection += `**Enfoque preferido**: ${currentAnswers[3]}\n\n`;
-        contextSection += `**Limitaciones conocidas**: ${currentAnswers[4]}\n\n`;
+        
+        // Agregar todas las respuestas disponibles
+        Object.keys(currentAnswers).forEach(index => {
+            const questionIndex = parseInt(index);
+            if (currentQuestions[questionIndex]) {
+                contextSection += `**${currentQuestions[questionIndex].replace('?', '')}**: ${currentAnswers[index]}\n\n`;
+            }
+        });
         
         // Combinar con la plantilla base
         currentPrompt = basePromptTemplate.replace('[PROBLEMA]', contextSection);

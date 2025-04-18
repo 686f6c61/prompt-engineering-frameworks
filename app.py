@@ -656,6 +656,238 @@ def enviar_correo():
             "error": f"Error al enviar el mensaje: {str(e)}"
         }), 500
 
+@app.route('/api/generar-preguntas', methods=['POST'])
+def generar_preguntas():
+    """
+    Endpoint para generar preguntas personalizadas basadas en el tema proporcionado.
+    
+    Expects:
+        JSON: {
+            "topic": string  # Tema o solicitud del usuario
+        }
+    
+    Returns:
+        JSON: {
+            "success": bool,
+            "questions": list,  # Lista de preguntas generadas
+            "error": string (opcional)
+        }
+    """
+    data = request.json
+    topic = data.get('topic', '')
+    
+    if not topic:
+        return jsonify({"success": False, "error": "Tema no proporcionado"}), 400
+    
+    # Verificar límite de uso
+    is_limited, remaining, reset_time = check_rate_limit()
+    if is_limited:
+        return jsonify({
+            "success": False, 
+            "error": f"Has alcanzado el límite de {10} solicitudes por hora. Por favor, espera {reset_time} o usa tu propia API key."
+        }), 429
+    
+    try:
+        # Obtener la API key si el usuario usa la suya propia
+        user_api_key = session.get('api_key') if session.get('use_custom_api_key', False) else None
+        
+        # Determinar el modelo a usar
+        model = PREMIUM_MODEL if session.get('use_custom_api_key', False) else DEFAULT_MODEL
+        
+        # Prompt para generar preguntas adaptadas al tema
+        system_prompt = """Eres un asistente especializado en análisis de necesidades. 
+Tu tarea es generar 5 preguntas relevantes y específicas basadas en el tema proporcionado por el usuario.
+
+Las preguntas deben:
+1. Adaptarse al tipo de solicitud (análisis, creación, asesoramiento, etc.)
+2. Ayudar a obtener información importante para generar un prompt efectivo
+3. Ser claras y directas
+4. Cubrir diferentes aspectos relevantes para el tema
+5. Estar formuladas en forma de pregunta con signos de interrogación
+
+Por ejemplo:
+- Si el tema es "Análisis de mercado para una startup de tecnología", las preguntas podrían centrarse en el sector específico, competidores, público objetivo, etc.
+- Si el tema es "Crear un portfolio de desarrollo web", las preguntas podrían enfocarse en proyectos a destacar, tecnologías, estilo visual, etc.
+
+Responde ÚNICAMENTE con una lista de 5 preguntas, sin introducción ni texto adicional."""
+        
+        # Preparar la solicitud a la API de OpenAI
+        from openai import OpenAI
+        
+        client = OpenAI(api_key=user_api_key or os.environ.get('OPENAI_API_KEY'))
+        
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": topic}
+            ],
+            temperature=0.7,
+            max_tokens=500
+        )
+        
+        # Procesar la respuesta y extraer las preguntas
+        response_content = response.choices[0].message.content.strip()
+        
+        # Extraer las preguntas del texto
+        import re
+        # Buscar preguntas con números o guiones al principio y signos de interrogación
+        questions = re.findall(r'(?:^|\n)(?:\d+[\.\)]\s*|\-\s*)?(.+\?)', response_content)
+        
+        # Si no se encontraron preguntas con el regex, dividir por líneas
+        if not questions or len(questions) < 3:
+            questions = [line.strip() for line in response_content.split('\n') if '?' in line]
+        
+        # Limitar a 5 preguntas y asegurarse de que cada una termine con signo de interrogación
+        questions = questions[:5]
+        questions = [q if q.endswith('?') else f"{q}?" for q in questions]
+        
+        # Asegurarse de que tenemos al menos 3 preguntas
+        if len(questions) < 3:
+            # Preguntas por defecto si no se pudieron generar suficientes
+            default_questions = [
+                "¿Cuál es el objetivo principal de tu solicitud?",
+                "¿Qué aspectos específicos te gustaría incluir?",
+                "¿Hay algún contexto particular o requisitos importantes que debamos considerar?",
+                "¿Prefieres un enfoque más teórico o práctico para este tema?",
+                "¿Tienes alguna restricción o limitación que debamos tener en cuenta?"
+            ]
+            # Agregar preguntas por defecto si es necesario
+            questions.extend(default_questions[:(5 - len(questions))])
+        
+        # Incrementar contador de uso
+        remaining, reset_time = increment_usage()
+        
+        return jsonify({
+            "success": True,
+            "questions": questions,
+            "usage": {
+                "remaining": remaining,
+                "reset_time": reset_time
+            }
+        })
+    except Exception as e:
+        console.error(f"Error al generar preguntas: {str(e)}")
+        return jsonify({"success": False, "error": str(e)}), 500
+
+@app.route('/api/generar-prompt-razonamiento', methods=['POST'])
+def generar_prompt_razonamiento():
+    """
+    Endpoint para generar un prompt optimizado basado en el tema y las respuestas proporcionadas.
+    
+    Expects:
+        JSON: {
+            "topic": string,       # Tema principal
+            "answers": dict,       # Respuestas a las preguntas
+            "questions": list      # Lista de preguntas originales
+        }
+    
+    Returns:
+        JSON: {
+            "success": bool,
+            "prompt": string,      # Prompt generado
+            "token_count": int,    # Contador de tokens
+            "error": string (opcional)
+        }
+    """
+    data = request.json
+    topic = data.get('topic', '')
+    answers = data.get('answers', {})
+    questions = data.get('questions', [])
+    
+    if not topic or not answers:
+        return jsonify({"success": False, "error": "Datos incompletos"}), 400
+    
+    # Verificar límite de uso
+    is_limited, remaining, reset_time = check_rate_limit()
+    if is_limited:
+        return jsonify({
+            "success": False, 
+            "error": f"Has alcanzado el límite de {10} solicitudes por hora. Por favor, espera {reset_time} o usa tu propia API key."
+        }), 429
+    
+    try:
+        # Obtener la API key si el usuario usa la suya propia
+        user_api_key = session.get('api_key') if session.get('use_custom_api_key', False) else None
+        
+        # Determinar el modelo a usar
+        model = PREMIUM_MODEL if session.get('use_custom_api_key', False) else DEFAULT_MODEL
+        
+        # Construir el contexto para la generación del prompt
+        context = f"Tema: {topic}\n\n"
+        
+        # Agregar las preguntas y respuestas
+        for q_idx, question in enumerate(questions):
+            if str(q_idx) in answers:
+                answer = answers[str(q_idx)]
+                context += f"Pregunta: {question}\nRespuesta: {answer}\n\n"
+        
+        # Prompt del sistema para generar el prompt adaptado
+        system_prompt = """Eres un experto en la creación de prompts optimizados para modelos de lenguaje avanzados.
+Tu tarea es analizar la solicitud del usuario junto con sus respuestas a preguntas específicas, y generar un prompt de alta calidad adaptado a sus necesidades.
+
+El prompt que generes debe:
+1. Adaptarse al tipo de solicitud (ya sea razonamiento, creación, análisis, etc.)
+2. Incluir instrucciones claras y estructuradas
+3. Incorporar la información proporcionada por el usuario en sus respuestas
+4. Estar optimizado para obtener resultados de alta calidad de modelos como GPT-4 u Claude
+
+Para solicitudes de razonamiento profundo o análisis complejo, usa este formato:
+```
+# Instrucciones para [tipo de tarea]
+
+Necesito que analices/desarrolles/explores [tema] de manera sistemática y exhaustiva. Por favor:
+
+1. **[Primer paso o instrucción]**
+2. **[Segundo paso o instrucción]**
+...
+
+[Contexto relevante basado en las respuestas del usuario]
+
+[Especificar el resultado esperado]
+```
+
+Para solicitudes más directas o creativas, adapta el formato según sea necesario, pero mantén la claridad y estructura.
+
+Incluye únicamente el prompt final, sin explicaciones adicionales."""
+        
+        # Preparar la solicitud a la API de OpenAI
+        from openai import OpenAI
+        
+        client = OpenAI(api_key=user_api_key or os.environ.get('OPENAI_API_KEY'))
+        
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": context}
+            ],
+            temperature=0.7,
+            max_tokens=1000
+        )
+        
+        # Obtener el prompt generado
+        prompt = response.choices[0].message.content.strip()
+        
+        # Contar tokens
+        token_count = count_tokens(prompt)
+        
+        # Incrementar contador de uso
+        remaining, reset_time = increment_usage()
+        
+        return jsonify({
+            "success": True,
+            "prompt": prompt,
+            "token_count": token_count,
+            "usage": {
+                "remaining": remaining,
+                "reset_time": reset_time
+            }
+        })
+    except Exception as e:
+        console.error(f"Error al generar prompt de razonamiento: {str(e)}")
+        return jsonify({"success": False, "error": str(e)}), 500
+
 # Configuración para ejecutar la aplicación en Render o localmente
 if __name__ == "__main__":
     # Usar el puerto proporcionado por Render o el 5000 por defecto para desarrollo local
