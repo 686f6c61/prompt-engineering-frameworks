@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Header principal -->
+    <div class="text-center my-5">
+        <h1 class="display-4 mb-3">Razonadores para modelos avanzados</h1>
+        <p class="lead text-muted">Genera prompts inteligentes para razonamiento profundo con modelos GPT-4o y o4.1</p>
+        
+        <!-- Indicador del modelo actual -->
+        <div class="model-info-container mt-4 py-2 px-3 bg-light rounded-pill d-inline-flex align-items-center border">
+            <div class="model-status d-flex align-items-center me-3">
+                <i class="bi {% if is_custom %}bi-stars{% else %}bi-lightning{% endif %} me-2 {% if is_custom %}text-warning{% else %}text-success{% endif %}"></i>
+                <span class="fw-medium">
+                    Usando {{ current_model }}
+                    <span class="ms-1 text-secondary">{% if is_custom %}(API Key personalizada){% else %}(Gratis){% endif %}</span>
+                </span>
+            </div>
+            <a href="/configuracion" class="btn btn-sm btn-primary rounded-pill">
+                <i class="bi bi-gear me-1"></i>
+                Cambiar modelo
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenedor para mostrar información de uso -->
+    <div id="usage-info-container" class="mb-3"></div>
+
+    <!-- Formulario inicial -->
+    <div class="row mb-5" id="initial-form-container">
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+            <div class="search-container p-3 bg-light rounded">
+                <h4 class="text-center mb-2">¿Sobre qué tema necesitas razonar?</h4>
+                <p class="text-muted text-center mb-3">Indica el tema o problema que deseas analizar y te ayudaremos a crear un prompt optimizado para razonamiento profundo.</p>
+                <div class="d-flex flex-column flex-md-row align-items-stretch gap-3">
+                    <textarea id="reasoning-topic" class="form-control form-control-lg" 
+                              placeholder="Describe el tema o problema que necesitas analizar en profundidad..." 
+                              rows="4"></textarea>
+                </div>
+                <div class="text-center mt-3">
+                    <button id="analyze-topic-btn" class="btn btn-primary px-4 py-2">
+                        <i class="bi bi-brain me-2"></i>Analizar tema
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preguntas para refinar el tema -->
+    <div class="row mb-5 d-none" id="refinement-questions-container">
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+            <div class="bg-light p-4 rounded">
+                <h4 class="text-center mb-3">Refinar el análisis</h4>
+                <p class="text-muted text-center mb-4">Por favor, responde estas preguntas para generar un prompt más preciso:</p>
+                
+                <form id="refine-form" class="mb-4">
+                    <div id="questions-container">
+                        <!-- Las preguntas se cargarán dinámicamente aquí -->
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button id="back-to-topic-btn" type="button" class="btn btn-outline-secondary me-2">
+                            <i class="bi bi-arrow-left me-2"></i>Volver
+                        </button>
+                        <button id="generate-prompt-btn" type="button" class="btn btn-primary px-4 py-2">
+                            <i class="bi bi-lightbulb me-2"></i>Generar prompt de razonamiento
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado del prompt -->
+    <div class="row mb-5 d-none" id="result-container">
+        <div class="col-12 mx-auto">
+            <div class="bg-white p-4 rounded shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="mb-0">Prompt de razonamiento avanzado</h4>
+                    <span>Tokens: <span id="token-count" class="token-counter">0</span></span>
+                </div>
+                
+                <div class="prompt-area bg-light p-3 rounded mb-4" style="max-height: 500px; overflow-y: auto;">
+                    <div id="prompt-preview" class="markdown-content"></div>
+                </div>
+                
+                <div class="d-flex flex-wrap justify-content-end gap-2">
+                    <button id="copy-markdown-btn" class="btn btn-outline-primary">
+                        <i class="bi bi-markdown me-2"></i>Copiar Markdown
+                    </button>
+                    <button id="copy-formatted-btn" class="btn btn-outline-primary">
+                        <i class="bi bi-file-richtext me-2"></i>Copiar Formateado
+                    </button>
+                    <button id="download-txt-btn" class="btn btn-outline-primary">
+                        <i class="bi bi-download me-2"></i>Descargar TXT
+                    </button>
+                    <button id="edit-prompt-btn" class="btn btn-outline-secondary">
+                        <i class="bi bi-pencil me-2"></i>Editar
+                    </button>
+                    <button id="regenerate-btn" class="btn btn-primary">
+                        <i class="bi bi-arrow-clockwise me-2"></i>Regenerar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para edición del prompt -->
+    <div class="modal fade" id="editPromptModal" tabindex="-1" aria-labelledby="editPromptModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPromptModalLabel">Editar Prompt</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="edit-prompt-textarea" class="form-control" rows="20"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="save-edited-prompt-btn">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de copiado -->
+    <div class="modal fade" id="copyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <i class="bi bi-check-circle text-success fs-1 mb-3"></i>
+                    <p class="mb-0">¡Prompt copiado con éxito!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de ejemplo -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ejemplo de prompt para razonamiento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre class="bg-light p-3 rounded">{{ ejemplo_razonamiento | safe }}</pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="use-example-btn">Usar este ejemplo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .model-info-container {
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        font-size: 0.9rem;
+    }
+    
+    .question-card {
+        border-left: 4px solid #0d6efd;
+        background-color: #f8f9fa;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+    
+    .markdown-content pre {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/razonadores.js') }}"></script>
+{% endblock %} 

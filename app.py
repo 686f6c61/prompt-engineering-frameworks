@@ -284,6 +284,53 @@ def ayuda_faq():
     """
     return render_template('ayuda_faq.html')
 
+@app.route('/razonadores')
+def razonadores():
+    """
+    Ruta que renderiza la página de razonadores para prompts avanzados.
+    
+    Returns:
+        template: Renderiza razonadores.html con un ejemplo de prompt
+    """
+    # Ejemplo de prompt de razonamiento
+    ejemplo_razonamiento = """# Instrucciones para razonamiento profundo
+
+Necesito que analices el siguiente problema de manera sistemática y exhaustiva. Por favor:
+
+1. **Descompón el problema** en sus componentes fundamentales
+2. **Examina las suposiciones** implícitas y explícitas
+3. **Considera múltiples perspectivas** antes de formular conclusiones
+4. **Identifica posibles sesgos** en tu razonamiento inicial
+5. **Explora contraejemplos o contraargumentos** relevantes
+6. **Evalúa la evidencia** disponible de manera crítica
+7. **Utiliza razonamiento paso a paso**, explicando cada parte de tu proceso mental
+8. **Señala las limitaciones** de tu análisis o áreas de incertidumbre
+9. **Sintetiza tus conclusiones** de manera equilibrada y matizada
+
+Cuando sea apropiado, usa herramientas complementarias como:
+- Análisis matemático
+- Diagramas mentales
+- Métodos de evaluación de escenarios
+- Razonamiento probabilístico
+- Analogías clarificadoras
+
+Por favor, proporciona tu análisis más riguroso y completo del siguiente problema:
+
+[INSERTAR PROBLEMA/PREGUNTA AQUÍ]"""
+    
+    # Obtener el modelo actual para mostrarlo en la interfaz
+    if session.get('use_custom_api_key', False):
+        current_model = PREMIUM_MODEL
+        is_custom = True
+    else:
+        current_model = DEFAULT_MODEL
+        is_custom = False
+    
+    return render_template('razonadores.html',
+                           current_model=current_model,
+                           is_custom=is_custom,
+                           ejemplo_razonamiento=ejemplo_razonamiento)
+
 @app.route('/bolt-lovable')
 def bolt_lovable():
     """
