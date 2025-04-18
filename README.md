@@ -263,6 +263,10 @@ Para usar el sistema sin limitaciones:
 3. Introduce tu API Key de OpenAI
 4. Confirma para eliminar las restricciones de uso
 
+<div align="center">
+  <img src="static/img/configuracion.png" alt="Pantalla de configuración de API Key" width="600">
+</div>
+
 ### 👨‍💻 Generador Bolt/Lovable para proyectos web
 
 <div align="center">
