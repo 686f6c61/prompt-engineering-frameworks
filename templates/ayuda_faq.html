@@ -118,7 +118,7 @@
                             
                             <div class="mb-4">
                                 <h5>¿Puedo combinar varios frameworks en un solo prompt?</h5>
-                                <p>Sí, Prompt Agent permite combinar hasta 3 frameworks diferentes para crear prompts híbridos que aprovechan las fortalezas de cada estructura. Esta característica es especialmente útil para objetivos complejos que abarcan múltiples dimensiones.</p>
+                                <p>Actualmente, Prompt Agent está optimizado para utilizar un framework a la vez, seleccionando el más adecuado para tu objetivo específico. Esto garantiza resultados más precisos y coherentes. En futuras actualizaciones, exploraremos la posibilidad de combinar frameworks para casos de uso más complejos.</p>
                             </div>
                             
                             <div>
@@ -202,19 +202,21 @@
                                 <div class="captcha-container p-3 bg-light rounded">
                                     <label class="form-label">Verificación de seguridad</label>
                                     <div class="captcha-question" id="captchaQuestion">
-                                        ¿Cuánto es <span id="num1">3</span> + <span id="num2">5</span>?
+                                        Resolver: <span id="num1">12</span> <span id="operation">×</span> <span id="num2">8</span> - <span id="num3">25</span> = ?
                                     </div>
                                     <input type="number" class="form-control mt-2" id="captchaAnswer" required>
                                     <div class="invalid-feedback">
-                                        Por favor resuelve la operación matemática
+                                        La respuesta es incorrecta. Inténtalo de nuevo.
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-primary w-100">
-                                    <i class="bi bi-send me-2"></i>Enviar mensaje
-                                </button>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary px-5">
+                                        <i class="bi bi-send me-2"></i>Enviar mensaje
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -242,12 +244,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Generar captcha aleatorio
     function generarCaptcha() {
-        const num1 = Math.floor(Math.random() * 10) + 1;
-        const num2 = Math.floor(Math.random() * 10) + 1;
+        // Generar números más grandes y una operación más compleja
+        const operations = ['×', '+', '-'];
+        const operation = operations[Math.floor(Math.random() * operations.length)];
+        
+        let num1, num2, num3, correctAnswer;
+        
+        if (operation === '×') {
+            num1 = Math.floor(Math.random() * 15) + 5; // 5-20
+            num2 = Math.floor(Math.random() * 9) + 2;  // 2-10
+            num3 = Math.floor(Math.random() * 30) + 5; // 5-35
+            correctAnswer = (num1 * num2) - num3;
+        } else if (operation === '+') {
+            num1 = Math.floor(Math.random() * 50) + 20; // 20-70
+            num2 = Math.floor(Math.random() * 30) + 10; // 10-40
+            num3 = Math.floor(Math.random() * 30) + 5;  // 5-35
+            correctAnswer = (num1 + num2) - num3;
+        } else {
+            num1 = Math.floor(Math.random() * 50) + 50; // 50-100
+            num2 = Math.floor(Math.random() * 30) + 10; // 10-40
+            num3 = Math.floor(Math.random() * 20) + 5;  // 5-25
+            correctAnswer = (num1 - num2) - num3;
+        }
+        
         document.getElementById('num1').textContent = num1;
+        document.getElementById('operation').textContent = operation;
         document.getElementById('num2').textContent = num2;
+        document.getElementById('num3').textContent = num3;
+        
         // Guardar la respuesta correcta como atributo de datos
-        document.getElementById('captchaQuestion').dataset.correctAnswer = num1 + num2;
+        document.getElementById('captchaQuestion').dataset.correctAnswer = correctAnswer;
     }
     
     // Generar captcha al cargar la página
