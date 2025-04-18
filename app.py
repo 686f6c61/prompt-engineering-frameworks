@@ -565,9 +565,13 @@ def enviar_correo():
             'Content-Type': 'application/json'
         }
         
+        # Usar variables de entorno para las direcciones de correo
+        email_from = os.environ.get('EMAIL_FROM', 'Prompt Agent <hola@promptagent.info>')
+        email_to = os.environ.get('EMAIL_TO', 'reg@00b.tech')
+        
         payload = {
-            'from': 'Prompt Agent <hola@promptagent.info>',
-            'to': ['reg@00b.tech'],  # Correo destino modificado
+            'from': email_from,
+            'to': [email_to],  # Correo destino desde variable de entorno
             'subject': f'[Formulario de contacto] {asunto}',
             'reply_to': email,
             'html': f"""
