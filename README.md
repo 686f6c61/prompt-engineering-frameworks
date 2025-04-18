@@ -28,10 +28,10 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 5. **SEO y estrategia**: Incluye palabras clave, meta etiquetas y estructura recomendada
 6. **Resultados profesionales**: Se aconseja usar API Key propia para resultados óptimos, aunque también funciona excelentemente con la versión gratuita
 
-### 🧠 Razonadores para modelos avanzados
+### 🧠 Prompts para modelos razonadores
 
 <div align="center">
-  <img src="static/img/razonadores.png" alt="Razonadores para modelos avanzados" width="600">
+  <img src="static/img/razonadores.png" alt="Prompts para modelos razonadores" width="600">
 </div>
 
 La sección de Razonadores está diseñada para crear prompts extremadamente detallados y estructurados que potencian las capacidades de razonamiento profundo de modelos de lenguaje avanzados como GPT-4o y Gemini.
