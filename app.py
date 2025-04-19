@@ -951,7 +951,7 @@ Incluye ÚNICAMENTE el prompt final, sin explicaciones adicionales."""
                 {"role": "user", "content": context}
             ],
             temperature=0.7,
-            max_tokens=1000
+            max_tokens=4000
         )
         
         # Obtener el prompt generado
