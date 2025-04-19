@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Permitir a todos los robots rastrear e indexar el sitio
+Disallow: /configuracion
+Disallow: /*.json$
+Disallow: /*.py$
+Disallow: /*.env$
+Disallow: /static/*.js$
+Disallow: /static/*.css$
+
+# Ubicación del sitemap
+Sitemap: https://www.promptagent.info/sitemap.xml 

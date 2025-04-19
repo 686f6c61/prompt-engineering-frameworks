@@ -540,35 +540,62 @@ def serve_framework(framework_name):
 @app.route('/download/frameworks')
 def download_frameworks_zip():
     """
-    Ruta para descargar todos los frameworks en un archivo ZIP.
+    Endpoint para descargar todos los frameworks en formato ZIP.
     
     Returns:
         file: Archivo ZIP con todos los frameworks
     """
-    # Verificar que el directorio de frameworks existe
-    frameworks_dir = 'static/frameworks/prompt-frameworks'
-    if not os.path.isdir(frameworks_dir):
-        return "Directorio de frameworks no encontrado", 404
+    try:
+        # Crear un objeto BytesIO en memoria para almacenar el ZIP
+        memory_file = io.BytesIO()
+        
+        # Crear un archivo ZIP en memoria
+        with zipfile.ZipFile(memory_file, 'w') as zf:
+            # Ruta a la carpeta de frameworks
+            frameworks_dir = os.path.join('static', 'frameworks', 'prompt-frameworks')
+            
+            # Recorrer todos los archivos en la carpeta
+            for filename in os.listdir(frameworks_dir):
+                # Solo incluir archivos de texto
+                if filename.endswith('.txt'):
+                    file_path = os.path.join(frameworks_dir, filename)
+                    # Añadir el archivo al ZIP
+                    zf.write(file_path, os.path.basename(file_path))
+        
+        # Mover el puntero al inicio del archivo
+        memory_file.seek(0)
+        
+        # Devolver el archivo
+        return send_file(
+            memory_file,
+            mimetype='application/zip',
+            as_attachment=True,
+            download_name='frameworks-prompt-engineering.zip'
+        )
+    except Exception as e:
+        console.error("Error al crear el archivo ZIP", str(e))
+        return jsonify({"success": False, "error": str(e)}), 500
+
+# Rutas para Search Console
+@app.route('/robots.txt')
+def robots():
+    """
+    Ruta para servir el archivo robots.txt.
     
-    # Crear un archivo ZIP en memoria
-    memory_file = io.BytesIO()
-    with zipfile.ZipFile(memory_file, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        # Recorrer todos los archivos en el directorio frameworks
-        for root, dirs, files in os.walk(frameworks_dir):
-            for file in files:
-                if file.endswith('.txt'):
-                    file_path = os.path.join(root, file)
-                    # Añadir archivo al ZIP
-                    zipf.write(file_path, arcname=file)
+    Returns:
+        file: Archivo robots.txt
+    """
+    return send_file('robots.txt')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    """
+    Ruta para servir el archivo sitemap.xml.
     
-    # Preparar el archivo para descarga
-    memory_file.seek(0)
-    return send_file(
-        memory_file,
-        mimetype='application/zip',
-        as_attachment=True,
-        download_name='frameworks.zip'
-    )
+    Returns:
+        file: Archivo sitemap.xml
+    """
+    return send_file('sitemap.xml')
 
 # Endpoint para enviar correos con Resend
 @app.route('/api/enviar-correo', methods=['POST'])
