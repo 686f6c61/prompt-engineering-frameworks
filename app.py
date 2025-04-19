@@ -284,6 +284,16 @@ def ayuda_faq():
     """
     return render_template('ayuda_faq.html')
 
+@app.route('/terminos')
+def terminos():
+    """
+    Ruta que renderiza la página de términos y condiciones.
+    
+    Returns:
+        template: Renderiza terminos.html
+    """
+    return render_template('terminos.html')
+
 @app.route('/razonadores')
 def razonadores():
     """
