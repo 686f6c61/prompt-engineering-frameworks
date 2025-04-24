@@ -28,6 +28,23 @@ Una aplicación web para generar prompts efectivos utilizando 47 frameworks espe
 5. **SEO y estrategia**: Incluye palabras clave, meta etiquetas y estructura recomendada
 6. **Resultados profesionales**: Se aconseja usar API Key propia para resultados óptimos, aunque también funciona excelentemente con la versión gratuita
 
+#### 🎨 Personalización estética
+
+<div align="center">
+  <img src="static/img/diseño.png" alt="Personalización estética" width="600">
+</div>
+
+Nueva funcionalidad que permite definir con precisión la estética de tu proyecto:
+
+1. **Paleta de colores**: Define colores primarios, secundarios y de acento con selectores visuales
+2. **Tipografía personalizada**: Selecciona fuentes para títulos y texto, tamaños y estilos tipográficos
+3. **Elementos de diseño**: Configura estilos de componentes, densidad de información y efectos visuales
+4. **Valores predeterminados**: Opción para aplicar valores estéticos predefinidos por Lovable
+5. **Referencias visuales**: Incluye URLs de sitios de referencia e inspiración
+6. **Integración completa**: Todos los detalles estéticos se incorporan automáticamente al prompt
+
+Esta personalización estética permite obtener resultados mucho más precisos y alineados con la identidad visual deseada para el proyecto.
+
 ### 🧠 Prompts para modelos razonadores
 
 <div align="center">
@@ -279,8 +296,21 @@ Para crear especificaciones detalladas de proyectos web:
 2. Escribe una descripción de tu proyecto web en el campo correspondiente
 3. Haz clic en "Recomendar Framework" para obtener una sugerencia basada en tu descripción
 4. Completa los campos del framework recomendado con los detalles de tu proyecto
-5. Genera el prompt detallado haciendo clic en "Generar Prompt Bolt/Lovable"
-6. Copia el resultado en formato Markdown o formateado según tus necesidades
+5. Haz clic en "Siguiente: Personalizar estética" para acceder a las opciones de personalización visual
+6. Define la paleta de colores, tipografía y elementos de diseño o usa los valores predeterminados de Lovable
+7. Genera el prompt detallado haciendo clic en "Generar Prompt Bolt/Lovable"
+8. Copia el resultado en formato Markdown o formateado según tus necesidades
+
+<div align="center">
+  <img src="static/img/diseño.png" alt="Personalización estética para Bolt/Lovable" width="600">
+</div>
+
+La nueva sección de personalización estética te permite:
+- Seleccionar colores con precisión usando selectores visuales
+- Escoger fuentes y estilos tipográficos para títulos y contenido
+- Definir el estilo de los componentes (redondeados, angulares, flat, etc.)
+- Aplicar valores estéticos predefinidos con un solo clic
+- Añadir referencias a sitios web de inspiración
 
 Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada en la sección "Configuración", aunque también se obtienen excelentes resultados con la versión gratuita (GPT-3.5).
 

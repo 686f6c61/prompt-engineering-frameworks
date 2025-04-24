@@ -2,6 +2,8 @@
 let selectedFramework = '';
 let generatedPrompt = '';
 let rawPrompt = '';
+let frameworkFormData = {}; // Para almacenar los datos del formulario de framework
+let aestheticFormData = {}; // Para almacenar los datos del formulario de estética
 
 // Definición de los frameworks web recomendados
 const webFrameworks = {
@@ -67,6 +69,31 @@ const fieldPlaceholders = {
     'user': 'Ej: Compradores de 25-45 años familiarizados con compras online',
     'delivery': 'Ej: Código fuente, documentación, despliegue en producción y capacitación',
     'evaluation': 'Ej: Métricas de conversión, velocidad, satisfacción de usuario, SEO'
+};
+
+// Valores predeterminados de Lovable
+const lovableDefaults = {
+    colors: {
+        primary: '#3a86ff',
+        secondary: '#8338ec',
+        accent: '#ff006e',
+        style: 'colorful'
+    },
+    typography: {
+        headingFont: 'display',
+        bodyFont: 'sans-serif',
+        fontSize: 'medium',
+        style: 'modern'
+    },
+    design: {
+        componentStyle: 'rounded',
+        density: 'balanced',
+        effects: 'subtle',
+        animation: 'subtle'
+    },
+    references: {
+        designStyle: 'material'
+    }
 };
 
 // Mostrar anuncio modal
@@ -208,6 +235,153 @@ function changeFramework() {
     selectedFramework = '';
 }
 
+// Ir al formulario de personalización estética
+function goToAestheticForm() {
+    // Validar que todos los campos del framework estén completos
+    const framework = webFrameworks[selectedFramework];
+    let hasEmptyFields = false;
+    
+    frameworkFormData = {}; // Reiniciar datos de formulario
+    
+    framework.fields.forEach(field => {
+        const value = document.getElementById(`field-${field}`).value.trim();
+        if (!value) {
+            hasEmptyFields = true;
+        }
+        frameworkFormData[field] = value;
+    });
+    
+    if (hasEmptyFields) {
+        showAnnouncement('Campos incompletos', 'Por favor, completa todos los campos del formulario para continuar.');
+        return;
+    }
+    
+    // Ocultar formulario del framework y mostrar formulario de estética
+    document.getElementById('framework-form-container').classList.add('d-none');
+    document.getElementById('aesthetic-form-container').classList.remove('d-none');
+    
+    // Sincronizar los valores de color con los campos de texto
+    syncColorInputs();
+}
+
+// Volver al formulario del framework
+function backToFrameworkForm() {
+    document.getElementById('aesthetic-form-container').classList.add('d-none');
+    document.getElementById('framework-form-container').classList.remove('d-none');
+}
+
+// Sincronizar inputs de color con campos de texto
+function syncColorInputs() {
+    // Color primario
+    const primaryColor = document.getElementById('primary-color');
+    const primaryColorHex = document.getElementById('primary-color-hex');
+    primaryColorHex.value = primaryColor.value;
+    
+    primaryColor.addEventListener('input', function() {
+        primaryColorHex.value = this.value;
+    });
+    
+    primaryColorHex.addEventListener('input', function() {
+        if (/^#[0-9A-F]{6}$/i.test(this.value)) {
+            primaryColor.value = this.value;
+        }
+    });
+    
+    // Color secundario
+    const secondaryColor = document.getElementById('secondary-color');
+    const secondaryColorHex = document.getElementById('secondary-color-hex');
+    secondaryColorHex.value = secondaryColor.value;
+    
+    secondaryColor.addEventListener('input', function() {
+        secondaryColorHex.value = this.value;
+    });
+    
+    secondaryColorHex.addEventListener('input', function() {
+        if (/^#[0-9A-F]{6}$/i.test(this.value)) {
+            secondaryColor.value = this.value;
+        }
+    });
+    
+    // Color de acento
+    const accentColor = document.getElementById('accent-color');
+    const accentColorHex = document.getElementById('accent-color-hex');
+    accentColorHex.value = accentColor.value;
+    
+    accentColor.addEventListener('input', function() {
+        accentColorHex.value = this.value;
+    });
+    
+    accentColorHex.addEventListener('input', function() {
+        if (/^#[0-9A-F]{6}$/i.test(this.value)) {
+            accentColor.value = this.value;
+        }
+    });
+}
+
+// Aplicar valores predeterminados de Lovable
+function applyLovableDefaults() {
+    // Colores
+    document.getElementById('primary-color').value = lovableDefaults.colors.primary;
+    document.getElementById('primary-color-hex').value = lovableDefaults.colors.primary;
+    
+    document.getElementById('secondary-color').value = lovableDefaults.colors.secondary;
+    document.getElementById('secondary-color-hex').value = lovableDefaults.colors.secondary;
+    
+    document.getElementById('accent-color').value = lovableDefaults.colors.accent;
+    document.getElementById('accent-color-hex').value = lovableDefaults.colors.accent;
+    
+    document.getElementById('color-style').value = lovableDefaults.colors.style;
+    
+    // Tipografía
+    document.getElementById('heading-font').value = lovableDefaults.typography.headingFont;
+    document.getElementById('body-font').value = lovableDefaults.typography.bodyFont;
+    document.getElementById('font-size').value = lovableDefaults.typography.fontSize;
+    document.getElementById('typography-style').value = lovableDefaults.typography.style;
+    
+    // Elementos de diseño
+    document.getElementById('component-style').value = lovableDefaults.design.componentStyle;
+    document.getElementById('density').value = lovableDefaults.design.density;
+    document.getElementById('effects').value = lovableDefaults.design.effects;
+    document.getElementById('animation').value = lovableDefaults.design.animation;
+    
+    // Referencias
+    document.getElementById('design-style').value = lovableDefaults.references.designStyle;
+    document.getElementById('reference-urls').value = '';
+    
+    // Mostrar confirmación
+    showAnnouncement('Valores predeterminados aplicados', 'Se han aplicado los valores estéticos predeterminados de Lovable a tu proyecto.');
+}
+
+// Recopilar datos del formulario de estética
+function collectAestheticData() {
+    aestheticFormData = {
+        colors: {
+            primary: document.getElementById('primary-color').value,
+            secondary: document.getElementById('secondary-color').value,
+            accent: document.getElementById('accent-color').value,
+            style: document.getElementById('color-style').value
+        },
+        typography: {
+            headingFont: document.getElementById('heading-font').value,
+            bodyFont: document.getElementById('body-font').value,
+            fontSize: document.getElementById('font-size').value,
+            style: document.getElementById('typography-style').value
+        },
+        design: {
+            componentStyle: document.getElementById('component-style').value,
+            density: document.getElementById('density').value,
+            effects: document.getElementById('effects').value,
+            animation: document.getElementById('animation').value
+        },
+        references: {
+            urls: document.getElementById('reference-urls').value,
+            designStyle: document.getElementById('design-style').value
+        }
+    };
+    
+    return aestheticFormData;
+}
+
 // Generar prompt para Bolt/Lovable
 async function generateBoltLovablePrompt() {
     if (!selectedFramework) {
@@ -215,23 +389,14 @@ async function generateBoltLovablePrompt() {
         return;
     }
     
-    // Recopilar datos del formulario
-    const framework = webFrameworks[selectedFramework];
-    const formData = {};
-    let hasEmptyFields = false;
-    
-    framework.fields.forEach(field => {
-        const value = document.getElementById(`field-${field}`).value.trim();
-        if (!value) {
-            hasEmptyFields = true;
-        }
-        formData[field] = value;
-    });
-    
-    if (hasEmptyFields) {
-        showAnnouncement('Campos incompletos', 'Por favor, completa todos los campos del formulario para generar un prompt de calidad.');
+    // Si estamos en el formulario de framework, ir al de estética
+    if (!document.getElementById('framework-form-container').classList.contains('d-none')) {
+        goToAestheticForm();
         return;
     }
+    
+    // Recopilar datos del formulario de estética
+    collectAestheticData();
     
     // Mostrar indicador de carga
     const generateBtn = document.getElementById('generate-bolt-lovable-btn');
@@ -246,7 +411,8 @@ async function generateBoltLovablePrompt() {
             },
             body: JSON.stringify({
                 framework_type: selectedFramework,
-                form_data: formData
+                form_data: frameworkFormData,
+                aesthetic_data: aestheticFormData // Añadir datos estéticos
             })
         });
         
@@ -279,7 +445,7 @@ async function generateBoltLovablePrompt() {
             }
             
             // Mostrar el contenedor de resultado y ocultar el formulario
-            document.getElementById('framework-form-container').classList.add('d-none');
+            document.getElementById('aesthetic-form-container').classList.add('d-none');
             document.getElementById('result-container').classList.remove('d-none');
         } else {
             throw new Error(data.error || 'No se pudo generar el prompt');
@@ -517,6 +683,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Botones de recomendación de framework
     document.getElementById('use-framework-btn').addEventListener('click', useRecommendedFramework);
     document.getElementById('change-framework-btn').addEventListener('click', changeFramework);
+    
+    // Botones de navegación entre formularios
+    document.getElementById('next-aesthetic-btn').addEventListener('click', goToAestheticForm);
+    document.getElementById('back-to-framework-btn').addEventListener('click', backToFrameworkForm);
+    document.getElementById('use-lovable-defaults-btn').addEventListener('click', applyLovableDefaults);
     
     // Botón de generación
     document.getElementById('generate-bolt-lovable-btn').addEventListener('click', generateBoltLovablePrompt);

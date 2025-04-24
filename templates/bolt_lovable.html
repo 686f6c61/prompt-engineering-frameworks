@@ -96,7 +96,193 @@
                     </div>
                     
                     <div class="text-center">
-                        <button id="generate-bolt-lovable-btn" type="button" class="btn btn-primary px-4 py-2">
+                        <button id="next-aesthetic-btn" type="button" class="btn btn-primary px-4 py-2">
+                            <i class="bi bi-arrow-right me-2"></i>Siguiente: Personalizar estética
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de personalización estética -->
+    <div class="row mb-5 d-none" id="aesthetic-form-container">
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+            <div class="bg-light p-4 rounded">
+                <h4 class="text-center mb-3">Personalización estética</h4>
+                <p class="text-muted text-center mb-4">Define las características visuales y de diseño para tu proyecto.</p>
+                
+                <!-- Opción para usar valores predeterminados -->
+                <div class="text-center mb-4">
+                    <button type="button" id="use-lovable-defaults-btn" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-magic me-2"></i>Usar valores predeterminados por Lovable
+                    </button>
+                </div>
+                
+                <form id="aesthetic-form">
+                    <!-- Sección de Paleta de Colores -->
+                    <div class="mb-4">
+                        <h5 class="border-bottom pb-2 mb-3">Paleta de colores</h5>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="primary-color" class="form-label">Color primario</label>
+                                <div class="input-group">
+                                    <input type="color" class="form-control form-control-color" id="primary-color" value="#4361ee">
+                                    <input type="text" class="form-control" id="primary-color-hex" placeholder="#4361ee">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="secondary-color" class="form-label">Color secundario</label>
+                                <div class="input-group">
+                                    <input type="color" class="form-control form-control-color" id="secondary-color" value="#3f37c9">
+                                    <input type="text" class="form-control" id="secondary-color-hex" placeholder="#3f37c9">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <label for="accent-color" class="form-label">Color de acento</label>
+                                <div class="input-group">
+                                    <input type="color" class="form-control form-control-color" id="accent-color" value="#f72585">
+                                    <input type="text" class="form-control" id="accent-color-hex" placeholder="#f72585">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="color-style" class="form-label">Estilo de colores</label>
+                                <select class="form-select" id="color-style">
+                                    <option value="minimal">Minimalista</option>
+                                    <option value="colorful">Colorido</option>
+                                    <option value="corporate">Corporativo</option>
+                                    <option value="pastel">Pastel</option>
+                                    <option value="monochrome">Monocromático</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección de Tipografía -->
+                    <div class="mb-4">
+                        <h5 class="border-bottom pb-2 mb-3">Tipografía</h5>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="heading-font" class="form-label">Fuente para títulos</label>
+                                <select class="form-select" id="heading-font">
+                                    <option value="sans-serif">Sans-serif (Roboto, Helvetica, Arial)</option>
+                                    <option value="serif">Serif (Merriweather, Georgia)</option>
+                                    <option value="display">Display (Montserrat, Playfair Display)</option>
+                                    <option value="monospace">Monospace (Roboto Mono, Source Code Pro)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="body-font" class="form-label">Fuente para texto</label>
+                                <select class="form-select" id="body-font">
+                                    <option value="sans-serif">Sans-serif (Roboto, Open Sans)</option>
+                                    <option value="serif">Serif (Lora, Georgia)</option>
+                                    <option value="humanist">Humanist (Ubuntu, Nunito)</option>
+                                    <option value="readable">Alta legibilidad (Inter, Noto Sans)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <label for="font-size" class="form-label">Tamaño de texto base</label>
+                                <select class="form-select" id="font-size">
+                                    <option value="small">Pequeño (14px)</option>
+                                    <option value="medium" selected>Medio (16px)</option>
+                                    <option value="large">Grande (18px)</option>
+                                    <option value="xlarge">Extra grande (20px)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="typography-style" class="form-label">Estilo tipográfico</label>
+                                <select class="form-select" id="typography-style">
+                                    <option value="modern">Moderno</option>
+                                    <option value="classic">Clásico</option>
+                                    <option value="playful">Dinámico</option>
+                                    <option value="minimalist">Minimalista</option>
+                                    <option value="technical">Técnico</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección de Elementos de Diseño -->
+                    <div class="mb-4">
+                        <h5 class="border-bottom pb-2 mb-3">Elementos de diseño</h5>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="component-style" class="form-label">Estilo de componentes</label>
+                                <select class="form-select" id="component-style">
+                                    <option value="rounded">Redondeados</option>
+                                    <option value="sharp">Angulares</option>
+                                    <option value="flat">Flat Design</option>
+                                    <option value="neumorphic">Neumorfismo</option>
+                                    <option value="glassmorphic">Efecto Cristal</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="density" class="form-label">Densidad de información</label>
+                                <select class="form-select" id="density">
+                                    <option value="compact">Compacta</option>
+                                    <option value="balanced" selected>Balanceada</option>
+                                    <option value="airy">Espaciada</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <label for="effects" class="form-label">Sombras y efectos</label>
+                                <select class="form-select" id="effects">
+                                    <option value="none">Sin efectos</option>
+                                    <option value="subtle">Sutiles</option>
+                                    <option value="medium" selected>Moderados</option>
+                                    <option value="pronounced">Pronunciados</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="animation" class="form-label">Animaciones</label>
+                                <select class="form-select" id="animation">
+                                    <option value="none">Sin animaciones</option>
+                                    <option value="subtle" selected>Sutiles</option>
+                                    <option value="moderate">Moderadas</option>
+                                    <option value="playful">Dinámicas</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección de Referencias -->
+                    <div class="mb-4">
+                        <h5 class="border-bottom pb-2 mb-3">Referencias e inspiración</h5>
+                        
+                        <div class="mb-3">
+                            <label for="reference-urls" class="form-label">URLs de sitios de referencia</label>
+                            <textarea class="form-control" id="reference-urls" rows="2" placeholder="Ej: https://ejemplo.com, https://referencia.com"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="design-style" class="form-label">Estilo de diseño preferido</label>
+                            <select class="form-select" id="design-style">
+                                <option value="material">Material Design (Google)</option>
+                                <option value="apple">Human Interface Guidelines (Apple)</option>
+                                <option value="fluent">Fluent Design (Microsoft)</option>
+                                <option value="bootstrap">Bootstrap</option>
+                                <option value="custom">Personalizado/Único</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <button type="button" id="back-to-framework-btn" class="btn btn-outline-secondary px-4 py-2">
+                            <i class="bi bi-arrow-left me-2"></i>Volver
+                        </button>
+                        <button type="button" id="generate-bolt-lovable-btn" class="btn btn-primary px-4 py-2">
                             <i class="bi bi-magic me-2"></i>Generar Prompt Bolt/Lovable
                         </button>
                     </div>

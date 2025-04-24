@@ -434,7 +434,8 @@ def generate_bolt_lovable():
     Expects:
         JSON: {
             "framework_type": string,   # Tipo de framework seleccionado
-            "form_data": dict           # Datos del formulario
+            "form_data": dict,          # Datos del formulario
+            "aesthetic_data": dict      # Datos estéticos (opcional)
         }
     
     Returns:
@@ -449,6 +450,7 @@ def generate_bolt_lovable():
     data = request.json
     framework_type = data.get('framework_type', '')
     form_data = data.get('form_data', {})
+    aesthetic_data = data.get('aesthetic_data', {})
     
     if not framework_type or not form_data:
         return jsonify({
@@ -470,6 +472,11 @@ def generate_bolt_lovable():
         
         # Generar el prompt para Bolt/Lovable
         form_data['framework_type'] = framework_type
+        
+        # Añadir datos estéticos si existen
+        if aesthetic_data:
+            form_data['aesthetic_data'] = aesthetic_data
+            
         result = generate_bolt_lovable_prompt(form_data, user_api_key)
         
         if not result['success']:

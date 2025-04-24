@@ -120,6 +120,7 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
     Args:
         framework_data (dict): Datos del framework seleccionado con campos como
                                role, task, format, context, etc. según el framework
+                               Puede contener 'aesthetic_data' con información de diseño
         user_api_key (str, optional): API key del usuario para usar el modelo premium.
                                       Si no se proporciona, se usa el modelo por defecto.
         
@@ -138,13 +139,71 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
         model = PREMIUM_MODEL if user_api_key else DEFAULT_MODEL
         api_key = user_api_key or os.environ.get('OPENAI_API_KEY')
         
+        # Extraer datos estéticos si existen
+        aesthetic_data = framework_data.get('aesthetic_data', {})
+        
         # Crear contexto para la generación basado en el framework proporcionado
-        # Extraemos todos los campos excepto framework_type para usarlos como input
+        # Extraemos todos los campos excepto framework_type y aesthetic_data para usarlos como input
         framework_context = "Datos del framework seleccionado:\n"
         for key, value in framework_data.items():
-            if key != 'framework_type':
+            if key not in ['framework_type', 'aesthetic_data']:
                 framework_context += f"- {key}: {value}\n"
-                
+        
+        # Añadir información estética si existe
+        aesthetic_context = ""
+        if aesthetic_data:
+            aesthetic_context = """
+            ## Especificaciones Estéticas Proporcionadas
+            
+            ### Paleta de Colores
+            """
+            
+            if 'colors' in aesthetic_data:
+                colors = aesthetic_data['colors']
+                aesthetic_context += f"""
+                - **Color Primario**: {colors.get('primary', 'No especificado')}
+                - **Color Secundario**: {colors.get('secondary', 'No especificado')}
+                - **Color de Acento**: {colors.get('accent', 'No especificado')}
+                - **Estilo de Colores**: {colors.get('style', 'No especificado')}
+                """
+            
+            aesthetic_context += """
+            ### Tipografía
+            """
+            
+            if 'typography' in aesthetic_data:
+                typography = aesthetic_data['typography']
+                aesthetic_context += f"""
+                - **Fuente para Títulos**: {typography.get('headingFont', 'No especificado')}
+                - **Fuente para Texto**: {typography.get('bodyFont', 'No especificado')}
+                - **Tamaño de Texto Base**: {typography.get('fontSize', 'No especificado')}
+                - **Estilo Tipográfico**: {typography.get('style', 'No especificado')}
+                """
+            
+            aesthetic_context += """
+            ### Elementos de Diseño
+            """
+            
+            if 'design' in aesthetic_data:
+                design = aesthetic_data['design']
+                aesthetic_context += f"""
+                - **Estilo de Componentes**: {design.get('componentStyle', 'No especificado')}
+                - **Densidad de Información**: {design.get('density', 'No especificado')}
+                - **Sombras y Efectos**: {design.get('effects', 'No especificado')}
+                - **Animaciones**: {design.get('animation', 'No especificado')}
+                """
+            
+            aesthetic_context += """
+            ### Referencias e Inspiración
+            """
+            
+            if 'references' in aesthetic_data:
+                references = aesthetic_data['references']
+                aesthetic_context += f"""
+                - **URLs de Referencia**: {references.get('urls', 'No especificado')}
+                - **Estilo de Diseño Preferido**: {references.get('designStyle', 'No especificado')}
+                """
+        
         # Objetivo de desarrollo web para el sistema Bolt/Lovable
         # Este prompt extenso define la estructura y expectativas para 
         # un prompt de desarrollo web completo y detallado
@@ -154,6 +213,8 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
         Tu tarea es transformar la siguiente información de proyecto en un prompt completo y estructurado para una plataforma de desarrollo web llamada Bolt/Lovable.
 
         {framework_context}
+        
+        {aesthetic_context}
 
         ## Instrucciones Generales
         - Sé extremadamente detallado y específico en cada sección
@@ -161,6 +222,7 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
         - Define comportamientos exactos para cada elemento interactivo
         - Incluye medidas precisas (en px, rem, vh/vw) para los componentes principales
         - Especifica animaciones y transiciones deseadas con su timing
+        - Respeta estrictamente las especificaciones estéticas proporcionadas cuando estén disponibles
 
         ## Estructura del Documento
 
@@ -359,6 +421,8 @@ def generate_bolt_lovable_prompt(framework_data, user_api_key=None):
         - **Contenido Multimedia**: Especificaciones para fotos, videos, audio (formatos, dimensiones, duración)
         
         Asegúrate de adaptar cada sección a las necesidades específicas del proyecto y proporcionar ejemplos concretos siempre que sea posible. El documento final debe servir como una guía completa y autónoma para el equipo de desarrollo de Bolt/Lovable, con énfasis especial en los aspectos visuales e interactivos que definirán la experiencia del usuario.
+        
+        IMPORTANTE: DEBES integrar la información de las Especificaciones Estéticas Proporcionadas (si existen) en la sección de Especificaciones Visuales Detalladas. Los colores, tipografías y elementos de diseño proporcionados son requisitos prioritarios y deben respetarse de manera exacta.
         """
         
         console.info(f"Generando prompt Bolt/Lovable usando el modelo {model}")
