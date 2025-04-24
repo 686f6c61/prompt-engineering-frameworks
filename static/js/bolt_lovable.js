@@ -230,9 +230,167 @@ function useRecommendedFramework() {
 
 // Volver a la descripción del proyecto
 function changeFramework() {
-    document.getElementById('framework-recommendation-container').classList.add('d-none');
-    document.getElementById('initial-form-container').classList.remove('d-none');
-    selectedFramework = '';
+    // Mostrar selector de frameworks en un modal
+    showFrameworkSelector();
+}
+
+// Función para mostrar el selector de frameworks como un popup
+function showFrameworkSelector() {
+    // Crear el contenedor principal del popup
+    const popupContainer = document.createElement('div');
+    popupContainer.className = 'framework-selector-popup';
+    popupContainer.style.position = 'fixed';
+    popupContainer.style.top = '0';
+    popupContainer.style.left = '0';
+    popupContainer.style.width = '100%';
+    popupContainer.style.height = '100%';
+    popupContainer.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    popupContainer.style.zIndex = '1050';
+    popupContainer.style.display = 'flex';
+    popupContainer.style.alignItems = 'center';
+    popupContainer.style.justifyContent = 'center';
+
+    // Crear el cuadro de diálogo
+    const dialogBox = document.createElement('div');
+    dialogBox.className = 'framework-selector-dialog';
+    dialogBox.style.backgroundColor = 'white';
+    dialogBox.style.borderRadius = '8px';
+    dialogBox.style.padding = '20px';
+    dialogBox.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+    dialogBox.style.maxWidth = '800px';
+    dialogBox.style.width = '90%';
+    dialogBox.style.maxHeight = '80vh';
+    dialogBox.style.display = 'flex';
+    dialogBox.style.flexDirection = 'column';
+
+    // Encabezado del popup
+    const header = document.createElement('div');
+    header.style.marginBottom = '15px';
+    header.style.display = 'flex';
+    header.style.justifyContent = 'space-between';
+    header.style.alignItems = 'center';
+
+    const title = document.createElement('h3');
+    title.textContent = 'Selecciona un Framework';
+    title.style.margin = '0';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '×';
+    closeBtn.className = 'btn-close';
+    closeBtn.style.fontSize = '1.5rem';
+    closeBtn.style.border = 'none';
+    closeBtn.style.background = 'none';
+    closeBtn.style.cursor = 'pointer';
+    closeBtn.onclick = function() {
+        document.body.removeChild(popupContainer);
+    };
+
+    header.appendChild(title);
+    header.appendChild(closeBtn);
+
+    // Buscador de frameworks
+    const searchContainer = document.createElement('div');
+    searchContainer.className = 'mb-3';
+    
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.className = 'form-control';
+    searchInput.placeholder = 'Buscar framework...';
+    searchInput.style.marginBottom = '15px';
+    
+    searchContainer.appendChild(searchInput);
+
+    // Contenedor scrollable para las opciones
+    const optionsContainer = document.createElement('div');
+    optionsContainer.style.overflowY = 'auto';
+    optionsContainer.style.maxHeight = 'calc(80vh - 150px)';
+    optionsContainer.style.paddingRight = '10px';
+
+    // Crear un grid para los frameworks
+    const frameworkGrid = document.createElement('div');
+    frameworkGrid.style.display = 'grid';
+    frameworkGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(220px, 1fr))';
+    frameworkGrid.style.gap = '10px';
+
+    // Función para seleccionar un framework
+    function selectFrameworkFromGrid(frameworkId) {
+        // Actualizar el framework seleccionado
+        selectedFramework = frameworkId;
+        
+        // Cerrar el selector
+        document.body.removeChild(popupContainer);
+        
+        // Preparar el formulario con los campos del framework
+        useRecommendedFramework();
+    }
+
+    // Añadir cada framework disponible al grid
+    Object.entries(webFrameworks).forEach(([key, framework]) => {
+        const frameworkCard = document.createElement('div');
+        frameworkCard.className = 'framework-card card';
+        frameworkCard.style.cursor = 'pointer';
+        frameworkCard.style.transition = 'all 0.2s ease';
+        frameworkCard.style.border = '1px solid #dee2e6';
+        frameworkCard.style.borderRadius = '5px';
+        
+        frameworkCard.onmouseover = function() {
+            this.style.backgroundColor = '#f8f9fa';
+            this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+        };
+        
+        frameworkCard.onmouseout = function() {
+            this.style.backgroundColor = 'white';
+            this.style.boxShadow = 'none';
+        };
+        
+        frameworkCard.onclick = function() {
+            selectFrameworkFromGrid(key);
+        };
+        
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+        cardBody.style.padding = '10px';
+        
+        const frameworkName = document.createElement('div');
+        frameworkName.className = 'fw-bold';
+        frameworkName.textContent = framework.name;
+        frameworkName.style.marginBottom = '2px';
+        
+        const frameworkDesc = document.createElement('div');
+        frameworkDesc.className = 'small text-muted';
+        frameworkDesc.textContent = framework.description;
+        
+        cardBody.appendChild(frameworkName);
+        cardBody.appendChild(frameworkDesc);
+        frameworkCard.appendChild(cardBody);
+        frameworkGrid.appendChild(frameworkCard);
+    });
+    
+    // Función para filtrar frameworks en la búsqueda
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        // Filtrar los frameworks según el término de búsqueda
+        document.querySelectorAll('.framework-card').forEach(card => {
+            const cardText = card.textContent.toLowerCase();
+            
+            if (cardText.includes(searchTerm)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+
+    // Añadir elementos al DOM
+    optionsContainer.appendChild(frameworkGrid);
+    dialogBox.appendChild(header);
+    dialogBox.appendChild(searchContainer);
+    dialogBox.appendChild(optionsContainer);
+    popupContainer.appendChild(dialogBox);
+    
+    // Añadir el selector al cuerpo del documento
+    document.body.appendChild(popupContainer);
 }
 
 // Ir al formulario de personalización estética
