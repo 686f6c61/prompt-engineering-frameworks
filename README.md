@@ -237,17 +237,17 @@ La aplicación incluye por defecto el código de Google Analytics. Si deseas usa
 1. Localiza en el archivo `templates/base.html` el siguiente bloque:
 ```html
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYM5KDT6C6"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0000000"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-BYM5KDT6C6');
+  gtag('config', '000000');
 </script>
 ```
 
-2. Sustituye el ID `G-BYM5KDT6C6` por tu propio ID de Google Analytics
+2. Sustituye el ID `000000` por tu propio ID de Google Analytics
 
 ### Configuración del sistema de contacto
 
