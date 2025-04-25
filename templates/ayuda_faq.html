@@ -172,6 +172,25 @@
     <!-- Formulario de contacto -->
     <div class="row mt-5 pt-4">
         <div class="col-lg-8 mx-auto">
+            <!-- Información sobre aumento de límite gratuito -->
+            <div class="alert alert-info mb-4 border-0 shadow-sm">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0 me-3">
+                        <i class="bi bi-speedometer2 text-primary" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h5 class="alert-heading mb-1">
+                            <i class="bi bi-stars me-1"></i> ¿Necesitas más solicitudes gratuitas?
+                        </h5>
+                        <p class="mb-1">Si estás trabajando en un proyecto educativo o de investigación y necesitas aumentar el límite gratuito de 10 a 30 solicitudes por hora, explícanos tu caso utilizando el formulario de contacto a continuación.</p>
+                        <hr class="my-2">
+                        <p class="mb-0 small">
+                            <i class="bi bi-info-circle me-1"></i> Menciona "Solicitud de código promocional" en el asunto e incluye detalles sobre tu proyecto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="card border-0 shadow-sm">
                 <div class="card-body p-4">
                     <h2 class="h4 mb-4 text-center">Formulario de contacto</h2>
@@ -202,10 +221,25 @@
                                 <label for="asunto" class="form-label">Asunto</label>
                                 <div class="input-group">
                                     <span class="input-group-text"><i class="bi bi-chat-square-text"></i></span>
-                                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+                                    <select class="form-select" id="asunto" name="asunto" required>
+                                        <option value="" selected disabled>Selecciona un asunto</option>
+                                        <option value="Solicitud de código promocional">Solicitud de código promocional</option>
+                                        <option value="Consulta general">Consulta general</option>
+                                        <option value="Sugerencia">Sugerencia</option>
+                                        <option value="Reporte de error">Reporte de error</option>
+                                        <option value="Nuevo framework">Propuesta de nuevo framework</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
                                 </div>
                                 <div class="invalid-feedback">
-                                    Por favor introduce el asunto
+                                    Por favor selecciona el asunto
+                                </div>
+                            </div>
+                            <div class="col-12" id="otroAsuntoContainer" style="display: none;">
+                                <label for="otroAsunto" class="form-label">Especifica el asunto</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-pencil"></i></span>
+                                    <input type="text" class="form-control" id="otroAsunto" name="otroAsunto" placeholder="Especifica el asunto de tu mensaje">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -448,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = {
             nombre: document.getElementById('nombre').value,
             email: document.getElementById('email').value,
-            asunto: document.getElementById('asunto').value,
+            asunto: document.getElementById('asunto').value === 'Otro' ? document.getElementById('otroAsunto').value : document.getElementById('asunto').value,
             mensaje: document.getElementById('mensaje').value
         };
         
@@ -505,6 +539,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // Restablecer estado del captcha cuando se modifica
     document.getElementById('captchaAnswer').addEventListener('input', function() {
         this.classList.remove('is-invalid');
+    });
+    
+    // Manejar el cambio en el selector de asunto
+    const asuntoSelect = document.getElementById('asunto');
+    const otroAsuntoContainer = document.getElementById('otroAsuntoContainer');
+    const otroAsuntoInput = document.getElementById('otroAsunto');
+    
+    asuntoSelect.addEventListener('change', function() {
+        if (this.value === 'Otro') {
+            otroAsuntoContainer.style.display = 'block';
+            otroAsuntoInput.setAttribute('required', true);
+        } else {
+            otroAsuntoContainer.style.display = 'none';
+            otroAsuntoInput.removeAttribute('required');
+        }
+    });
+    
+    // Preseleccionar asunto cuando se hace clic en la información de código promocional
+    document.querySelector('.alert-info').addEventListener('click', function() {
+        asuntoSelect.value = 'Solicitud de código promocional';
+        // Disparar el evento change para actualizar cualquier lógica dependiente
+        const event = new Event('change');
+        asuntoSelect.dispatchEvent(event);
     });
 });
 </script>
