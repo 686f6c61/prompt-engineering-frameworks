@@ -1103,7 +1103,9 @@ function updateUsageInfoFromResponse(data) {
         updateUsageDisplay({
             remaining: data.usage.remaining,
             reset_time: data.usage.reset_time,
-            limited: data.usage.remaining <= 0
+            limited: data.usage.remaining <= 0,
+            max: data.usage.max || 10,
+            has_promo: data.usage.has_promo || false
         });
     }
 }
@@ -1118,7 +1120,9 @@ function checkUsageLimit() {
                 updateUsageDisplay({
                     remaining: usageInfo.remaining,
                     reset_time: usageInfo.reset_time,
-                    limited: usageInfo.limited
+                    limited: usageInfo.limited,
+                    max: usageInfo.max || 10,
+                    has_promo: usageInfo.has_promo || false
                 });
             }
         })
@@ -1138,19 +1142,26 @@ function updateUsageDisplay(data) {
         let message = '';
         let icon = 'bi-info-circle';
         let bgClass = 'bg-light';
+        const maxLimit = data.max || 10;
+        const hasPromo = data.has_promo || false;
         
         if (data.limited || data.remaining <= 0) {
             statusClass = 'text-danger';
             icon = 'bi-exclamation-triangle';
-            message = `Has alcanzado el límite de 10 usos por hora para GPT-3.5. Podrás realizar más solicitudes en: ${data.reset_time}`;
-        } else if (data.remaining <= 3) {
+            message = `Has alcanzado el límite de ${maxLimit} usos por hora para GPT-3.5. Podrás realizar más solicitudes en: ${data.reset_time}`;
+        } else if (data.remaining <= Math.max(3, maxLimit * 0.2)) { // Avisar cuando queden menos del 20%
             statusClass = 'text-warning';
             icon = 'bi-exclamation-circle';
             message = `Atención: Te quedan solo ${data.remaining} usos de GPT-3.5 para esta hora.`;
         } else {
             statusClass = 'text-success';
             icon = 'bi-lightning';
-            message = `Usos disponibles de GPT-3.5: ${data.remaining}/10 para esta hora.`;
+            message = `Usos disponibles de GPT-3.5: ${data.remaining}/${maxLimit} para esta hora.`;
+            
+            // Mostrar insignia de código promocional si está activo
+            if (hasPromo) {
+                message += ' <span class="badge bg-success ms-1">Código promocional activo</span>';
+            }
         }
         
         usageContainer.innerHTML = `

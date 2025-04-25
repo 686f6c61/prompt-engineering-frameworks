@@ -8,6 +8,7 @@ Este módulo proporciona:
 3. Incremento y gestión de contadores de uso
 4. Formateo de tiempos restantes en formato legible
 5. Soporte para bypass de limitaciones con API keys personales
+6. Sistema de códigos para aumentar el límite de solicitudes
 
 La implementación utiliza un sistema basado en ventanas deslizantes (sliding window)
 que permite una gestión precisa de las solicitudes, eliminando automáticamente
@@ -24,12 +25,79 @@ from console import console
 # ===================================
 
 # Constantes para el límite de tasa
-RATE_LIMIT_MAX = 30  # Máximo número de solicitudes permitidas por hora
+DEFAULT_RATE_LIMIT = 10  # Límite predeterminado de solicitudes por hora
+ENHANCED_RATE_LIMIT = 30  # Límite aumentado con código válido
 RATE_LIMIT_WINDOW = 3600  # Ventana de tiempo en segundos (1 hora)
+
+# Códigos promocionales válidos para aumentar el límite
+VALID_CODES = {
+    "CLASEEVARISTOYSONIA",
+    "CLASEIA",
+}
+
 
 # ===================================
 # FUNCIONES PRINCIPALES
 # ===================================
+
+def is_valid_promo_code(code):
+    """
+    Verifica si un código promocional es válido.
+    
+    Args:
+        code (str): El código promocional a verificar
+        
+    Returns:
+        bool: True si el código es válido, False en caso contrario
+    """
+    if not code or code.strip() == "":
+        return False
+    
+    # Normalizar el código (eliminar espacios y convertir a mayúsculas)
+    normalized_code = code.strip().upper()
+    
+    # Comprobar si el código normalizado está en el conjunto de códigos válidos
+    for valid_code in VALID_CODES:
+        if normalized_code == valid_code.upper():
+            return True
+            
+    # Si llegamos aquí, el código no es válido
+    console.debug(f"Código promocional inválido: '{code}', normalizado: '{normalized_code}'")
+    return False
+
+def set_promo_code(code):
+    """
+    Establece un código promocional en la sesión del usuario.
+    
+    Args:
+        code (str): El código promocional a establecer
+        
+    Returns:
+        bool: True si el código es válido y se estableció correctamente, False en caso contrario
+    """
+    if is_valid_promo_code(code):
+        session['promo_code'] = code
+        return True
+    return False
+
+def get_rate_limit_max():
+    """
+    Obtiene el límite máximo de solicitudes aplicable al usuario actual.
+    
+    Returns:
+        int: El límite máximo de solicitudes (10 por defecto, 30 con código válido)
+    """
+    # Si el usuario usa su propia API key, no hay límite aplicable
+    if session.get('use_custom_api_key', False):
+        return ENHANCED_RATE_LIMIT
+    
+    # Si el usuario tiene un código promocional válido, aplicar límite aumentado
+    promo_code = session.get('promo_code', '')
+    if is_valid_promo_code(promo_code):
+        return ENHANCED_RATE_LIMIT
+    
+    # Caso por defecto: límite estándar
+    return DEFAULT_RATE_LIMIT
 
 def check_rate_limit():
     """
@@ -61,7 +129,7 @@ def check_rate_limit():
     """
     # Si el usuario usa su propia API key, no aplicar límite
     if session.get('use_custom_api_key', False):
-        return False, RATE_LIMIT_MAX, "N/A"
+        return False, get_rate_limit_max(), "N/A"
     
     # Obtener datos de uso actuales de la sesión
     current_time = int(time.time())
@@ -95,7 +163,8 @@ def check_rate_limit():
     
     # Calcular solicitudes restantes
     used_count = len(requests)
-    remaining = RATE_LIMIT_MAX - used_count
+    rate_limit_max = get_rate_limit_max()
+    remaining = rate_limit_max - used_count
     
     # Calcular tiempo hasta reinicio
     # Si hay solicitudes, el reinicio ocurrirá cuando expire la más antigua
@@ -140,7 +209,7 @@ def increment_usage():
     """
     # Si el usuario usa su propia API key, no contar
     if session.get('use_custom_api_key', False):
-        return RATE_LIMIT_MAX, "N/A"
+        return get_rate_limit_max(), "N/A"
     
     # Obtener datos actuales
     current_time = int(time.time())
@@ -175,7 +244,8 @@ def increment_usage():
     session['usage_data'] = usage_data
     
     # Calcular solicitudes restantes
-    remaining = RATE_LIMIT_MAX - len(requests)
+    rate_limit_max = get_rate_limit_max()
+    remaining = rate_limit_max - len(requests)
     
     # Calcular tiempo hasta reinicio
     # El tiempo de reinicio se basa en cuándo expirará la solicitud más antigua
@@ -208,6 +278,7 @@ def get_usage_info():
                 'remaining': int,   # Solicitudes restantes
                 'max': int,         # Máximo de solicitudes permitidas
                 'reset_time': str   # Tiempo hasta reinicio en formato legible
+                'has_promo': bool,  # True si tiene código promocional activo
             }
     
     Ejemplo:
@@ -217,15 +288,19 @@ def get_usage_info():
         >>> else:
         >>>     mensaje = f"Tienes {info['remaining']} de {info['max']} solicitudes disponibles"
     """
+    rate_limit_max = get_rate_limit_max()
+    has_promo = session.get('promo_code', '') in VALID_CODES
+    
     # Si el usuario usa su propia API key, no hay límite
     # Consideramos estos usuarios como 'premium' y no aplica límite
     if session.get('use_custom_api_key', False):
         return {
             'limited': False,
             'premium': True,
-            'remaining': RATE_LIMIT_MAX,
-            'max': RATE_LIMIT_MAX,
-            'reset_time': "N/A"
+            'remaining': rate_limit_max,
+            'max': rate_limit_max,
+            'reset_time': "N/A",
+            'has_promo': has_promo
         }
     
     # Verificar límite actual
@@ -236,8 +311,9 @@ def get_usage_info():
         'limited': is_limited,
         'premium': False,
         'remaining': remaining,
-        'max': RATE_LIMIT_MAX,
-        'reset_time': reset_time_str
+        'max': rate_limit_max,
+        'reset_time': reset_time_str,
+        'has_promo': has_promo
     }
 
 # ===================================

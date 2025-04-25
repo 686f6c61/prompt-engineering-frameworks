@@ -92,6 +92,52 @@
                     </form>
                 </div>
             </div>
+            
+            <!-- Sección de Código Promocional -->
+            <div class="card mt-4" id="promo-code-section">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Código Promocional</h5>
+                </div>
+                <div class="card-body">
+                    <form id="promoCodeForm" method="post" action="/configuracion#promo-code-section">
+                        <input type="hidden" name="form_type" value="promo_code">
+                        <div class="mb-3">
+                            <label for="promo_code" class="form-label fw-bold">Introduce un código promocional:</label>
+                            <div class="input-group" style="max-width: 400px;">
+                                <input type="text" class="form-control" id="promo_code" name="promo_code" 
+                                       placeholder="Escribe tu código aquí" value="{{ promo_code or '' }}">
+                                <button class="btn btn-primary" type="submit">Aplicar</button>
+                            </div>
+                            
+                            {% if promo_message %}
+                                {% if promo_valid %}
+                                <div class="mt-2 alert alert-success py-2 px-3" style="max-width: 400px;">
+                                    <i class="bi bi-check-circle me-1"></i>
+                                    <span>{{ promo_message }}</span>
+                                </div>
+                                {% else %}
+                                <div class="mt-2 alert alert-danger py-2 px-3" style="max-width: 400px;">
+                                    <i class="bi bi-exclamation-triangle me-1"></i>
+                                    <span>{{ promo_message }}</span>
+                                </div>
+                                {% endif %}
+                            {% endif %}
+                            
+                            {% if has_promo %}
+                            <div class="mt-2 alert alert-info py-2 px-3" style="max-width: 400px;">
+                                <i class="bi bi-info-circle me-1"></i>
+                                <span>Límite aumentado a 30 solicitudes por hora</span>
+                            </div>
+                            {% endif %}
+                            
+                            <div class="form-text text-muted mt-2">
+                                <i class="bi bi-info-circle me-1"></i>
+                                Introduce un código promocional válido para aumentar tu límite de solicitudes de 10 a 30 por hora.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -142,6 +188,16 @@ document.addEventListener('DOMContentLoaded', function() {
             updateSelection();
         });
     });
+    
+    // Scroll automático a la sección de código promocional si hay un anclaje en la URL
+    if (window.location.hash === '#promo-code-section') {
+        const promoSection = document.getElementById('promo-code-section');
+        if (promoSection) {
+            setTimeout(function() {
+                promoSection.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    }
 });
 </script>
 {% endblock %} 

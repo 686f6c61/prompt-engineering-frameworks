@@ -14,7 +14,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 from utils.openai_helper import optimize_prompt, count_tokens, get_framework_recommendation, FRAMEWORK_EXAMPLES
 from utils.openai_helper import DEFAULT_MODEL, PREMIUM_MODEL
 from utils.prompt_formatter import format_prompt_markdown
-from utils.rate_limiter import check_rate_limit, increment_usage, get_usage_info
+from utils.rate_limiter import check_rate_limit, increment_usage, get_usage_info, set_promo_code
 from utils.bolt_lovable_helper import generate_bolt_lovable_prompt
 from console import console
 import os.path  # Importar os.path para manejar rutas de archivos
@@ -68,37 +68,73 @@ def configuracion():
         # Marcar la sesión como permanente para que dure 30 días
         session.permanent = True
         
-        # Obtener la opción seleccionada
-        model_option = request.form.get('model_option', 'free')
+        # Determinar qué formulario se envió
+        form_type = request.form.get('form_type', '')
         
-        if model_option == 'premium':
-            api_key = request.form.get('api_key', '').strip()
-            if api_key and api_key.startswith('sk-'):
-                # Guardar la configuración en la sesión
-                session['use_custom_api_key'] = True
-                session['api_key'] = api_key
-                console.info("Configuración actualizada: Usando modelo premium con API key personalizada")
+        # Si es el formulario de código promocional
+        if form_type == 'promo_code':
+            promo_code = request.form.get('promo_code', '').strip()
+            console.debug(f"Intentando validar código promocional: '{promo_code}'")
+            
+            is_valid = set_promo_code(promo_code)
+            
+            if is_valid:
+                console.info(f"Código promocional '{promo_code}' aplicado correctamente")
+                # Guardar mensaje para mostrar en la página
+                session['promo_message'] = "¡Código válido! Límite aumentado a 30 solicitudes por hora."
+                session['promo_valid'] = True
             else:
-                # Si la API key no es válida, usar el modelo gratuito
+                console.warn(f"Código promocional inválido: '{promo_code}'")
+                # Guardar mensaje de error para mostrar
+                session['promo_message'] = "Código no válido. Intenta con otro código."
+                session['promo_valid'] = False
+                
+            # Redirigir a la página de configuración para mostrar el resultado
+            return redirect(url_for('configuracion') + '#promo-code-section')
+        
+        # Si es el formulario de selección de modelo
+        else:
+            # Obtener la opción seleccionada
+            model_option = request.form.get('model_option', 'free')
+            
+            if model_option == 'premium':
+                api_key = request.form.get('api_key', '').strip()
+                if api_key and api_key.startswith('sk-'):
+                    # Guardar la configuración en la sesión
+                    session['use_custom_api_key'] = True
+                    session['api_key'] = api_key
+                    console.info("Configuración actualizada: Usando modelo premium con API key personalizada")
+                else:
+                    # Si la API key no es válida, usar el modelo gratuito
+                    session['use_custom_api_key'] = False
+                    session.pop('api_key', None)
+                    console.warn("API Key no válida, usando modelo gratuito")
+            else:
+                # Configurar para usar el modelo gratuito
                 session['use_custom_api_key'] = False
                 session.pop('api_key', None)
-                console.warn("API Key no válida, usando modelo gratuito")
-        else:
-            # Configurar para usar el modelo gratuito
-            session['use_custom_api_key'] = False
-            session.pop('api_key', None)
-            console.info("Configuración actualizada: Usando modelo gratuito")
-        
-        # Redireccionar a la página principal
-        return redirect(url_for('index'))
+                console.info("Configuración actualizada: Usando modelo gratuito")
+            
+            # Redireccionar a la página principal
+            return redirect(url_for('index'))
     
-    # Para solicitudes GET, mostrar la página de configuración
+    # Para solicitudes GET, mostrar la página de configuración con información del código promocional
+    usage_info = get_usage_info()
+    
+    # Obtener mensajes de validación de la sesión
+    promo_message = session.pop('promo_message', None)
+    promo_valid = session.pop('promo_valid', None)
+    
     return render_template(
         'configuracion.html',
         use_custom_api_key=session.get('use_custom_api_key', False),
         api_key=session.get('api_key', ''),
         default_model=DEFAULT_MODEL,
-        premium_model=PREMIUM_MODEL
+        premium_model=PREMIUM_MODEL,
+        promo_code=session.get('promo_code', ''),
+        has_promo=usage_info.get('has_promo', False),
+        promo_message=promo_message,
+        promo_valid=promo_valid
     )
 
 @app.route('/api/get-example', methods=['POST'])
@@ -171,12 +207,17 @@ def recommend_framework():
             console.error("Formato de respuesta inválido")
             return jsonify({"success": False, "error": "Formato de respuesta inválido"}), 400
         
+        # Verificar info de uso completa para enviarla en la respuesta
+        usage_info = get_usage_info()
+        
         return jsonify({
             "success": True, 
             "recommendation": recommendation_text,
             "usage": {
                 "remaining": remaining,
-                "reset_time": reset_time
+                "reset_time": reset_time,
+                "max": usage_info['max'],
+                "has_promo": usage_info['has_promo']
             }
         })
     except Exception as e:
@@ -227,13 +268,18 @@ def generate_prompt():
         # Format the prompt with Markdown formatting
         formatted_result = format_prompt_markdown(result)
         
+        # Verificar info de uso completa para enviarla en la respuesta
+        usage_info = get_usage_info()
+        
         return jsonify({
-            "success": True, 
-            "prompt": formatted_result, 
+            "success": True,
+            "prompt": formatted_result,
             "raw_prompt": result,
             "usage": {
                 "remaining": remaining,
-                "reset_time": reset_time
+                "reset_time": reset_time,
+                "max": usage_info['max'],
+                "has_promo": usage_info['has_promo']
             }
         })
     except Exception as e:
@@ -412,13 +458,18 @@ def recommend_web_framework():
         elif "CLARITY" in recommendation_text:
             framework = "clarity"
         
+        # Verificar info de uso completa para enviarla en la respuesta
+        usage_info = get_usage_info()
+        
         return jsonify({
             "success": True, 
             "framework": framework,
             "recommendation": recommendation_text,
             "usage": {
                 "remaining": remaining,
-                "reset_time": reset_time
+                "reset_time": reset_time,
+                "max": usage_info['max'],
+                "has_promo": usage_info['has_promo']
             }
         })
     except Exception as e:
@@ -488,6 +539,9 @@ def generate_bolt_lovable():
         # Contar tokens
         token_count = count_tokens(result['raw_prompt'])
         
+        # Verificar info de uso completa para enviarla en la respuesta
+        usage_info = get_usage_info()
+        
         return jsonify({
             "success": True,
             "prompt": result['prompt'],
@@ -495,7 +549,9 @@ def generate_bolt_lovable():
             "token_count": token_count,
             "usage": {
                 "remaining": remaining,
-                "reset_time": reset_time
+                "reset_time": reset_time,
+                "max": usage_info['max'],
+                "has_promo": usage_info['has_promo']
             }
         })
     except Exception as e:
@@ -811,12 +867,17 @@ Responde ÚNICAMENTE con una lista de 5 preguntas, sin introducción ni texto ad
         # Incrementar contador de uso
         remaining, reset_time = increment_usage()
         
+        # Verificar info de uso completa para enviarla en la respuesta
+        usage_info = get_usage_info()
+        
         return jsonify({
             "success": True,
             "questions": questions,
             "usage": {
                 "remaining": remaining,
-                "reset_time": reset_time
+                "reset_time": reset_time,
+                "max": usage_info['max'],
+                "has_promo": usage_info['has_promo']
             }
         })
     except Exception as e:
@@ -970,13 +1031,18 @@ Incluye ÚNICAMENTE el prompt final, sin explicaciones adicionales."""
         # Incrementar contador de uso
         remaining, reset_time = increment_usage()
         
+        # Verificar info de uso completa para enviarla en la respuesta
+        usage_info = get_usage_info()
+        
         return jsonify({
             "success": True,
             "prompt": prompt,
             "token_count": token_count,
             "usage": {
                 "remaining": remaining,
-                "reset_time": reset_time
+                "reset_time": reset_time,
+                "max": usage_info['max'],
+                "has_promo": usage_info['has_promo']
             }
         })
     except Exception as e:

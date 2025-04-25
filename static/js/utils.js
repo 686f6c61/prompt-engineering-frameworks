@@ -27,7 +27,9 @@ function updateUsageInfoFromResponse(data) {
         updateUsageDisplay({
             remaining: data.usage.remaining,
             reset_time: data.usage.reset_time,
-            limited: data.usage.remaining <= 0
+            limited: data.usage.remaining <= 0,
+            max: data.usage.max,
+            has_promo: data.usage.has_promo
         });
     }
 }
@@ -47,21 +49,28 @@ function updateUsageDisplay(usageInfo) {
         let messageClass = 'alert-info';
         let message = '';
         let icon = 'bi-info-circle';
+        const maxLimit = usageInfo.max || 10; // Obtener el límite máximo (10 o 30)
+        const hasPromo = usageInfo.has_promo || false; // Verificar si hay código promocional activo
         
         if (usageInfo.limited || usageInfo.remaining <= 0) {
             messageClass = 'alert-danger';
             icon = 'bi-exclamation-triangle';
-            message = `Has alcanzado el límite de 10 usos por hora para GPT-3.5. Podrás realizar más solicitudes en: ${usageInfo.reset_time}`;
-        } else if (usageInfo.remaining <= 3) {
+            message = `Has alcanzado el límite de ${maxLimit} usos por hora. Podrás realizar más solicitudes en: ${usageInfo.reset_time}`;
+        } else if (usageInfo.remaining <= Math.max(3, maxLimit * 0.2)) { // Advertencia cuando queden 20% o menos de los usos
             messageClass = 'alert-warning';
             icon = 'bi-exclamation-circle';
-            message = `Atención: Te quedan solo ${usageInfo.remaining} usos de GPT-3.5 para esta hora.`;
+            message = `Atención: Te quedan solo ${usageInfo.remaining} usos para esta hora.`;
         } else {
             icon = 'bi-lightning';
-            message = `Usos disponibles de GPT-3.5: ${usageInfo.remaining}/10 para esta hora.`;
+            message = `Usos disponibles: ${usageInfo.remaining}/${maxLimit} para esta hora.`;
+            
+            // Añadir badge de código promocional si está activo
+            if (hasPromo) {
+                message += ' <span class="badge bg-success ms-1">Código promocional activo</span>';
+            }
         }
         
-        usageContainer.innerHTML = `<div class="row"><div class="col-12 col-md-10 col-lg-8 mx-auto"><div class="alert ${messageClass}"><i class="bi ${icon}"></i>${message}</div></div></div>`;
+        usageContainer.innerHTML = `<div class="row"><div class="col-12 col-md-10 col-lg-8 mx-auto"><div class="alert ${messageClass}"><i class="bi ${icon} me-2"></i>${message}</div></div></div>`;
         usageContainer.style.display = 'block';
     } else {
         usageContainer.style.display = 'none';
@@ -82,7 +91,9 @@ function checkUsageLimit() {
                 updateUsageDisplay({
                     remaining: usageInfo.remaining,
                     reset_time: usageInfo.reset_time,
-                    limited: usageInfo.limited
+                    limited: usageInfo.limited,
+                    max: usageInfo.max,
+                    has_promo: usageInfo.has_promo
                 });
             }
         })
