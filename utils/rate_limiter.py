@@ -19,6 +19,7 @@ from flask import session
 import time
 from datetime import datetime, timedelta
 from console import console
+import os
 
 # ===================================
 # CONSTANTES Y CONFIGURACIÓN
@@ -30,11 +31,36 @@ ENHANCED_RATE_LIMIT = 30  # Límite aumentado con código válido
 RATE_LIMIT_WINDOW = 3600  # Ventana de tiempo en segundos (1 hora)
 
 # Códigos promocionales válidos para aumentar el límite
-VALID_CODES = {
-    "CLASEEVARISTOYSONIA",
-    "CLASEIA",
-}
+# Lee los códigos promocionales desde variables de entorno
+# Si no existen, se usa un conjunto vacío
+def get_valid_promo_codes():
+    """
+    Obtiene los códigos promocionales válidos desde las variables de entorno.
+    
+    Las variables de entorno PROMO_CODE1 y PROMO_CODE2 contienen los códigos promocionales.
+    Si estos no están definidos, devuelve un conjunto vacío.
+    
+    Returns:
+        set: Conjunto de códigos promocionales válidos
+    """
+    valid_codes = set()
+    
+    # Obtener códigos desde variables de entorno
+    promo_code1 = os.environ.get('PROMO_CODE1', '')
+    promo_code2 = os.environ.get('PROMO_CODE2', '')
+    
+    # Añadir códigos al conjunto si no están vacíos
+    if promo_code1 and promo_code1.strip():
+        valid_codes.add(promo_code1.strip())
+    
+    if promo_code2 and promo_code2.strip():
+        valid_codes.add(promo_code2.strip())
+    
+    console.debug(f"Códigos promocionales cargados: {len(valid_codes)}")
+    return valid_codes
 
+# Obtener códigos promocionales válidos
+VALID_CODES = get_valid_promo_codes()
 
 # ===================================
 # FUNCIONES PRINCIPALES
