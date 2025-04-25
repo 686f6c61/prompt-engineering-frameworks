@@ -76,17 +76,28 @@ def is_valid_promo_code(code):
     Returns:
         bool: True si el código es válido, False en caso contrario
     """
+    # Obtener códigos válidos en cada validación para asegurar que están actualizados
+    valid_codes = get_valid_promo_codes()
+    
+    console.debug(f"Intentando validar código: '{code}'")
+    console.debug(f"Códigos válidos actuales: {valid_codes}")
+    
     if not code or code.strip() == "":
+        console.debug("Código vacío o solo espacios")
         return False
     
     # Normalizar el código (eliminar espacios y convertir a mayúsculas)
     normalized_code = code.strip().upper()
+    console.debug(f"Código normalizado: '{normalized_code}'")
     
     # Comprobar si el código normalizado está en el conjunto de códigos válidos
-    for valid_code in VALID_CODES:
-        if normalized_code == valid_code.upper():
+    for valid_code in valid_codes:
+        valid_code_upper = valid_code.upper()
+        console.debug(f"Comparando con código válido (normalizado): '{valid_code_upper}'")
+        if normalized_code == valid_code_upper:
+            console.debug(f"¡Código válido encontrado! '{normalized_code}' coincide con '{valid_code_upper}'")
             return True
-            
+    
     # Si llegamos aquí, el código no es válido
     console.debug(f"Código promocional inválido: '{code}', normalizado: '{normalized_code}'")
     return False
@@ -119,7 +130,11 @@ def get_rate_limit_max():
     
     # Si el usuario tiene un código promocional válido, aplicar límite aumentado
     promo_code = session.get('promo_code', '')
-    if is_valid_promo_code(promo_code):
+    
+    # Verificar que el código sea válido obteniendo los códigos válidos actualizados
+    valid_codes = get_valid_promo_codes()
+    
+    if promo_code and any(promo_code.strip().upper() == code.upper() for code in valid_codes):
         return ENHANCED_RATE_LIMIT
     
     # Caso por defecto: límite estándar
@@ -315,7 +330,11 @@ def get_usage_info():
         >>>     mensaje = f"Tienes {info['remaining']} de {info['max']} solicitudes disponibles"
     """
     rate_limit_max = get_rate_limit_max()
-    has_promo = session.get('promo_code', '') in VALID_CODES
+    
+    # Verificar si el usuario tiene un código promocional válido
+    promo_code = session.get('promo_code', '')
+    valid_codes = get_valid_promo_codes()
+    has_promo = promo_code and any(promo_code.strip().upper() == code.upper() for code in valid_codes)
     
     # Si el usuario usa su propia API key, no hay límite
     # Consideramos estos usuarios como 'premium' y no aplica límite
