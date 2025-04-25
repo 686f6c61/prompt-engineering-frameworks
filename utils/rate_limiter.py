@@ -24,7 +24,7 @@ from console import console
 # ===================================
 
 # Constantes para el límite de tasa
-RATE_LIMIT_MAX = 10  # Máximo número de solicitudes permitidas por hora
+RATE_LIMIT_MAX = 30  # Máximo número de solicitudes permitidas por hora
 RATE_LIMIT_WINDOW = 3600  # Ventana de tiempo en segundos (1 hora)
 
 # ===================================
