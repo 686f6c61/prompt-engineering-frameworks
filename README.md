@@ -284,6 +284,38 @@ Para usar el sistema sin limitaciones:
   <img src="static/img/configuracion.png" alt="Pantalla de configuración de API Key" width="600">
 </div>
 
+### 🎟️ Sistema de códigos promocionales
+
+Para proyectos educativos o de investigación, Prompt Agent ofrece un sistema de códigos promocionales que permite aumentar el límite gratuito de 10 a 30 solicitudes por hora:
+
+<div align="center">
+  <img src="static/img/codigos.png" alt="Sistema de códigos promocionales" width="600">
+</div>
+
+Características del sistema:
+- **Aumento significativo**: Triplica el límite estándar (de 10 a 30 solicitudes/hora)
+- **Solicitud simple**: Formulario integrado para solicitar códigos promocionales
+- **Validación instantánea**: Aplicación inmediata del nuevo límite al validar el código
+- **Gestión de sesión**: El código promocional se mantiene activo durante toda la sesión
+- **Indicador visual**: Muestra claramente cuando un código está activo
+
+Los códigos promocionales actualmente disponibles son:
+- `CODE_01`: Código promocional para estudiantes de la clase de Evaristo y Sonia
+- `CODE_02`: Código promocional para estudiantes de IA
+
+Para solicitar un código promocional:
+1. Accede a la sección de "Ayuda/FAQ" desde la barra de navegación
+2. Utiliza el formulario de contacto al final de la página
+3. Selecciona "Código promocional" como asunto
+4. Describe brevemente tu proyecto educativo o de investigación
+5. Envía la solicitud y recibirás respuesta por correo electrónico
+
+También puedes aplicar un código promocional existente:
+1. Haz clic en "Configuración" en la barra de navegación
+2. En la sección "Código Promocional", introduce el código recibido
+3. Haz clic en "Aplicar" para validar y activar el código
+4. Si es válido, verás un mensaje de confirmación y tu límite aumentará a 30 solicitudes/hora
+
 ### 👨‍💻 Generador Bolt/Lovable para proyectos web
 
 <div align="center">
