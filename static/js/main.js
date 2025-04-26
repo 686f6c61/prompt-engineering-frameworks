@@ -180,7 +180,7 @@ const frameworks = {
     'learn': ['level', 'experience', 'approach', 'resources', 'next_steps'],
     'solve': ['situation', 'options', 'limitations', 'verification', 'execution'],
     'prime': ['problem', 'research', 'implementation', 'monitoring', 'evaluation'],
-    'adapt': ['analysis', 'design', 'approach', 'progress', 'testing'],
+    'adapt': ['analyze', 'design', 'approach', 'progress', 'testing'],
     'build': ['base', 'understanding', 'implementation', 'learning', 'delivery'],
     'craft': ['context', 'requirements', 'approach', 'features', 'testing'],
     'scale': ['strategy', 'capabilities', 'action', 'learning', 'evolution'],
@@ -425,7 +425,7 @@ const frameworkPlaceholders = {
         evaluation: "Ej: Evaluación de resultados"
     },
     'adapt': {
-        analysis: "Ej: Análisis de la situación",
+        analyze: "Ej: Análisis de la situación",
         design: "Ej: Diseño de la solución",
         approach: "Ej: Enfoque de implementación",
         progress: "Ej: Monitoreo del progreso",
