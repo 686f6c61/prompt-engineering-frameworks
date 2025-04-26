@@ -52,6 +52,7 @@ const fieldTranslations = {
     implementation: 'Implementación',
     criteria: 'Criterios',
     coreNeed: 'Necesidad Core',
+    core_need: 'Necesidad Core',
     obstacles: 'Obstáculos',
     plan: 'Plan',
     evaluation: 'Evaluación',
@@ -67,23 +68,28 @@ const fieldTranslations = {
     requirements: 'Requerimientos',
     timeline: 'Cronograma',
     yield: 'Rendimiento',
+    performance: 'Rendimiento',
     specific: 'Específico',
     measurable: 'Medible',
     achievable: 'Alcanzable',
     relevant: 'Relevante',
     timeBound: 'Temporal',
+    time_bound: 'Temporal',
     endResult: 'Resultado Final',
+    end_result: 'Resultado Final',
     style: 'Estilo',
     situation: 'Situación',
     question: 'Pregunta',
     qualification: 'Calificación',
     answerFormat: 'Formato de Respuesta',
+    answer_format: 'Formato de Respuesta',
     attention: 'Atención',
     interest: 'Interés',
     desire: 'Deseo',
     assessment: 'Evaluación',
     experience: 'Experiencia',
     qualifiers: 'Calificadores',
+    qualifications: 'Calificaciones',
     details: 'Detalles',
     examples: 'Ejemplos',
     perspective: 'Perspectiva',
@@ -95,21 +101,26 @@ const fieldTranslations = {
     reality: 'Realidad',
     options: 'Opciones',
     way: 'Camino',
+    way_forward: 'Camino a seguir',
     problem: 'Problema',
     implication: 'Implicación',
     needPayoff: 'Necesidad',
+    need_payoff: 'Necesidad',
     focus: 'Enfoque',
     tone: 'Tono',
     history: 'Historia',
     insights: 'Insights',
     nextSteps: 'Siguientes Pasos',
+    next_steps: 'Siguientes Pasos',
     knowledge: 'Conocimiento',
     verification: 'Verificación',
     research: 'Investigación',
     monitoring: 'Monitoreo',
     analysis: 'Análisis',
+    analyze: 'Analizar',
     progress: 'Progreso',
     baseline: 'Línea Base',
+    base: 'Base',
     learning: 'Aprendizaje',
     delivery: 'Entrega',
     features: 'Características',
@@ -120,12 +131,16 @@ const fieldTranslations = {
     direction: 'Dirección',
     validation: 'Validación',
     completion: 'Finalización',
+    completeness: 'Completitud',
     handover: 'Entrega',
     navigation: 'Navegación',
     planning: 'Planificación',
     user: 'Usuario',
     target: 'Objetivo',
-    horizon: 'Horizonte'
+    horizon: 'Horizonte',
+    framework: 'Framework',
+    intention: 'Intención',
+    design: 'Diseño'
 };
 
 // Framework definitions
@@ -135,46 +150,46 @@ const frameworks = {
     'bab': ['before', 'after', 'bridge'],
     'care': ['context', 'action', 'result', 'example'],
     'rise': ['role', 'input', 'steps', 'expectation'],
-    'peas': ['purpose', 'endResult', 'audience', 'style'],
+    'peas': ['purpose', 'end_result', 'audience', 'style'],
     'star': ['situation', 'task', 'action', 'result'],
-    'qcqa': ['question', 'context', 'qualification', 'answerFormat'],
+    'qcqa': ['question', 'context', 'qualification', 'answer_format'],
     'aida': ['attention', 'interest', 'desire', 'action'],
     'para': ['purpose', 'action', 'result', 'assessment'],
-    'smart': ['specific', 'measurable', 'achievable', 'relevant', 'timeBound'],
-    'erq': ['experience', 'requirements', 'qualifiers'],
+    'smart': ['specific', 'measurable', 'achievable', 'relevant', 'time_bound'],
+    'erq': ['experience', 'requirements', 'qualifications'],
     'code': ['context', 'objective', 'details', 'examples'],
     'pros': ['perspective', 'requirements', 'outcome', 'scope'],
     'team': ['task', 'environment', 'approach', 'metrics'],
     'idea': ['identify', 'define', 'execute', 'assess'],
     'fast': ['focus', 'audience', 'scope', 'tone'],
     'leap': ['level', 'expectations', 'approach', 'parameters'],
-    'grow': ['goal', 'reality', 'options', 'way'],
-    'spin': ['situation', 'problem', 'implication', 'needPayoff'],
+    'grow': ['goal', 'reality', 'options', 'way_forward'],
+    'spin': ['situation', 'problem', 'implication', 'need_payoff'],
     'design': ['define', 'explore', 'scope', 'ideate', 'guide', 'reduce'],
     'vision': ['visualize', 'identify', 'structure', 'implement', 'optimize', 'navigate'],
-    'impact': ['intent', 'message', 'purpose', 'audience', 'channel', 'timing'],
+    'impact': ['intention', 'message', 'purpose', 'audience', 'channel', 'timing'],
     'master': ['mission', 'approach', 'strategy', 'tactics', 'execution', 'review'],
     'power': ['problem', 'outcome', 'why', 'execution', 'resources'],
     'logic': ['layout', 'objective', 'guidelines', 'implementation', 'criteria'],
-    'scope': ['situation', 'coreNeed', 'obstacles', 'plan', 'evaluation'],
+    'scope': ['situation', 'core_need', 'obstacles', 'plan', 'evaluation'],
     'focus': ['frame', 'objective', 'constraints', 'understanding', 'solution'],
     'expert': ['expertise', 'context', 'purpose', 'execution', 'results', 'testing'],
-    'clarity': ['context', 'limitations', 'approach', 'requirements', 'implementation', 'timeline', 'yield'],
+    'clarity': ['context', 'limitations', 'approach', 'requirements', 'implementation', 'timeline', 'performance'],
     'guide': ['goal', 'user', 'implementation', 'delivery', 'evaluation'],
     'path': ['purpose', 'approach', 'target', 'horizon'],
-    'learn': ['level', 'experience', 'approach', 'resources', 'nextSteps'],
+    'learn': ['level', 'experience', 'approach', 'resources', 'next_steps'],
     'solve': ['situation', 'options', 'limitations', 'verification', 'execution'],
     'prime': ['problem', 'research', 'implementation', 'monitoring', 'evaluation'],
     'adapt': ['analysis', 'design', 'approach', 'progress', 'testing'],
-    'build': ['baseline', 'understanding', 'implementation', 'learning', 'delivery'],
+    'build': ['base', 'understanding', 'implementation', 'learning', 'delivery'],
     'craft': ['context', 'requirements', 'approach', 'features', 'testing'],
     'scale': ['strategy', 'capabilities', 'action', 'learning', 'evolution'],
-    'think': ['topic', 'history', 'insights', 'nextSteps', 'knowledge'],
+    'think': ['topic', 'history', 'insights', 'next_steps', 'knowledge'],
     'quest': ['question', 'understanding', 'exploration', 'solution', 'testing'],
     'drive': ['direction', 'resources', 'implementation', 'validation', 'evolution'],
-    'shape': ['situation', 'history', 'analysis', 'plan', 'execution'],
-    'reach': ['requirements', 'evaluation', 'approach', 'completion', 'handover'],
-    'blend': ['baseline', 'learning', 'evolution', 'navigation', 'delivery'],
+    'shape': ['situation', 'history', 'analyze', 'plan', 'execution'],
+    'reach': ['requirements', 'evaluation', 'approach', 'completeness', 'handover'],
+    'blend': ['base', 'learning', 'evolution', 'navigation', 'delivery'],
     'spark': ['strategy', 'planning', 'action', 'results', 'knowledge'],
     'pulse': ['purpose', 'understanding', 'learning', 'strategy', 'evaluation']
 };
@@ -210,7 +225,7 @@ const frameworkPlaceholders = {
     },
     'peas': {
         purpose: "Ej: Mejorar experiencia de usuario",
-        endResult: "Ej: Reducción de tiempo de carga",
+        end_result: "Ej: Reducción de tiempo de carga",
         audience: "Ej: Usuarios móviles",
         style: "Ej: Diseño minimalista y eficiente"
     },
@@ -224,7 +239,7 @@ const frameworkPlaceholders = {
         question: "Ej: ¿Cómo mejorar el rendimiento?",
         context: "Ej: Sistema actual y limitaciones",
         qualification: "Ej: Experiencia en optimización",
-        answerFormat: "Ej: Plan detallado con métricas"
+        answer_format: "Ej: Plan detallado con métricas"
     },
     'aida': {
         attention: "Ej: Problema crítico de rendimiento",
@@ -243,12 +258,12 @@ const frameworkPlaceholders = {
         measurable: "Ej: Métricas de rendimiento",
         achievable: "Ej: Plan realista",
         relevant: "Ej: Impacto en usuarios",
-        timeBound: "Ej: Completar en 3 meses"
+        time_bound: "Ej: Completar en 3 meses"
     },
     'erq': {
         experience: "Ej: 5 años en desarrollo backend",
         requirements: "Ej: Conocimientos específicos",
-        qualifiers: "Ej: Certificaciones relevantes"
+        qualifications: "Ej: Certificaciones relevantes"
     },
     'code': {
         context: "Ej: Sistema actual y necesidades",
@@ -290,13 +305,13 @@ const frameworkPlaceholders = {
         goal: "Ej: Objetivo del proyecto",
         reality: "Ej: Situación actual",
         options: "Ej: Alternativas disponibles",
-        way: "Ej: Plan de acción"
+        way_forward: "Ej: Plan de acción"
     },
     'spin': {
         situation: "Ej: Estado actual del sistema",
         problem: "Ej: Problemas identificados",
         implication: "Ej: Impacto en el negocio",
-        needPayoff: "Ej: Beneficios de la solución"
+        need_payoff: "Ej: Beneficios de la solución"
     },
     'design': {
         define: "Ej: Definir requisitos",
@@ -315,7 +330,7 @@ const frameworkPlaceholders = {
         navigate: "Ej: Gestión de obstáculos"
     },
     'impact': {
-        intent: "Ej: Objetivo principal",
+        intention: "Ej: Objetivo principal",
         message: "Ej: Mensaje clave",
         purpose: "Ej: Propósito del proyecto",
         audience: "Ej: Audiencia objetivo",
@@ -346,7 +361,7 @@ const frameworkPlaceholders = {
     },
     'scope': {
         situation: "Ej: Situación actual",
-        coreNeed: "Ej: Necesidad principal",
+        core_need: "Ej: Necesidad principal",
         obstacles: "Ej: Obstáculos identificados",
         plan: "Ej: Plan de acción",
         evaluation: "Ej: Criterios de evaluación"
@@ -373,7 +388,7 @@ const frameworkPlaceholders = {
         requirements: "Ej: Requisitos específicos",
         implementation: "Ej: Plan de implementación",
         timeline: "Ej: Cronograma detallado",
-        yield: "Ej: Beneficios esperados"
+        performance: "Ej: Beneficios esperados"
     },
     'guide': {
         goal: "Ej: Objetivo principal",
@@ -393,7 +408,7 @@ const frameworkPlaceholders = {
         experience: "Ej: Experiencia previa",
         approach: "Ej: Enfoque de aprendizaje",
         resources: "Ej: Recursos disponibles",
-        nextSteps: "Ej: Próximos pasos"
+        next_steps: "Ej: Próximos pasos"
     },
     'solve': {
         situation: "Ej: Situación actual",
@@ -417,7 +432,7 @@ const frameworkPlaceholders = {
         testing: "Ej: Pruebas de la solución"
     },
     'build': {
-        baseline: "Ej: Línea base del proyecto",
+        base: "Ej: Línea base del proyecto",
         understanding: "Ej: Comprensión del problema",
         implementation: "Ej: Plan de implementación",
         learning: "Ej: Aprendizaje durante el proyecto",
@@ -441,7 +456,7 @@ const frameworkPlaceholders = {
         topic: "Ej: Tema de investigación",
         history: "Ej: Historia del tema",
         insights: "Ej: Conocimientos adquiridos",
-        nextSteps: "Ej: Próximos pasos",
+        next_steps: "Ej: Próximos pasos",
         knowledge: "Ej: Conocimientos aplicados"
     },
     'quest': {
@@ -461,7 +476,7 @@ const frameworkPlaceholders = {
     'shape': {
         situation: "Ej: Situación actual",
         history: "Ej: Historia del proyecto",
-        analysis: "Ej: Análisis de la situación",
+        analyze: "Ej: Análisis de la situación",
         plan: "Ej: Plan de acción",
         execution: "Ej: Plan de ejecución"
     },
@@ -469,11 +484,11 @@ const frameworkPlaceholders = {
         requirements: "Ej: Requisitos específicos",
         evaluation: "Ej: Evaluación de resultados",
         approach: "Ej: Enfoque de implementación",
-        completion: "Ej: Finalización del proyecto",
+        completeness: "Ej: Finalización del proyecto",
         handover: "Ej: Entrega de resultados"
     },
     'blend': {
-        baseline: "Ej: Línea base del proyecto",
+        base: "Ej: Línea base del proyecto",
         learning: "Ej: Aprendizaje durante el proyecto",
         evolution: "Ej: Evolución del proyecto",
         navigation: "Ej: Navegación del proyecto",
