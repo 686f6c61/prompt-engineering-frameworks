@@ -1,0 +1,52 @@
+# Framework ICE: Impacto, Confianza, Facilidad
+
+El framework ICE (Impacto, Confianza, Facilidad) es una metodología de priorización que ayuda a evaluar y clasificar ideas o proyectos basándose en tres criterios clave. Este framework es especialmente útil para equipos de producto y desarrollo que necesitan decidir qué características o iniciativas implementar primero.
+
+## Componentes principales:
+
+### I - Impacto
+Evalúa el beneficio potencial que la idea o proyecto tendría en el objetivo principal cuando se implemente con éxito.
+- ¿Qué valor proporciona esta idea a los usuarios/clientes?
+- ¿Cómo afecta a las métricas clave del negocio?
+- ¿Qué tan grande sería el impacto positivo?
+
+### C - Confianza
+Representa el nivel de certeza que tienes en tu estimación de impacto.
+- ¿Cuánta evidencia o datos tienes para respaldar tus suposiciones?
+- ¿Se ha probado algo similar antes?
+- ¿Están de acuerdo los expertos o partes interesadas con tu evaluación?
+
+### E - Facilidad (Ease)
+Evalúa la facilidad de implementación, teniendo en cuenta el esfuerzo, los recursos y la complejidad.
+- ¿Cuánto tiempo llevaría implementar esta idea?
+- ¿Qué recursos (humanos/financieros) se necesitarían?
+- ¿Cuál es la complejidad técnica o los obstáculos potenciales?
+
+## Aplicación como Prompt:
+
+```
+Necesito evaluar [idea/proyecto] usando el framework ICE:
+
+# Impacto
+[Describe el impacto potencial de la idea/proyecto en términos de valor para usuarios y métricas de negocio]
+
+# Confianza
+[Explica qué evidencia o datos respaldan tus suposiciones sobre el impacto]
+
+# Facilidad
+[Describe el nivel de esfuerzo, recursos y complejidad necesarios para la implementación]
+
+Por favor, proporciona una puntuación ICE (de 1-10 para cada componente) y explica tu razonamiento detallado para cada aspecto. Luego, multiplica las tres puntuaciones para obtener una puntuación ICE final que ayudará a priorizar esta idea junto con otras.
+```
+
+## Ejemplo de uso:
+
+Desarrollar una nueva función de búsqueda mejorada para nuestra aplicación:
+
+- **Impacto (8/10)**: Alta probabilidad de mejorar significativamente la experiencia del usuario y aumentar las conversiones, ya que los datos muestran que los usuarios abandonan cuando no encuentran resultados rápidamente.
+
+- **Confianza (7/10)**: Tenemos buenos datos de análisis que muestran problemas con la búsqueda actual y estudios de usuarios que confirman la frustración, pero no hemos realizado pruebas A/B para validar completamente el impacto.
+
+- **Facilidad (4/10)**: La implementación requerirá cambios tanto en el frontend como en el backend, y necesitaremos adaptar la arquitectura de datos existente, lo que aumenta la complejidad.
+
+**Puntuación ICE final**: 8 × 7 × 4 = 224 

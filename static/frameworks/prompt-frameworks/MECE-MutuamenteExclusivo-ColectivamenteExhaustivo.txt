@@ -1,0 +1,125 @@
+# Framework MECE: Mutuamente Exclusivo, Colectivamente Exhaustivo
+
+El framework MECE (Mutually Exclusive, Collectively Exhaustive) es un principio de estructuración de pensamiento popularizado por la consultora McKinsey. Este enfoque permite organizar información, análisis y problemas en categorías que no se superponen (mutuamente exclusivas) pero que en conjunto cubren todas las posibilidades relevantes (colectivamente exhaustivas).
+
+## Componentes principales:
+
+### ME - Mutuamente Exclusivo (Mutually Exclusive)
+Las categorías o elementos no deben superponerse; cada idea, concepto o dato pertenece a una sola categoría.
+- ¿Hay solapamiento entre las categorías definidas?
+- ¿Cada elemento puede clasificarse claramente en una única categoría?
+- ¿Las categorías tienen límites bien definidos?
+- ¿Se evita contar dos veces un mismo elemento?
+
+### CE - Colectivamente Exhaustivo (Collectively Exhaustive)
+Las categorías o elementos en conjunto deben cubrir todas las posibilidades relevantes sin dejar vacíos.
+- ¿El conjunto de categorías abarca todas las posibilidades importantes?
+- ¿Hay aspectos del problema que no están considerados?
+- ¿Se incluyen todas las variables relevantes para el análisis?
+- ¿La estructura captura el problema completo?
+
+## Aplicación como Prompt:
+
+```
+Necesito realizar un análisis MECE (Mutuamente Exclusivo, Colectivamente Exhaustivo) para [problema/situación/decisión]. Por favor, ayúdame a crear una estructura de pensamiento clara y completa que:
+
+# Definición del problema
+[Define claramente el problema o área de análisis, estableciendo el alcance y los objetivos]
+
+# Estructura MECE
+[Desarrolla una estructura donde cada categoría o elemento de análisis sea mutuamente exclusivo (sin solapamientos) y donde el conjunto sea colectivamente exhaustivo (cubra todas las posibilidades relevantes)]
+
+Para cada categoría principal, proporciona:
+1. Definición clara de los límites de la categoría
+2. Subcategorías o elementos que la componen (también aplicando el principio MECE)
+3. Preguntas clave para explorar esa dimensión del problema
+4. Posibles fuentes de datos o información para analizar cada categoría
+
+Finalmente, incluye:
+- Un diagrama o esquema que ilustre visualmente la estructura MECE propuesta
+- Una lista de verificación para confirmar que la estructura cumple con los principios MECE
+- Recomendaciones sobre cómo utilizar esta estructura para avanzar en el análisis o solución del problema
+```
+
+## Ejemplo de uso:
+
+Análisis MECE para evaluar opciones de entrada a un nuevo mercado geográfico para una cadena de restaurantes:
+
+### Estructura Principal MECE:
+
+#### 1. Factores Externos (Contexto de Mercado)
+*Elementos fuera del control directo de la empresa que afectan la viabilidad*
+
+- **Macroentorno**
+  * Factores económicos: PIB, inflación, niveles de ingresos
+  * Factores socioculturales: hábitos alimenticios, preferencias locales
+  * Factores legales/regulatorios: normativas alimentarias, licencias
+  * Factores tecnológicos: adopción de pedidos digitales, logística
+
+- **Microentorno**
+  * Análisis de competidores: directos e indirectos
+  * Análisis de proveedores: disponibilidad, calidad, costos
+  * Análisis de clientes: segmentación, comportamiento, necesidades
+  * Análisis de distribuidores: opciones logísticas, infraestructura
+
+#### 2. Factores Internos (Capacidades Organizacionales)
+*Elementos bajo control de la empresa que afectan la ejecución*
+
+- **Capacidades operativas**
+  * Experiencia en expansión internacional
+  * Adaptabilidad del concepto culinario
+  * Capacidad de formación y transferencia de conocimiento
+  * Robustez de la cadena de suministro
+
+- **Capacidades financieras**
+  * Capital disponible para inversión
+  * Estructura de costos y márgenes
+  * Tolerancia al riesgo financiero
+  * Expectativas de retorno y plazos
+
+- **Capacidades de mercadeo**
+  * Fortaleza y adaptabilidad de la marca
+  * Conocimiento del cliente objetivo
+  * Estrategias de comunicación intercultural
+  * Presencia digital y estrategia de marketing
+
+#### 3. Modos de Entrada
+*Mecanismos específicos para ingresar al mercado*
+
+- **Entrada directa**
+  * Locales propios: inversión completa y gestión directa
+  * Adquisición: compra de cadenas locales existentes
+  * Joint venture: asociación con participación accionaria
+
+- **Entrada indirecta**
+  * Franquicias: concesión del modelo a operadores locales
+  * Licencias: permitir uso de marca y recetas
+  * Modelo híbrido: combinación de propios y franquicias
+
+#### 4. Estrategia de Implementación
+*Enfoque para ejecutar la entrada al mercado*
+
+- **Estrategia de fases**
+  * Big bang: entrada masiva simultánea
+  * Secuencial por regiones: expansión gradual
+  * Piloto controlado: prueba inicial limitada
+
+- **Velocidad de implementación**
+  * Inmediata: entrada rápida para capitalizar oportunidad
+  * Gradual: expansión controlada midiendo resultados
+  * Adaptativa: ritmo basado en retroalimentación del mercado
+
+- **Grado de localización**
+  * Estandarización: modelo idéntico al mercado actual
+  * Adaptación parcial: ajustes específicos manteniendo la esencia
+  * Localización profunda: transformación significativa del concepto
+
+### Verificación MECE:
+- **Mutuamente Exclusivo**: Las cuatro categorías principales (Factores Externos, Factores Internos, Modos de Entrada, Estrategia de Implementación) no se superponen, abordando aspectos claramente diferenciados del problema.
+- **Colectivamente Exhaustivo**: El análisis abarca todas las dimensiones relevantes para la decisión de entrada a un nuevo mercado, cubriendo tanto análisis contextual como capacidades organizacionales, modalidades específicas y enfoques de implementación.
+
+### Aplicación práctica:
+1. Para cada subcategoría, asignar un equipo de análisis con plazos específicos
+2. Utilizar esta estructura para crear un tablero de decisión con criterios de evaluación ponderados
+3. Identificar 3-5 mercados potenciales y evaluarlos sistemáticamente usando este framework
+4. Desarrollar escenarios para las combinaciones más prometedoras de mercado, modo de entrada y estrategia de implementación 

@@ -118,7 +118,9 @@ AVAILABLE_FRAMEWORKS = [
     'idea', 'fast', 'leap', 'grow', 'spin',
     'design', 'vision', 'impact', 'master', 'power',
     'logic', 'scope', 'focus', 'expert', 'clarity',
-    'guide', 'path', 'learn', 'solve', 'prime', 'adapt', 'build', 'craft', 'scale', 'think', 'quest', 'drive', 'shape', 'reach', 'blend', 'spark', 'pulse', 'bolt_lovable'
+    'guide', 'path', 'learn', 'solve', 'prime', 'adapt', 'build', 'craft', 'scale', 'think', 'quest', 'drive', 'shape', 'reach', 'blend', 'spark', 'pulse', 'bolt_lovable',
+    'daci', 'raci', 'heart', 'mece', 'ooda', 'pdca', 'vmost', 'swot', 'adkar', 'okr', '5w2h', '6m', '4p', 'rice', 'ice', 'rasci',
+    'create', 'flow', 'bolt', 'pace', 'agile', 'seed', 'shift', 'lift', 'paths', 'faster', 'value', 'smarter', 'grit', 'glide', 'pivot', 'epic'
 ]
 
 """
@@ -174,7 +176,23 @@ framework_templates = {
     'blend': "Base: {base}\nAprendizaje: {learning}\nEvolución: {evolution}\nNavegación: {navigation}\nEntrega: {delivery}",
     'spark': "Estrategia: {strategy}\nPlanificación: {planning}\nAcción: {action}\nResultados: {results}\nConocimiento: {knowledge}",
     'pulse': "Propósito: {purpose}\nEntendimiento: {understanding}\nAprendizaje: {learning}\nEstrategia: {strategy}\nEvaluación: {evaluation}",
-    'bolt_lovable': "{context}"
+    'bolt_lovable': "{context}",
+    'daci': "Driver: {driver}\nApprover: {approver}\nContributor: {contributor}\nInformed: {informed}",
+    'raci': "Responsable: {responsable}\nAccountable: {accountable}\nConsultado: {consultado}\nInformed: {informed}",
+    'heart': "Felicidad: {felicidad}\nCompromiso: {compromiso}\nAdopción: {adopcion}\nRetención: {retencion}\nÉxito en tareas: {exito_en_tareas}",
+    'mece': "Mutuamente Exclusivo: {mutuamente_exclusivo}\nColectivamente Exhaustivo: {colectivamente_exhaustivo}",
+    'ooda': "Observar: {observar}\nOrientar: {orientar}\nDecidir: {decidir}\nActuar: {actuar}",
+    'pdca': "Planificar: {planificar}\nHacer: {hacer}\nVerificar: {verificar}\nActuar: {actuar}",
+    'vmost': "Visión: {vision}\nMisión: {mission}\nObjetivos: {objectives}\nEstrategia: {strategy}\nTáctica: {tactica}",
+    'swot': "Fortalezas: {fortalezas}\nDebilidades: {debilidades}\nOportunidades: {oportunidades}\nAmenazas: {amenazas}",
+    'adkar': "Awareness: {awareness}\nDesire: {desire}\nKnowledge: {knowledge}\nAbility: {ability}\nReinforcement: {reinforcement}",
+    'okr': "Objectives: {objectives}\nKey Results: {key_results}",
+    '5w2h': "What: {what}\nWhy: {why}\nWhere: {where}\nWhen: {when}\nWho: {who}\nHow: {how}\nHow much: {how_much}",
+    '6m': "Man: {man}\nMachine: {machine}\nMaterial: {material}\nMethod: {method}\nMeasurement: {measurement}\nMother Nature: {mother_nature}",
+    '4p': "Product: {product}\nPrice: {price}\nPlace: {place}\nPromotion: {promotion}",
+    'rice': "Reach: {reach}\nImpact: {impact}\nConfidence: {confidence}\nEffort: {effort}",
+    'ice': "Impact: {impact}\nConfidence: {confidence}\nEase: {ease}",
+    'rasci': "Responsable: {responsable}\nAccountable: {accountable}\nSupportive: {supportive}\nConsulted: {consulted}\nInformed: {informed}"
 }
 
 """
@@ -505,6 +523,106 @@ Compradores interesados en productos artesanales únicos, con poder adquisitivo 
 ## Alcance del Proyecto
 Incluye: Catálogo de productos, sistema de pagos, panel de administración, perfiles de artesanos.
 No incluye: Aplicación móvil nativa, integración con puntos físicos.
+""",
+    'daci': """
+Driver: Líder Técnico del Proyecto
+Approver: Director de Tecnología
+Contributor: Equipo de Desarrollo, QA
+Informed: Stakeholders, Equipos de Soporte
+""",
+    'raci': """
+Responsable: Equipo de Desarrollo Frontend
+Accountable: Líder de Proyecto
+Consultado: Equipo UX, Arquitecto de Software
+Informed: Dirección, Otros Equipos
+""",
+    'heart': """
+Felicidad: Encuestas de satisfacción NPS > 80
+Compromiso: Visitas recurrentes semanales
+Adopción: Activación 70% de nuevas funciones
+Retención: Tasa de abandono < 5% mensual
+Éxito en tareas: Conversión del funnel > 25%
+""",
+    'mece': """
+Mutuamente Exclusivo: Segmentación por tipo de usuario
+Colectivamente Exhaustivo: Cobertura de todas las casuísticas
+""",
+    'ooda': """
+Observar: Monitorización en tiempo real
+Orientar: Análisis de patrones detectados
+Decidir: Selección de la mejor estrategia
+Actuar: Implementación inmediata
+""",
+    'pdca': """
+Planificar: Diseño de la arquitectura
+Hacer: Implementación por fases
+Verificar: Pruebas A/B y métricas
+Actuar: Ajustes basados en feedback
+""",
+    'vmost': """
+Visión: Liderazgo en procesamiento de datos
+Misión: Proporcionar insights accionables
+Objetivos: Reducir latencia 40% en 6 meses
+Estrategia: Migración a arquitectura cloud
+Táctica: Implementación de procesamiento distribuido
+""",
+    'swot': """
+Fortalezas: Equipo experto, tecnología avanzada
+Debilidades: Recursos limitados, deuda técnica
+Oportunidades: Nuevos mercados, tecnologías emergentes
+Amenazas: Competidores disruptivos, cambios regulatorios
+""",
+    'adkar': """
+Awareness: Comunicación del cambio tecnológico
+Desire: Beneficios para equipos y usuarios
+Knowledge: Capacitación en nuevas tecnologías
+Ability: Prácticas guiadas y ambiente de pruebas
+Reinforcement: Soporte continuo y mejoras
+""",
+    'okr': """
+Objectives: Mejorar experiencia de usuario
+Key Results: NPS>60, Tiempo de carga<2s, Conversión+20%
+""",
+    '5w2h': """
+What: Sistema de autenticación multifactor
+Why: Mejorar seguridad de acceso a datos sensibles
+Where: Aplicación web y móvil
+When: Implementación en Q2 2024
+Who: Equipo de seguridad con soporte DevOps
+How: Desarrollo progresivo con pruebas continuas
+How much: 3 sprint de desarrollo, $30K en infraestructura
+""",
+    '6m': """
+Man: Capacitación del equipo en nuevas tecnologías
+Machine: Servidor de alta disponibilidad en la nube
+Material: Bases de datos optimizadas y actualizadas
+Method: Metodología ágil con integración continua
+Measurement: Métricas de rendimiento en tiempo real
+Mother Nature: Contingencias para interrupciones externas
+""",
+    '4p': """
+Product: Plataforma SaaS de análisis predictivo
+Price: Modelo freemium con planes por volumen
+Place: Distribución directa y marketplace
+Promotion: Webinars, casos de éxito y prueba gratuita
+""",
+    'rice': """
+Reach: Impacto en 15mil usuarios activos
+Impact: Mejora del 30% en métricas clave
+Confidence: 80% basado en datos históricos
+Effort: 2 sprints con equipo de 4 desarrolladores
+""",
+    'ice': """
+Impact: 8/10 en retención de usuarios
+Confidence: 7/10 basado en pruebas A/B
+Ease: 6/10 complejidad de implementación
+""",
+    'rasci': """
+Responsable: Equipo de Backend
+Accountable: Arquitecto de Soluciones
+Supportive: Equipo de QA y UX
+Consulted: Seguridad y Compliance
+Informed: Management y Stakeholders
 """
 }
 
@@ -635,7 +753,7 @@ def get_framework_recommendation(objective: str, context: str = "general") -> st
     # Mensaje del sistema que guía al modelo en su tarea de recomendación
     system_message = f'''Eres un experto en frameworks de prompts en español. Tu tarea es analizar el objetivo del usuario y recomendar ÚNICAMENTE uno de los siguientes frameworks disponibles. NO INVENTES FRAMEWORKS NUEVOS:
 
-    RTF, TAG, BAB, CARE, RISE, PEAS, STAR, QCQA, AIDA, PARA, SMART, ERQ, CODE, PROS, TEAM, IDEA, FAST, LEAP, GROW, SPIN, DESIGN, VISION, IMPACT, MASTER, POWER, LOGIC, SCOPE, FOCUS, EXPERT, CLARITY, GUIDE, PATH, LEARN, SOLVE, PRIME, ADAPT, BUILD, CRAFT, SCALE, THINK, QUEST, DRIVE, SHAPE, REACH, BLEND, SPARK, PULSE
+    RTF, TAG, BAB, CARE, RISE, PEAS, STAR, QCQA, AIDA, PARA, SMART, ERQ, CODE, PROS, TEAM, IDEA, FAST, LEAP, GROW, SPIN, DESIGN, VISION, IMPACT, MASTER, POWER, LOGIC, SCOPE, FOCUS, EXPERT, CLARITY, GUIDE, PATH, LEARN, SOLVE, PRIME, ADAPT, BUILD, CRAFT, SCALE, THINK, QUEST, DRIVE, SHAPE, REACH, BLEND, SPARK, PULSE, DACI, RACI, HEART, MECE, OODA, PDCA, VMOST, SWOT, ADKAR, OKR, 5W2H, 6M, 4P, RICE, ICE, RASCI, CREATE, FLOW, BOLT, PACE, AGILE, SEED, SHIFT, LIFT, PATHS, FASTER, VALUE, SMARTER, GRIT, GLIDE, PIVOT, EPIC
 
     IMPORTANTE: SOLO PUEDES RECOMENDAR UNO DE LOS FRAMEWORKS LISTADOS ARRIBA. No inventes nuevos frameworks como "RECIPE" u otros.
 
@@ -649,24 +767,31 @@ def get_framework_recommendation(objective: str, context: str = "general") -> st
        - Transformación digital (LOGIC, EXPERT)
        - Expansión y crecimiento (SCOPE, GROW)
        - Innovación y desarrollo (DESIGN, VISION)
+       - Procesos creativos (CREATE, FLOW)
+       - Desarrollo ágil (AGILE, FASTER)
+       - Gestión del cambio (SHIFT, PIVOT)
+       - Optimización (FLOW, VALUE)
 
     2. Complejidad:
        - Simple (1-2 pasos): RTF, TAG, PEAS
        - Moderada (3-4 pasos): CARE, STAR, PARA
-       - Compleja (5+ pasos): MASTER, CLARITY, EXPERT
+       - Compleja (5+ pasos): MASTER, CLARITY, EXPERT, SMARTER
 
     3. Enfoque principal:
-       - Resultados medibles: SMART, POWER
-       - Proceso estructurado: LOGIC, EXPERT
-       - Transformación: VISION, IMPACT
-       - Planificación: SCOPE, MASTER
-       - Análisis: FOCUS, CLARITY
+       - Resultados medibles: SMART, POWER, GRIT
+       - Proceso estructurado: LOGIC, EXPERT, PATHS
+       - Transformación: VISION, IMPACT, SHIFT
+       - Planificación: SCOPE, MASTER, EPIC
+       - Análisis: FOCUS, CLARITY, VALUE
+       - Evaluación: ICE, RICE, MECE
 
     4. Contexto específico:
        - B2B vs B2C: SPIN vs AIDA
        - Interno vs Externo: TEAM vs IMPACT
        - Corto vs Largo plazo: FAST vs VISION
        - Estratégico vs Táctico: MASTER vs LOGIC
+       - Ágil vs Tradicional: AGILE vs CLARITY
+       - Innovación vs Optimización: CREATE vs FLOW
     '''
     
     # Añadir contexto específico para desarrollo web si aplica

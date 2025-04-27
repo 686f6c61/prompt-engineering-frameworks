@@ -140,7 +140,63 @@ const fieldTranslations = {
     horizon: 'Horizonte',
     framework: 'Framework',
     intention: 'Intención',
-    design: 'Diseño'
+    design: 'Diseño',
+    development: 'Desarrollo',
+    reason: 'Razón',
+    opportunities: 'Oportunidades',
+    relevance: 'Relevancia',
+    information: 'Información',
+    driver: 'Driver',
+    approver: 'Approver',
+    contributor: 'Contributor',
+    informed: 'Informado',
+    responsable: 'Responsable',
+    accountable: 'Accountable',
+    consultado: 'Consultado',
+    felicidad: 'Felicidad',
+    compromiso: 'Compromiso',
+    adopcion: 'Adopción',
+    retencion: 'Retención',
+    exito_en_tareas: 'Éxito en tareas',
+    mutuamente_exclusivo: 'Mutuamente Exclusivo',
+    colectivamente_exhaustivo: 'Colectivamente Exhaustivo',
+    observar: 'Observar',
+    orientar: 'Orientar',
+    decidir: 'Decidir',
+    actuar: 'Actuar',
+    planificar: 'Planificar',
+    hacer: 'Hacer',
+    verificar: 'Verificar',
+    tactica: 'Táctica',
+    fortalezas: 'Fortalezas',
+    debilidades: 'Debilidades',
+    amenazas: 'Amenazas',
+    awareness: 'Awareness',
+    ability: 'Ability',
+    reinforcement: 'Reinforcement',
+    objectives: 'Objectives',
+    key_results: 'Key Results',
+    what: 'What',
+    where: 'Where',
+    when: 'When',
+    who: 'Who',
+    how: 'How',
+    how_much: 'How much',
+    man: 'Man',
+    machine: 'Machine',
+    material: 'Material',
+    method: 'Method',
+    measurement: 'Measurement',
+    mother_nature: 'Mother Nature',
+    product: 'Product',
+    price: 'Price',
+    place: 'Place',
+    promotion: 'Promotion',
+    reach: 'Reach',
+    confidence: 'Confidence',
+    effort: 'Effort',
+    ease: 'Ease',
+    supportive: 'Supportive'
 };
 
 // Framework definitions
@@ -149,15 +205,15 @@ const frameworks = {
     'rtf': ['role', 'task', 'format'],
     'bab': ['before', 'after', 'bridge'],
     'care': ['context', 'action', 'result', 'example'],
-    'rise': ['role', 'input', 'steps', 'expectation'],
+    'rise': ['relevance', 'information', 'solution', 'evaluation'],
     'peas': ['purpose', 'end_result', 'audience', 'style'],
     'star': ['situation', 'task', 'action', 'result'],
     'qcqa': ['question', 'context', 'qualification', 'answer_format'],
     'aida': ['attention', 'interest', 'desire', 'action'],
-    'para': ['purpose', 'action', 'result', 'assessment'],
+    'para': ['problem', 'approach', 'reason', 'action'],
     'smart': ['specific', 'measurable', 'achievable', 'relevant', 'time_bound'],
     'erq': ['experience', 'requirements', 'qualifications'],
-    'code': ['context', 'objective', 'details', 'examples'],
+    'code': ['context', 'objective', 'development', 'evaluation'],
     'pros': ['perspective', 'requirements', 'outcome', 'scope'],
     'team': ['task', 'environment', 'approach', 'metrics'],
     'idea': ['identify', 'define', 'execute', 'assess'],
@@ -169,7 +225,7 @@ const frameworks = {
     'vision': ['visualize', 'identify', 'structure', 'implement', 'optimize', 'navigate'],
     'impact': ['intention', 'message', 'purpose', 'audience', 'channel', 'timing'],
     'master': ['mission', 'approach', 'strategy', 'tactics', 'execution', 'review'],
-    'power': ['problem', 'outcome', 'why', 'execution', 'resources'],
+    'power': ['problem', 'opportunities', 'why', 'execution', 'resources'],
     'logic': ['layout', 'objective', 'guidelines', 'implementation', 'criteria'],
     'scope': ['situation', 'core_need', 'obstacles', 'plan', 'evaluation'],
     'focus': ['frame', 'objective', 'constraints', 'understanding', 'solution'],
@@ -191,7 +247,23 @@ const frameworks = {
     'reach': ['requirements', 'evaluation', 'approach', 'completeness', 'handover'],
     'blend': ['base', 'learning', 'evolution', 'navigation', 'delivery'],
     'spark': ['strategy', 'planning', 'action', 'results', 'knowledge'],
-    'pulse': ['purpose', 'understanding', 'learning', 'strategy', 'evaluation']
+    'pulse': ['purpose', 'understanding', 'learning', 'strategy', 'evaluation'],
+    'daci': ['driver', 'approver', 'contributor', 'informed'],
+    'raci': ['responsable', 'accountable', 'consultado', 'informed'],
+    'heart': ['felicidad', 'compromiso', 'adopcion', 'retencion', 'exito_en_tareas'],
+    'mece': ['mutuamente_exclusivo', 'colectivamente_exhaustivo'],
+    'ooda': ['observar', 'orientar', 'decidir', 'actuar'],
+    'pdca': ['planificar', 'hacer', 'verificar', 'actuar'],
+    'vmost': ['vision', 'mission', 'objectives', 'strategy', 'tactica'],
+    'swot': ['fortalezas', 'debilidades', 'oportunidades', 'amenazas'],
+    'adkar': ['awareness', 'desire', 'knowledge', 'ability', 'reinforcement'],
+    'okr': ['objectives', 'key_results'],
+    '5w2h': ['what', 'why', 'where', 'when', 'who', 'how', 'how_much'],
+    '6m': ['man', 'machine', 'material', 'method', 'measurement', 'mother_nature'],
+    '4p': ['product', 'price', 'place', 'promotion'],
+    'rice': ['reach', 'impact', 'confidence', 'effort'],
+    'ice': ['impact', 'confidence', 'ease'],
+    'rasci': ['responsable', 'accountable', 'supportive', 'consulted', 'informed']
 };
 
 // Placeholders for each framework
@@ -218,16 +290,16 @@ const frameworkPlaceholders = {
         example: "Ej: Caso de éxito en proyecto similar"
     },
     'rise': {
-        role: "Ej: Tech Lead del equipo backend",
-        input: "Ej: Código base actual y requisitos",
-        steps: "Ej: 1. Análisis, 2. POC, 3. Implementación",
-        expectation: "Ej: Sistema escalable a 1M usuarios"
+        relevance: "Ej: Pérdida de usuarios en app móvil (25% en 3 meses)",
+        information: "Ej: Análisis de embudos muestra abandono en proceso de registro",
+        solution: "Ej: Simplificar flujo de registro reduciendo pasos de 5 a 3",
+        evaluation: "Ej: Meta de aumentar conversión en registro del 45% al 70%"
     },
     'peas': {
-        purpose: "Ej: Mejorar experiencia de usuario",
-        end_result: "Ej: Reducción de tiempo de carga",
-        audience: "Ej: Usuarios móviles",
-        style: "Ej: Diseño minimalista y eficiente"
+        purpose: "Ej: Informar sobre nueva política de seguridad informática",
+        end_result: "Ej: 100% del personal comprende y cumple las nuevas normas",
+        audience: "Ej: Empleados no técnicos con acceso a datos sensibles",
+        style: "Ej: Claro, conciso, con ejemplos prácticos e infografías"
     },
     'star': {
         situation: "Ej: Sistema legacy con problemas de rendimiento",
@@ -248,10 +320,10 @@ const frameworkPlaceholders = {
         action: "Ej: Plan de implementación"
     },
     'para': {
-        purpose: "Ej: Optimizar rendimiento del sistema",
-        action: "Ej: Implementar caché y optimizaciones",
-        result: "Ej: Mejora significativa de velocidad",
-        assessment: "Ej: Métricas de éxito"
+        problem: "Ej: Baja velocidad de desarrollo",
+        approach: "Ej: Implementar desarrollo en rama principal",
+        reason: "Ej: Reduce conflictos de fusión y acelera integración",
+        action: "Ej: Migración gradual por equipos de desarrollo"
     },
     'smart': {
         specific: "Ej: Reducir tiempo de carga a 200ms",
@@ -266,10 +338,10 @@ const frameworkPlaceholders = {
         qualifications: "Ej: Certificaciones relevantes"
     },
     'code': {
-        context: "Ej: Sistema actual y necesidades",
-        objective: "Ej: Meta del desarrollo",
-        details: "Ej: Especificaciones técnicas",
-        examples: "Ej: Casos de uso"
+        context: "Ej: Necesidad de mejorar el rendimiento del sistema",
+        objective: "Ej: Reducir el tiempo de carga en un 30%",
+        development: "Ej: Optimización de consultas y refactorización de código",
+        evaluation: "Ej: Comparación de métricas antes y después de la optimización"
     },
     'pros': {
         perspective: "Ej: Visión técnica del problema",
@@ -346,11 +418,11 @@ const frameworkPlaceholders = {
         review: "Ej: Proceso de revisión"
     },
     'power': {
-        problem: "Ej: Problema a resolver",
-        outcome: "Ej: Resultado esperado",
-        why: "Ej: Justificación",
-        execution: "Ej: Plan de ejecución",
-        resources: "Ej: Recursos necesarios"
+        problem: "Ej: Tiempo de carga lento del sitio web",
+        opportunities: "Ej: Mejora en conversiones y retención",
+        why: "Ej: Cada segundo de retraso reduce conversiones un 7%",
+        execution: "Ej: Plan de optimización de 3 semanas",
+        resources: "Ej: Especialista en rendimiento y presupuesto para CDN"
     },
     'logic': {
         layout: "Ej: Estructura del sistema",
@@ -502,11 +574,111 @@ const frameworkPlaceholders = {
         knowledge: "Ej: Conocimientos aplicados"
     },
     'pulse': {
-        purpose: "Ej: Propósito del proyecto",
-        understanding: "Ej: Comprensión del problema",
-        learning: "Ej: Aprendizaje durante el proyecto",
-        strategy: "Ej: Estrategia del proyecto",
-        evaluation: "Ej: Evaluación de resultados"
+        purpose: "Ej: Optimización de procesos",
+        understanding: "Ej: Análisis de flujos actuales",
+        learning: "Ej: Mejores prácticas del sector",
+        strategy: "Ej: Plan de implementación ágil",
+        evaluation: "Ej: KPIs de rendimiento"
+    },
+    'daci': {
+        driver: "Ej: Líder técnico del proyecto",
+        approver: "Ej: Comité de arquitectura",
+        contributor: "Ej: Desarrolladores e ingenieros DevOps",
+        informed: "Ej: Equipos de soporte y operaciones"
+    },
+    'raci': {
+        responsable: "Ej: Desarrollador senior",
+        accountable: "Ej: Gerente de proyecto",
+        consultado: "Ej: Arquitecto de sistemas y usuario clave",
+        informed: "Ej: Equipo de gestión y stakeholders"
+    },
+    'heart': {
+        felicidad: "Ej: Encuestas de satisfacción NPS",
+        compromiso: "Ej: Sesiones por usuario/mes",
+        adopcion: "Ej: Activaciones de nuevas funciones",
+        retencion: "Ej: Usuarios activos recurrentes",
+        exito_en_tareas: "Ej: Tasa de conversión en funnel"
+    },
+    'mece': {
+        mutuamente_exclusivo: "Ej: Segmentación de usuarios por rangos de edad no superpuestos",
+        colectivamente_exhaustivo: "Ej: Cobertura de todos los posibles grupos de edad"
+    },
+    'ooda': {
+        observar: "Ej: Monitoreo de métricas de sistema en tiempo real",
+        orientar: "Ej: Análisis de patrones y comportamientos anómalos",
+        decidir: "Ej: Selección de estrategia de mitigación",
+        actuar: "Ej: Implementación de solución y ajustes"
+    },
+    'pdca': {
+        planificar: "Ej: Diseñar proceso de CI/CD",
+        hacer: "Ej: Implementar la infraestructura y flujos",
+        verificar: "Ej: Medir tiempos de despliegue y fallos",
+        actuar: "Ej: Optimizar cuellos de botella identificados"
+    },
+    'vmost': {
+        vision: "Ej: Plataforma líder en procesamiento de datos",
+        mission: "Ej: Ofrecer insights accionables en tiempo real",
+        objectives: "Ej: Reducir latencia en un 50% en 6 meses",
+        strategy: "Ej: Migración a arquitectura distribuida",
+        tactica: "Ej: Implementar procesamiento en Edge"
+    },
+    'swot': {
+        fortalezas: "Ej: Equipo técnico especializado, infraestructura robusta",
+        debilidades: "Ej: Procesos manuales, deuda técnica acumulada",
+        oportunidades: "Ej: Nuevas tecnologías disponibles, mercado en expansión",
+        amenazas: "Ej: Competidores innovadores, regulaciones cambiantes"
+    },
+    'adkar': {
+        awareness: "Ej: Comunicar razón para migrar a metodologías ágiles",
+        desire: "Ej: Involucrar equipos en el diseño del nuevo proceso",
+        knowledge: "Ej: Capacitación en Scrum y herramientas asociadas",
+        ability: "Ej: Coaching y práctica guiada en primeros sprints",
+        reinforcement: "Ej: Reconocimiento de mejoras y ajustes continuos"
+    },
+    'okr': {
+        objectives: "Ej: Crear la mejor experiencia de usuario en nuestra categoría",
+        key_results: "Ej: Aumentar NPS de 30 a 60, reducir tiempo de carga a <2s, incrementar retención en un 20%"
+    },
+    '5w2h': {
+        what: "Ej: Implementación de un sistema de monitoreo en tiempo real",
+        why: "Ej: Para detectar y responder proactivamente a incidentes",
+        where: "Ej: En los servidores de producción y pre-producción",
+        when: "Ej: Durante el próximo mes, con despliegue final el 15 de octubre",
+        who: "Ej: Equipo de DevOps con apoyo del equipo de Seguridad",
+        how: "Ej: Utilizando Prometheus y Grafana con alertas automatizadas",
+        how_much: "Ej: Presupuesto de 20K para licencias y 15 días/persona de trabajo"
+    },
+    '6m': {
+        man: "Ej: Falta de capacitación en nuevas herramientas",
+        machine: "Ej: Servidores sobrecargados en horas pico",
+        material: "Ej: Datos de entrada inconsistentes o corruptos",
+        method: "Ej: Proceso de validación insuficiente",
+        measurement: "Ej: Métricas imprecisas de rendimiento",
+        mother_nature: "Ej: Interferencias de red en ciertas ubicaciones"
+    },
+    '4p': {
+        product: "Ej: Plataforma SaaS de análisis de datos con IA integrada",
+        price: "Ej: Modelo freemium con niveles premium por volumen de datos",
+        place: "Ej: Distribución directa vía web y marketplace de integraciones",
+        promotion: "Ej: Marketing de contenidos técnicos y demostraciones en vivo"
+    },
+    'rice': {
+        reach: "Ej: 10.000 usuarios mensuales",
+        impact: "Ej: 3 de 5 en escala definida",
+        confidence: "Ej: 80%",
+        effort: "Ej: 5 persona-semanas"
+    },
+    'ice': {
+        impact: "Ej: 8/10 - Mejora significativa en retención",
+        confidence: "Ej: 7/10 - Basado en datos de pruebas A/B previas",
+        ease: "Ej: 6/10 - Implementación moderadamente compleja"
+    },
+    'rasci': {
+        responsable: "Ej: Equipo de desarrollo",
+        accountable: "Ej: Arquitecto de soluciones",
+        supportive: "Ej: Equipo de operaciones y SRE",
+        consulted: "Ej: Equipo de seguridad y equipo de UX",
+        informed: "Ej: Directores de producto y stakeholders"
     }
 };
 
@@ -891,7 +1063,23 @@ function showFrameworkExample(framework) {
         'vision': 'VISION-Visualizar-Identificar-Estructurar-Implementar-Optimizar-Navegar',
         'impact': 'IMPACT-Intencion-Mensaje-Proposito-Audiencia-Canal-Tiempo',
         'master': 'MASTER-Mision-Aproximacion-Estrategia-Tacticas-Ejecucion-Revision',
-        'power': 'POWER-Problema-Resultado-PorQue-Ejecucion-Recursos'
+        'power': 'POWER-Problema-Resultado-PorQue-Ejecucion-Recursos',
+        'daci': 'DACI-Driver-Approver-Contributor-Informed',
+        'raci': 'RACI-Responsable-Accountable-Consultado-Informado',
+        'heart': 'HEART-Felicidad-Compromiso-Adopcion-Retencion-Exitoentareas',
+        'mece': 'MECE-MutuamenteExclusivo-ColectivamenteExhaustivo',
+        'ooda': 'OODA-Observar-Orientar-Decidir-Actuar',
+        'pdca': 'PDCA-Planificar-Hacer-Verificar-Actuar',
+        'vmost': 'VMOST-Vision-Mision-Objetivos-Estrategia-Tactica',
+        'swot': 'SWOT-Fortalezas-Debilidades-Oportunidades-Amenazas',
+        'adkar': 'ADKAR-Awareness-Desire-Knowledge-Ability-Reinforcement',
+        'okr': 'OKR-Objectives-KeyResults',
+        '5w2h': '5W2H-What-Why-Where-When-Who-How-Howmuch',
+        '6m': '6M-Man-Machine-Material-Method-Measurement-MotherNature',
+        '4p': '4P-Product-Price-Place-Promotion',
+        'rice': 'RICE-Reach-Impact-Confidence-Effort',
+        'ice': 'ICE-Impact-Confidence-Ease',
+        'rasci': 'RASCI-Responsible-Accountable-Supportive-Consulted-Informed'
     };
 
     // Obtener el nombre completo del archivo
@@ -1142,7 +1330,9 @@ function updateUsageInfo() {
                 updateUsageDisplay({
                     remaining: usageInfo.remaining,
                     reset_time: usageInfo.reset_time,
-                    limited: usageInfo.limited
+                    limited: usageInfo.remaining <= 0,
+                    max: usageInfo.max || 10,
+                    has_promo: usageInfo.has_promo || false
                 });
             }
         })
@@ -1172,7 +1362,7 @@ function checkUsageLimit() {
                 updateUsageDisplay({
                     remaining: usageInfo.remaining,
                     reset_time: usageInfo.reset_time,
-                    limited: usageInfo.limited,
+                    limited: usageInfo.remaining <= 0,
                     max: usageInfo.max || 10,
                     has_promo: usageInfo.has_promo || false
                 });

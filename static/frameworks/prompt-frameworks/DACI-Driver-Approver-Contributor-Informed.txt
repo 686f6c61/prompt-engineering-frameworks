@@ -1,0 +1,88 @@
+# Framework DACI: Conductor, Aprobador, Contribuidor, Informado
+
+El framework DACI es una matriz de responsabilidades utilizada para clarificar los roles en la toma de decisiones dentro de proyectos u organizaciones. Esta estructura permite definir claramente quién tiene autoridad para impulsar decisiones, quién las aprueba, quién contribuye con información y quién debe mantenerse informado.
+
+## Componentes principales:
+
+### D - Conductor (Driver)
+La persona responsable de impulsar la decisión hasta su conclusión.
+- ¿Quién coordina el proceso de toma de decisiones?
+- ¿Quién recopila la información necesaria y gestiona el cronograma?
+- ¿Quién asegura que se llegue a una decisión en el plazo establecido?
+- ¿Quién implementa la decisión una vez tomada?
+
+### A - Aprobador (Approver)
+La persona o personas con autoridad para tomar la decisión final o aprobarla.
+- ¿Quién tiene la última palabra?
+- ¿Quién asume la responsabilidad por el resultado de la decisión?
+- ¿Cuántos aprobadores son necesarios y cómo se resuelven los desacuerdos?
+- ¿Qué criterios utilizarán para aprobar o rechazar?
+
+### C - Contribuidor (Contributor)
+Personas que aportan información relevante o experiencia para la toma de decisiones.
+- ¿Quién tiene conocimientos especializados necesarios?
+- ¿Quién será consultado antes de tomar la decisión?
+- ¿Qué equipos o departamentos deben aportar su perspectiva?
+- ¿Cómo se incorporarán sus aportaciones al proceso?
+
+### I - Informado (Informed)
+Personas que deben ser informadas sobre la decisión pero que no participan en el proceso de tomarla.
+- ¿Quién se verá afectado por la decisión?
+- ¿Quién necesita estar al tanto para coordinar su trabajo?
+- ¿Cómo y cuándo se les informará?
+- ¿Qué nivel de detalle necesitan conocer?
+
+## Aplicación como Prompt:
+
+```
+Necesito definir una matriz DACI para [proyecto/decisión]. Por favor, ayúdame a establecer claramente los roles y responsabilidades:
+
+# Conductor (Driver)
+[Identifica quién será responsable de impulsar esta decisión, coordinando el proceso y asegurando su implementación]
+
+# Aprobador (Approver)
+[Define quién tiene la autoridad final para aprobar o rechazar, y qué criterios utilizarán]
+
+# Contribuidor (Contributor)
+[Lista todas las personas o equipos que deben ser consultados y qué tipo de información o experiencia aportarán]
+
+# Informado (Informed)
+[Especifica quiénes deben mantenerse informados sobre la decisión, por qué razones y cómo se les comunicará]
+
+Además, proporciona recomendaciones sobre:
+1. El proceso de comunicación entre los diferentes roles
+2. Cómo documentar la decisión y su justificación
+3. Cómo gestionar los posibles desacuerdos entre Aprobadores
+4. El cronograma recomendado para este proceso de decisión
+```
+
+## Ejemplo de uso:
+
+Matriz DACI para la decisión de selección de una nueva plataforma de CRM para la empresa:
+
+### Conductor (Driver):
+- **Gerente de Operaciones Comerciales**: Responsable de establecer los requisitos, investigar opciones, coordinar demostraciones de proveedores, recopilar feedback, y finalmente implementar la solución elegida. Elaborará también un documento con pros y contras de cada opción.
+
+### Aprobador (Approver):
+- **Director Comercial**: Tiene la autoridad final para aprobar la selección basada en capacidades del sistema, retorno de inversión y alineación con la estrategia comercial.
+- **Director Financiero**: Debe aprobar el presupuesto asignado a la solución.
+- *Proceso de aprobación*: Ambos directores deben aprobar; en caso de desacuerdo, el CEO mediará.
+
+### Contribuidor (Contributor):
+- **Equipo de Ventas**: Proporcionará requisitos funcionales desde la perspectiva del usuario principal.
+- **Departamento de IT**: Evaluará la compatibilidad técnica, seguridad y requerimientos de integración.
+- **Representantes de Marketing**: Aportarán requisitos relacionados con campañas y análisis de clientes.
+- **Servicio al Cliente**: Compartirá necesidades para la gestión de casos y soporte postventa.
+
+### Informado (Informed):
+- **Todos los empleados que utilizarán el sistema**: Serán informados del cambio y recibirán capacitación.
+- **Departamento de Finanzas**: Informado para preparar los pagos y ajustes presupuestarios.
+- **CEO**: Recibirá un resumen ejecutivo de la decisión y justificación.
+- **Proveedores actuales de sistemas relacionados**: Notificados para planificar integraciones.
+
+### Cronograma:
+- Semana 1-2: El Conductor recopila requisitos de los Contribuidores
+- Semana 3-4: Evaluación de proveedores y demostraciones
+- Semana 5: Presentación de opciones a los Aprobadores
+- Semana 6: Decisión final y comunicación a los Informados
+- Semana 7-12: Implementación 

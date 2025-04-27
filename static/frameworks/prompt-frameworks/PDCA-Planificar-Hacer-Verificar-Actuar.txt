@@ -1,0 +1,119 @@
+# Framework PDCA: Planificar, Hacer, Verificar, Actuar
+
+El ciclo PDCA (Plan, Do, Check, Act), también conocido como Ciclo de Deming o Ciclo de Mejora Continua, es una metodología iterativa de cuatro pasos utilizada para la mejora continua de procesos y productos. Desarrollado inicialmente por Walter A. Shewhart y popularizado por W. Edwards Deming, este marco se ha convertido en fundamental para la gestión de calidad y la optimización de procesos en organizaciones de todo tipo.
+
+## Componentes principales:
+
+### P - Planificar (Plan)
+Establecimiento de objetivos y procesos necesarios para entregar resultados de acuerdo con las especificaciones esperadas.
+- ¿Qué resultados queremos lograr?
+- ¿Qué datos tenemos y qué necesitamos recopilar?
+- ¿Qué cambios podrían ser deseables, qué recursos tenemos disponibles?
+- ¿Cómo y cuándo implementaremos los cambios?
+
+### D - Hacer (Do)
+Implementación del plan, ejecución del proceso, realización de los cambios diseñados.
+- ¿Cómo implementaremos lo que hemos planificado?
+- ¿Qué medidas tomaremos para garantizar la adherencia al plan?
+- ¿Cómo documentaremos lo que ocurra durante esta fase?
+- ¿Cómo manejaremos los problemas inesperados?
+
+### C - Verificar (Check)
+Monitorización y evaluación de los resultados mediante la comparación con los objetivos esperados.
+- ¿Los resultados obtenidos coinciden con los objetivos planteados?
+- ¿Qué funcionó bien y qué no funcionó?
+- ¿Qué aprendimos durante el proceso?
+- ¿Hay efectos secundarios o consecuencias imprevistas?
+
+### A - Actuar (Act)
+Toma de acciones para mejorar continuamente el desempeño de los procesos en base a lo aprendido.
+- ¿Qué acciones tomaremos basándonos en lo aprendido?
+- ¿Cómo estandarizaremos las mejoras efectivas?
+- ¿Qué ajustes necesitamos hacer antes del próximo ciclo?
+- ¿Cómo compartiremos el conocimiento adquirido?
+
+## Aplicación como Prompt:
+
+```
+Necesito aplicar el ciclo PDCA (Planificar, Hacer, Verificar, Actuar) para mejorar [proceso/situación/problema]. Por favor, guíame a través de las cuatro fases con un enfoque estructurado:
+
+# Planificar
+[Ayúdame a definir claramente el problema u oportunidad, establecer objetivos medibles, analizar la situación actual, identificar causas raíz, y desarrollar un plan de acción detallado con responsables y plazos]
+
+# Hacer
+[Proporciona una estrategia para implementar el plan a pequeña escala o en fase piloto, documentar el proceso, recopilar datos relevantes durante la ejecución, y gestionar problemas imprevistos]
+
+# Verificar
+[Diseña un método para analizar los resultados obtenidos comparándolos con los esperados, evaluar la efectividad de las soluciones implementadas, documentar lecciones aprendidas e identificar áreas de mejora]
+
+# Actuar
+[Recomienda cómo estandarizar y formalizar los cambios exitosos, comunicar mejores prácticas, planificar el siguiente ciclo de mejora, y ajustar metas más ambiciosas basadas en el aprendizaje]
+
+Además, proporciona:
+1. Herramientas y técnicas específicas recomendadas para cada fase
+2. Métricas clave para evaluar el progreso y éxito
+3. Desafíos comunes en cada fase y cómo superarlos
+4. Un cronograma recomendado para completar el ciclo completo
+```
+
+## Ejemplo de uso:
+
+Aplicación del ciclo PDCA para mejorar el tiempo de respuesta del servicio de atención al cliente:
+
+### Planificar:
+- **Definición del problema**: El tiempo medio de respuesta a consultas de clientes es de 48 horas, mientras que el estándar de la industria es de 24 horas.
+- **Objetivo medible**: Reducir el tiempo medio de respuesta de 48 a menos de 24 horas en un plazo de 3 meses, sin reducir la calidad de las respuestas.
+- **Análisis de la situación actual**:
+  * Medición de línea base: Tiempo medio actual de 48 horas
+  * Volumen: 250 consultas diarias a través de 3 canales (email, chat, teléfono)
+  * Distribución: Picos de consultas los lunes (30% más) y en horario de tarde
+  * Personal: 15 agentes distribuidos en 2 turnos
+- **Análisis de causas raíz**:
+  * Diagrama de Ishikawa revela problemas de: procesos de escalamiento complejos, carencia de respuestas pre-aprobadas, sistemas desconectados, y distribución inadecuada de personal según volumen
+- **Plan de acción**:
+  * Crear biblioteca de 50 respuestas pre-aprobadas para consultas frecuentes (Resp: Equipo Contenido, Plazo: 2 semanas)
+  * Rediseñar flujo de escalamiento reduciendo de 4 a 2 niveles (Resp: Gerente Operaciones, Plazo: 1 semana)
+  * Ajustar distribución de turnos según análisis de volumen (Resp: Supervisor, Plazo: 1 semana)
+  * Implementar integración de sistemas CRM y email (Resp: IT, Plazo: 3 semanas)
+
+### Hacer:
+- **Implementación piloto**: Aplicar cambios con 5 agentes seleccionados durante 2 semanas
+- **Documentación**: Crear nuevos procedimientos detallados para cada proceso modificado
+- **Capacitación**: Sesiones de entrenamiento de 3 horas para agentes piloto
+- **Recopilación de datos**:
+  * Tiempo de respuesta por tipo de consulta y canal
+  * Satisfacción del cliente (encuestas post-interacción)
+  * Comentarios y sugerencias de los agentes involucrados
+  * Número de escalamientos necesarios
+- **Gestión de imprevistos**: Establecer reunión diaria de 15 minutos para resolver problemas emergentes
+
+### Verificar:
+- **Análisis de resultados**:
+  * Tiempo medio de respuesta reducido a 28 horas en grupo piloto (mejora del 42%)
+  * Reducción del 60% en escalamientos necesarios
+  * Aumento de satisfacción del cliente de 7.2 a 8.1 (escala 1-10)
+  * Capacidad de gestión de consultas por agente aumentada en 25%
+- **Puntos de mejora identificados**:
+  * Las respuestas pre-aprobadas requieren más personalización
+  * Necesidad de capacitación adicional en el nuevo sistema CRM
+  * Algunos tipos de consultas técnicas siguen excediendo el tiempo objetivo
+
+### Actuar:
+- **Estandarización**: Extender los cambios exitosos a todo el equipo de atención al cliente
+- **Ajustes**:
+  * Revisar y mejorar las plantillas de respuestas con mayor flexibilidad para personalización
+  * Implementar programa de capacitación continua con sesiones semanales de 1 hora
+  * Crear equipo especializado para consultas técnicas complejas
+- **Documentación formal**: Actualizar manuales de procedimientos y políticas
+- **Próximo ciclo PDCA**: Iniciar nuevo ciclo enfocado en:
+  * Objetivo: Reducir tiempo de respuesta a consultas técnicas
+  * Meta: De 40 horas actuales a menos de 30 horas
+  * Plazo: Próximos 2 meses
+
+### Cronograma completo:
+- Planificar: 2 semanas
+- Hacer (piloto): 2 semanas
+- Verificar: 1 semana
+- Actuar (implementación completa): 3 semanas
+- Evaluación de resultados finales: Al finalizar el tercer mes
+- Inicio de nuevo ciclo PDCA: Inmediatamente después de la evaluación final 

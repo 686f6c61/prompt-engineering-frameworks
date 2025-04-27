@@ -1,0 +1,143 @@
+# Framework ADKAR: Conciencia, Deseo, Conocimiento, Habilidad, Refuerzo
+
+El modelo ADKAR es un framework de gestión del cambio desarrollado por Prosci que se enfoca en las fases individuales que una persona debe atravesar para adoptar y asimilar un cambio con éxito. Este marco proporciona una estructura para entender y abordar la dimensión humana del cambio, permitiendo a las organizaciones implementar transformaciones de manera más efectiva y con menos resistencia.
+
+## Componentes principales:
+
+### A - Conciencia (Awareness)
+Comprender la necesidad del cambio y por qué es importante.
+- ¿Por qué es necesario el cambio?
+- ¿Cuáles son los riesgos de no cambiar?
+- ¿Cómo afecta este cambio a la organización y a los individuos?
+- ¿Qué mensajes y canales son efectivos para comunicar esta necesidad?
+
+### D - Deseo (Desire)
+Motivación y voluntad para participar y apoyar el cambio.
+- ¿Qué motiva a las personas a adoptar este cambio?
+- ¿Qué beneficios personales obtendrán los individuos?
+- ¿Cómo se aborda la resistencia natural al cambio?
+- ¿Qué incentivos pueden reforzar el deseo de cambiar?
+
+### K - Conocimiento (Knowledge)
+Información, formación y educación necesarias para saber cómo cambiar.
+- ¿Qué nuevos conocimientos, habilidades o comportamientos se necesitan?
+- ¿Qué tipo de formación es necesaria?
+- ¿Cómo se transmitirá esta información de manera efectiva?
+- ¿Qué recursos educativos deben estar disponibles?
+
+### A - Habilidad (Ability)
+Capacidad para implementar el cambio y demostrar el desempeño requerido.
+- ¿Cómo se traduce el conocimiento en acción práctica?
+- ¿Qué barreras pueden impedir la aplicación del conocimiento?
+- ¿Qué soporte y coaching se necesita para desarrollar habilidades?
+- ¿Cómo se mide el progreso en la adquisición de habilidades?
+
+### R - Refuerzo (Reinforcement)
+Factores que sostienen y consolidan el cambio a largo plazo.
+- ¿Cómo se reconoce y celebra el progreso?
+- ¿Qué mecanismos aseguran que el cambio se mantenga?
+- ¿Cómo se corrigen las desviaciones del nuevo estado?
+- ¿Qué sistemas de feedback están implementados?
+
+## Aplicación como Prompt:
+
+```
+Necesito desarrollar un plan de gestión del cambio utilizando el modelo ADKAR para [iniciativa de cambio específica]. Por favor, proporciona estrategias detalladas para cada fase del proceso:
+
+# Conciencia (Awareness)
+[Desarrolla un plan de comunicación para crear comprensión sobre por qué el cambio es necesario, abordando el contexto, los impulsores del cambio, los riesgos de mantener el status quo, y los beneficios organizacionales esperados]
+
+# Deseo (Desire)
+[Proporciona estrategias para fomentar la motivación personal, abordar las preocupaciones individuales y la resistencia, identificar y activar agentes de cambio, y crear incentivos efectivos para la participación]
+
+# Conocimiento (Knowledge)
+[Diseña un plan de formación y educación que incluya los métodos de aprendizaje más adecuados, recursos necesarios, cronograma de capacitación, y mecanismos para evaluar la comprensión]
+
+# Habilidad (Ability)
+[Desarrolla un programa para convertir el conocimiento en competencia práctica, incluyendo prácticas guiadas, mentoría, eliminación de obstáculos, y métricas para evaluar el progreso de desempeño]
+
+# Refuerzo (Reinforcement)
+[Crea un sistema para sostener el cambio a largo plazo, con mecanismos de reconocimiento, celebración de logros, corrección de desviaciones, y evolución continua de los nuevos comportamientos]
+
+Para cada fase, incluye:
+1. Objetivos específicos y medibles
+2. Actividades clave y responsables
+3. Cronograma recomendado
+4. Posibles obstáculos y estrategias para superarlos
+```
+
+## Ejemplo de uso:
+
+Plan ADKAR para la implementación de una nueva plataforma de colaboración digital en una empresa:
+
+### Conciencia (Awareness):
+- **Objetivo**: Lograr que el 95% del personal comprenda la necesidad de adoptar la nueva plataforma en las primeras 2 semanas.
+- **Estrategia de comunicación**:
+  * **Mensaje central**: "Nuestra actual infraestructura tecnológica limita nuestra productividad y competitividad. La nueva plataforma permitirá un 30% más de eficiencia y facilitará el trabajo remoto/híbrido."
+  * **Canales múltiples**: Reunión general de lanzamiento, correos ejecutivos semanales, videos explicativos, infografías en espacios comunes e intranet.
+  * **Datos de respaldo**: Presentar estadísticas de ineficiencias actuales (tiempo perdido, duplicación de esfuerzos, problemas de versiones).
+  * **Narrativa de mercado**: Mostrar cómo los competidores están avanzando con tecnologías similares y los riesgos de quedarse atrás.
+- **Responsables**: CEO para mensaje inicial, Dirección de TI y Comunicación Interna para seguimiento.
+- **Obstáculos anticipados**: Saturación informativa, escepticismo por cambios anteriores fallidos.
+- **Métricas**: Encuestas de comprensión, participación en sesiones informativas.
+
+### Deseo (Desire):
+- **Objetivo**: Conseguir que el 80% de los empleados exprese voluntad positiva de adoptar la nueva plataforma antes del lanzamiento.
+- **Estrategias motivacionales**:
+  * **Beneficios personales**: Enfatizar reducción de tareas repetitivas, flexibilidad de ubicación, interfaz intuitiva.
+  * **Programa de campeones**: Identificar y capacitar a 20 "Embajadores Digitales" influyentes (uno por departamento).
+  * **Sesiones de escucha**: Organizar 10 grupos focales para abordar preocupaciones específicas por departamento.
+  * **Incentivos**: Reconocimiento para primeros adoptantes, pequeñas recompensas para participación en capacitación.
+- **Abordaje de resistencia**:
+  * Respuesta directa a preocupaciones específicas (seguridad de datos, curva de aprendizaje, etc.)
+  * Demostración de casos de éxito en departamentos piloto
+  * Garantía de soporte constante durante la transición
+- **Cronograma**: Semanas 3-6 del proyecto
+- **Métricas**: Encuestas de actitud, participación voluntaria en sesiones de demostración
+
+### Conocimiento (Knowledge):
+- **Objetivo**: Capacitar al 100% del personal en funcionalidades básicas y al 50% en funcionalidades avanzadas antes del mes 3.
+- **Plan de capacitación**:
+  * **Opciones de aprendizaje diversas**: Talleres presenciales (90 minutos), webinars grabados, microlearning digital (5-10 min), documentación en wiki interna.
+  * **Ruta de aprendizaje personalizada**: Módulos específicos según rol y departamento, con evaluaciones previas para determinar nivel.
+  * **Ambiente de práctica**: Versión de prueba con datos simulados para experimentación sin riesgo.
+  * **Recursos permanentes**: Biblioteca de tutoriales, preguntas frecuentes, y línea directa de ayuda.
+- **Secuencia de aprendizaje**: 
+  1. Funcionalidades básicas (navegación, comunicación)
+  2. Funcionalidades específicas por rol
+  3. Integración con otros sistemas
+  4. Solución de problemas comunes
+- **Cronograma**: Semanas 4-12, con sesiones recurrentes
+- **Métricas**: Tasas de finalización de capacitación, resultados de evaluaciones prácticas
+
+### Habilidad (Ability):
+- **Objetivo**: Lograr que el 85% de los usuarios demuestren competencia en tareas esenciales después de un mes de implementación.
+- **Desarrollo de competencias**:
+  * **Prácticas guiadas**: Sesiones semanales con tareas reales bajo supervisión de expertos.
+  * **Sistema de mentores**: Embajadores digitales disponibles 4 horas diarias para soporte en tiempo real.
+  * **Clínicas de solución**: Sesiones dedicadas para resolver problemas específicos que surjan.
+  * **Feedback inmediato**: Sistema automático que sugiere optimizaciones mientras se usa la plataforma.
+- **Eliminación de obstáculos**:
+  * Ajuste de permisos y flujos de trabajo que causen fricción
+  * Optimización de velocidad en áreas con conectividad limitada
+  * Creación de atajos y plantillas para tareas frecuentes
+- **Cronograma**: Meses 2-4, con intensidad decreciente
+- **Métricas**: Tiempo de finalización de tareas, tasa de errores, solicitudes de soporte
+
+### Refuerzo (Reinforcement):
+- **Objetivo**: Mantener una tasa de adopción superior al 90% durante los primeros 12 meses post-implementación.
+- **Estrategias de sostenibilidad**:
+  * **Programa de reconocimiento**: Destacar mensualmente a usuarios y equipos con mejor desempeño.
+  * **Comunidad de práctica**: Foro para compartir mejores prácticas y nuevos usos descubiertos.
+  * **Seguimiento de métricas**: Dashboard público de uso por departamento para estimular competencia positiva.
+  * **Ciclo de mejora**: Actualizaciones trimestrales basadas en feedback de usuarios.
+- **Mecanismos de corrección**:
+  * Alertas automáticas cuando se detectan patrones de uso ineficientes
+  * Sesiones de refuerzo para equipos con métricas por debajo del objetivo
+  * Ajuste de procesos que no estén funcionando según lo esperado
+- **Evolución planificada**:
+  * Roadmap de nuevas funcionalidades basado en necesidades emergentes
+  * Programa de certificación para usuarios avanzados
+  * Integración progresiva con más sistemas de la organización
+- **Cronograma**: Meses 4-12, con revisiones trimestrales
+- **Métricas**: Tasas de uso sostenido, encuestas de satisfacción, impacto en indicadores de negocio 

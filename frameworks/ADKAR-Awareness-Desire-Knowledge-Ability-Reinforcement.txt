@@ -1,0 +1,49 @@
+# ADKAR: Awareness-Desire-Knowledge-Ability-Reinforcement
+
+## Significado del Acrónimo
+
+*   **Awareness:** Conciencia sobre la necesidad de cambio y sus implicaciones
+*   **Desire:** Deseo de participar y apoyar el cambio propuesto
+*   **Knowledge:** Conocimiento sobre cómo cambiar y qué hacer durante la transición
+*   **Ability:** Capacidad para implementar las habilidades y comportamientos requeridos
+*   **Reinforcement:** Refuerzo para sostener y consolidar el cambio en el tiempo
+
+## Descripción y Propósito
+
+El framework ADKAR es un modelo para gestionar el cambio organizacional centrado en las personas. Proporciona una secuencia lógica de etapas que las personas deben atravesar para lograr un cambio exitoso y sostenible, desde la conciencia inicial sobre la necesidad de cambio hasta el refuerzo continuo para mantenerlo. Es especialmente valioso para transformaciones organizacionales, implementación de nuevos sistemas o procesos, y cualquier iniciativa que requiera cambios significativos en comportamientos o prácticas de trabajo.
+
+## Componentes
+
+*   **Awareness:** Conciencia sobre la necesidad de cambio y sus implicaciones
+*   **Desire:** Deseo de participar y apoyar el cambio propuesto
+*   **Knowledge:** Conocimiento sobre cómo cambiar y qué hacer durante la transición
+*   **Ability:** Capacidad para implementar las habilidades y comportamientos requeridos
+*   **Reinforcement:** Refuerzo para sostener y consolidar el cambio en el tiempo
+
+## Ejemplo de Uso
+
+*   **Awareness:** Comunicar razón para migrar a metodologías ágiles
+*   **Desire:** Involucrar equipos en el diseño del nuevo proceso
+*   **Knowledge:** Capacitación en Scrum y herramientas asociadas
+*   **Ability:** Coaching y práctica guiada en primeros sprints
+*   **Reinforcement:** Reconocimiento de mejoras y ajustes continuos
+
+## Casos Recomendados
+
+*   Transformación digital de organizaciones
+*   Adopción de nuevas metodologías de trabajo
+*   Implementación de sistemas o plataformas
+*   Fusiones y adquisiciones empresariales
+*   Reestructuración de equipos o departamentos
+*   Cambios culturales en la organización
+*   Adopción de nuevas tecnologías o herramientas
+
+## Ventajas
+
+*   Enfoque centrado en las personas, no solo en los procesos
+*   Estructura secuencial clara para gestionar el cambio
+*   Identifica y aborda barreras específicas en cada etapa
+*   Facilita el desarrollo de planes de cambio personalizados
+*   Proporciona un lenguaje común para discutir el progreso del cambio
+*   Mejora las tasas de éxito en iniciativas de transformación
+*   Reduce resistencia al cambio mediante un enfoque estructurado 

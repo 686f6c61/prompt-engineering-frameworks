@@ -4,7 +4,7 @@
   <img src="static/img/Frameworks-Prompt.png" alt="Frameworks Prompt" width="500">
 </div>
 
-Una aplicación web para generar prompts efectivos utilizando 47 frameworks especializados de prompt engineering.
+Una aplicación web para generar prompts efectivos utilizando 63 frameworks especializados de prompt engineering.
 
 ## 🌟 Características
 
@@ -136,6 +136,22 @@ Para obtener resultados óptimos se recomienda utilizar una API Key propia confi
 | **[I-M-P-A-C-T](static/frameworks/prompt-frameworks/IMPACT-Intencion-Mensaje-Proposito-Audiencia-Canal-Tiempo.txt)** | Intent, Message, Purpose, Audience, Channel, Timing | Estrategias de comunicación. |
 | **[M-A-S-T-E-R](static/frameworks/prompt-frameworks/MASTER-Mision-Aproximacion-Estrategia-Tacticas-Ejecucion-Revision.txt)** | Mission, Approach, Strategy, Tactics, Execution, Review | Gestión de proyectos. |
 | **[P-O-W-E-R](static/frameworks/prompt-frameworks/POWER-Problema-Resultado-PorQue-Ejecucion-Recursos.txt)** | Problem, Outcome, Why, Execution, Resources | Resolución de problemas. |
+| **[C-R-E-A-T-E](static/frameworks/prompt-frameworks/CREATE-Contexto-Requisitos-Ejemplos-Alternativas-Pruebas-Evaluacion.txt)** | Context, Requirements, Examples, Alternatives, Testing, Evaluation | Procesos creativos y desarrollo de soluciones. |
+| **[F-L-O-W](static/frameworks/prompt-frameworks/FLOW-Enfoque-Limites-Resultados-Trabajo.txt)** | Focus, Limits, Outcomes, Work | Optimización de procesos y productividad. |
+| **[B-O-L-T](static/frameworks/prompt-frameworks/BOLT-Negocio-Operaciones-Legal-Tecnico.txt)** | Business, Operations, Legal, Technical | Análisis empresarial integral. |
+| **[P-A-C-E](static/frameworks/prompt-frameworks/PACE-Proposito-Audiencia-Contenido-Expresion.txt)** | Purpose, Audience, Content, Expression | Comunicación efectiva y presentaciones. |
+| **[A-G-I-L-E](static/frameworks/prompt-frameworks/AGILE-Adaptable-Orientado-Iterativo-Ligero-Eficiente.txt)** | Adaptable, Goal-oriented, Iterative, Lightweight, Efficient | Desarrollo ágil y gestión de proyectos. |
+| **[S-E-E-D](static/frameworks/prompt-frameworks/SEED-Situacion-Expectativa-Ejecucion-Entrega.txt)** | Situation, Expectation, Execution, Delivery | Implementación de proyectos desde cero. |
+| **[S-H-I-F-T](static/frameworks/prompt-frameworks/SHIFT-Situacion-Obstaculos-Innovacion-Marco-Transicion.txt)** | Situation, Hurdles, Innovation, Framework, Transition | Gestión del cambio y transformación. |
+| **[L-I-F-T](static/frameworks/prompt-frameworks/LIFT-Aprendizaje-Implementacion-Retroalimentacion-Transformacion.txt)** | Learning, Implementation, Feedback, Transformation | Mejora continua y aprendizaje. |
+| **[P-A-T-H-S](static/frameworks/prompt-frameworks/PATHS-Problema-Alternativas-Compensaciones-Hipotesis-Solucion.txt)** | Problem, Alternatives, Tradeoffs, Hypothesis, Solution | Toma de decisiones complejas. |
+| **[F-A-S-T-E-R](static/frameworks/prompt-frameworks/FASTER-Enfoque-Analisis-Solucion-Prueba-Evaluacion-Refinamiento.txt)** | Focus, Analysis, Solution, Testing, Evaluation, Refinement | Desarrollo rápido y optimización. |
+| **[V-A-L-U-E](static/frameworks/prompt-frameworks/VALUE-Vision-Aproximacion-Aprovechamiento-Comprension-Ejecucion.txt)** | Vision, Approach, Leverage, Understanding, Execution | Creación de valor empresarial. |
+| **[S-M-A-R-T-E-R](static/frameworks/prompt-frameworks/SMARTER-Especifico-Medible-Alcanzable-Relevante-Temporal-Evaluar-Reevaluar.txt)** | Specific, Measurable, Achievable, Relevant, Time-bound, Evaluate, Reassess | Definición y seguimiento de objetivos. |
+| **[G-R-I-T](static/frameworks/prompt-frameworks/GRIT-Meta-Recursos-Impedimentos-Tiempo.txt)** | Goal, Resources, Impediments, Timeline | Gestión de proyectos con objetivos desafiantes. |
+| **[G-L-I-D-E](static/frameworks/prompt-frameworks/GLIDE-Meta-Limitaciones-Implementacion-Desarrollo-Evaluacion.txt)** | Goal, Limitations, Implementation, Development, Evaluation | Desarrollo de productos de forma eficiente. |
+| **[P-I-V-O-T](static/frameworks/prompt-frameworks/PIVOT-Problema-Investigacion-Verificacion-Oportunidad-Transformacion.txt)** | Problem, Investigation, Verification, Opportunity, Transformation | Adaptación y gestión del cambio. |
+| **[E-P-I-C](static/frameworks/prompt-frameworks/EPIC-Expectativa-Plan-Implementacion-Completacion.txt)** | Expectation, Plan, Implementation, Completion | Gestión de proyectos con entregables claros. |
 
 ### 🛠️ Características técnicas
 - **Generación de prompts**: Creación automática según el framework seleccionado
@@ -359,3 +375,23 @@ Las contribuciones son bienvenidas. Por favor:
 ## 📝 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 📋 Historial de versiones recientes
+
+### V.08 (Abril 2025)
+- Ampliación a 63 frameworks disponibles para prompt engineering
+- Aumento en los créditos de uso para usuarios gratuitos
+- Mejoras en algoritmo de recomendación para incluir nuevos frameworks
+- Optimización del sistema de búsqueda de frameworks
+
+### V.07 (Abril 2025)
+- Implementación de sistema de códigos promocionales para aumentar límites gratuitos
+- Mejora en la sección de configuración para usar modelos premium con API propia
+- Actualización de interfaz para solicitar aumento de límites gratuitos
+- Correcciones en validación de códigos promocionales
+
+### V.06 (10 Abril 2025)
+- Adición de sección de modelos razonadores para análisis lógico avanzado
+- Soporte para uso de API personal del usuario con modelos razonadores
+- Mejoras en rendimiento y tiempo de respuesta
+- Correcciones de bugs menores y mejoras de UX

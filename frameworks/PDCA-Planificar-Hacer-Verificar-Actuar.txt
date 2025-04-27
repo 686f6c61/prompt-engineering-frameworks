@@ -1,0 +1,46 @@
+# PDCA: Planificar-Hacer-Verificar-Actuar
+
+## Significado del Acrónimo
+
+*   **Planificar:** Establecer objetivos, procesos y acciones necesarias para lograr resultados
+*   **Hacer:** Implementar el plan, ejecutar el proceso y llevar a cabo las acciones
+*   **Verificar:** Monitorear y evaluar los resultados contra los objetivos planificados
+*   **Actuar:** Tomar acciones para mejorar continuamente el desempeño del proceso
+
+## Descripción y Propósito
+
+El framework PDCA (también conocido como Ciclo de Deming) es una metodología para la mejora continua de procesos y productos. Proporciona un enfoque sistemático y cíclico que comienza con la planificación, continúa con la implementación, verifica los resultados y actúa para incorporar mejoras. Este ciclo iterativo promueve el aprendizaje organizacional y la optimización constante de operaciones. Es particularmente valioso para la gestión de calidad, optimización de procesos y cualquier iniciativa que requiera mejora sistemática a lo largo del tiempo.
+
+## Componentes
+
+*   **Planificar:** Establecer objetivos, procesos y acciones necesarias para lograr resultados
+*   **Hacer:** Implementar el plan, ejecutar el proceso y llevar a cabo las acciones
+*   **Verificar:** Monitorear y evaluar los resultados contra los objetivos planificados
+*   **Actuar:** Tomar acciones para mejorar continuamente el desempeño del proceso
+
+## Ejemplo de Uso
+
+*   **Planificar:** Diseñar proceso de CI/CD
+*   **Hacer:** Implementar la infraestructura y flujos
+*   **Verificar:** Medir tiempos de despliegue y fallos
+*   **Actuar:** Optimizar cuellos de botella identificados
+
+## Casos Recomendados
+
+*   Implementación de sistemas de gestión de calidad
+*   Optimización de procesos de desarrollo
+*   Mejora de operaciones técnicas
+*   Reducción de errores y problemas recurrentes
+*   Estandarización de procedimientos
+*   Implementación de cambios organizacionales
+*   Desarrollo de programas de mejora continua
+
+## Ventajas
+
+*   Proporciona un enfoque estructurado para la mejora continua
+*   Facilita la identificación y resolución sistemática de problemas
+*   Promueve decisiones basadas en datos y mediciones
+*   Previene la recurrencia de problemas mediante acciones correctivas
+*   Establece una cultura de mejora y aprendizaje continuo
+*   Permite adaptarse a cambios a través de iteraciones
+*   Sistematiza el proceso de optimización de resultados 

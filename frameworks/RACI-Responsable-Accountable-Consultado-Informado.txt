@@ -1,0 +1,46 @@
+# RACI: Responsable-Accountable-Consultado-Informado
+
+## Significado del Acrónimo
+
+*   **Responsable:** Persona(s) que realiza el trabajo para completar la tarea
+*   **Accountable:** Persona que rinde cuentas por el resultado final y tiene capacidad de decisión
+*   **Consultado:** Personas cuyas opiniones se solicitan para la toma de decisiones o ejecución
+*   **Informado:** Personas que son mantenidas al día sobre el progreso y las decisiones
+
+## Descripción y Propósito
+
+El framework RACI es una matriz para asignar y visualizar las responsabilidades de los miembros del equipo en un proyecto o proceso. Define con claridad quién hace el trabajo, quién es responsable último, quién debe ser consultado y quién debe ser informado. Este enfoque evita confusiones sobre roles, reduce vacíos de responsabilidad y mejora la coordinación en equipos multidisciplinarios, siendo particularmente valioso en gestión de proyectos complejos.
+
+## Componentes
+
+*   **Responsable:** Persona(s) que realiza el trabajo para completar la tarea
+*   **Accountable:** Persona que rinde cuentas por el resultado final y tiene capacidad de decisión
+*   **Consultado:** Personas cuyas opiniones se solicitan para la toma de decisiones o ejecución
+*   **Informado:** Personas que son mantenidas al día sobre el progreso y las decisiones
+
+## Ejemplo de Uso
+
+*   **Responsable:** Desarrollador senior
+*   **Accountable:** Gerente de proyecto
+*   **Consultado:** Arquitecto de sistemas y usuario clave
+*   **Informado:** Equipo de gestión y stakeholders
+
+## Casos Recomendados
+
+*   Gestión de proyectos tecnológicos
+*   Definición de procesos organizacionales
+*   Iniciativas cross-funcionales
+*   Reestructuración de equipos
+*   Implementación de cambios significativos
+*   Desarrollo de nuevos productos o servicios
+*   Proyectos con múltiples equipos involucrados
+
+## Ventajas
+
+*   Clarifica roles y responsabilidades en todas las etapas
+*   Evita duplicación de esfuerzos y confusiones
+*   Asegura que cada tarea tenga un responsable claro
+*   Mejora la rendición de cuentas en equipos
+*   Facilita la comunicación y gestión de expectativas
+*   Optimiza flujos de trabajo entre departamentos
+*   Reduce riesgos de que tareas queden sin asignar 

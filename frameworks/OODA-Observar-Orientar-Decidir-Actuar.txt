@@ -1,0 +1,46 @@
+# OODA: Observar-Orientar-Decidir-Actuar
+
+## Significado del Acrónimo
+
+*   **Observar:** Recopilar datos e información del entorno y situación actual
+*   **Orientar:** Analizar los datos, contextualizarlos y formar una perspectiva
+*   **Decidir:** Determinar el curso de acción basado en las alternativas disponibles
+*   **Actuar:** Implementar la decisión y ejecutar las acciones correspondientes
+
+## Descripción y Propósito
+
+El framework OODA, originado en contextos militares, es un ciclo de decisión diseñado para entornos dinámicos que requieren respuestas rápidas. Proporciona un proceso iterativo que permite observar la situación, orientarse para entenderla, decidir qué hacer y actuar en consecuencia. El objetivo es recorrer este ciclo más rápido y eficientemente que los competidores o que la velocidad de cambio del entorno. Es especialmente valioso en situaciones que requieren adaptabilidad, rapidez y eficacia en la toma de decisiones.
+
+## Componentes
+
+*   **Observar:** Recopilar datos e información del entorno y situación actual
+*   **Orientar:** Analizar los datos, contextualizarlos y formar una perspectiva
+*   **Decidir:** Determinar el curso de acción basado en las alternativas disponibles
+*   **Actuar:** Implementar la decisión y ejecutar las acciones correspondientes
+
+## Ejemplo de Uso
+
+*   **Observar:** Monitoreo de métricas de sistema en tiempo real
+*   **Orientar:** Análisis de patrones y comportamientos anómalos
+*   **Decidir:** Selección de estrategia de mitigación
+*   **Actuar:** Implementación de solución y ajustes
+
+## Casos Recomendados
+
+*   Respuesta a incidentes de seguridad
+*   Toma de decisiones en entornos cambiantes
+*   Gestión de crisis técnicas
+*   Desarrollo ágil de productos
+*   Operaciones en tiempo real
+*   Ajustes estratégicos en mercados volátiles
+*   Resolución competitiva de problemas
+
+## Ventajas
+
+*   Facilita la toma de decisiones ágiles y adaptativas
+*   Mejora la capacidad de respuesta en situaciones cambiantes
+*   Promueve un enfoque basado en datos y observación continua
+*   Reduce la parálisis por análisis excesivo
+*   Permite ventajas competitivas en entornos dinámicos
+*   Integra la observación con la acción en un ciclo continuo
+*   Aumenta la velocidad y eficacia de respuesta a eventos 

@@ -1,0 +1,107 @@
+# Framework OKR: Objetivos y Resultados Clave
+
+El framework OKR (Objectives and Key Results) es una metodología de establecimiento de metas y seguimiento del desempeño desarrollada inicialmente en Intel y popularizada por Google. Este sistema ayuda a las organizaciones a definir objetivos ambiciosos y medir el progreso hacia su consecución, alineando esfuerzos a través de toda la empresa y fomentando la transparencia y el enfoque.
+
+## Componentes principales:
+
+### O - Objetivos (Objectives)
+Declaraciones cualitativas, inspiradoras y ambiciosas que definen lo que se quiere lograr.
+- ¿Qué queremos conseguir?
+- ¿Es esta meta inspiradora y ambiciosa?
+- ¿Es clara y fácil de entender para todos?
+- ¿Está alineada con la misión y estrategia de la organización?
+
+### KR - Resultados Clave (Key Results)
+Métricas específicas y cuantificables que miden el progreso hacia el objetivo.
+- ¿Cómo mediremos el avance hacia nuestro objetivo?
+- ¿Son estas métricas específicas y medibles?
+- ¿Son suficientemente ambiciosas pero alcanzables?
+- ¿Cuántos resultados clave son apropiados (generalmente 2-5)?
+
+## Características esenciales:
+
+- **Aspiracionales**: Los OKRs deben impulsar a las personas y equipos a ir más allá de lo cómodo.
+- **Medibles**: Los resultados clave deben ser cuantificables, sin ambigüedades.
+- **Transparentes**: Todos los OKRs deberían ser visibles para toda la organización.
+- **Alineados**: Deben conectarse con la estrategia organizacional y entre niveles.
+- **Temporales**: Generalmente se establecen por trimestre, con revisiones frecuentes.
+
+## Aplicación como Prompt:
+
+```
+Necesito desarrollar un conjunto efectivo de OKRs para [departamento/equipo/organización] para [período de tiempo]. Por favor, ayúdame a crear:
+
+# Contexto
+[Describe brevemente la situación actual, la estrategia general, los desafíos que enfrenta la organización/equipo, y cualquier información relevante que ayude a entender el entorno]
+
+# Objetivos (2-4)
+[Define objetivos ambiciosos, inspiradores y cualitativos que describan lo que queremos lograr. Cada objetivo debe ser breve, motivador y alineado con la misión general]
+
+# Resultados Clave para cada Objetivo (2-5 por objetivo)
+[Para cada objetivo, especifica resultados clave medibles y cuantificables que permitan evaluar el progreso hacia ese objetivo. Deben ser suficientemente ambiciosos pero posibles, específicos y con un plazo definido]
+
+Además, proporciona:
+1. Recomendaciones para el seguimiento y las revisiones de estos OKRs
+2. Consejos para asegurar la alineación vertical y horizontal dentro de la organización
+3. Métodos para evaluar el éxito al final del período (sabiendo que lograr el 70% de los resultados clave suele considerarse un buen desempeño)
+4. Posibles desafíos en la implementación y cómo superarlos
+```
+
+## Ejemplo de uso:
+
+OKRs para el Departamento de Marketing de una empresa SaaS B2B para el Q2 2023:
+
+### Contexto:
+La empresa está lanzando una nueva característica de análisis avanzado y necesita aumentar la generación de leads cualificados mientras mejora el posicionamiento como líder de pensamiento en su sector. Los ingresos por cliente (ARPU) se han estancado, y la competencia está ganando visibilidad en el mercado.
+
+### Objetivo 1: Posicionar nuestra plataforma como la solución líder en análisis avanzado para empresas medianas
+
+**Resultados Clave:**
+1. Aumentar el tráfico orgánico a las páginas de la nueva característica en un 40% respecto al trimestre anterior
+2. Conseguir publicación de 5 artículos de opinión en medios de referencia del sector (Forbes, TechCrunch, Industry Weekly)
+3. Alcanzar 2.500 registros para el webinar de lanzamiento de la nueva característica
+4. Lograr que el 85% de los clientes actuales conozcan la nueva característica según encuesta de producto
+
+### Objetivo 2: Mejorar significativamente la calidad y conversión de leads
+
+**Resultados Clave:**
+1. Incrementar la tasa de conversión de MQL a SQL del 12% actual al 18%
+2. Reducir el coste por lead cualificado de marketing (MQL) de $65 a $45
+3. Aumentar el NPS de los recorridos de nurturing de 32 a 45
+4. Implementar y validar un nuevo modelo de scoring de leads con precisión del 80% o superior
+
+### Objetivo 3: Expandir el ecosistema de partners para ampliar alcance y capacidades
+
+**Resultados Clave:**
+1. Incorporar 8 nuevos partners tecnológicos con integraciones verificadas
+2. Lanzar programa de certificación para consultores con mínimo 25 profesionales certificados
+3. Generar el 15% de los nuevos ingresos trimestrales a través del canal de partners
+4. Crear y publicar 12 casos de éxito conjuntos con partners estratégicos
+
+### Seguimiento y revisión:
+- Revisiones semanales rápidas (15 min) de métricas clave en progreso
+- Revisión mensual profunda con ajustes tácticos si es necesario
+- Transparencia total: OKRs publicados en dashboard accesible para toda la empresa
+- Semáforo de estado: Verde (en camino), Amarillo (en riesgo), Rojo (desviación significativa)
+
+### Alineación organizacional:
+- Objetivo 1 se alinea con el OKR corporativo de "Liderar el mercado con innovación tecnológica"
+- Objetivo 2 soporta el OKR de Ventas de "Reducir el ciclo de ventas y aumentar tasa de cierre"
+- Objetivo 3 conecta con la iniciativa estratégica de "Expandir modelo de negocio mediante ecosistema"
+- Equipos individuales (Content, Demand Gen, Product Marketing) definirán sus propios OKRs que contribuyan a estos objetivos departamentales
+
+### Evaluación de éxito:
+- Puntuación 0.0-1.0 para cada resultado clave al final del trimestre
+- Escala de color: Rojo (<0.3), Naranja (0.3-0.7), Verde (>0.7)
+- Consideración de factores externos que puedan haber afectado el desempeño
+- Documentación de aprendizajes para mejora continua del proceso OKR
+
+### Desafíos potenciales y mitigación:
+- **Desafío**: Sobrecarga de métricas que distraen del foco principal
+  * **Solución**: Limitar estrictamente a máximo 4-5 resultados clave por objetivo
+- **Desafío**: Objetivos demasiado fáciles o imposibles
+  * **Solución**: Calibración con datos históricos y benchmarks de industria
+- **Desafío**: Desconexión entre equipos
+  * **Solución**: Sesiones de alineación al inicio del trimestre y revisiones cruzadas mensuales
+- **Desafío**: Abandono del seguimiento durante el trimestre
+  * **Solución**: Integración con herramientas de trabajo diario y visualización constante 

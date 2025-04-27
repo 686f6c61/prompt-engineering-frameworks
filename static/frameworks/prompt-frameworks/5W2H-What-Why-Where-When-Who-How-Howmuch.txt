@@ -1,0 +1,200 @@
+# Framework 5W2H: Qué, Por qué, Dónde, Cuándo, Quién, Cómo, Cuánto
+
+El framework 5W2H es una herramienta de planificación y análisis estructurado que permite examinar todos los aspectos relevantes de un problema, proceso o proyecto a través de siete preguntas fundamentales. Su nombre proviene de las iniciales en inglés: What, Why, Where, When, Who, How y How much. Esta metodología es especialmente útil para definir planes de acción, analizar procesos, resolver problemas y documentar procedimientos de manera clara y completa.
+
+## Componentes principales:
+
+### W1 - Qué (What)
+Define claramente la acción, actividad o problema que se aborda.
+- ¿Qué se debe hacer exactamente?
+- ¿Qué es el problema o la situación?
+- ¿Qué acciones o tareas son necesarias?
+- ¿Qué resultados se esperan?
+
+### W2 - Por qué (Why)
+Establece la justificación y el propósito detrás de la acción.
+- ¿Por qué es necesario hacer esto?
+- ¿Por qué es importante abordar este problema?
+- ¿Por qué se ha elegido este enfoque?
+- ¿Cuáles son los beneficios esperados?
+
+### W3 - Dónde (Where)
+Especifica la ubicación o contexto espacial para la acción.
+- ¿Dónde se llevará a cabo?
+- ¿En qué lugar físico o virtual ocurrirá?
+- ¿Dónde se aplica o implementa?
+- ¿Dónde se origina el problema?
+
+### W4 - Cuándo (When)
+Define el marco temporal para la acción o actividad.
+- ¿Cuándo comenzará y terminará?
+- ¿Cuál es el cronograma o la secuencia?
+- ¿Con qué frecuencia se realizará?
+- ¿Cuándo deberían ser visibles los resultados?
+
+### W5 - Quién (Who)
+Identifica a las personas responsables e involucradas.
+- ¿Quién será responsable de ejecutar esto?
+- ¿Quién necesita estar involucrado o informado?
+- ¿Quién debe proporcionar aprobación o recursos?
+- ¿Quién se beneficiará de esto?
+
+### H1 - Cómo (How)
+Detalla la metodología, el enfoque o los pasos para la ejecución.
+- ¿Cómo se llevará a cabo esta tarea?
+- ¿Qué métodos, herramientas o procesos se utilizarán?
+- ¿Cómo se medirá el éxito?
+- ¿Cómo se manejarán los obstáculos o desafíos?
+
+### H2 - Cuánto (How much)
+Cuantifica los recursos necesarios y los costos asociados.
+- ¿Cuánto costará en términos financieros?
+- ¿Cuántos recursos humanos, materiales o temporales se requieren?
+- ¿Cuánto se espera ganar o ahorrar?
+- ¿Cuál es la escala o el alcance del esfuerzo?
+
+## Aplicación como Prompt:
+
+```
+Necesito desarrollar un plan de acción completo utilizando el framework 5W2H para [problema/proyecto/proceso]. Por favor, proporciona un análisis detallado que cubra todos los aspectos clave:
+
+# Qué (What)
+[Define con precisión qué se debe hacer, detallando las acciones específicas, alcance y entregables concretos]
+
+# Por qué (Why)
+[Explica las razones fundamentales que justifican este proyecto/acción, incluyendo beneficios, necesidades que cubre, y consecuencias de no realizarlo]
+
+# Dónde (Where)
+[Especifica todas las ubicaciones relevantes para la implementación, considerando aspectos físicos, virtuales, departamentales o geográficos]
+
+# Cuándo (When)
+[Desarrolla un cronograma detallado con fechas de inicio/fin, hitos clave, plazos, secuencia de actividades y dependencias temporales]
+
+# Quién (Who)
+[Identifica a todos los stakeholders relevantes, asignando claramente responsabilidades, roles, equipos involucrados y necesidades de comunicación]
+
+# Cómo (How)
+[Describe la metodología completa de implementación, incluyendo procesos, tecnologías, mejores prácticas, pasos secuenciales y métodos de seguimiento]
+
+# Cuánto (How much)
+[Cuantifica todos los recursos necesarios: presupuesto financiero detallado, estimación de horas/personas, materiales, equipamiento y cualquier otro recurso requerido]
+
+Además, proporciona:
+1. Una matriz de responsabilidades RACI vinculada a los elementos clave del plan
+2. Un análisis de riesgos potenciales y estrategias de mitigación
+3. Métodos de seguimiento y control para asegurar la correcta implementación
+```
+
+## Ejemplo de uso:
+
+Plan 5W2H para la implementación de un sistema CRM en una empresa de servicios profesionales:
+
+### Qué (What):
+- **Acción principal**: Implementar un sistema CRM (Customer Relationship Management) integrado para centralizar toda la información de clientes y gestionar el ciclo de ventas.
+- **Alcance**: El sistema incluirá módulos de gestión de contactos, pipeline de ventas, seguimiento de interacciones, gestión de oportunidades, informes y análisis, e integración con el email.
+- **Entregables**:
+  * Plataforma CRM completamente configurada y operativa
+  * Datos de clientes actuales migrados y depurados
+  * Usuarios capacitados y activos en el sistema
+  * Documentación de procesos y manuales de usuario
+  * Informes automatizados para seguimiento de KPIs
+
+### Por qué (Why):
+- **Problema actual**: La información de clientes está fragmentada en múltiples hojas de cálculo, emails y notas personales, lo que provoca pérdida de oportunidades (estimado en 15% anual) y experiencia inconsistente para los clientes.
+- **Beneficios esperados**:
+  * Incremento del 20% en tasa de conversión de oportunidades
+  * Reducción del 30% en tiempo de gestión administrativa
+  * Mejora del 25% en satisfacción de clientes
+  * Visibilidad completa del pipeline de ventas para toma de decisiones
+  * Eliminación de silos de información entre departamentos
+
+### Dónde (Where):
+- **Implementación técnica**: Solución cloud (SaaS) accesible desde cualquier ubicación con conectividad a internet
+- **Aplicación funcional**:
+  * Departamento de Ventas (uso principal)
+  * Departamento de Servicio al Cliente (seguimiento post-venta)
+  * Departamento de Marketing (campañas y segmentación)
+  * Dirección General (informes y análisis)
+- **Cobertura geográfica**: Oficinas centrales y 3 delegaciones regionales
+
+### Cuándo (When):
+- **Cronograma**:
+  * Fase 1 - Selección y contratación (Semanas 1-3)
+  * Fase 2 - Configuración inicial y personalización (Semanas 4-6)
+  * Fase 3 - Migración de datos (Semanas 7-8)
+  * Fase 4 - Pruebas y validación (Semanas 9-10)
+  * Fase 5 - Capacitación de usuarios (Semanas 10-12)
+  * Fase 6 - Lanzamiento piloto con equipo clave (Semanas 13-14)
+  * Fase 7 - Despliegue completo (Semana 15)
+  * Fase 8 - Seguimiento y optimización (Semanas 16-20)
+- **Fecha de inicio**: 1 de marzo de 2023
+- **Fecha de finalización prevista**: 20 de julio de 2023
+- **Hitos clave**:
+  * Firma de contrato con proveedor: 15 de marzo
+  * Sistema configurado: 15 de abril
+  * Migración de datos completada: 30 de abril
+  * Usuarios capacitados: 31 de mayo
+  * Go-live definitivo: 15 de junio
+
+### Quién (Who):
+- **Sponsor del proyecto**: Director General
+- **Líder del proyecto**: Responsable de Sistemas
+- **Equipo de implementación**:
+  * Administrador de TI (configuración técnica)
+  * Responsable de Ventas (requisitos funcionales)
+  * Analista de Datos (migración y calidad de datos)
+  * Consultor externo del proveedor del CRM
+- **Usuarios clave** (early adopters): 2 comerciales senior, 1 soporte al cliente, 1 marketing
+- **Usuarios finales**: 25 personas en total (12 ventas, 8 soporte, 3 marketing, 2 dirección)
+- **Stakeholders adicionales**: Departamento Financiero, Asesoría Legal (contratos)
+
+### Cómo (How):
+- **Metodología de implementación**: Enfoque ágil con sprints de 2 semanas
+- **Proceso paso a paso**:
+  1. Análisis detallado de procesos actuales y definición de requisitos
+  2. Evaluación y selección de proveedor basado en matriz de criterios ponderados
+  3. Diseño de la arquitectura del CRM y mapeo de campos de datos
+  4. Configuración y personalización del sistema según requisitos
+  5. Limpieza y normalización de datos existentes
+  6. Migración por fases con validaciones
+  7. Pruebas de funcionalidad, integración y rendimiento
+  8. Capacitación diferenciada por rol de usuario
+  9. Adopción gradual con sistema de "buddy" (usuario experto + novato)
+  10. Optimización continua basada en feedback
+- **Herramientas de gestión del proyecto**: Jira para seguimiento, Microsoft Teams para comunicación, SharePoint para documentación
+
+### Cuánto (How much):
+- **Presupuesto total**: $78,500
+  * Licencias del software: $32,000 anual (80 USD/usuario/mes)
+  * Servicios de consultoría: $18,500
+  * Horas extra del personal interno: $15,000
+  * Capacitación: $8,000
+  * Contingencia (10%): $5,000
+- **Recursos humanos**:
+  * 180 horas del Responsable de Sistemas
+  * 120 horas del Responsable de Ventas
+  * 80 horas del Analista de Datos
+  * 25 horas por cada usuario para capacitación y adopción
+  * 200 horas del consultor externo
+- **ROI esperado**: 
+  * Incremento proyectado en ventas: $150,000 primer año
+  * Ahorro en eficiencia operativa: $45,000 anual
+  * Período de recuperación de la inversión: 7 meses
+
+### Matriz RACI:
+| Actividad | Dir. General | Resp. Sistemas | Resp. Ventas | Consultor | Usuario Final |
+|-----------|--------------|----------------|--------------|-----------|--------------|
+| Definición de requisitos | A | R | R | C | C |
+| Selección proveedor | A | R | C | I | I |
+| Configuración técnica | I | A | C | R | I |
+| Migración de datos | I | A | C | R | I |
+| Pruebas funcionales | I | A | R | C | R |
+| Capacitación | I | A | C | R | R |
+| Go-live | A | R | R | C | I |
+
+### Seguimiento y control:
+- Reuniones semanales de estado del proyecto
+- Dashboard en tiempo real con indicadores de avance
+- Encuestas de satisfacción a usuarios durante implementación
+- Auditorías de calidad de datos pre y post migración
+- Medición de adopción por usuario y departamento durante los primeros 3 meses 

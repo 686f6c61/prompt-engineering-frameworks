@@ -1,0 +1,40 @@
+# OKR: Objectives and Key Results
+
+## Significado del Acrónimo
+
+*   **Objectives:** Objetivos inspiradores, cualitativos y ambiciosos que definen lo que se quiere lograr
+*   **Key Results:** Resultados clave medibles y cuantificables que determinan si se ha alcanzado el objetivo
+
+## Descripción y Propósito
+
+El framework OKR es una metodología para definir y hacer seguimiento de objetivos organizacionales y sus resultados. Proporciona un enfoque para establecer metas ambiciosas (Objectives) y medirlas mediante resultados clave específicos (Key Results). Los objetivos describen QUÉ se quiere lograr, mientras que los resultados clave determinan CÓMO se medirá el progreso. Este marco es particularmente valioso para alinear equipos, establecer prioridades claras y fomentar la transparencia, siendo utilizado por empresas como Google, LinkedIn y otras organizaciones tecnológicas.
+
+## Componentes
+
+*   **Objectives:** Objetivos inspiradores, cualitativos y ambiciosos que definen lo que se quiere lograr
+*   **Key Results:** Resultados clave medibles y cuantificables que determinan si se ha alcanzado el objetivo
+
+## Ejemplo de Uso
+
+*   **Objectives:** Crear la mejor experiencia de usuario en nuestra categoría
+*   **Key Results:** Aumentar NPS de 30 a 60, reducir tiempo de carga a <2s, incrementar retención en un 20%
+
+## Casos Recomendados
+
+*   Alineación de objetivos organizacionales
+*   Establecimiento de metas trimestrales o anuales
+*   Definición de prioridades en equipos de desarrollo
+*   Comunicación de estrategia a todos los niveles
+*   Seguimiento de progreso en iniciativas clave
+*   Fomento de transparencia y colaboración
+*   Impulso de crecimiento e innovación
+
+## Ventajas
+
+*   Promueve el establecimiento de objetivos ambiciosos y aspiracionales
+*   Facilita la medición objetiva del progreso mediante métricas claras
+*   Alinea esfuerzos en toda la organización hacia metas comunes
+*   Mejora la transparencia sobre prioridades y avances
+*   Fomenta la autonomía junto con la responsabilidad
+*   Permite ajustes ágiles basándose en resultados medibles
+*   Separa claramente los objetivos inspiradores de sus métricas de éxito 

@@ -1,0 +1,72 @@
+# Framework RICE: Alcance, Impacto, Confianza, Esfuerzo
+
+El framework RICE es una metodología de priorización que amplía el framework ICE añadiendo una dimensión adicional: el Alcance (Reach). Este framework es ideal para evaluar y comparar características, proyectos o iniciativas basándose en cuatro criterios clave, proporcionando una base más completa para la toma de decisiones.
+
+## Componentes principales:
+
+### R - Alcance (Reach)
+Evalúa cuántos usuarios o clientes serán afectados por la implementación de esta idea o proyecto en un período determinado.
+- ¿A cuántos usuarios afectará esta iniciativa?
+- ¿Qué porcentaje de tu base de usuarios experimentará este cambio?
+- ¿Cómo se mide específicamente el alcance para este proyecto?
+
+### I - Impacto
+Evalúa el efecto positivo que tendrá la implementación en cada usuario afectado.
+- ¿Qué valor proporciona a cada usuario individual?
+- ¿Cómo mejora su experiencia o resuelve su problema?
+- ¿Cuál es la magnitud del impacto por usuario?
+
+### C - Confianza
+Representa el nivel de certeza en tus estimaciones anteriores de alcance e impacto.
+- ¿Qué evidencia respalda tus estimaciones?
+- ¿Qué tan seguro estás de que entiendes correctamente el problema y la solución?
+- ¿Hay datos o investigaciones que confirmen tus suposiciones?
+
+### E - Esfuerzo
+Evalúa los recursos necesarios para implementar la idea o proyecto.
+- ¿Cuánto tiempo de desarrollo requerirá?
+- ¿Qué recursos humanos y financieros serán necesarios?
+- ¿Qué complejidad técnica o desafíos podrían surgir?
+
+## Cálculo de la puntuación RICE:
+RICE = (Reach × Impact × Confidence) ÷ Effort
+
+## Aplicación como Prompt:
+
+```
+Necesito priorizar [idea/proyecto] utilizando el framework RICE:
+
+# Alcance (Reach)
+[Describe cuántos usuarios serán afectados por esta iniciativa en un período específico]
+
+# Impacto (Impact)
+[Describe el impacto positivo que tendrá en cada usuario individual]
+
+# Confianza (Confidence)
+[Explica qué nivel de certeza tienes en tus estimaciones, basado en evidencia disponible]
+
+# Esfuerzo (Effort)
+[Detalla los recursos necesarios para implementar la idea]
+
+Por favor, asigna una puntuación a cada componente:
+- Alcance: número estimado de usuarios afectados
+- Impacto: escala de 1 a 3 (1=mínimo, 2=moderado, 3=masivo)
+- Confianza: porcentaje de 0% a 100%
+- Esfuerzo: estimado en "persona-semanas" de trabajo
+
+Calcula la puntuación RICE como (Reach × Impact × Confidence) ÷ Effort y proporciona un análisis detallado que justifique cada puntuación asignada.
+```
+
+## Ejemplo de uso:
+
+Implementación de autenticación de dos factores (2FA) en nuestra plataforma:
+
+- **Alcance (5,000)**: Estimamos que 5,000 usuarios activos adoptarán esta función en el primer trimestre basándonos en tasas históricas de adopción de características de seguridad.
+
+- **Impacto (3/3)**: Impacto masivo en la seguridad de las cuentas de usuario, reduciendo significativamente el riesgo de accesos no autorizados y protegiendo datos sensibles.
+
+- **Confianza (80%)**: Tenemos alta confianza basada en investigaciones de la industria y datos de implementaciones similares, pero existe cierta incertidumbre sobre la tasa de adopción real.
+
+- **Esfuerzo (4 persona-semanas)**: Requiere desarrollo tanto en frontend como backend, integración con proveedores de autenticación, y pruebas exhaustivas de seguridad.
+
+**Puntuación RICE**: (5,000 × 3 × 0.8) ÷ 4 = 3,000 

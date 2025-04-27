@@ -1,0 +1,43 @@
+# ICE: Impact-Confidence-Ease
+
+## Significado del Acrónimo
+
+*   **Impact:** El efecto potencial que tendrá la iniciativa en objetivos clave, normalmente en escala de 1-10
+*   **Confidence:** Nivel de certeza en las estimaciones y predicciones de impacto, en escala de 1-10
+*   **Ease:** Facilidad de implementación, considerando tiempo, recursos y complejidad, en escala de 1-10
+
+## Descripción y Propósito
+
+El framework ICE es un modelo simplificado de priorización desarrollado por Sean Ellis para evaluar y clasificar ideas, experimentos o iniciativas. Utiliza una fórmula sencilla (Impact × Confidence × Ease) para calcular una puntuación que permite comparar diferentes opciones. Su simplicidad lo hace particularmente útil para decisiones rápidas y es ampliamente utilizado en metodologías de growth hacking, desarrollo de producto y entornos ágiles donde se necesita una forma rápida pero efectiva de decidir qué hacer primero.
+
+## Componentes
+
+*   **Impact:** El efecto potencial que tendrá la iniciativa en objetivos clave, normalmente en escala de 1-10
+*   **Confidence:** Nivel de certeza en las estimaciones y predicciones de impacto, en escala de 1-10
+*   **Ease:** Facilidad de implementación, considerando tiempo, recursos y complejidad, en escala de 1-10
+
+## Ejemplo de Uso
+
+*   **Impact:** 8/10 - Mejora significativa en retención
+*   **Confidence:** 7/10 - Basado en datos de pruebas A/B previas
+*   **Ease:** 6/10 - Implementación moderadamente compleja
+
+## Casos Recomendados
+
+*   Priorización rápida de backlog de producto
+*   Evaluación de experimentos de growth hacking
+*   Toma de decisiones en sprints de desarrollo
+*   Selección de iniciativas de mejora continua
+*   Priorización de correcciones de bugs
+*   Evaluación de propuestas en sesiones de brainstorming
+*   Optimización de procesos en equipos ágiles
+
+## Ventajas
+
+*   Extremadamente sencillo de entender y aplicar
+*   No requiere cálculos complejos ni datos extensos
+*   Permite priorización rápida con recursos limitados
+*   Equilibra el potencial impacto con la factibilidad de implementación
+*   Incorpora el nivel de confianza en las estimaciones
+*   Facilita conversaciones productivas sobre qué priorizar
+*   Adaptable a diferentes contextos y tipos de decisiones 

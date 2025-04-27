@@ -1,0 +1,46 @@
+# RICE: Reach-Impact-Confidence-Effort
+
+## Significado del Acrónimo
+
+*   **Reach:** Número estimado de personas o usuarios que la iniciativa afectará en un período de tiempo
+*   **Impact:** Valoración del efecto que tendrá en cada persona afectada, en una escala definida
+*   **Confidence:** Porcentaje que refleja el nivel de certeza en las estimaciones anteriores
+*   **Effort:** Cantidad estimada de tiempo que costará implementar, medido en persona-tiempo
+
+## Descripción y Propósito
+
+El framework RICE es un modelo de priorización cuantitativo desarrollado por Intercom para evaluar y clasificar características, proyectos o iniciativas basado en cuatro factores clave. Proporciona una fórmula para calcular una puntuación objetiva: (Reach × Impact × Confidence) ÷ Effort. Este enfoque permite comparar objetivamente diferentes opciones y tomar decisiones basadas en datos sobre qué priorizar. Es particularmente valioso para equipos de producto, desarrollo y cualquier contexto donde sea necesario elegir entre múltiples iniciativas con recursos limitados.
+
+## Componentes
+
+*   **Reach:** Número estimado de personas o usuarios que la iniciativa afectará en un período de tiempo
+*   **Impact:** Valoración del efecto que tendrá en cada persona afectada, en una escala definida
+*   **Confidence:** Porcentaje que refleja el nivel de certeza en las estimaciones anteriores
+*   **Effort:** Cantidad estimada de tiempo que costará implementar, medido en persona-tiempo
+
+## Ejemplo de Uso
+
+*   **Reach:** 10.000 usuarios mensuales
+*   **Impact:** 3 de 5 en escala definida
+*   **Confidence:** 80%
+*   **Effort:** 5 persona-semanas
+
+## Casos Recomendados
+
+*   Priorización de funcionalidades en roadmaps de producto
+*   Evaluación de proyectos de mejora de experiencia de usuario
+*   Planificación de backlog en desarrollo ágil
+*   Toma de decisiones sobre optimizaciones técnicas
+*   Selección entre múltiples iniciativas con recursos limitados
+*   Justificación objetiva de prioridades para stakeholders
+*   Definición de secuencia en planificaciones trimestrales
+
+## Ventajas
+
+*   Proporciona un método cuantitativo y objetivo para la priorización
+*   Integra factores de alcance, impacto, confianza y esfuerzo en una sola puntuación
+*   Facilita comparaciones directas entre opciones dispares
+*   Incorpora explícitamente el nivel de confianza en las estimaciones
+*   Equilibra el potencial beneficio con el costo de implementación
+*   Reduce sesgos y preferencias personales en la toma de decisiones
+*   Proporciona un lenguaje común para discutir prioridades entre equipos 

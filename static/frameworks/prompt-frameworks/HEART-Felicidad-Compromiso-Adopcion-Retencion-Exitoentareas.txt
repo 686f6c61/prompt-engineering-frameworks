@@ -1,0 +1,134 @@
+# Framework HEART: Felicidad, Engagement, Adopción, Retención, Éxito en Tareas
+
+El framework HEART es una metodología desarrollada por Google para medir la experiencia del usuario (UX) en productos digitales. Este modelo proporciona un enfoque estructurado para seleccionar métricas centradas en el usuario que sean relevantes para objetivos de negocio y de experiencia de usuario.
+
+## Componentes principales:
+
+### H - Felicidad (Happiness)
+Mide las actitudes, percepciones y respuestas emocionales de los usuarios hacia el producto.
+- ¿Qué tan satisfechos están los usuarios con el producto?
+- ¿Cuál es el nivel de satisfacción con características específicas?
+- ¿Los usuarios recomendarían el producto a otros? (NPS)
+- ¿Cómo perciben los usuarios la usabilidad y la estética?
+
+### E - Compromiso (Engagement)
+Evalúa el nivel de interacción, frecuencia y profundidad de uso del producto.
+- ¿Con qué frecuencia usan los usuarios el producto?
+- ¿Cuánto tiempo pasan en cada sesión?
+- ¿Qué nivel de interacción tienen con diferentes características?
+- ¿Qué tan activamente participan los usuarios en la comunidad?
+
+### A - Adopción (Adoption)
+Mide la adquisición de nuevos usuarios y la adopción de nuevas características.
+- ¿Cuántos usuarios nuevos se registran?
+- ¿Qué porcentaje de usuarios adopta nuevas características?
+- ¿Cómo se compara la tasa de adopción actual con períodos anteriores?
+- ¿Qué características son adoptadas más rápidamente?
+
+### R - Retención (Retention)
+Evalúa la tasa a la que los usuarios continúan utilizando el producto a lo largo del tiempo.
+- ¿Qué porcentaje de usuarios regresa después de su primera experiencia?
+- ¿Cuál es la tasa de abandono (churn) mensual o anual?
+- ¿Cuánto tiempo permanecen los usuarios antes de abandonar?
+- ¿Qué patrones de uso predicen mejor la retención a largo plazo?
+
+### T - Éxito en Tareas (Task Success)
+Mide la eficiencia, efectividad y tasa de finalización de tareas específicas.
+- ¿Qué porcentaje de usuarios completa tareas específicas con éxito?
+- ¿Cuánto tiempo toman los usuarios para completar tareas clave?
+- ¿Cuántos errores cometen los usuarios durante tareas importantes?
+- ¿Qué tan eficiente es el camino que toman para completar objetivos?
+
+## Aplicación como Prompt:
+
+```
+Necesito desarrollar un plan de medición HEART para [producto/aplicación/sitio web]. Por favor, proporciona un análisis detallado y recomendaciones para cada componente:
+
+# Felicidad (Happiness)
+[Identifica métricas de satisfacción y actitud, incluyendo encuestas, NPS, valoraciones de usuarios y otros indicadores de percepción subjetiva]
+
+# Compromiso (Engagement)
+[Detalla métricas de frecuencia, intensidad y profundidad de interacción, incluyendo sesiones por usuario, tiempo de sesión, acciones por sesión, y patrones de uso]
+
+# Adopción (Adoption)
+[Especifica métricas para medir la adquisición de nuevos usuarios y adopción de características, incluyendo tasas de conversión, porcentajes de uso de nuevas funciones]
+
+# Retención (Retention)
+[Define cómo medirás la permanencia de usuarios a lo largo del tiempo, incluyendo retención por cohortes, tasas de churn, ciclo de vida del usuario]
+
+# Éxito en Tareas (Task Success)
+[Identifica tareas críticas y cómo medirás su finalización exitosa, incluyendo tasas de conversión de embudo, tiempo de finalización, tasas de error]
+
+Para cada métrica propuesta, indica:
+1. La definición específica y cómo se calculará
+2. La fuente de datos y herramientas para su medición
+3. La frecuencia de medición recomendada
+4. Los objetivos o benchmarks a establecer
+5. Cómo esta métrica se alinea con los objetivos de negocio generales
+```
+
+## Ejemplo de uso:
+
+Plan de medición HEART para una aplicación de aprendizaje de idiomas:
+
+### Felicidad (Happiness):
+- **NPS (Net Promoter Score)**: Encuesta trimestral para medir la probabilidad de recomendación en escala 0-10.
+  * Fuente: Encuesta in-app con tasa de respuesta objetivo >20%
+  * Objetivo: NPS > 40
+- **Satisfacción de lecciones**: Valoración de 1-5 estrellas al finalizar cada lección.
+  * Fuente: Datos de interacción in-app
+  * Objetivo: Promedio > 4.2 estrellas
+- **Sentimiento en reseñas**: Análisis de sentimiento en reseñas de tiendas de aplicaciones.
+  * Fuente: App Store y Google Play
+  * Herramienta: Análisis de sentimiento automatizado
+  * Objetivo: >80% reseñas positivas
+
+### Compromiso (Engagement):
+- **Sesiones por semana**: Promedio de veces que un usuario abre la app semanalmente.
+  * Fuente: Datos de analítica de sesiones
+  * Objetivo: >4 sesiones por semana
+- **Tiempo de aprendizaje diario**: Minutos de uso activo por día.
+  * Fuente: Tiempo de interacción en la app
+  * Objetivo: >15 minutos por día
+- **Porcentaje de usuarios que completan sus metas diarias**: Cumplimiento de objetivos.
+  * Fuente: Sistema de metas diarias
+  * Objetivo: >60% de usuarios activos
+
+### Adopción (Adoption):
+- **Tasa de conversión de registro**: Porcentaje de descargas que completan registro.
+  * Fuente: Embudo de adquisición
+  * Objetivo: >70% conversión
+- **Adopción de nuevas características**: Porcentaje de usuarios que prueban nuevas funciones en primeros 30 días tras lanzamiento.
+  * Fuente: Eventos de interacción con características
+  * Objetivo: >30% de usuarios activos
+- **Actualización a versión premium**: Tasa de conversión a suscripciones pagas.
+  * Fuente: Datos de transacciones
+  * Objetivo: >8% de usuarios activos mensuales
+
+### Retención (Retention):
+- **Retención D1/D7/D30**: Porcentaje de usuarios que regresan 1, 7 y 30 días después del registro.
+  * Fuente: Análisis de cohortes
+  * Objetivo: D1>60%, D7>40%, D30>25%
+- **Usuarios activos mensuales**: Total de usuarios únicos activos cada mes.
+  * Fuente: Datos de sesiones mensuales
+  * Objetivo: Crecimiento >5% mensual
+- **Tasa de churn de suscripciones**: Porcentaje de suscriptores que cancelan mensualmente.
+  * Fuente: Datos de suscripción
+  * Objetivo: <7% mensual
+
+### Éxito en Tareas (Task Success):
+- **Tasa de finalización de lecciones**: Porcentaje de lecciones iniciadas que se completan.
+  * Fuente: Datos de progreso de lecciones
+  * Objetivo: >85% de finalización
+- **Precisión de respuestas**: Porcentaje de respuestas correctas en ejercicios.
+  * Fuente: Datos de rendimiento en ejercicios
+  * Objetivo: Mejora progresiva de precisión por usuario
+- **Tiempo de completado por nivel**: Tiempo promedio para completar cada nivel del curso.
+  * Fuente: Análisis de progresión
+  * Objetivo: Alineado con estimaciones de diseño pedagógico
+
+### Integración y análisis:
+- Dashboard centralizado actualizándose diariamente con todas las métricas
+- Informes semanales para el equipo de producto con tendencias clave
+- Análisis mensual profundo para identificar correlaciones entre métricas
+- Alineación trimestral de métricas HEART con KPIs de negocio (ingresos, retención de suscripciones) 

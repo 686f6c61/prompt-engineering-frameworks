@@ -845,3 +845,76 @@ function updateFormFields(framework) {
 .framework-table td:last-child {
     text-align: left;
 }
+
+/* Estilos para el timeline del historial de versiones */
+.timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #dee2e6;
+    left: 88px;
+    top: 0;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item-date {
+    width: 90px;
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.timeline-item-date:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #0d6efd;
+    right: -6px;
+    top: 4px;
+}
+
+.timeline-item-content {
+    flex-grow: 1;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.timeline-item-content h5 {
+    margin-bottom: 0.75rem;
+    color: #0d6efd;
+}
+
+.timeline-item-content ul {
+    margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+    .timeline:before {
+        left: 60px;
+    }
+    
+    .timeline-item-date {
+        width: 60px;
+    }
+    
+    .timeline-item-content {
+        padding-left: 1rem;
+    }
+}

@@ -1,0 +1,40 @@
+# MECE: Mutuamente Exclusivo, Colectivamente Exhaustivo
+
+## Significado del Acrónimo
+
+*   **Mutuamente Exclusivo:** Asegura que los elementos o categorías no se superpongan entre sí
+*   **Colectivamente Exhaustivo:** Garantiza que la clasificación cubra todas las posibilidades sin omisiones
+
+## Descripción y Propósito
+
+El framework MECE es un principio para estructurar el pensamiento y el análisis que busca crear categorías o grupos que no se superpongan (mutuamente exclusivos) y que juntos cubran todas las posibilidades (colectivamente exhaustivos). Este enfoque, popularizado por firmas de consultoría, proporciona claridad, evita redundancias y asegura la cobertura completa en análisis de problemas, diseño de soluciones o clasificación de información. Es particularmente valioso para estructurar análisis complejos de manera rigurosa y sistemática.
+
+## Componentes
+
+*   **Mutuamente Exclusivo:** Asegura que los elementos o categorías no se superpongan entre sí
+*   **Colectivamente Exhaustivo:** Garantiza que la clasificación cubra todas las posibilidades sin omisiones
+
+## Ejemplo de Uso
+
+*   **Mutuamente Exclusivo:** Segmentación de usuarios por rangos de edad no superpuestos
+*   **Colectivamente Exhaustivo:** Cobertura de todos los posibles grupos de edad
+
+## Casos Recomendados
+
+*   Análisis de mercado y segmentación
+*   Estructuración de investigaciones
+*   Diseño de taxonomías y categorías
+*   Resolución estructurada de problemas
+*   Toma de decisiones basada en análisis
+*   Diseño de arquitecturas de información
+*   Desarrollo de estrategias comprehensivas
+
+## Ventajas
+
+*   Elimina redundancias y solapamientos en análisis
+*   Asegura que no se omitan aspectos relevantes de un problema
+*   Facilita la comunicación clara de estructuras complejas
+*   Mejora la calidad y rigor del pensamiento analítico
+*   Reduce sesgos cognitivos en la toma de decisiones
+*   Proporciona una base sólida para priorización
+*   Asegura la exhaustividad en cobertura de escenarios 

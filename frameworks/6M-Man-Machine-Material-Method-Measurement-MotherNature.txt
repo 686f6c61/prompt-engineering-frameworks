@@ -1,0 +1,52 @@
+# 6M: Man-Machine-Material-Method-Measurement-Mother Nature/Environment
+
+## Significado del Acrónimo
+
+*   **Man:** Factor humano, incluyendo habilidades, capacitación, experiencia y factores humanos
+*   **Machine:** Equipos, herramientas, tecnología e infraestructura involucrada
+*   **Material:** Materias primas, componentes, datos o insumos utilizados
+*   **Method:** Procesos, procedimientos, metodologías y flujos de trabajo
+*   **Measurement:** Métricas, indicadores, instrumentos y métodos de medición
+*   **Mother Nature:** Factores ambientales, condiciones externas y entorno de operación
+
+## Descripción y Propósito
+
+El framework 6M (o Diagrama de Ishikawa o Espina de Pescado) es una herramienta para el análisis de causa raíz que identifica sistemáticamente las posibles causas de un problema en seis categorías principales. Proporciona un enfoque estructurado para explorar todos los factores potenciales que podrían contribuir a un problema o defecto, facilitando el análisis profundo y la identificación de causas fundamentales en lugar de síntomas superficiales. Es particularmente valioso para la resolución de problemas complejos, mejora de calidad y prevención de defectos.
+
+## Componentes
+
+*   **Man:** Factor humano, incluyendo habilidades, capacitación, experiencia y factores humanos
+*   **Machine:** Equipos, herramientas, tecnología e infraestructura involucrada
+*   **Material:** Materias primas, componentes, datos o insumos utilizados
+*   **Method:** Procesos, procedimientos, metodologías y flujos de trabajo
+*   **Measurement:** Métricas, indicadores, instrumentos y métodos de medición
+*   **Mother Nature:** Factores ambientales, condiciones externas y entorno de operación
+
+## Ejemplo de Uso
+
+*   **Man:** Falta de capacitación en nuevas herramientas
+*   **Machine:** Servidores sobrecargados en horas pico
+*   **Material:** Datos de entrada inconsistentes o corruptos
+*   **Method:** Proceso de validación insuficiente
+*   **Measurement:** Métricas imprecisas de rendimiento
+*   **Mother Nature:** Interferencias de red en ciertas ubicaciones
+
+## Casos Recomendados
+
+*   Análisis de causa raíz de fallos en sistemas
+*   Investigación de incidentes de seguridad
+*   Identificación de causas de defectos de software
+*   Mejora de procesos y calidad
+*   Optimización de rendimiento de aplicaciones
+*   Resolución de problemas recurrentes
+*   Prevención de fallos en infraestructura
+
+## Ventajas
+
+*   Proporciona un enfoque sistemático y exhaustivo para el análisis
+*   Identifica causas fundamentales en lugar de síntomas superficiales
+*   Facilita la colaboración interdisciplinaria en la resolución de problemas
+*   Mejora la comprensión de interrelaciones entre diferentes factores
+*   Previene soluciones parciales al considerar múltiples categorías de causas
+*   Estructura visualmente las relaciones causa-efecto
+*   Promueve el pensamiento crítico y profundo en equipos 

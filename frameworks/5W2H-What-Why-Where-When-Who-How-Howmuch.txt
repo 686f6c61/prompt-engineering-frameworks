@@ -1,0 +1,55 @@
+# 5W2H: What-Why-Where-When-Who-How-How much
+
+## Significado del Acrónimo
+
+*   **What:** Qué se hará, cuál es la tarea o actividad principal
+*   **Why:** Por qué se debe hacer, razón o justificación de la actividad
+*   **Where:** Dónde se realizará, lugar o ubicación para la implementación
+*   **When:** Cuándo se hará, fechas, plazos y cronograma
+*   **Who:** Quién lo hará, responsables y partes involucradas
+*   **How:** Cómo se hará, metodología, proceso o enfoque
+*   **How much:** Cuánto costará, presupuesto, recursos necesarios o métricas de evaluación
+
+## Descripción y Propósito
+
+El framework 5W2H es una herramienta de planificación y gestión que proporciona un enfoque estructurado para detallar todos los aspectos relevantes de un proyecto, tarea o problema. Mediante siete preguntas fundamentales, asegura que se definan claramente todos los elementos clave de una iniciativa, desde su justificación hasta sus recursos. Es particularmente valioso para la planificación detallada de proyectos, resolución estructurada de problemas y documentación completa de planes de acción.
+
+## Componentes
+
+*   **What:** Qué se hará, cuál es la tarea o actividad principal
+*   **Why:** Por qué se debe hacer, razón o justificación de la actividad
+*   **Where:** Dónde se realizará, lugar o ubicación para la implementación
+*   **When:** Cuándo se hará, fechas, plazos y cronograma
+*   **Who:** Quién lo hará, responsables y partes involucradas
+*   **How:** Cómo se hará, metodología, proceso o enfoque
+*   **How much:** Cuánto costará, presupuesto, recursos necesarios o métricas de evaluación
+
+## Ejemplo de Uso
+
+*   **What:** Implementación de un sistema de monitoreo en tiempo real
+*   **Why:** Para detectar y responder proactivamente a incidentes
+*   **Where:** En los servidores de producción y pre-producción
+*   **When:** Durante el próximo mes, con despliegue final el 15 de octubre
+*   **Who:** Equipo de DevOps con apoyo del equipo de Seguridad
+*   **How:** Utilizando Prometheus y Grafana con alertas automatizadas
+*   **How much:** Presupuesto de 20K para licencias y 15 días/persona de trabajo
+
+## Casos Recomendados
+
+*   Planificación detallada de proyectos técnicos
+*   Documentación de planes de implementación
+*   Análisis y resolución estructurada de problemas
+*   Comunicación clara de iniciativas a equipos
+*   Elaboración de procedimientos operativos
+*   Planificación de cambios en sistemas o procesos
+*   Creación de planes de acción completos
+
+## Ventajas
+
+*   Proporciona un enfoque exhaustivo que evita omitir aspectos clave
+*   Estructura la información de manera clara y sistemática
+*   Facilita la comunicación efectiva entre los interesados
+*   Mejora la planificación al considerar todos los factores relevantes
+*   Ayuda a identificar posibles obstáculos y limitaciones
+*   Establece claridad sobre roles, responsabilidades y recursos
+*   Sirve como checklist para verificar la completitud de un plan 

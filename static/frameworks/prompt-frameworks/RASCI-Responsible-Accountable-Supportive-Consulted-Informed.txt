@@ -1,0 +1,159 @@
+# Framework RASCI: Responsable, Aprobador, Soporte, Consultado, Informado
+
+El framework RASCI es una extensión de la matriz RACI que añade una dimensión adicional ("Soporte") para definir con mayor precisión los roles y responsabilidades en proyectos y procesos. Esta herramienta ayuda a clarificar quién hace qué en una organización, eliminando ambigüedades, evitando duplicación de esfuerzos y asegurando que todas las tareas tengan asignados los roles necesarios para su correcta ejecución.
+
+## Componentes principales:
+
+### R - Responsable (Responsible)
+Persona(s) que realiza(n) el trabajo y completa(n) la tarea.
+- ¿Quién hace el trabajo?
+- ¿Quién ejecuta la actividad?
+- ¿Quién es responsable de implementar las decisiones?
+- Puede haber múltiples responsables para una tarea
+
+### A - Aprobador (Accountable)
+Persona que rinde cuentas por el éxito de la tarea y tiene la autoridad final de decisión.
+- ¿Quién tiene la última palabra?
+- ¿Quién responde por el éxito o fracaso?
+- ¿Quién tiene autoridad para aprobar o vetar?
+- Solo debe haber un único Aprobador por cada tarea o decisión
+
+### S - Soporte (Supportive)
+Persona(s) que proporciona(n) recursos o asistencia para completar la actividad.
+- ¿Quién ayuda al Responsable a completar la tarea?
+- ¿Quién proporciona recursos adicionales?
+- ¿Quién brinda apoyo logístico o técnico?
+- ¿Quién contribuye sin ser directamente responsable?
+
+### C - Consultado (Consulted)
+Persona(s) cuya opinión o expertise es buscada y con quien existe comunicación bidireccional.
+- ¿A quién se debe consultar antes de tomar una decisión?
+- ¿Quién tiene información o conocimiento especializado?
+- ¿Cuyas opiniones deben considerarse?
+- ¿Con quién se debe mantener un diálogo?
+
+### I - Informado (Informed)
+Persona(s) que es mantenida al día sobre el progreso o las decisiones tomadas.
+- ¿Quién debe mantenerse informado sobre el avance?
+- ¿A quién se notifica las decisiones pero no se consulta?
+- ¿Quién necesita estar al tanto para coordinar su propio trabajo?
+- ¿Quién debe recibir actualizaciones?
+
+## Aplicación como Prompt:
+
+```
+Necesito desarrollar una matriz RASCI para [proyecto/proceso/actividad]. Por favor, ayúdame a definir claramente los roles y responsabilidades de todos los involucrados:
+
+# Actividades principales
+[Enumera todas las tareas, fases o decisiones clave que requieren asignación de roles y responsabilidades, organizadas de manera lógica y secuencial]
+
+# Stakeholders o roles organizacionales
+[Identifica todos los individuos, roles o departamentos que deben ser considerados en la matriz RASCI]
+
+Para cada combinación de actividad y stakeholder, asigna uno de los siguientes roles:
+- **R (Responsable)**: Quien realiza el trabajo y completa la tarea
+- **A (Aprobador)**: Quien tiene la autoridad final y rinde cuentas por el resultado (siempre uno solo)
+- **S (Soporte)**: Quien proporciona recursos o asistencia para completar la actividad
+- **C (Consultado)**: Quien debe ser consultado antes de tomar acciones o decisiones
+- **I (Informado)**: Quien debe ser informado sobre decisiones o avances
+
+Además, proporciona:
+1. Una explicación para las asignaciones que podrían generar confusión o conflicto
+2. Recomendaciones para gestionar transiciones entre actividades
+3. Consideraciones especiales para la comunicación efectiva entre los diferentes roles
+4. Mecanismos sugeridos para resolver ambigüedades o desacuerdos que puedan surgir
+```
+
+## Ejemplo de uso:
+
+Matriz RASCI para el desarrollo y lanzamiento de un nuevo producto software:
+
+### Fases y actividades principales:
+
+1. **Definición del producto**
+   - 1.1 Investigación de mercado
+   - 1.2 Definición de requisitos
+   - 1.3 Aprobación de concepto
+
+2. **Diseño y planificación**
+   - 2.1 Diseño de arquitectura
+   - 2.2 Planificación de desarrollo
+   - 2.3 Definición de criterios de calidad
+
+3. **Desarrollo**
+   - 3.1 Desarrollo de backend
+   - 3.2 Desarrollo de frontend
+   - 3.3 Integración de sistemas
+
+4. **Pruebas y validación**
+   - 4.1 Pruebas unitarias
+   - 4.2 Pruebas de integración
+   - 4.3 Beta testing con clientes
+   - 4.4 Validación final
+
+5. **Lanzamiento y post-lanzamiento**
+   - 5.1 Preparación de infraestructura
+   - 5.2 Lanzamiento al mercado
+   - 5.3 Monitoreo post-lanzamiento
+   - 5.4 Recepción de feedback y mejoras
+
+### Roles involucrados:
+- Director de Producto (DP)
+- Jefe de Proyecto (JP)
+- Arquitecto de Software (AS)
+- Líder Técnico (LT)
+- Equipo de Desarrollo (ED)
+- Quality Assurance (QA)
+- UX/UI Designer (UX)
+- DevOps (DO)
+- Marketing (MK)
+- Servicio al Cliente (SC)
+- Director Ejecutivo (CEO)
+
+### Matriz RASCI completa:
+
+| Actividad | DP | JP | AS | LT | ED | QA | UX | DO | MK | SC | CEO |
+|-----------|----|----|----|----|----|----|----|----|----|----|-----|
+| **1.1 Investigación de mercado** | A/R | S | - | - | - | - | C | - | R | C | I |
+| **1.2 Definición de requisitos** | A/R | S | C | C | - | C | C | C | C | C | I |
+| **1.3 Aprobación de concepto** | R | C | C | C | - | - | C | C | C | C | A |
+| **2.1 Diseño de arquitectura** | I | S | A/R | C | C | C | C | C | - | - | - |
+| **2.2 Planificación de desarrollo** | C | A/R | C | R | C | C | C | C | I | - | I |
+| **2.3 Definición de criterios de calidad** | C | A | C | C | - | R | C | C | I | C | - |
+| **3.1 Desarrollo de backend** | I | A | C | R | R | C | - | S | - | - | - |
+| **3.2 Desarrollo de frontend** | I | A | - | R | R | C | R | - | - | - | - |
+| **3.3 Integración de sistemas** | I | A | C | R | R | C | C | S | - | - | - |
+| **4.1 Pruebas unitarias** | - | A | - | C | R | S | - | - | - | - | - |
+| **4.2 Pruebas de integración** | I | A | C | S | S | R | C | S | - | - | - |
+| **4.3 Beta testing con clientes** | C | A | - | S | S | R | C | S | C | R | I |
+| **4.4 Validación final** | C | S | C | C | S | R | C | S | C | C | A |
+| **5.1 Preparación de infraestructura** | I | A | C | C | S | C | - | R | - | S | - |
+| **5.2 Lanzamiento al mercado** | C | A | - | S | S | S | S | R | R | S | I |
+| **5.3 Monitoreo post-lanzamiento** | I | A | - | C | S | S | - | R | S | R | I |
+| **5.4 Recepción de feedback y mejoras** | R | A | S | S | S | S | S | - | C | R | I |
+
+### Notas explicativas:
+
+1. **Roles múltiples**: 
+   - En "Investigación de mercado", el Director de Producto es tanto Aprobador como Responsable (A/R) porque, además de rendir cuentas por la actividad, participa activamente en su ejecución junto con Marketing.
+   - En "Diseño de arquitectura", el Arquitecto de Software tiene tanto la responsabilidad de ejecución como la aprobación final (A/R) debido a su especialización técnica.
+
+2. **Transiciones críticas**:
+   - La transición de "Definición de requisitos" a "Diseño de arquitectura" requiere una sesión formal de transferencia donde el Director de Producto (DP) explique los requisitos al Arquitecto de Software (AS).
+   - Al pasar de "Desarrollo" a "Pruebas", se recomienda una reunión de entrega donde el Líder Técnico (LT) presente formalmente los entregables al equipo de QA.
+
+3. **Consideraciones de comunicación**:
+   - Establecer reuniones semanales entre todos los roles R, A y S de cada fase en curso.
+   - Mantener un repositorio centralizado de documentación accesible para todos los stakeholders.
+   - Implementar un sistema de notificaciones automatizadas para mantener informados a quienes tienen rol "I".
+   - Crear canales dedicados en herramientas de comunicación para consultas rápidas con quienes tienen rol "C".
+
+4. **Resolución de ambigüedades**:
+   - Si surge un conflicto entre un Responsable (R) y un rol de Soporte (S), el Aprobador (A) de la actividad tiene la decisión final.
+   - Para desacuerdos entre el Aprobador (A) y otros roles, se escalará al Jefe de Proyecto como mediador, y si persiste, al CEO para actividades de alto impacto.
+   - Establecer un comité de revisión de cambios para modificaciones a la matriz RASCI durante el proyecto.
+
+5. **Casos especiales**:
+   - En "Aprobación de concepto" y "Validación final", el CEO es el Aprobador debido a la importancia estratégica de estas decisiones.
+   - En "Beta testing con clientes", Servicio al Cliente tiene un rol de Responsable importante para gestionar la interacción con los usuarios de prueba.
+   - En "Monitoreo post-lanzamiento", DevOps es Responsable de la infraestructura y monitoreo técnico, mientras que Servicio al Cliente es Responsable del seguimiento de la experiencia del usuario. 

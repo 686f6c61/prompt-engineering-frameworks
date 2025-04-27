@@ -1,0 +1,102 @@
+# Framework RACI: Responsable, Accountable (Aprobador), Consultado, Informado
+
+El framework RACI es una matriz de asignación de responsabilidades que define y clarifica los roles y responsabilidades en proyectos o procesos. Es una herramienta esencial para evitar confusiones sobre quién debe hacer qué, garantizando que todas las actividades tengan asignados los roles necesarios para su ejecución efectiva.
+
+## Componentes principales:
+
+### R - Responsable (Responsible)
+Persona(s) que realiza(n) el trabajo para completar la tarea.
+- ¿Quién ejecuta la tarea o actividad?
+- ¿Quién es responsable de la implementación?
+- Puede haber múltiples responsables para una tarea
+- Son quienes "hacen el trabajo"
+
+### A - Aprobador (Accountable)
+Persona que rinde cuentas sobre la actividad y tiene la autoridad final de decisión.
+- ¿Quién aprueba el trabajo realizado?
+- ¿Quién tiene la última palabra y la autoridad de veto?
+- Solo debe haber un único Aprobador por cada tarea
+- Es quien responde por el resultado final
+
+### C - Consultado (Consulted)
+Personas cuyas opiniones se buscan y con quienes existe comunicación bidireccional.
+- ¿A quién se debe consultar antes de tomar acción o decisiones?
+- ¿Quién posee información o experiencia valiosa para la tarea?
+- ¿Qué expertos deben ser involucrados?
+- Son quienes proveen información o asesoramiento
+
+### I - Informado (Informed)
+Personas que son mantenidas al día sobre el progreso, generalmente tras una decisión o acción.
+- ¿Quién debe ser informado sobre las decisiones tomadas?
+- ¿Quién necesita estar al día sobre el progreso?
+- ¿A quién afectan los resultados de la tarea?
+- Son quienes reciben la comunicación de avance y resultados
+
+## Aplicación como Prompt:
+
+```
+Necesito desarrollar una matriz RACI completa para [proyecto/proceso]. Por favor, ayúdame a definir los roles y responsabilidades para cada actividad clave:
+
+# Listado de actividades principales
+[Enumera todas las actividades o tareas clave del proyecto/proceso que requieren asignación de responsabilidades]
+
+# Participantes o roles involucrados
+[Identifica todos los roles, departamentos o personas que participarán]
+
+Para cada actividad, asigna los siguientes roles:
+- **R (Responsable)**: Quién ejecuta la tarea
+- **A (Aprobador)**: Quién aprueba y tiene la responsabilidad final (siempre uno solo)
+- **C (Consultado)**: Quiénes deben ser consultados y dar input
+- **I (Informado)**: Quiénes deben ser informados sobre el progreso/resultado
+
+Presenta la matriz completa en formato tabular, asegurando que:
+1. Cada actividad tenga al menos un Responsable
+2. Cada actividad tenga exactamente un Aprobador
+3. No haya ambigüedades en las asignaciones
+4. Se incluyan notas o aclaraciones sobre cualquier asignación que pueda generar confusión
+```
+
+## Ejemplo de uso:
+
+Matriz RACI para el lanzamiento de un nuevo producto digital:
+
+### Actividades clave del proyecto:
+1. Investigación de mercado
+2. Definición de requisitos del producto
+3. Diseño de la interfaz de usuario
+4. Desarrollo del producto
+5. Pruebas de calidad
+6. Plan de marketing
+7. Capacitación del equipo de ventas
+8. Lanzamiento al mercado
+
+### Roles involucrados:
+- Director de Producto (DP)
+- Gerente de Proyecto (GP)
+- Equipo de UX/UI (UX)
+- Equipo de Desarrollo (DEV)
+- Control de Calidad (QA)
+- Marketing (MKT)
+- Ventas (VNT)
+- Director General (CEO)
+
+### Matriz RACI:
+
+| Actividad | DP | GP | UX | DEV | QA | MKT | VNT | CEO |
+|-----------|----|----|----|----|----|----|-----|-----|
+| 1. Investigación de mercado | A | R | C | - | - | R | C | I |
+| 2. Definición de requisitos | A | R | C | C | C | C | C | I |
+| 3. Diseño de UI | C | R | A/R | C | C | C | - | - |
+| 4. Desarrollo | C | R | C | A/R | C | - | - | - |
+| 5. Pruebas de calidad | C | R | C | R | A/R | - | - | - |
+| 6. Plan de marketing | C | R | C | - | - | A/R | C | I |
+| 7. Capacitación ventas | I | R | - | C | - | R | A/R | - |
+| 8. Lanzamiento | I | R | I | R | R | R | R | A |
+
+### Notas importantes:
+- El Gerente de Proyecto (GP) aparece como Responsable (R) en todas las actividades porque coordina y asegura que se completen, aunque no ejecute directamente todas ellas.
+- En algunas actividades como "Diseño de UI", el mismo rol (UX) aparece como Aprobador y Responsable (A/R) porque tiene tanto la responsabilidad de ejecución como la autoridad final sobre esa área específica.
+- El CEO es principalmente Informado (I) pero es Aprobador (A) del lanzamiento final porque representa la autorización definitiva para salir al mercado.
+- El equipo de Ventas (VNT) es consultado en la fase inicial para entender las necesidades del cliente y es responsable de su propia capacitación.
+
+Esta matriz clarifica quién hace qué, quién decide, quién aporta información y quién necesita estar informado durante todo el ciclo de vida del proyecto, minimizando confusiones y asegurando que todas las actividades críticas tienen claramente asignadas las responsabilidades. 

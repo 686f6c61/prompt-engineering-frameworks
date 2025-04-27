@@ -1,0 +1,49 @@
+# VMOST: Visión-Misión-Objetivos-Estrategia-Táctica
+
+## Significado del Acrónimo
+
+*   **Visión:** Estado futuro deseado o ambición a largo plazo de la organización
+*   **Misión:** Propósito fundamental y razón de ser que guía las actividades
+*   **Objetivos:** Metas específicas, medibles y con plazos definidos
+*   **Estrategia:** Enfoque general o plan para lograr los objetivos y la visión
+*   **Táctica:** Acciones concretas y pasos específicos para ejecutar la estrategia
+
+## Descripción y Propósito
+
+El framework VMOST proporciona una estructura jerárquica para alinear todos los niveles de planificación organizacional, desde la visión de alto nivel hasta las tácticas específicas. Asegura que exista coherencia y trazabilidad entre la dirección estratégica y las acciones cotidianas. Este enfoque es particularmente valioso para la planificación estratégica, el desarrollo de roadmaps tecnológicos y cualquier iniciativa que requiera una alineación clara entre visión y ejecución.
+
+## Componentes
+
+*   **Visión:** Estado futuro deseado o ambición a largo plazo de la organización
+*   **Misión:** Propósito fundamental y razón de ser que guía las actividades
+*   **Objetivos:** Metas específicas, medibles y con plazos definidos
+*   **Estrategia:** Enfoque general o plan para lograr los objetivos y la visión
+*   **Táctica:** Acciones concretas y pasos específicos para ejecutar la estrategia
+
+## Ejemplo de Uso
+
+*   **Visión:** Plataforma líder en procesamiento de datos
+*   **Misión:** Ofrecer insights accionables en tiempo real
+*   **Objetivos:** Reducir latencia en un 50% en 6 meses
+*   **Estrategia:** Migración a arquitectura distribuida
+*   **Táctica:** Implementar procesamiento en Edge
+
+## Casos Recomendados
+
+*   Planificación estratégica de tecnología
+*   Desarrollo de roadmaps de producto
+*   Alineación organizacional
+*   Comunicación de dirección estratégica
+*   Priorización de iniciativas
+*   Evaluación de consistencia estratégica
+*   Desarrollo de planes departamentales alineados
+
+## Ventajas
+
+*   Asegura coherencia entre todos los niveles de planificación
+*   Facilita la comunicación clara de la dirección estratégica
+*   Permite identificar desalineaciones entre objetivos y acciones
+*   Conecta la visión de largo plazo con la ejecución táctica
+*   Proporciona un marco para evaluar iniciativas propuestas
+*   Mejora la toma de decisiones al considerar múltiples niveles
+*   Establece un lenguaje común para la planificación estratégica 

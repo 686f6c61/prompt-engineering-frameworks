@@ -1,0 +1,95 @@
+# Framework OODA: Observar, Orientar, Decidir, Actuar
+
+El ciclo OODA (Observe, Orient, Decide, Act) es un marco conceptual desarrollado por el estratega militar John Boyd para optimizar la toma de decisiones en entornos dinámicos e inciertos. Originalmente creado para mejorar el rendimiento de pilotos de combate, este framework se ha adaptado ampliamente a los negocios, gestión de crisis y liderazgo estratégico por su eficacia para navegar situaciones complejas.
+
+## Componentes principales:
+
+### O - Observar (Observe)
+Recopilación activa de información desde múltiples fuentes para construir un panorama completo de la situación.
+- ¿Qué está sucediendo en el entorno?
+- ¿Qué datos e información están disponibles?
+- ¿Qué señales o cambios se detectan?
+- ¿Qué acciones están tomando otros actores relevantes?
+
+### O - Orientar (Orient)
+Análisis e interpretación de la información observada a través de filtros mentales, experiencia y conocimiento para dar sentido a la situación.
+- ¿Cómo se interpreta la información recopilada?
+- ¿Qué significado tiene en el contexto actual?
+- ¿Qué patrones, oportunidades o amenazas emergen?
+- ¿Cómo afectan los prejuicios, experiencias previas y modelos mentales a la interpretación?
+
+### D - Decidir (Decide)
+Determinación del curso de acción basado en la orientación, evaluando alternativas y eligiendo la respuesta más adecuada.
+- ¿Qué opciones están disponibles dada la interpretación de la situación?
+- ¿Cuál es la mejor alternativa considerando recursos, riesgos y beneficios?
+- ¿Qué plan de acción ofrece mejores posibilidades de éxito?
+- ¿Cómo se puede mantener la flexibilidad para adaptarse a cambios?
+
+### A - Actuar (Act)
+Implementación de la decisión, traduciendo el plan elegido en acciones concretas y observando sus efectos para reiniciar el ciclo.
+- ¿Cómo se implementa efectivamente la decisión tomada?
+- ¿Qué recursos y coordinación se requieren?
+- ¿Qué métricas se utilizarán para evaluar los resultados?
+- ¿Cómo se comunicará y ejecutará el plan de acción?
+
+## Aplicación como Prompt:
+
+```
+Necesito aplicar el ciclo OODA (Observar, Orientar, Decidir, Actuar) para abordar [situación/problema/decisión]. Por favor, guíame a través de un análisis estructurado que me permita:
+
+# Observar
+[Identifica qué información necesito recopilar, de qué fuentes, qué datos son relevantes, y qué señales debo monitorear para entender completamente la situación actual]
+
+# Orientar
+[Ayúdame a analizar e interpretar la información recopilada, identificar patrones y significados, considerar diferentes perspectivas, y evaluar cómo mis experiencias y sesgos pueden influir en mi interpretación]
+
+# Decidir
+[Basado en la orientación, genera opciones viables, evalúa cada alternativa considerando ventajas y desventajas, y sugiere un proceso para seleccionar el mejor curso de acción]
+
+# Actuar
+[Proporciona recomendaciones sobre cómo implementar la decisión, qué recursos movilizar, cómo medir resultados, y cómo prepararse para reiniciar el ciclo en respuesta a los cambios]
+
+Además, incluye:
+1. Consideraciones sobre la velocidad del ciclo (cuán rápido necesito iterar)
+2. Recomendaciones para mejorar cada etapa del ciclo
+3. Potenciales obstáculos o desafíos que podrían surgir en cada fase
+4. Estrategias para mantener la agilidad y adaptabilidad durante todo el proceso
+```
+
+## Ejemplo de uso:
+
+Aplicación del ciclo OODA para gestionar una crisis de relaciones públicas tras un incidente de seguridad de datos en una empresa:
+
+### Observar:
+- **Alcance del incidente**: Análisis técnico completo del tipo de datos comprometidos, número de usuarios afectados y método de filtración.
+- **Respuesta externa**: Monitoreo en tiempo real de redes sociales, medios de comunicación y foros especializados para evaluar la percepción pública.
+- **Respuesta interna**: Feedback de empleados, estado de los sistemas, acciones inmediatas tomadas por equipos técnicos.
+- **Contexto regulatorio**: Identificación de obligaciones legales de divulgación y plazos según normativas aplicables (GDPR, CCPA, etc.).
+- **Respuesta de competidores**: Análisis de casos similares en la industria y sus estrategias de manejo de crisis.
+
+### Orientar:
+- **Análisis de severidad**: Evaluación del impacto potencial basada en la sensibilidad de los datos y el alcance de la exposición.
+- **Mapeo de stakeholders**: Identificación de los grupos más afectados (clientes, inversores, reguladores) y sus principales preocupaciones.
+- **Evaluación de reputación**: Análisis del capital de marca pre-crisis y cómo el incidente afecta la confianza según segmentos de clientes.
+- **Escenarios potenciales**: Desarrollo de escenarios "mejor/peor/más probable" sobre la evolución de la crisis.
+- **Limitaciones operativas**: Identificación de restricciones internas (recursos, tecnología, personal) que pueden afectar la respuesta.
+
+### Decidir:
+- **Estrategia de comunicación**: Elección entre transparencia proactiva vs. gestión controlada de información basada en valores corporativos y severidad real.
+- **Secuencia de notificaciones**: Determinación del orden para informar a diferentes stakeholders (primero clientes, empleados, reguladores, luego medios).
+- **Mensajes clave**: Definición de 3-5 mensajes principales que guiarán todas las comunicaciones.
+- **Acciones correctivas**: Selección de medidas técnicas y operativas inmediatas para contener y remediar el incidente.
+- **Plan de compensación**: Determinación de acciones compensatorias para los afectados (monitoreo de crédito gratuito, descuentos, etc.).
+
+### Actuar:
+- **Activación del equipo de crisis**: Asignación de roles específicos (portavoz, enlace técnico, coordinador legal) con responsabilidades claras.
+- **Ejecución de comunicaciones**: Implementación del plan de comunicación, comenzando con notificaciones directas a afectados y publicación de declaración oficial.
+- **Implementación técnica**: Despliegue de parches de seguridad, cambios de contraseñas, y medidas para prevenir incidentes similares.
+- **Seguimiento regulatorio**: Presentación de informes requeridos a autoridades de protección de datos dentro de los plazos legales.
+- **Monitoreo continuo**: Establecimiento de un sistema de seguimiento para evaluar la efectividad de la respuesta y detectar cambios en la percepción pública.
+
+### Iteración del ciclo:
+- Revisión cada 4 horas durante las primeras 48 horas para ajustar la estrategia según evolucione la situación
+- Actualización del mensaje según surja nueva información técnica
+- Adaptación de la respuesta basada en la reacción de los stakeholders clave
+- Reevaluación de tácticas según métricas de efectividad (menciones negativas en redes, cancelaciones de servicio, consultas de soporte) 

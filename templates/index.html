@@ -4,7 +4,7 @@
 <div class="container">
     <!-- Header principal -->
     <div class="text-center my-5">
-        <h1 class="display-4 mb-3">Prompt Engineering con +47 Frameworks</h1>
+        <h1 class="display-4 mb-3">Prompt Engineering con +63 Frameworks</h1>
         <p class="lead text-muted">Selecciona el framework más adecuado para crear prompts efectivos y profesionales.</p>
         
         <!-- Indicador del modelo actual -->
@@ -29,7 +29,7 @@
             
             <div class="search-container p-3 bg-light rounded">
                 <h4 class="text-center mb-2">Describe o define tu objetivo</h4>
-                <p class="text-muted text-center mb-3">Encontraremos el mejor Framework para tu Prompt entre los +47 que tenemos disponibles.</p>
+                <p class="text-muted text-center mb-3">Encontraremos el mejor Framework para tu Prompt entre los +63 que tenemos disponibles.</p>
                 <div class="d-flex flex-column flex-md-row align-items-stretch gap-3">
                     <input type="text" id="framework-search" class="form-control form-control-lg" placeholder="Describe tu objetivo para encontrar el mejor framework" aria-label="Buscar objetivo para framework">
                     <button id="search-btn" class="btn btn-primary btn-lg mt-2 mt-md-0 d-flex align-items-center gap-2" aria-label="Buscar framework">
@@ -75,73 +75,240 @@
         }
     </style>
 
-    <h2 class="text-center mb-4">Elige entre los +47 Framework para desarrollar tu prompting</h2>
+    <h2 class="text-center mb-4">Elige entre los +63 framework para desarrollar tu prompting</h2>
     <p class="text-center text-muted mb-4">Haz clic en el framework que quieres usar. Podrás ver ejemplos en cada uno de ellos.</p>
     
-    <div class="row mb-4">
-        {% for framework in [
-            ('rtf', 'R-T-F', 'Framework Rol-Tarea-Formato para instrucciones claras basadas en roles', 'Ideal para definir tareas específicas con roles claros y entregables estructurados'),
-            ('tag', 'T-A-G', 'Framework Tarea-Acción-Meta para prompts orientados a objetivos', 'Perfecto para proyectos con objetivos medibles y acciones concretas'),
-            ('bab', 'B-A-B', 'Framework Antes-Después-Puente para escenarios de transformación', 'Excelente para mostrar cambios y mejoras con un plan claro'),
-            ('care', 'C-A-R-E', 'Framework Contexto-Acción-Resultado-Ejemplo para planificación detallada', 'Óptimo para proyectos que requieren contexto completo y ejemplos'),
-            ('rise', 'R-I-S-E', 'Framework Rol-Entrada-Pasos-Expectativa para tareas basadas en procesos', 'Ideal para procesos paso a paso con resultados esperados claros'),
-            ('peas', 'P-E-A-S', 'Framework Propósito-Resultado-Audiencia-Estilo para comunicación efectiva', 'Perfecto para estrategias de comunicación y marketing'),
-            ('star', 'S-T-A-R', 'Framework Situación-Tarea-Acción-Resultado para casos de éxito', 'Excelente para documentar logros y experiencias'),
-            ('qcqa', 'Q-C-Q-A', 'Framework Pregunta-Contexto-Calificación-Respuesta para consultas estructuradas', 'Ideal para resolver problemas complejos paso a paso'),
-            ('aida', 'A-I-D-A', 'Framework Atención-Interés-Deseo-Acción para marketing persuasivo', 'Perfecto para crear contenido persuasivo y campañas'),
-            ('para', 'P-A-R-A', 'Framework Problema-Enfoque-Razón-Plan para resolución estructurada', 'Óptimo para solución de problemas y planificación'),
-            ('smart', 'S-M-A-R-T', 'Framework Específico-Medible-Alcanzable-Relevante-Temporal para objetivos', 'Ideal para establecer objetivos claros y medibles'),
-            ('erq', 'E-R-Q', 'Framework Experiencia-Requisitos-Calificadores para perfiles específicos', 'Perfecto para definir roles y requisitos'),
-            ('code', 'C-O-D-E', 'Framework Contexto-Objetivo-Detalles-Ejemplos para instrucciones claras', 'Excelente para documentación y guías paso a paso'),
-            ('pros', 'P-R-O-S', 'Framework Perspectiva-Requisitos-Resultado-Alcance para proyectos', 'Óptimo para definición y alcance de proyectos'),
-            ('team', 'T-E-A-M', 'Framework Tarea-Entorno-Aproximación-Métricas para trabajo en equipo', 'Ideal para proyectos colaborativos'),
-            ('idea', 'I-D-E-A', 'Framework Identificar-Definir-Ejecutar-Evaluar para solución de problemas', 'Perfecto para procesos de mejora continua'),
-            ('fast', 'F-A-S-T', 'Framework Enfoque-Audiencia-Alcance-Tono para comunicación efectiva', 'Excelente para estrategias de comunicación'),
-            ('leap', 'L-E-A-P', 'Framework Nivel-Expectativas-Enfoque-Parámetros para planificación', 'Óptimo para planificación estratégica'),
-            ('grow', 'G-R-O-W', 'Framework Meta-Realidad-Opciones-Camino para desarrollo personal', 'Ideal para coaching y desarrollo'),
-            ('spin', 'S-P-I-N', 'Framework Situación-Problema-Implicación-Necesidad para ventas consultivas', 'Perfecto para ventas y negociación'),
-            ('design', 'D-E-S-I-G-N', 'Framework Define-Explore-Scope-Ideate-Guide-Narrow para diseño', 'Ideal para procesos de diseño y desarrollo'),
-            ('vision', 'V-I-S-I-O-N', 'Framework Visualize-Identify-Structure-Implement-Optimize-Navigate', 'Perfecto para planificación estratégica'),
-            ('impact', 'I-M-P-A-C-T', 'Framework Intent-Message-Purpose-Audience-Channel-Timing', 'Óptimo para estrategias de comunicación'),
-            ('master', 'M-A-S-T-E-R', 'Framework Mission-Approach-Strategy-Tactics-Execution-Review', 'Ideal para gestión de proyectos'),
-            ('power', 'P-O-W-E-R', 'Framework Problem-Outcome-Why-Execution-Resources', 'Perfecto para resolución de problemas'),
-            ('logic', 'L-O-G-I-C', 'Framework Layout-Objective-Guidelines-Implementation-Criteria', 'Óptimo para desarrollo estructurado'),
-            ('scope', 'S-C-O-P-E', 'Framework Situation-Core Need-Obstacles-Plan-Evaluation', 'Ideal para definición de alcance'),
-            ('focus', 'F-O-C-U-S', 'Framework Frame-Objective-Constraints-Understanding-Solution', 'Perfecto para análisis de problemas'),
-            ('expert', 'E-X-P-E-R-T', 'Framework Expertise-Context-Purpose-Execution-Results-Testing', 'Óptimo para documentación técnica'),
-            ('clarity', 'C-L-A-R-I-T-Y', 'Framework Context-Limitations-Approach-Requirements-Implementation-Timeline-Yield', 'Ideal para planificación detallada'),
-            ('guide', 'G-U-I-D-E', 'Framework Goal-User-Implementation-Delivery-Evaluation para desarrollo de productos y servicios', 'Ideal para desarrollo de productos y servicios'),
-            ('path', 'P-A-T-H', 'Framework Purpose-Approach-Target-Horizon para planificación estratégica', 'Ideal para planificación estratégica'),
-            ('learn', 'L-E-A-R-N', 'Framework Level-Experience-Approach-Resources-Next steps para planes de formación y desarrollo', 'Ideal para planes de formación y desarrollo'),
-            ('solve', 'S-O-L-V-E', 'Framework Situation-Options-Limitations-Verification-Execution para resolución de problemas complejos', 'Ideal para resolución de problemas complejos'),
-            ('prime', 'P-R-I-M-E', 'Framework Problem-Research-Implementation-Monitoring-Evaluation para proyectos de investigación y desarrollo', 'Ideal para proyectos de investigación y desarrollo'),
-            ('adapt', 'A-D-A-P-T', 'Framework Analysis-Design-Approach-Progress-Testing para proyectos adaptativos y ágiles', 'Ideal para proyectos adaptativos y ágiles'),
-            ('build', 'B-U-I-L-D', 'Framework Baseline-Understanding-Implementation-Learning-Delivery para desarrollo de nuevos productos o servicios', 'Ideal para desarrollo de nuevos productos o servicios'),
-            ('craft', 'C-R-A-F-T', 'Framework Context-Requirements-Approach-Features-Testing para desarrollo de soluciones a medida', 'Ideal para desarrollo de soluciones a medida'),
-            ('scale', 'S-C-A-L-E', 'Framework Strategy-Capabilities-Action-Learning-Evolution para escalamiento de proyectos y operaciones', 'Ideal para escalamiento de proyectos y operaciones'),
-            ('think', 'T-H-I-N-K', 'Framework Topic-History-Insights-Next steps-Knowledge para análisis estratégico y toma de decisiones', 'Ideal para análisis estratégico y toma de decisiones'),
-            ('quest', 'Q-U-E-S-T', 'Framework Question-Understanding-Exploration-Solution-Testing para investigación y resolución de problemas', 'Ideal para investigación y resolución de problemas'),
-            ('drive', 'D-R-I-V-E', 'Framework Direction-Resources-Implementation-Validation-Evolution para gestión de proyectos innovadores', 'Ideal para gestión de proyectos innovadores'),
-            ('shape', 'S-H-A-P-E', 'Framework Situation-History-Analysis-Plan-Execution para transformación organizacional', 'Ideal para transformación organizacional'),
-            ('reach', 'R-E-A-C-H', 'Framework Requirements-Evaluation-Approach-Completion-Handover para gestión de proyectos end-to-end', 'Ideal para gestión de proyectos end-to-end'),
-            ('blend', 'B-L-E-N-D', 'Framework Baseline-Learning-Evolution-Navigation-Delivery para proyectos híbridos y metodologías mixtas', 'Ideal para proyectos híbridos y metodologías mixtas'),
-            ('spark', 'S-P-A-R-K', 'Framework Strategy-Planning-Action-Results-Knowledge para iniciativas de innovación', 'Ideal para iniciativas de innovación'),
-            ('pulse', 'P-U-L-S-E', 'Framework Purpose-Understanding-Learning-Strategy-Evaluation para monitoreo y mejora continua', 'Ideal para monitoreo y mejora continua')
-        ] %}
-        <div class="col-md-4 mb-3">
-            <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">{{ framework[1] }}</h5>
-                    <p class="card-text">{{ framework[2] }}</p>
-                    <div class="mt-auto">
-                        <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
-                            <i class="bi bi-eye"></i> Ver Ejemplo
-                        </button>
+    <!-- Organización por categorías -->
+    
+    <!-- Categoría 1: Ideación y descubrimiento -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3">Ideación y descubrimiento</h3>
+        <p class="text-muted mb-3">Para explorar ideas de producto, investigación de mercado y definición de problemas</p>
+        <div class="row">
+            {% set frameworks_cat1 = [
+                ('quest', 'Q-U-E-S-T', 'Framework pregunta-entendimiento-exploración-solución-pruebas para investigación y resolución de problemas', 'Para explorar ideas de producto y definir problemas'),
+                ('think', 'T-H-I-N-K', 'Framework tema-historia-insights-siguientes pasos-conocimiento para análisis estratégico', 'Para análisis estratégico y exploración de ideas'),
+                ('design', 'D-E-S-I-G-N', 'Framework definir-explorar-alcance-idear-guiar-reducir para diseño', 'Para procesos de diseño y conceptualización'),
+                ('vision', 'V-I-S-I-O-N', 'Framework visualizar-identificar-estructurar-implementar-optimizar-navegar', 'Para planificación estratégica y visión de producto'),
+                ('grow', 'G-R-O-W', 'Framework meta-realidad-opciones-camino para desarrollo personal', 'Para coaching y desarrollo de ideas')
+            ] %}
+            {% for framework in frameworks_cat1 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index }}</span>
+                        </div>
+                        <p class="card-text">{{ framework[2] }}</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+    </div>
+    
+    <!-- Categoría 2: Especificación y planificación -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3">Especificación y planificación</h3>
+        <p class="text-muted mb-3">Para definir requisitos del producto, establecer objetivos medibles y planificar sprints</p>
+        <div class="row">
+            {% set frameworks_cat2 = [
+                ('code', 'C-O-D-E', 'Framework contexto-objetivo-detalles-ejemplos para instrucciones claras', 'Para documentación y especificaciones'),
+                ('clarity', 'C-L-A-R-I-T-Y', 'Framework contexto-limitaciones-aproximación-requisitos-implementación-cronograma-rendimiento', 'Para planificación detallada de proyectos'),
+                ('scope', 'S-C-O-P-E', 'Framework situación-necesidad core-obstáculos-plan-evaluación', 'Para definición de alcance'),
+                ('smart', 'S-M-A-R-T', 'Framework específico-medible-alcanzable-relevante-temporal para objetivos', 'Para establecer objetivos claros y medibles'),
+                ('5w2h', '5W2H', 'Framework what-why-where-when-who-how-how much para planificación detallada', 'Para detallar planes de acción'),
+                ('okr', 'O-K-R', 'Framework objectives and key results para definir y seguir objetivos', 'Para establecer metas ambiciosas y medibles')
+            ] %}
+            {% for framework in frameworks_cat2 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length }}</span>
+                        </div>
+                        <p class="card-text">{{ framework[2] }}</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Categoría 3: Desarrollo y construcción -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3">Desarrollo y construcción</h3>
+        <p class="text-muted mb-3">Para guiar el desarrollo, comunicarse con equipos técnicos y documentar soluciones</p>
+        <div class="row">
+            {% set frameworks_cat3 = [
+                ('build', 'B-U-I-L-D', 'Framework línea base-entendimiento-implementación-aprendizaje-entrega para desarrollo', 'Para desarrollo de nuevos productos'),
+                ('rtf', 'R-T-F', 'Framework rol-tarea-formato para instrucciones claras basadas en roles', 'Para definir tareas con roles claros'),
+                ('tag', 'T-A-G', 'Framework tarea-acción-meta para prompts orientados a objetivos', 'Para proyectos con objetivos medibles'),
+                ('adapt', 'A-D-A-P-T', 'Framework análisis-diseño-aproximación-progreso-pruebas para proyectos ágiles', 'Para proyectos adaptativos y ágiles'),
+                ('focus', 'F-O-C-U-S', 'Framework marco-objetivo-restricciones-comprensión-solución', 'Para análisis de problemas'),
+                ('raci', 'R-A-C-I', 'Framework responsable-accountable-consultado-informado para asignar responsabilidades', 'Para definir responsabilidades en proyectos')
+            ] %}
+            {% for framework in frameworks_cat3 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length }}</span>
+                        </div>
+                        <p class="card-text">{{ framework[2] }}</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Categoría 4: Testing y validación -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3">Testing y validación</h3>
+        <p class="text-muted mb-3">Para evaluar prototipos, priorizar mejoras y estructurar feedback</p>
+        <div class="row">
+            {% set frameworks_cat4 = [
+                ('care', 'C-A-R-E', 'Framework contexto-acción-resultado-ejemplo para planificación detallada', 'Para proyectos que requieren contexto completo'),
+                ('ice', 'I-C-E', 'Framework impact-confidence-ease para priorización rápida', 'Para priorización ágil y growth hacking'),
+                ('rice', 'R-I-C-E', 'Framework reach-impact-confidence-effort para priorización cuantitativa', 'Para priorizar funcionalidades o proyectos'),
+                ('solve', 'S-O-L-V-E', 'Framework situación-opciones-limitaciones-verificación-ejecución', 'Para resolución de problemas complejos'),
+                ('pdca', 'P-D-C-A', 'Framework planificar-hacer-verificar-actuar para mejora continua', 'Para optimización de procesos')
+            ] %}
+            {% for framework in frameworks_cat4 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length }}</span>
+                        </div>
+                        <p class="card-text">{{ framework[2] }}</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Categoría 5: Comunicación y lanzamiento -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3">Comunicación y lanzamiento</h3>
+        <p class="text-muted mb-3">Para marketing de producto, comunicación con usuarios y pitch de lanzamiento</p>
+        <div class="row">
+            {% set frameworks_cat5 = [
+                ('peas', 'P-E-A-S', 'Framework propósito-resultado-audiencia-estilo para comunicación efectiva', 'Para estrategias de comunicación'),
+                ('aida', 'A-I-D-A', 'Framework atención-interés-deseo-acción para marketing persuasivo', 'Para crear contenido persuasivo'),
+                ('4p', '4P', 'Framework product-price-place-promotion (marketing mix)', 'Para desarrollar estrategias de marketing'),
+                ('impact', 'I-M-P-A-C-T', 'Framework intención-mensaje-propósito-audiencia-canal-tiempo', 'Para estrategias de comunicación'),
+                ('star', 'S-T-A-R', 'Framework situación-tarea-acción-resultado para casos de éxito', 'Para documentar logros y experiencias')
+            ] %}
+            {% for framework in frameworks_cat5 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length }}</span>
+                        </div>
+                        <p class="card-text">{{ framework[2] }}</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Sección con los frameworks restantes -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3">Frameworks adicionales</h3>
+        <p class="text-muted mb-3">Frameworks especializados para diversos casos de uso</p>
+        <div class="row">
+            {% set additional_frameworks = [
+                ('para', 'P-A-R-A', 'Framework problema-enfoque-razón-plan para resolución estructurada', 'Para solución de problemas'),
+                ('erq', 'E-R-Q', 'Framework experiencia-requisitos-calificadores para perfiles específicos', 'Para definir roles y requisitos'),
+                ('pros', 'P-R-O-S', 'Framework perspectiva-requisitos-resultado-alcance para proyectos', 'Para definición y alcance'),
+                ('team', 'T-E-A-M', 'Framework tarea-entorno-aproximación-métricas para trabajo en equipo', 'Para proyectos colaborativos'),
+                ('idea', 'I-D-E-A', 'Framework identificar-definir-ejecutar-evaluar para solución de problemas', 'Para procesos de mejora'),
+                ('fast', 'F-A-S-T', 'Framework enfoque-audiencia-alcance-tono para comunicación efectiva', 'Para estrategias de comunicación'),
+                ('leap', 'L-E-A-P', 'Framework nivel-expectativas-enfoque-parámetros para planificación', 'Para planificación estratégica'),
+                ('spin', 'S-P-I-N', 'Framework situación-problema-implicación-necesidad para ventas consultivas', 'Para ventas y negociación'),
+                ('master', 'M-A-S-T-E-R', 'Framework misión-aproximación-estrategia-tácticas-ejecución-revisión', 'Para gestión de proyectos'),
+                ('power', 'P-O-W-E-R', 'Framework problema-resultado-por qué-ejecución-recursos', 'Para resolución de problemas'),
+                ('logic', 'L-O-G-I-C', 'Framework diseño-objetivo-directrices-implementación-criterios', 'Para desarrollo estructurado'),
+                ('expert', 'E-X-P-E-R-T', 'Framework experiencia-contexto-propósito-ejecución-resultados-pruebas', 'Para documentación técnica'),
+                ('guide', 'G-U-I-D-E', 'Framework meta-usuario-implementación-entrega-evaluación', 'Para desarrollo de productos'),
+                ('path', 'P-A-T-H', 'Framework propósito-aproximación-objetivo-horizonte', 'Para planificación estratégica'),
+                ('learn', 'L-E-A-R-N', 'Framework nivel-experiencia-aproximación-recursos-siguientes pasos', 'Para planes de formación'),
+                ('prime', 'P-R-I-M-E', 'Framework problema-investigación-implementación-monitoreo-evaluación', 'Para investigación y desarrollo'),
+                ('craft', 'C-R-A-F-T', 'Framework contexto-requisitos-aproximación-funcionalidades-pruebas', 'Para soluciones a medida'),
+                ('scale', 'S-C-A-L-E', 'Framework estrategia-capacidades-acción-aprendizaje-evolución', 'Para escalamiento de proyectos'),
+                ('drive', 'D-R-I-V-E', 'Framework dirección-recursos-implementación-validación-evolución', 'Para proyectos innovadores'),
+                ('shape', 'S-H-A-P-E', 'Framework situación-historia-análisis-plan-ejecución', 'Para transformación organizacional'),
+                ('reach', 'R-E-A-C-H', 'Framework requisitos-evaluación-aproximación-completitud-handover', 'Para gestión end-to-end'),
+                ('blend', 'B-L-E-N-D', 'Framework base-aprendizaje-evolución-navegación-entrega', 'Para metodologías mixtas'),
+                ('spark', 'S-P-A-R-K', 'Framework estrategia-planificación-acción-resultados-conocimiento', 'Para iniciativas de innovación'),
+                ('pulse', 'P-U-L-S-E', 'Framework propósito-entendimiento-aprendizaje-estrategia-evaluación', 'Para mejora continua'),
+                ('daci', 'D-A-C-I', 'Framework driver-approver-contributor-informed para decisiones', 'Para clarificar roles en decisiones'),
+                ('heart', 'H-E-A-R-T', 'Framework felicidad-compromiso-adopción-retención-éxito en tareas', 'Para medir experiencia de usuario'),
+                ('mece', 'M-E-C-E', 'Principio mutuamente exclusivo, colectivamente exhaustivo para análisis', 'Para estructurar análisis completos'),
+                ('ooda', 'O-O-D-A', 'Framework observar-orientar-decidir-actuar para ciclos de decisión', 'Para respuesta rápida'),
+                ('vmost', 'V-M-O-S-T', 'Framework visión-misión-objetivos-estrategia-táctica', 'Para alineación estratégica'),
+                ('swot', 'S-W-O-T', 'Framework fortalezas-debilidades-oportunidades-amenazas', 'Para análisis estratégico'),
+                ('adkar', 'A-D-K-A-R', 'Modelo awareness-desire-knowledge-ability-reinforcement', 'Para gestión del cambio'),
+                ('6m', '6M', 'Framework man-machine-material-method-measurement-mother nature', 'Para análisis de causa raíz'),
+                ('qcqa', 'Q-C-Q-A', 'Framework pregunta-contexto-calificación-respuesta', 'Para consultas estructuradas'),
+                ('bab', 'B-A-B', 'Framework antes-después-puente para escenarios de transformación', 'Para mostrar cambios y mejoras'),
+                ('rise', 'R-I-S-E', 'Framework rol-entrada-pasos-expectativa para tareas basadas en procesos', 'Para procesos paso a paso'),
+                ('rasci', 'R-A-S-C-I', 'Variante de RACI con rol supportive', 'Para proyectos con múltiples roles')
+            ] %}
+            {% for framework in additional_frameworks %}
+            <div class="col-md-3 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length }}</span>
+                        </div>
+                        <p class="card-text small">{{ framework[2] }}</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="form-container mb-4">

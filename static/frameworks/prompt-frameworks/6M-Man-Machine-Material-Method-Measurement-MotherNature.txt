@@ -1,0 +1,201 @@
+# Framework 6M: Mano de Obra, Máquina, Material, Método, Medición, Medio Ambiente
+
+El framework 6M, también conocido como Diagrama de Ishikawa o Diagrama de Espina de Pescado, es una herramienta de análisis causal que permite identificar y clasificar las causas potenciales de un problema o efecto. Desarrollado por Kaoru Ishikawa en la década de 1960, este método es ampliamente utilizado en la mejora de calidad, resolución de problemas y análisis de procesos para descubrir las causas raíz de manera estructurada.
+
+## Componentes principales:
+
+### M1 - Mano de Obra (Man)
+Factores relacionados con el personal involucrado en el proceso.
+- ¿El personal tiene las habilidades y capacitación adecuadas?
+- ¿Hay problemas de fatiga, motivación o rotación?
+- ¿Existen aspectos de comunicación o trabajo en equipo que afecten?
+- ¿Cómo influyen los factores humanos en el problema?
+
+### M2 - Máquina (Machine)
+Aspectos relacionados con el equipo, tecnología e infraestructura.
+- ¿El equipamiento es adecuado para la tarea?
+- ¿Existen problemas de mantenimiento o calibración?
+- ¿La capacidad o configuración es la correcta?
+- ¿Hay obsolescencia o falta de actualización?
+
+### M3 - Material (Material)
+Elementos relacionados con los insumos, materias primas o componentes.
+- ¿Los materiales tienen la calidad requerida?
+- ¿Hay variabilidad en las especificaciones de los insumos?
+- ¿El almacenamiento o manejo es adecuado?
+- ¿Existen problemas con los proveedores?
+
+### M4 - Método (Method)
+Aspectos relacionados con los procedimientos, instrucciones y flujos de trabajo.
+- ¿Los procedimientos son claros y adecuados?
+- ¿Existen estándares definidos?
+- ¿El diseño del proceso es eficiente?
+- ¿Se siguen los procedimientos establecidos?
+
+### M5 - Medición (Measurement)
+Factores relacionados con los sistemas de medición, métricas y controles.
+- ¿Los instrumentos de medición son precisos?
+- ¿Las métricas utilizadas son las adecuadas?
+- ¿Se calibran correctamente los equipos de medición?
+- ¿Las inspecciones son suficientes y efectivas?
+
+### M6 - Medio Ambiente (Mother Nature)
+Elementos del entorno físico o condiciones ambientales que influyen en el proceso.
+- ¿Cómo afectan la temperatura, humedad o iluminación?
+- ¿El espacio de trabajo es adecuado?
+- ¿Existen factores externos que impactan el proceso?
+- ¿Las condiciones de limpieza y orden son apropiadas?
+
+## Aplicación como Prompt:
+
+```
+Necesito realizar un análisis exhaustivo de las causas del [problema/defecto/situación] utilizando el framework 6M (Ishikawa). Por favor, proporciona un análisis detallado que identifique las posibles causas en cada una de las siguientes categorías:
+
+# Mano de Obra (Man)
+[Identifica todas las posibles causas relacionadas con el personal, incluyendo factores como capacitación, experiencia, fatiga, comunicación, supervisión, compromiso y factores humanos]
+
+# Máquina (Machine)
+[Analiza las causas potenciales relacionadas con equipos, tecnología e infraestructura, considerando aspectos como mantenimiento, calibración, capacidad, configuración, diseño y desgaste]
+
+# Material (Material)
+[Examina los factores relacionados con insumos y materias primas, abordando aspectos como calidad, especificaciones, almacenamiento, manejo, variabilidad y suministro]
+
+# Método (Method)
+[Evalúa las causas relacionadas con procedimientos y procesos, incluyendo documentación, estandarización, diseño del proceso, instrucciones de trabajo y flujos de información]
+
+# Medición (Measurement)
+[Identifica las causas relacionadas con sistemas de medición y control, analizando precisión, exactitud, frecuencia, métodos de muestreo, análisis de datos e interpretación]
+
+# Medio Ambiente (Mother Nature)
+[Examina los factores ambientales y del entorno que pueden contribuir al problema, como condiciones físicas, espacio, temperatura, humedad, ruido, iluminación y factores externos]
+
+Para cada categoría, proporciona:
+1. Las causas potenciales específicas y detalladas
+2. Una evaluación preliminar de la probabilidad de que cada causa contribuya al problema
+3. Posibles interrelaciones entre las diferentes causas identificadas
+4. Recomendaciones preliminares para investigar y verificar las causas principales
+```
+
+## Ejemplo de uso:
+
+Análisis 6M para alto porcentaje de defectos en un proceso de manufactura de circuitos electrónicos:
+
+### Mano de Obra (Man):
+- **Capacitación insuficiente**:
+  * El personal nuevo recibe solo 2 días de entrenamiento antes de operar equipos complejos
+  * No existe un programa de recertificación periódica
+  * Probabilidad alta (85%) de contribuir al problema
+- **Fatiga del operador**:
+  * Turnos extendidos de 12 horas en la línea de montaje
+  * Rotación frecuente entre estaciones de trabajo diferentes
+  * Probabilidad media-alta (70%)
+- **Supervisión inconsistente**:
+  * Ratio supervisor:operarios de 1:25, superior al estándar industrial de 1:15
+  * Criterios de calidad interpretados diferentemente entre turnos
+  * Probabilidad media (60%)
+- **Alta rotación de personal**:
+  * Tasa de rotación del 25% trimestral en operadores de soldadura
+  * Curva de aprendizaje no completada antes de la salida de empleados
+  * Probabilidad alta (80%)
+
+### Máquina (Machine):
+- **Calibración inadecuada de equipos de soldadura**:
+  * Protocolo actual especifica calibración mensual, pero registros muestran intervalos de hasta 10 semanas
+  * Variaciones detectadas en temperatura de soldadura de ±15°C entre máquinas
+  * Probabilidad muy alta (90%)
+- **Obsolescencia de equipos de inspección automática**:
+  * Sistemas de visión artificial con 7 años de antigüedad (vida útil recomendada 5 años)
+  * Tasa de falsos positivos/negativos de 12%, superior al estándar de la industria (3%)
+  * Probabilidad alta (75%)
+- **Mantenimiento reactivo vs. preventivo**:
+  * 80% de las intervenciones de mantenimiento ocurren tras fallas
+  * Paradas no programadas afectan configuración óptima tras reinicio
+  * Probabilidad media-alta (65%)
+- **Incompatibilidad entre equipos de diferentes generaciones**:
+  * Mezclado de máquinas adquiridas entre 2010-2022 sin protocolo de integración
+  * Diferentes interfaces de control y parámetros entre modelos
+  * Probabilidad media (55%)
+
+### Material (Material):
+- **Variabilidad en componentes electrónicos**:
+  * Suministro desde 3 proveedores diferentes con especificaciones ligeramente distintas
+  * Tolerancias de componentes en el límite superior permitido (±10%)
+  * Probabilidad alta (80%)
+- **Almacenamiento inadecuado**:
+  * Control de humedad insuficiente en área de almacenamiento (45-70% vs. 50-55% recomendado)
+  * Exposición a cambios de temperatura durante transporte interno
+  * Probabilidad media (60%)
+- **Problemas con pasta de soldadura**:
+  * Inconsistencia en viscosidad por variaciones en tiempo de uso
+  * No se realiza prueba de consistencia al inicio de cada turno
+  * Probabilidad muy alta (85%)
+- **Trazabilidad limitada de lotes**:
+  * Sistema actual no permite seguimiento completo de componentes específicos
+  * Dificultad para aislar problemas de proveedores específicos
+  * Probabilidad baja-media (40%)
+
+### Método (Method):
+- **Procedimientos desactualizados**:
+  * Última revisión de instrucciones de trabajo hace 18 meses
+  * Incorporación de 3 nuevos modelos sin actualización de documentación
+  * Probabilidad alta (75%)
+- **Variación entre turnos**:
+  * Diferencias en secuencias de operación entre turno diurno y nocturno
+  * Ajustes no documentados realizados por operadores experimentados
+  * Probabilidad media-alta (70%)
+- **Tiempo insuficiente para inspección**:
+  * Reducción del 15% en tiempo asignado para verificación visual
+  * Presión por cumplir cuotas de producción
+  * Probabilidad alta (80%)
+- **Ausencia de poka-yoke (sistemas a prueba de errores)**:
+  * Proceso permite continuar con parámetros fuera de rango sin alertas
+  * Mínimas barreras físicas para prevenir errores de ensamblaje
+  * Probabilidad media-alta (65%)
+
+### Medición (Measurement):
+- **Criterios de inspección subjetivos**:
+  * Evaluación visual sin patrones estandarizados de referencia
+  * Diferentes interpretaciones de "defecto aceptable" entre inspectores
+  * Probabilidad muy alta (85%)
+- **Muestreo inadecuado**:
+  * Inspección de solo 5 unidades por lote de 500 (1%)
+  * Método de selección no aleatorio (primeras unidades del lote)
+  * Probabilidad alta (80%)
+- **Equipos de medición sin verificación**:
+  * Multímetros de prueba funcional calibrados anualmente en vez de trimestralmente
+  * No existe verificación cruzada entre instrumentos
+  * Probabilidad media-alta (70%)
+- **Análisis de datos limitado**:
+  * No se utilizan técnicas estadísticas para identificar tendencias
+  * Reportes generados manualmente con errores de transcripción
+  * Probabilidad media (50%)
+
+### Medio Ambiente (Mother Nature):
+- **Control insuficiente de temperatura y humedad**:
+  * Fluctuaciones de temperatura en planta de ±5°C durante el día
+  * Sistema HVAC con capacidad insuficiente para volumen del área
+  * Probabilidad alta (75%)
+- **Contaminación por partículas**:
+  * Sistema de filtración de aire no cumple especificaciones para electrónica
+  * Área de producción cercana a zona de mecanizado (generación de polvo)
+  * Probabilidad media-alta (65%)
+- **Iluminación inadecuada**:
+  * Niveles de iluminación de 300 lux vs. 750 lux recomendados para inspección de precisión
+  * Sombras en áreas críticas por disposición inadecuada de luminarias
+  * Probabilidad media (60%)
+- **Vibraciones mecánicas**:
+  * Equipos de alta vibración instalados en la misma plataforma que equipos sensibles
+  * Ausencia de sistemas de aislamiento de vibraciones para soldadura de precisión
+  * Probabilidad baja-media (45%)
+
+### Interrelaciones clave identificadas:
+1. La alta rotación de personal (Mano de Obra) agrava el problema de procedimientos desactualizados (Método)
+2. La calibración inadecuada (Máquina) afecta directamente a las mediciones inconsistentes (Medición)
+3. Los problemas de pasta de soldadura (Material) se intensifican con el control deficiente de temperatura (Medio Ambiente)
+4. La presión por cumplir cuotas (Método) contribuye a la fatiga del operador (Mano de Obra)
+
+### Recomendaciones para investigación:
+1. **Alta prioridad**: Realizar análisis SPC (Control Estadístico de Procesos) en equipos de soldadura para verificar variabilidad
+2. **Alta prioridad**: Implementar pruebas controladas con diferentes lotes de pasta de soldadura
+3. **Media prioridad**: Conducir auditoría cruzada de procedimientos entre turnos
+4. **Media prioridad**: Realizar estudio de ergonomía y carga laboral en operadores 

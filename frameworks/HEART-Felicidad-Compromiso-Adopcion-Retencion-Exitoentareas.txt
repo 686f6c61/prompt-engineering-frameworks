@@ -1,0 +1,49 @@
+# HEART: Felicidad-Compromiso-Adopción-Retención-Éxito en tareas
+
+## Significado del Acrónimo
+
+*   **Felicidad:** Mide la satisfacción, facilidad de uso y actitud de los usuarios hacia el producto
+*   **Compromiso:** Evalúa el nivel de interacción y frecuencia de uso por parte de los usuarios
+*   **Adopción:** Mide la adquisición de nuevos usuarios o adopción de nuevas funcionalidades
+*   **Retención:** Analiza el porcentaje de usuarios que continúan utilizando el producto en el tiempo
+*   **Éxito en tareas:** Evalúa la eficiencia, efectividad y tasa de éxito en completar tareas
+
+## Descripción y Propósito
+
+El framework HEART, desarrollado por Google, proporciona un enfoque estructurado para medir la experiencia del usuario a gran escala. Establece métricas centradas en el usuario que abarcan desde la satisfacción subjetiva hasta el éxito objetivo en tareas, permitiendo un análisis holístico de la experiencia de usuario. Es especialmente valioso para productos digitales donde se busca equilibrar la satisfacción emocional con el rendimiento práctico.
+
+## Componentes
+
+*   **Felicidad:** Mide la satisfacción, facilidad de uso y actitud de los usuarios hacia el producto
+*   **Compromiso:** Evalúa el nivel de interacción y frecuencia de uso por parte de los usuarios
+*   **Adopción:** Mide la adquisición de nuevos usuarios o adopción de nuevas funcionalidades
+*   **Retención:** Analiza el porcentaje de usuarios que continúan utilizando el producto en el tiempo
+*   **Éxito en tareas:** Evalúa la eficiencia, efectividad y tasa de éxito en completar tareas
+
+## Ejemplo de Uso
+
+*   **Felicidad:** Encuestas de satisfacción NPS
+*   **Compromiso:** Sesiones por usuario/mes
+*   **Adopción:** Activaciones de nuevas funciones
+*   **Retención:** Usuarios activos recurrentes
+*   **Éxito en tareas:** Tasa de conversión en funnel
+
+## Casos Recomendados
+
+*   Evaluación de productos y servicios digitales
+*   Optimización de experiencia de usuario
+*   Desarrollo de KPIs para plataformas
+*   Evaluación de rediseños o nuevas funcionalidades
+*   Comparativa entre diferentes versiones de un producto
+*   Diagnóstico de problemas de retención
+*   Establecimiento de objetivos centrados en usuario
+
+## Ventajas
+
+*   Proporciona una visión holística de la experiencia del usuario
+*   Equilibra métricas emocionales con métricas de comportamiento
+*   Facilita la priorización de mejoras basadas en datos
+*   Permite identificar problemas específicos en la experiencia
+*   Conecta métricas de usuario con objetivos de negocio
+*   Establece un lenguaje común para discutir la calidad del producto
+*   Proporciona estructura para sistemas de medición a gran escala 

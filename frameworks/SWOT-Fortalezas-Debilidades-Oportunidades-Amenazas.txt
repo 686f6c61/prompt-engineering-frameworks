@@ -1,0 +1,46 @@
+# SWOT: Fortalezas-Debilidades-Oportunidades-Amenazas
+
+## Significado del Acrónimo
+
+*   **Fortalezas:** Capacidades, recursos y factores positivos internos que pueden aprovecharse
+*   **Debilidades:** Limitaciones, deficiencias o aspectos negativos internos que deben abordarse
+*   **Oportunidades:** Factores externos favorables que pueden ser aprovechados para obtener ventajas
+*   **Amenazas:** Factores externos desfavorables que pueden representar desafíos o riesgos
+
+## Descripción y Propósito
+
+El framework SWOT (también conocido como FODA en español) es una herramienta de análisis estratégico que evalúa factores internos (fortalezas y debilidades) y externos (oportunidades y amenazas) que afectan a una organización, proyecto o iniciativa. Proporciona una visión completa de la situación actual y ayuda a identificar acciones estratégicas. Es particularmente valioso para la planificación estratégica, evaluación de proyectos y cualquier contexto donde sea importante comprender la posición relativa frente a factores internos y externos.
+
+## Componentes
+
+*   **Fortalezas:** Capacidades, recursos y factores positivos internos que pueden aprovecharse
+*   **Debilidades:** Limitaciones, deficiencias o aspectos negativos internos que deben abordarse
+*   **Oportunidades:** Factores externos favorables que pueden ser aprovechados para obtener ventajas
+*   **Amenazas:** Factores externos desfavorables que pueden representar desafíos o riesgos
+
+## Ejemplo de Uso
+
+*   **Fortalezas:** Equipo técnico especializado, infraestructura robusta
+*   **Debilidades:** Procesos manuales, deuda técnica acumulada
+*   **Oportunidades:** Nuevas tecnologías disponibles, mercado en expansión
+*   **Amenazas:** Competidores innovadores, regulaciones cambiantes
+
+## Casos Recomendados
+
+*   Planificación estratégica de tecnología
+*   Evaluación de viabilidad de proyectos
+*   Análisis competitivo
+*   Toma de decisiones estratégicas
+*   Identificación de áreas de mejora
+*   Evaluación de riesgos y oportunidades
+*   Desarrollo de planes de acción específicos
+
+## Ventajas
+
+*   Proporciona una visión holística de factores internos y externos
+*   Facilita la identificación de ventajas competitivas
+*   Ayuda a anticipar y mitigar riesgos potenciales
+*   Identifica oportunidades de crecimiento o mejora
+*   Establece una base sólida para la planificación estratégica
+*   Promueve el pensamiento crítico y el análisis sistemático
+*   Facilita la comunicación de situación actual y dirección estratégica 

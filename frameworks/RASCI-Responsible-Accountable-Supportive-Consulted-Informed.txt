@@ -1,0 +1,49 @@
+# RASCI: Responsible-Accountable-Supportive-Consulted-Informed
+
+## Significado del Acrónimo
+
+*   **Responsible:** Personas que realizan el trabajo para completar la tarea o entregable
+*   **Accountable:** Persona con autoridad final que rinde cuentas por el resultado (solo una)
+*   **Supportive:** Personas que proporcionan recursos o asistencia para completar la actividad
+*   **Consulted:** Personas cuyas opiniones se solicitan y con las que hay comunicación bidireccional
+*   **Informed:** Personas que se mantienen al día sobre el progreso, generalmente solo tras completarse
+
+## Descripción y Propósito
+
+El framework RASCI es una variante extendida del modelo RACI que incluye un rol adicional de Soporte (Supportive). Proporciona una matriz para la asignación clara de roles y responsabilidades en proyectos y procesos. Al distinguir entre responsabilidades primarias, rendición de cuentas, apoyo, consulta e información, RASCI ayuda a establecer claridad en qué se espera de cada persona involucrada en una tarea o proyecto. Es particularmente valioso para proyectos complejos que involucran a múltiples equipos o departamentos donde el rol de soporte necesita ser explícitamente definido.
+
+## Componentes
+
+*   **Responsible:** Personas que realizan el trabajo para completar la tarea o entregable
+*   **Accountable:** Persona con autoridad final que rinde cuentas por el resultado (solo una)
+*   **Supportive:** Personas que proporcionan recursos o asistencia para completar la actividad
+*   **Consulted:** Personas cuyas opiniones se solicitan y con las que hay comunicación bidireccional
+*   **Informed:** Personas que se mantienen al día sobre el progreso, generalmente solo tras completarse
+
+## Ejemplo de Uso
+
+*   **Responsible:** Equipo de desarrollo
+*   **Accountable:** Arquitecto de soluciones
+*   **Supportive:** Equipo de operaciones y SRE
+*   **Consulted:** Equipo de seguridad y equipo de UX
+*   **Informed:** Directores de producto y stakeholders
+
+## Casos Recomendados
+
+*   Gestión de proyectos complejos multidisciplinarios
+*   Definición de roles en transformaciones técnicas
+*   Establecimiento de procesos DevOps y CI/CD
+*   Implementación de sistemas empresariales
+*   Proyectos con equipos distribuidos o globales
+*   Iniciativas que requieren coordinación entre departamentos
+*   Proyectos con múltiples dependencias entre equipos
+
+## Ventajas
+
+*   Mayor claridad que RACI al distinguir explícitamente el rol de soporte
+*   Reduce confusiones sobre qué se espera de cada miembro del equipo
+*   Mejora la coordinación y colaboración entre diferentes áreas
+*   Elimina vacíos de responsabilidad y evita duplicación de esfuerzos
+*   Facilita la gestión de dependencias entre equipos
+*   Proporciona una estructura para resolver conflictos y tomar decisiones
+*   Mejora la transparencia y rendición de cuentas en toda la organización 

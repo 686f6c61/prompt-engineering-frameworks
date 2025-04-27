@@ -1,0 +1,46 @@
+# DACI: Driver-Approver-Contributor-Informed
+
+## Significado del Acrónimo
+
+*   **Driver:** Persona responsable de liderar la iniciativa y asegurar que se tome una decisión
+*   **Approver:** Individuo o grupo con autoridad para aprobar o vetar la decisión final
+*   **Contributor:** Personas consultadas y que aportan información al proceso de decisión
+*   **Informed:** Personas que deben ser informadas sobre la decisión una vez tomada
+
+## Descripción y Propósito
+
+El framework DACI es una metodología para la toma de decisiones y asignación de responsabilidades en proyectos o iniciativas. Clarifica quién tiene qué rol en el proceso de decisión, estableciendo un propietario claro (Driver), definiendo quién tiene autoridad de aprobación, quiénes contribuyen con información y quiénes necesitan ser informados. Este marco es particularmente valioso para evitar ambigüedades en la toma de decisiones y asegurar que todos los interesados estén adecuadamente involucrados.
+
+## Componentes
+
+*   **Driver:** Persona responsable de liderar la iniciativa y asegurar que se tome una decisión
+*   **Approver:** Individuo o grupo con autoridad para aprobar o vetar la decisión final
+*   **Contributor:** Personas consultadas y que aportan información al proceso de decisión
+*   **Informed:** Personas que deben ser informadas sobre la decisión una vez tomada
+
+## Ejemplo de Uso
+
+*   **Driver:** Líder técnico del proyecto
+*   **Approver:** Comité de arquitectura
+*   **Contributor:** Desarrolladores e ingenieros DevOps
+*   **Informed:** Equipos de soporte y operaciones
+
+## Casos Recomendados
+
+*   Toma de decisiones técnicas complejas
+*   Cambios de arquitectura en sistemas
+*   Selección de tecnologías o proveedores
+*   Definición de procesos críticos
+*   Resolución de conflictos entre equipos
+*   Priorización de funcionalidades
+*   Cambios que afectan a múltiples departamentos
+
+## Ventajas
+
+*   Establece claridad sobre roles y responsabilidades
+*   Evita la paralización en la toma de decisiones
+*   Reduce conflictos sobre quién tiene autoridad
+*   Asegura que todas las partes relevantes sean consultadas
+*   Mejora la comunicación entre equipos
+*   Acelera el proceso de toma de decisiones
+*   Facilita la rendición de cuentas posterior 

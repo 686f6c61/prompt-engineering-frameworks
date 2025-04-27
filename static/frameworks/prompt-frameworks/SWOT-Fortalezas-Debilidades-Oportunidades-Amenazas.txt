@@ -1,0 +1,96 @@
+# Framework SWOT: Fortalezas, Debilidades, Oportunidades, Amenazas
+
+El análisis SWOT (o DAFO en español) es una herramienta estratégica que permite evaluar la situación de una organización, proyecto o idea identificando factores internos (Fortalezas y Debilidades) y externos (Oportunidades y Amenazas). Este marco proporciona una visión completa para la toma de decisiones estratégicas.
+
+## Componentes principales:
+
+### S - Fortalezas (Strengths)
+Características internas positivas que proporcionan ventajas competitivas o capacidades distintivas.
+- ¿Qué hace bien la organización/proyecto?
+- ¿Qué recursos únicos posee?
+- ¿Qué ventajas tiene sobre sus competidores?
+- ¿Qué capacidades o competencias clave tiene?
+
+### W - Debilidades (Weaknesses)
+Características internas negativas que presentan desventajas competitivas o áreas de mejora.
+- ¿Qué podría mejorarse?
+- ¿Qué se debería evitar?
+- ¿Qué factores reducen las ventas o el éxito del proyecto?
+- ¿Qué perciben los demás como debilidades?
+
+### O - Oportunidades (Opportunities)
+Factores externos positivos que podrían ser aprovechados para obtener ventajas o beneficios.
+- ¿Qué tendencias o condiciones favorables existen en el mercado?
+- ¿Qué necesidades de los clientes no están siendo atendidas?
+- ¿Qué cambios tecnológicos, de mercado o sociales presentan oportunidades?
+- ¿Qué nichos han sido descuidados por los competidores?
+
+### T - Amenazas (Threats)
+Factores externos negativos que podrían presentar desafíos, riesgos o condiciones desfavorables.
+- ¿Qué obstáculos enfrenta la organización/proyecto?
+- ¿Qué están haciendo los competidores?
+- ¿Existen cambios regulatorios, tecnológicos o de mercado que representen amenazas?
+- ¿Las debilidades identificadas hacen vulnerable al proyecto frente a amenazas externas?
+
+## Aplicación como Prompt:
+
+```
+Necesito realizar un análisis SWOT completo para [organización/proyecto/idea]. Por favor, proporciona un análisis detallado y estratégico que abarque:
+
+# Fortalezas
+[Identifica y analiza todas las fortalezas internas clave, recursos únicos, ventajas competitivas y capacidades distintivas]
+
+# Debilidades
+[Examina todas las debilidades internas, limitaciones, áreas de mejora y desventajas competitivas]
+
+# Oportunidades
+[Identifica las oportunidades externas relevantes, tendencias favorables, necesidades no atendidas y posibles áreas de crecimiento]
+
+# Amenazas
+[Analiza las amenazas externas potenciales, incluyendo competencia, cambios desfavorables en el mercado, obstáculos y riesgos]
+
+Para cada elemento identificado, proporciona una explicación detallada de su relevancia estratégica y posibles implicaciones. Concluye con una sección de recomendaciones estratégicas basadas en el análisis, identificando cómo:
+- Aprovechar las fortalezas para capitalizar oportunidades
+- Mitigar debilidades mediante oportunidades específicas
+- Utilizar fortalezas para contrarrestar amenazas
+- Abordar debilidades para minimizar vulnerabilidades ante amenazas
+```
+
+## Ejemplo de uso:
+
+Análisis SWOT para una pequeña tienda local de café que considera expandir su negocio:
+
+### Fortalezas:
+- **Café de alta calidad**: Utilizamos granos de especialidad tostados localmente.
+- **Ubicación privilegiada**: Estamos situados en una esquina transitada del centro de la ciudad.
+- **Personal experimentado**: Nuestros baristas tienen formación especializada y ofrecen un servicio excelente.
+- **Fidelidad de clientes**: Base sólida de clientes habituales que visitan la tienda varias veces por semana.
+- **Reputación positiva**: 4.8/5 estrellas en plataformas de reseñas y boca a boca positivo.
+
+### Debilidades:
+- **Espacio limitado**: El local actual es demasiado pequeño para acomodar a todos los clientes en horas punta.
+- **Oferta gastronómica limitada**: Menú reducido de alimentos comparado con competidores.
+- **Precios elevados**: Nuestros productos tienen un precio superior a la media del mercado.
+- **Dependencia del fundador**: Muchas operaciones críticas dependen del propietario.
+- **Presencia digital limitada**: Poca actividad en redes sociales y web básica.
+
+### Oportunidades:
+- **Creciente interés en café de especialidad**: Tendencia en aumento de consumidores buscando experiencias de café premium.
+- **Local adyacente disponible**: Posibilidad de expandir el espacio físico.
+- **Mercado de entrega a domicilio**: Potencial para desarrollar un servicio de suscripción de café.
+- **Turismo en aumento**: Mayor afluencia de visitantes en la zona durante todo el año.
+- **Alianzas potenciales**: Interés de panaderías artesanales locales para colaboraciones.
+
+### Amenazas:
+- **Competencia creciente**: Apertura de dos nuevas cafeterías de cadena en un radio de 500 metros.
+- **Inflación de costos**: Aumento del precio de los granos de café y otros insumos.
+- **Cambios en hábitos de consumo**: Tendencia al trabajo remoto puede reducir el tráfico de oficinistas.
+- **Regulaciones sanitarias**: Nuevas normativas podrían requerir inversiones adicionales.
+- **Dificultad para contratar**: Escasez de personal cualificado en el sector hostelero.
+
+### Recomendaciones estratégicas:
+1. Aprovechar la disponibilidad del local adyacente para expandir el espacio, solucionando la debilidad de espacio limitado y capitalizando la oportunidad de creciente interés en café de especialidad.
+2. Desarrollar una oferta gastronómica ampliada mediante alianzas con panaderías artesanales locales, convirtiendo una debilidad en fortaleza.
+3. Implementar un programa de fidelización digital para aprovechar la base de clientes leales mientras se mejora la presencia online.
+4. Crear un servicio de suscripción de café para contrarrestar la amenaza de cambios en hábitos de consumo por trabajo remoto.
+5. Desarrollar un programa de formación interna para reducir la dependencia del fundador y abordar la dificultad de contratación. 
