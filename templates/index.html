@@ -79,31 +79,30 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            padding: 1rem;
         }
         
         .framework-card .card-text {
             flex-grow: 1;
+            margin-bottom: 0.5rem;
         }
         
-        .explanation-container {
-            height: 80px;
-            overflow: hidden;
-            position: relative;
+        .explanation-text {
             margin-bottom: 8px;
-        }
-        
-        .explanation-container:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: linear-gradient(transparent, white);
         }
         
         .card-actions {
             margin-top: auto;
+            padding-top: 0.5rem;
+        }
+        
+        .framework-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .framework-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
     </style>
 
@@ -127,15 +126,13 @@
             {% for framework in frameworks_cat1 %}
             <div class="col-md-4 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -164,15 +161,13 @@
             {% for framework in frameworks_cat2 %}
             <div class="col-md-4 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -201,15 +196,13 @@
             {% for framework in frameworks_cat3 %}
             <div class="col-md-4 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -237,15 +230,13 @@
             {% for framework in frameworks_cat4 %}
             <div class="col-md-4 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -273,15 +264,13 @@
             {% for framework in frameworks_cat5 %}
             <div class="col-md-4 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -312,15 +301,13 @@
             {% for framework in frameworks_cat6 %}
             <div class="col-md-3 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text small mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text small explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text small"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -351,15 +338,13 @@
             {% for framework in frameworks_cat7 %}
             <div class="col-md-3 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text small mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text small explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text small"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -402,15 +387,13 @@
             {% for framework in frameworks_cat8 %}
             <div class="col-md-3 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length + frameworks_cat7|length }}</span>
                         </div>
-                        <div class="explanation-container">
-                            <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        </div>
-                        <p class="card-text small mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text small explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text small"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
