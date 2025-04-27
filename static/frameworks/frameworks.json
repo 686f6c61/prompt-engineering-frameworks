@@ -1,0 +1,2351 @@
+[
+  {
+    "nombre_completo": "GUIDE (Meta-Usuario-Implementación-Entrega-Evaluación)",
+    "acronimo": "GUIDE",
+    "significado_acronimo": [
+      "Meta (Goal)",
+      "Usuario",
+      "Implementación",
+      "Entrega (Delivery)",
+      "Evaluación"
+    ],
+    "componentes": [
+      {"nombre": "Meta (Goal)", "descripcion": "Define el objetivo principal y los resultados deseados"},
+      {"nombre": "Usuario", "descripcion": "Identifica a los usuarios o stakeholders y sus necesidades específicas"},
+      {"nombre": "Implementación", "descripcion": "Detalla cómo se desarrollará o construirá la solución"},
+      {"nombre": "Entrega (Delivery)", "descripcion": "Especifica cómo se desplegará o entregará el producto final"},
+      {"nombre": "Evaluación", "descripcion": "Establece cómo se medirá el éxito y se recogerá feedback"}
+    ],
+    "descripcion_proposito": "El framework GUIDE proporciona una estructura centrada en el usuario para el desarrollo y entrega de productos y servicios. Sigue un flujo natural que comienza con la definición de objetivos, pone énfasis en las necesidades de los usuarios, detalla la implementación, planifica la entrega y establece mecanismos de evaluación. Este enfoque es particularmente valioso para el desarrollo de productos o servicios donde la satisfacción del usuario y la usabilidad son críticas para el éxito.",
+    "ejemplo_uso": {
+      "Meta": "Lanzar MVP en 2 meses",
+      "Usuario": "Equipo de desarrollo",
+      "Implementación": "Definir requisitos y prototipos",
+      "Entrega": "Desplegar versión beta",
+      "Evaluación": "Recoger feedback y métricas de uso"
+    },
+    "casos_recomendados": [
+      "Desarrollo de productos centrados en el usuario",
+      "Lanzamiento de nuevas funcionalidades o servicios",
+      "Proyectos de mejora de experiencia de usuario",
+      "Implementación de herramientas internas para equipos",
+      "Actualización de plataformas con enfoque en usabilidad",
+      "Desarrollo de MVPs y productos en etapas iniciales",
+      "Optimización de procesos basada en feedback de usuarios"
+    ],
+    "ventajas": [
+      "Mantiene el foco en las necesidades reales de los usuarios",
+      "Proporciona un enfoque equilibrado entre objetivos, implementación y evaluación",
+      "Establece un ciclo completo desde la definición hasta el feedback",
+      "Facilita la iteración basada en evaluaciones de usuarios reales",
+      "Mejora la adopción al considerar explícitamente la experiencia de entrega",
+      "Promueve una cultura de mejora continua basada en métricas",
+      "Ayuda a alinear las decisiones técnicas con las necesidades de los usuarios"
+    ]
+  },
+  {
+    "nombre_completo": "IDEA (Identificar-Definir-Ejecutar-Analizar)",
+    "acronimo": "IDEA",
+    "significado_acronimo": [
+      "Identificar",
+      "Definir",
+      "Ejecutar",
+      "Analizar"
+    ],
+    "componentes": [
+      {"nombre": "Identificar", "descripcion": "Reconoce y delimita el problema, oportunidad o área de mejora"},
+      {"nombre": "Definir", "descripcion": "Establece los objetivos, alcance y criterios de éxito"},
+      {"nombre": "Ejecutar", "descripcion": "Implementa el plan de acción o solución propuesta"},
+      {"nombre": "Analizar", "descripcion": "Evalúa los resultados y extrae conclusiones para futuras iteraciones"}
+    ],
+    "descripcion_proposito": "El framework IDEA proporciona un ciclo completo para la resolución de problemas y mejora continua. Sigue una secuencia lógica que comienza con la identificación clara del problema, continúa con la definición precisa de objetivos, prosigue con la ejecución disciplinada de la solución, y concluye con el análisis riguroso de los resultados. Este enfoque sistemático es particularmente valioso para optimizaciones y mejoras en sistemas o procesos existentes.",
+    "ejemplo_uso": {
+      "Identificar": "Cuellos de botella en rendimiento",
+      "Definir": "Objetivos de optimización",
+      "Ejecutar": "Estrategia de caché",
+      "Analizar": "Tiempo de respuesta y capacidad"
+    },
+    "casos_recomendados": [
+      "Proyectos de optimización de rendimiento",
+      "Iniciativas de mejora continua",
+      "Resolución de problemas técnicos",
+      "Planificación de actualizaciones de sistemas",
+      "Desarrollo de nuevas funcionalidades",
+      "Diagnóstico y solución de incidencias",
+      "Experimentos y pruebas A/B"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque estructurado y cíclico para la resolución de problemas",
+      "Equilibra la identificación del problema con la implementación de soluciones",
+      "Incluye la fase de análisis para garantizar aprendizaje y mejora continua",
+      "Facilita la documentación del proceso completo de mejora",
+      "Ayuda a evitar soluciones apresuradas sin definición clara del problema",
+      "Establece un marco para la iteración y mejora incremental",
+      "Fomenta el pensamiento crítico en todas las fases del proceso"
+    ]
+  },
+  {
+    "nombre_completo": "ADAPT (Análisis-Diseño-Aproximación-Progreso-Pruebas)",
+    "acronimo": "ADAPT",
+    "significado_acronimo": ["Análisis", "Diseño", "Aproximación", "Progreso", "Pruebas"],
+    "componentes": [
+      {"nombre": "Análisis", "descripcion": "Evalúa la situación actual, requisitos y cambios necesarios"},
+      {"nombre": "Diseño", "descripcion": "Desarrolla la estructura y arquitectura de la solución"},
+      {"nombre": "Aproximación", "descripcion": "Establece la metodología y estrategia de implementación"},
+      {"nombre": "Progreso", "descripcion": "Define los hitos, métricas y seguimiento del avance"},
+      {"nombre": "Pruebas", "descripcion": "Especifica los métodos de validación y aseguramiento de calidad"}
+    ],
+    "descripcion_proposito": "El framework ADAPT proporciona una metodología integral para gestionar el cambio y desarrollo de soluciones en entornos dinámicos. Sigue un flujo lógico que comienza con el análisis riguroso, continúa con el diseño estructurado, establece un enfoque claro de implementación, monitorea el progreso y asegura la calidad mediante pruebas sistemáticas. Es valioso para proyectos de desarrollo iterativo, respuesta a cambios de requisitos y cualquier iniciativa que requiera equilibrar la planificación estructurada con la adaptabilidad.",
+    "ejemplo_uso": {
+      "Análisis": "Evaluación de cambios de requisitos",
+      "Diseño": "Arquitectura modular",
+      "Aproximación": "Desarrollo iterativo",
+      "Progreso": "Revisión semanal",
+      "Pruebas": "Pruebas unitarias y de integración"
+    },
+    "casos_recomendados": [
+      "Desarrollo de software en entornos ágiles",
+      "Adaptación a cambios de requisitos",
+      "Implementación de nuevas características en sistemas existentes",
+      "Proyectos con necesidades de alta flexibilidad",
+      "Migraciones y actualizaciones de sistemas",
+      "Desarrollo de productos con feedback continuo",
+      "Optimización de procesos existentes"
+    ],
+    "ventajas": [
+      "Equilibra la planificación estructurada con la adaptabilidad",
+      "Proporciona un marco completo desde el análisis hasta la validación",
+      "Enfatiza la importancia de la medición del progreso",
+      "Incorpora pruebas como componente esencial del proceso",
+      "Facilita la adaptación a cambios durante el desarrollo",
+      "Promueve ciclos de feedback y mejora continua",
+      "Mejora la comunicación entre equipos mediante una estructura clara"
+    ]
+  },
+  {
+    "nombre_completo": "AIDA (Atención-Interés-Deseo-Acción)",
+    "acronimo": "AIDA",
+    "significado_acronimo": ["Atención", "Interés", "Deseo", "Acción"],
+    "componentes": [
+      {"nombre": "Atención", "descripcion": "Capta la atención del público con un dato o afirmación impactante"},
+      {"nombre": "Interés", "descripcion": "Genera interés profundizando en los beneficios o características relevantes"},
+      {"nombre": "Deseo", "descripcion": "Crea deseo demostrando cómo la solución resuelve un problema específico"},
+      {"nombre": "Acción", "descripcion": "Invita a una acción concreta y específica con un siguiente paso claro"}
+    ],
+    "descripcion_proposito": "El framework AIDA es un modelo clásico y efectivo para estructurar comunicaciones persuasivas y de marketing. Sigue una progresión psicológica natural: primero captar la atención, luego despertar el interés, generar un deseo hacia la solución y finalmente motivar a la acción. Este enfoque secuencial asegura que el mensaje no solo atraiga inicialmente, sino que también conduzca a resultados concretos y medibles.",
+    "ejemplo_uso": {
+      "Atención": "70% de aplicaciones tienen fallos de seguridad",
+      "Interés": "Nueva solución de seguridad integrada",
+      "Deseo": "Detección automática de vulnerabilidades",
+      "Acción": "Prueba gratuita por 14 días"
+    },
+    "casos_recomendados": [
+      "Campañas de marketing y ventas",
+      "Presentaciones comerciales y propuestas",
+      "Emails de prospección y seguimiento",
+      "Páginas de aterrizaje (landing pages)",
+      "Descripciones de productos o servicios",
+      "Comunicaciones para lanzamientos",
+      "Anuncios y publicidad digital"
+    ],
+    "ventajas": [
+      "Estructura probada y efectiva para comunicaciones persuasivas",
+      "Enfoque orientado a la acción y resultados medibles",
+      "Sigue el recorrido natural del proceso de decisión del cliente",
+      "Facilita la creación de mensajes convincentes y enfocados",
+      "Aplicable a diferentes formatos y canales de comunicación",
+      "Ayuda a mantener el interés del público a lo largo del mensaje",
+      "Aumenta la probabilidad de conversión al incluir una llamada clara a la acción"
+    ]
+  },
+  {
+    "nombre_completo": "BAB (Antes-Después-Puente)",
+    "acronimo": "BAB",
+    "significado_acronimo": ["Antes", "Después", "Puente"],
+    "componentes": [
+      {"nombre": "Antes", "descripcion": "Describe la situación actual o el estado inicial"},
+      {"nombre": "Después", "descripcion": "Presenta el estado deseado o la visión futura"},
+      {"nombre": "Puente", "descripcion": "Detalla el plan o estrategia para pasar del antes al después"}
+    ],
+    "descripcion_proposito": "El framework BAB es una poderosa herramienta para comunicar y planificar cambios y transformaciones. Permite contrastar claramente la situación actual con la visión futura, y lo más importante, proporciona un camino claro para llegar de un punto a otro. Es especialmente útil para proyectos de transformación, mejora continua o cuando se necesita justificar inversiones o cambios significativos.",
+    "ejemplo_uso": {
+      "Antes": "Sistema de monolito PHP",
+      "Después": "Arquitectura de microservicios",
+      "Puente": "Plan de migración gradual 6 meses"
+    },
+    "casos_recomendados": [
+      "Presentaciones de proyectos de transformación digital",
+      "Propuestas de mejora de arquitectura tecnológica",
+      "Planes de migración de sistemas",
+      "Justificación de inversiones en tecnología",
+      "Comunicación de cambios organizacionales",
+      "Documentación de estrategias de evolución de productos",
+      "Propuestas de valor para clientes o inversores"
+    ],
+    "ventajas": [
+      "Presenta una narrativa clara del cambio",
+      "Facilita la comprensión de la necesidad de transformación",
+      "Proporciona contexto completo: de dónde venimos, a dónde vamos y cómo llegaremos",
+      "Ayuda a obtener apoyo para los cambios propuestos",
+      "Ofrece una estructura clara para la planificación estratégica",
+      "Facilita la medición del progreso hacia el estado futuro deseado"
+    ]
+  },
+  {
+    "nombre_completo": "BLEND (Base-Aprendizaje-Evolución-Navegación-Entrega)",
+    "acronimo": "BLEND",
+    "significado_acronimo": ["Base", "Aprendizaje", "Evolución", "Navegación", "Entrega"],
+    "componentes": [
+      {"nombre": "Base", "descripcion": "Establece el punto de partida, fundamentos o sistema actual"},
+      {"nombre": "Aprendizaje", "descripcion": "Recopila información, datos e insights relevantes"},
+      {"nombre": "Evolución", "descripcion": "Desarrolla mejoras incrementales y adaptaciones"},
+      {"nombre": "Navegación", "descripcion": "Guía el proceso, ajusta el rumbo y reacciona a cambios"},
+      {"nombre": "Entrega", "descripcion": "Implementa y despliega las mejoras de manera efectiva"}
+    ],
+    "descripcion_proposito": "El framework BLEND proporciona una metodología adaptativa para la mejora y transformación gradual de sistemas existentes. Su enfoque enfatiza el aprendizaje continuo, la evolución incremental y la capacidad de navegación a través de entornos cambiantes. Es valioso para la modernización de sistemas en uso, mejora de plataformas existentes y cualquier iniciativa que requiera un enfoque incremental y adaptativo en lugar de una reescritura completa o cambio radical.",
+    "ejemplo_uso": {
+      "Base": "Sistema actual de ventas",
+      "Aprendizaje": "Análisis de patrones de usuario",
+      "Evolución": "Mejoras incrementales",
+      "Navegación": "Interfaz intuitiva",
+      "Entrega": "Despliegue por fases"
+    },
+    "casos_recomendados": [
+      "Modernización de sistemas en uso",
+      "Mejora de experiencia de usuario en plataformas existentes",
+      "Evolución de arquitecturas y aplicaciones",
+      "Implementación de cambios en sistemas críticos",
+      "Optimización incremental de rendimiento",
+      "Proyectos con restricciones de continuidad operativa",
+      "Transformación gradual de sistemas complejos"
+    ],
+    "ventajas": [
+      "Minimiza riesgos mediante cambios incrementales en lugar de transformaciones radicales",
+      "Permite la mejora continua mientras el sistema sigue en funcionamiento",
+      "Aprovecha el conocimiento y datos del sistema actual",
+      "Facilita la adaptación a cambios en requisitos o condiciones del entorno",
+      "Reduce la resistencia al cambio mediante transiciones suaves",
+      "Proporciona valor de forma continua en lugar de esperar a entregas monolíticas",
+      "Equilibra la estabilidad operativa con la necesidad de evolución"
+    ]
+  },
+  {
+    "nombre_completo": "BUILD (Línea Base-Entendimiento-Implementación-Aprendizaje-Entrega)",
+    "acronimo": "BUILD",
+    "significado_acronimo": ["Línea Base", "Entendimiento", "Implementación", "Aprendizaje", "Entrega"],
+    "componentes": [
+      {"nombre": "Línea Base", "descripcion": "Establece el punto de partida, estado actual o situación inicial"},
+      {"nombre": "Entendimiento", "descripcion": "Analiza las necesidades, requisitos y expectativas"},
+      {"nombre": "Implementación", "descripcion": "Desarrolla y construye la solución o producto"},
+      {"nombre": "Aprendizaje", "descripcion": "Recopila insights, feedback y lecciones aprendidas"},
+      {"nombre": "Entrega", "descripcion": "Finaliza y entrega el producto o solución al usuario final"}
+    ],
+    "descripcion_proposito": "El framework BUILD proporciona una metodología completa para el desarrollo de productos y soluciones desde cero. Sigue un flujo natural que comienza estableciendo una línea base clara, profundiza en el entendimiento de las necesidades, implementa la solución, incorpora el aprendizaje continuo y culmina con la entrega de valor. Es valioso para el desarrollo de nuevos productos, sistemas o funcionalidades donde es importante mantener el enfoque en las necesidades del usuario a lo largo de todo el ciclo.",
+    "ejemplo_uso": {
+      "Línea Base": "Estado actual del sistema",
+      "Entendimiento": "Necesidades del usuario",
+      "Implementación": "Desarrollo incremental",
+      "Aprendizaje": "Feedback de usuarios",
+      "Entrega": "Versión final en producción"
+    },
+    "casos_recomendados": [
+      "Desarrollo de nuevos productos o sistemas",
+      "Implementación de nuevas funcionalidades",
+      "Proyectos de transformación digital",
+      "Creación de plataformas y servicios",
+      "Iniciativas de innovación y desarrollo",
+      "Actualización significativa de sistemas existentes",
+      "Proyectos centrados en el usuario"
+    ],
+    "ventajas": [
+      "Proporciona un ciclo completo desde el estado inicial hasta la entrega final",
+      "Enfatiza la importancia del entendimiento profundo antes de la implementación",
+      "Incorpora el aprendizaje como componente esencial del proceso",
+      "Establece una referencia clara para medir el progreso y cambios",
+      "Mantiene el foco en la entrega de valor al usuario final",
+      "Facilita la comunicación del proceso a stakeholders",
+      "Equilibra la planificación con la adaptabilidad basada en aprendizajes"
+    ]
+  },
+
+  {
+    "nombre_completo": "CODE (Contexto-Objetivo-Desarrollo-Evaluación)",
+    "acronimo": "CODE",
+    "significado_acronimo": ["Contexto", "Objetivo", "Desarrollo", "Evaluación"],
+    "componentes": [
+      {"nombre": "Contexto", "descripcion": "Explica el entorno, situación o antecedentes relevantes"},
+      {"nombre": "Objetivo", "descripcion": "Define el propósito o meta principal"},
+      {"nombre": "Desarrollo", "descripcion": "Detalla el proceso, pasos o actividades a realizar"},
+      {"nombre": "Evaluación", "descripcion": "Establece criterios y métodos para medir el éxito"}
+    ],
+    "descripcion_proposito": "El framework CODE proporciona una estructura clara para la planificación y ejecución de proyectos o tareas. Ayuda a contextualizar, definir objetivos concretos, desarrollar un plan de acción y evaluar los resultados. Es útil para la gestión de proyectos, planificación de tareas y mejora continua.",
+    "ejemplo_uso": {
+      "Contexto": "Necesidad de mejorar el rendimiento del sistema",
+      "Objetivo": "Reducir el tiempo de carga en un 30%",
+      "Desarrollo": "Optimización de consultas y refactorización de código",
+      "Evaluación": "Comparación de métricas antes y después de la optimización"
+    },
+    "casos_recomendados": [
+      "Gestión de proyectos tecnológicos",
+      "Planificación de tareas complejas",
+      "Desarrollo de nuevas funcionalidades",
+      "Implementación de mejoras de rendimiento",
+      "Evaluación de resultados de proyectos",
+      "Documentación de procesos",
+      "Presentación de propuestas técnicas"
+    ],
+    "ventajas": [
+      "Estructura clara y fácil de seguir",
+      "Facilita la alineación de objetivos y acciones",
+      "Promueve la medición de resultados",
+      "Mejora la comunicación entre equipos",
+      "Permite identificar áreas de mejora",
+      "Optimiza la gestión del tiempo y recursos",
+      "Reduce la ambigüedad en la ejecución de tareas"
+    ]
+  },
+  {
+    "nombre_completo": "ERQ (Experiencia-Requisitos-Cualificaciones)",
+    "acronimo": "ERQ",
+    "significado_acronimo": ["Experiencia", "Requisitos", "Cualificaciones"],
+    "componentes": [
+      {"nombre": "Experiencia", "descripcion": "Detalla el nivel de experiencia o conocimiento previo requerido"},
+      {"nombre": "Requisitos", "descripcion": "Especifica las habilidades, tecnologías o competencias necesarias"},
+      {"nombre": "Cualificaciones", "descripcion": "Define las certificaciones, títulos o validaciones formales deseables"}
+    ],
+    "descripcion_proposito": "El framework ERQ está diseñado para definir claramente perfiles profesionales y requisitos de roles técnicos. Proporciona una estructura completa para especificar no solo la experiencia necesaria, sino también los requisitos técnicos específicos y las cualificaciones formales que validan las competencias. Es especialmente útil en contextos de contratación, asignación de proyectos y evaluación de capacidades para tareas específicas.",
+    "ejemplo_uso": {
+      "Experiencia": "5 años en desarrollo Python/Django",
+      "Requisitos": "API REST, GraphQL, Servicios en la nube",
+      "Cualificaciones": "Certificación en arquitectura cloud"
+    },
+    "casos_recomendados": [
+      "Descripciones de puestos de trabajo y ofertas laborales",
+      "Definición de equipos para proyectos específicos",
+      "Evaluación de competencias técnicas",
+      "Planificación de capacitación y desarrollo profesional",
+      "Asignación de roles en proyectos técnicos",
+      "Autoevaluación de habilidades profesionales",
+      "Planificación de carreras técnicas"
+    ],
+    "ventajas": [
+      "Proporciona criterios claros y objetivos para evaluar candidatos",
+      "Facilita la comunicación de expectativas técnicas",
+      "Ayuda a identificar brechas de habilidades y necesidades de formación",
+      "Mejora la asignación de personal a proyectos específicos",
+      "Estandariza la evaluación de competencias",
+      "Permite la comparación objetiva entre diferentes perfiles",
+      "Orienta el desarrollo profesional hacia competencias valoradas"
+    ]
+  },
+  {
+    "nombre_completo": "EXPERT (Experiencia-Contexto-Propósito-Ejecución-Resultados-Pruebas)",
+    "acronimo": "EXPERT",
+    "significado_acronimo": ["Experiencia", "Contexto", "Propósito", "Ejecución", "Resultados", "Pruebas"],
+    "componentes": [
+      {"nombre": "Experiencia", "descripcion": "Define el nivel de conocimiento y habilidades especializadas necesarias"},
+      {"nombre": "Contexto", "descripcion": "Describe el entorno, situación o escenario específico del proyecto"},
+      {"nombre": "Propósito", "descripcion": "Establece el objetivo principal y razón de ser de la solución"},
+      {"nombre": "Ejecución", "descripcion": "Detalla la implementación técnica y metodología de desarrollo"},
+      {"nombre": "Resultados", "descripcion": "Especifica los logros medibles y entregables esperados"},
+      {"nombre": "Pruebas", "descripcion": "Define los métodos de validación, verificación y aseguramiento de calidad"}
+    ],
+    "descripcion_proposito": "El framework EXPERT proporciona una estructura integral para proyectos técnicos avanzados que requieren conocimientos especializados. Reconoce la importancia de la experiencia técnica, considera el contexto específico, define claramente el propósito, detalla la ejecución, establece resultados medibles y, de manera crucial, incorpora métodos de prueba rigurosos. Es valioso para desarrollos de alta complejidad técnica donde la calidad, el rendimiento y la fiabilidad son críticos.",
+    "ejemplo_uso": {
+      "Experiencia": "Backend Python avanzado",
+      "Contexto": "API altamente escalable",
+      "Propósito": "Sistema de microservicios",
+      "Ejecución": "FastAPI con async",
+      "Resultados": "10mil transacciones/segundo",
+      "Pruebas": "Integración y extremo a extremo"
+    },
+    "casos_recomendados": [
+      "Desarrollo de sistemas de alto rendimiento",
+      "Implementación de arquitecturas complejas",
+      "Proyectos que requieren conocimientos especializados",
+      "Soluciones para cargas de trabajo exigentes",
+      "Sistemas con requisitos estrictos de fiabilidad",
+      "Plataformas técnicas críticas para el negocio",
+      "Implementación de tecnologías emergentes"
+    ],
+    "ventajas": [
+      "Reconoce explícitamente la importancia de la experiencia técnica específica",
+      "Equilibra el enfoque en el desarrollo con la validación rigurosa",
+      "Conecta las habilidades técnicas con resultados medibles",
+      "Asegura la calidad mediante la inclusión explícita de estrategias de prueba",
+      "Proporciona un marco completo desde la planificación hasta la validación",
+      "Adapta la solución al contexto específico y requisitos de rendimiento",
+      "Facilita la comunicación de requisitos técnicos complejos"
+    ]
+  },
+  {
+    "nombre_completo": "FAST (Enfoque-Audiencia-Alcance-Tono)",
+    "acronimo": "FAST",
+    "significado_acronimo": ["Enfoque", "Audiencia", "Alcance", "Tono"],
+    "componentes": [
+      {"nombre": "Enfoque", "descripcion": "Define el tema principal o propósito central del contenido"},
+      {"nombre": "Audiencia", "descripcion": "Identifica el público objetivo y sus características específicas"},
+      {"nombre": "Alcance", "descripcion": "Establece los límites y extensión de la información a incluir"},
+      {"nombre": "Tono", "descripcion": "Determina el estilo de comunicación y enfoque lingüístico apropiado"}
+    ],
+    "descripcion_proposito": "El framework FAST está diseñado para crear contenido técnico y documentación efectiva. Proporciona un enfoque estructurado que asegura que el contenido esté bien dirigido, tenga un alcance apropiado y utilice un tono coherente con las necesidades de la audiencia. Esta metodología es particularmente valiosa para la creación de documentación técnica, guías de usuario, especificaciones de API y cualquier tipo de contenido donde la claridad y relevancia son críticas.",
+    "ejemplo_uso": {
+      "Enfoque": "Documentación de API",
+      "Audiencia": "Desarrolladores frontend",
+      "Alcance": "Endpoints REST versión 2",
+      "Tono": "Técnico y conciso"
+    },
+    "casos_recomendados": [
+      "Creación de documentación técnica",
+      "Diseño de guías de usuario",
+      "Redacción de manuales de referencia",
+      "Desarrollo de tutoriales y guías de aprendizaje",
+      "Especificaciones de APIs y servicios",
+      "Documentación de código y funcionalidades",
+      "Creación de estándares y mejores prácticas"
+    ],
+    "ventajas": [
+      "Centra el contenido en las necesidades específicas de la audiencia",
+      "Establece límites claros que evitan la sobrecarga de información",
+      "Asegura un tono y estilo consistente en toda la documentación",
+      "Mejora la eficacia de la comunicación técnica",
+      "Facilita la planeación y organización de contenidos extensos",
+      "Ayuda a priorizar qué información incluir y cuál omitir",
+      "Aumenta la utilidad del contenido al alinearlo con el propósito y audiencia"
+    ]
+  },
+  {
+    "nombre_completo": "FOCUS (Marco-Objetivo-Restricciones-Comprensión-Solución)",
+    "acronimo": "FOCUS",
+    "significado_acronimo": ["Marco", "Objetivo", "Restricciones", "Comprensión", "Solución"],
+    "componentes": [
+      {"nombre": "Marco", "descripcion": "Establece el contexto, enfoque o metodología general a utilizar"},
+      {"nombre": "Objetivo", "descripcion": "Define la meta principal y los resultados específicos a lograr"},
+      {"nombre": "Restricciones", "descripcion": "Identifica las limitaciones, requisitos o condiciones a considerar"},
+      {"nombre": "Comprensión", "descripcion": "Analiza a fondo el problema, usuarios o datos relevantes"},
+      {"nombre": "Solución", "descripcion": "Desarrolla la respuesta o implementación que cumple con todos los elementos anteriores"}
+    ],
+    "descripcion_proposito": "El framework FOCUS proporciona una estructura metódica para el desarrollo de soluciones técnicas dentro de limitaciones conocidas. Su enfoque único incluye tanto la comprensión profunda del problema como el reconocimiento explícito de las restricciones, lo que resulta en soluciones más viables y adaptadas a la realidad. Este marco es particularmente valioso para proyectos con limitaciones técnicas, legales o de recursos, donde es crucial balancear los objetivos ideales con las restricciones prácticas.",
+    "ejemplo_uso": {
+      "Marco": "Diseño móvil primero",
+      "Objetivo": "Aumentar conversión 30%",
+      "Restricciones": "Soporte navegadores antiguos",
+      "Comprensión": "Análisis de datos usuarios",
+      "Solución": "Aplicación web progresiva"
+    },
+    "casos_recomendados": [
+      "Desarrollo de productos con limitaciones técnicas",
+      "Proyectos con restricciones de compatibilidad",
+      "Soluciones para entornos con recursos limitados",
+      "Desarrollo con requisitos regulatorios específicos",
+      "Optimización de sistemas existentes con restricciones",
+      "Innovación dentro de parámetros técnicos definidos",
+      "Diseño de experiencias multiplataforma"
+    ],
+    "ventajas": [
+      "Equilibra de manera efectiva objetivos ambiciosos con restricciones reales",
+      "Promueve soluciones pragmáticas basadas en la comprensión profunda",
+      "Reduce riesgos al considerar las limitaciones desde el principio",
+      "Facilita expectativas realistas entre stakeholders y equipos técnicos",
+      "Mejora la viabilidad de las soluciones al considerar el contexto completo",
+      "Evita enfoques teóricos que no funcionan en la práctica",
+      "Proporciona un marco para la innovación dentro de limitaciones conocidas"
+    ]
+  },
+  {
+    "nombre_completo": "GROW (Meta-Realidad-Opciones-Camino)",
+    "acronimo": "GROW",
+    "significado_acronimo": ["Meta", "Realidad", "Opciones", "Camino"],
+    "componentes": [
+      {"nombre": "Meta", "descripcion": "Define el objetivo final o estado deseado a alcanzar"},
+      {"nombre": "Realidad", "descripcion": "Describe la situación actual con sus limitaciones y recursos"},
+      {"nombre": "Opciones", "descripcion": "Explora las diferentes alternativas o caminos posibles"},
+      {"nombre": "Camino", "descripcion": "Establece el plan de acción concreto a seguir"}
+    ],
+    "descripcion_proposito": "El framework GROW, originalmente desarrollado para coaching, es extremadamente efectivo para la toma de decisiones y planificación estratégica en proyectos técnicos. Proporciona una estructura que parte de definir claramente el objetivo, evalúa la situación actual, explora todas las opciones disponibles y finalmente establece un plan de acción concreto. Este enfoque sistemático ayuda a tomar decisiones informadas y desarrollar planes de implementación realistas basados en un análisis completo.",
+    "ejemplo_uso": {
+      "Meta": "Migrar monolito a microservicios",
+      "Realidad": "Sistema crítico en producción",
+      "Opciones": "Patrón estrangulador vs reescritura",
+      "Camino": "Migración incremental 6 meses"
+    },
+    "casos_recomendados": [
+      "Planificación de transformaciones tecnológicas",
+      "Toma de decisiones estratégicas en arquitectura",
+      "Planificación de migraciones de sistemas",
+      "Definición de roadmaps técnicos",
+      "Establecimiento de estrategias de modernización",
+      "Toma de decisiones consensuadas en equipo",
+      "Resolución de problemas complejos"
+    ],
+    "ventajas": [
+      "Estructura sistemática para la toma de decisiones",
+      "Facilita la evaluación objetiva de opciones",
+      "Promueve planes realistas basados en la situación actual",
+      "Mejora la documentación del proceso de decisión",
+      "Ayuda a enfocar las discusiones en soluciones concretas",
+      "Proporciona un marco para resolver problemas paso a paso",
+      "Fomenta la consideración de múltiples alternativas"
+    ]
+  },
+  {
+    "nombre_completo": "LOGIC (Diseño-Objetivo-Directrices-Implementación-Criterios)",
+    "acronimo": "LOGIC",
+    "significado_acronimo": ["Diseño", "Objetivo", "Directrices", "Implementación", "Criterios"],
+    "componentes": [
+      {"nombre": "Diseño", "descripcion": "Establece la estructura o arquitectura general del sistema o solución"},
+      {"nombre": "Objetivo", "descripcion": "Define el propósito principal y las metas específicas a alcanzar"},
+      {"nombre": "Directrices", "descripcion": "Especifica los principios, estándares o mejores prácticas a seguir"},
+      {"nombre": "Implementación", "descripcion": "Detalla cómo se construirá o desarrollará la solución técnicamente"},
+      {"nombre": "Criterios", "descripcion": "Establece los parámetros de evaluación y medidas de éxito"}
+    ],
+    "descripcion_proposito": "El framework LOGIC proporciona una estructura sistemática para el diseño y desarrollo de soluciones técnicas. Sigue un enfoque racional que comienza con el diseño de alto nivel, establece objetivos claros, define los estándares a seguir, detalla la implementación y establece criterios de éxito. Este marco es particularmente valioso para el desarrollo de sistemas, arquitecturas o componentes técnicos donde la consistencia, la calidad y el cumplimiento de estándares son críticos.",
+    "ejemplo_uso": {
+      "Diseño": "Arquitectura de API",
+      "Objetivo": "Endpoints REST escalables",
+      "Directrices": "Especificación OpenAPI 3.0",
+      "Implementación": "Desarrollo en Node.js",
+      "Criterios": "99.9% tiempo activo"
+    },
+    "casos_recomendados": [
+      "Diseño de arquitecturas de software",
+      "Desarrollo de APIs y servicios",
+      "Implementación de componentes técnicos",
+      "Establecimiento de estándares de desarrollo",
+      "Creación de productos tecnológicos",
+      "Definición de plataformas y frameworks",
+      "Planificación de sistemas distribuidos"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque estructurado para el diseño técnico",
+      "Asegura la alineación entre la arquitectura y los objetivos",
+      "Promueve la consistencia mediante directrices claras",
+      "Conecta el diseño conceptual con la implementación práctica",
+      "Facilita la evaluación objetiva mediante criterios definidos",
+      "Mejora la comunicación entre equipos técnicos",
+      "Equilibra la creatividad del diseño con el rigor de los estándares y criterios"
+    ]
+  },
+  {
+    "nombre_completo": "MASTER (Misión-Aproximación-Estrategia-Tácticas-Ejecución-Revisión)",
+    "acronimo": "MASTER",
+    "significado_acronimo": ["Misión", "Aproximación", "Estrategia", "Tácticas", "Ejecución", "Revisión"],
+    "componentes": [
+      {"nombre": "Misión", "descripcion": "Define el objetivo principal y propósito fundamental del proyecto"},
+      {"nombre": "Aproximación", "descripcion": "Establece el enfoque general y principios guía a seguir"},
+      {"nombre": "Estrategia", "descripcion": "Desarrolla el plan de alto nivel para lograr la misión"},
+      {"nombre": "Tácticas", "descripcion": "Detalla las acciones específicas y métodos para implementar la estrategia"},
+      {"nombre": "Ejecución", "descripcion": "Implementa las tácticas con asignación de recursos y cronogramas"},
+      {"nombre": "Revisión", "descripcion": "Evalúa resultados, aprende y ajusta basándose en el desempeño"}
+    ],
+    "descripcion_proposito": "El framework MASTER proporciona una metodología completa para la gestión de proyectos complejos, abarcando desde la definición de objetivos hasta la evaluación de resultados. Sigue una progresión lógica que conecta la visión de alto nivel con la implementación detallada y el aprendizaje continuo. Este enfoque integral es particularmente valioso para proyectos tecnológicos de gran escala, transformaciones organizacionales o cualquier iniciativa que requiera una planificación rigurosa y multidimensional.",
+    "ejemplo_uso": {
+      "Misión": "Migración a la nube",
+      "Aproximación": "Priorizar serverless",
+      "Estrategia": "Arquitectura de microservicios",
+      "Tácticas": "Pipeline de integración continua",
+      "Ejecución": "Sprints de 2 semanas",
+      "Revisión": "Métricas semanales"
+    },
+    "casos_recomendados": [
+      "Gestión de proyectos tecnológicos complejos",
+      "Implementación de transformaciones digitales",
+      "Desarrollo de nuevas plataformas o productos",
+      "Migraciones de sistemas críticos",
+      "Reestructuración de arquitecturas tecnológicas",
+      "Implementación de metodologías DevOps",
+      "Integración de sistemas empresariales"
+    ],
+    "ventajas": [
+      "Proporciona un marco completo desde la visión hasta la implementación y mejora",
+      "Establece una jerarquía clara que conecta objetivos con acciones concretas",
+      "Facilita la comunicación y alineación entre diferentes niveles organizacionales",
+      "Promueve la mejora continua mediante ciclos estructurados de revisión",
+      "Equilibra la planificación estratégica con la implementación táctica",
+      "Ayuda a prevenir la desviación del propósito original durante la implementación",
+      "Fomenta una cultura de aprendizaje y adaptación basada en resultados medibles"
+    ]
+  },
+  {
+    "nombre_completo": "PARA (Problema-Aproximación-Razón-Acción)",
+    "acronimo": "PARA",
+    "significado_acronimo": ["Problema", "Aproximación", "Razón", "Acción"],
+    "componentes": [
+      {"nombre": "Problema", "descripcion": "Identifica y describe claramente el problema o desafío"},
+      {"nombre": "Aproximación", "descripcion": "Detalla el enfoque o estrategia propuesta para la solución"},
+      {"nombre": "Razón", "descripcion": "Explica el fundamento o justificación de la aproximación elegida"},
+      {"nombre": "Acción", "descripcion": "Especifica los pasos concretos a seguir para implementar la solución"}
+    ],
+    "descripcion_proposito": "El framework PARA es una estructura efectiva para la resolución de problemas y toma de decisiones. A diferencia de otros frameworks, PARA enfatiza no solo en identificar el problema y la solución, sino también en justificar el enfoque elegido y detallar un plan de acción concreto. Esto lo hace especialmente valioso para entornos organizacionales y técnicos donde es importante no solo proponer soluciones, sino también fundamentar por qué son las más adecuadas.",
+    "ejemplo_uso": {
+      "Problema": "Baja velocidad de desarrollo",
+      "Aproximación": "Implementar desarrollo en rama principal",
+      "Razón": "Reduce conflictos de fusión y acelera integración",
+      "Acción": "Migración gradual por equipos de desarrollo"
+    },
+    "casos_recomendados": [
+      "Propuestas de soluciones técnicas",
+      "Documentación de cambios en procesos o sistemas",
+      "Planes de mejora continua",
+      "Justificación de cambios metodológicos",
+      "Comunicación de decisiones estratégicas",
+      "Planificación de proyectos de optimización",
+      "Documentación de resolución de incidentes"
+    ],
+    "ventajas": [
+      "Proporciona un marco completo desde el problema hasta la implementación",
+      "Asegura que las soluciones sean justificadas con fundamentos sólidos",
+      "Facilita la evaluación de diferentes enfoques al exigir explicación de razones",
+      "Conecta la identificación del problema con acciones concretas",
+      "Mejora la comunicación de decisiones técnicas a diferentes niveles",
+      "Ayuda a evitar soluciones improvisadas sin fundamento",
+      "Proporciona un camino claro hacia la implementación"
+    ]
+  },
+  {
+    "nombre_completo": "PATH (Propósito-Aproximación-Objetivo-Horizonte)",
+    "acronimo": "PATH",
+    "significado_acronimo": ["Propósito", "Aproximación", "Objetivo", "Horizonte"],
+    "componentes": [
+      {"nombre": "Propósito", "descripcion": "Define la razón fundamental y visión que impulsa la iniciativa"},
+      {"nombre": "Aproximación", "descripcion": "Establece la metodología o estrategia a seguir"},
+      {"nombre": "Objetivo", "descripcion": "Especifica las metas concretas a alcanzar"},
+      {"nombre": "Horizonte", "descripcion": "Define el marco temporal y la perspectiva a futuro"}
+    ],
+    "descripcion_proposito": "El framework PATH está diseñado para la planificación estratégica con un enfoque claro en el propósito y la visión a largo plazo. Proporciona una estructura que conecta el 'por qué' fundamental con el 'cómo' estratégico y el 'qué' específico, todo dentro de un horizonte temporal definido. Este marco es particularmente valioso para la planificación de iniciativas estratégicas, desarrollos a largo plazo y comunicación de visión directiva donde es crucial mantener la claridad sobre el propósito mientras se avanza en objetivos concretos.",
+    "ejemplo_uso": {
+      "Propósito": "Clarificar visión estratégica",
+      "Aproximación": "Análisis de mercado",
+      "Objetivo": "3 áreas clave",
+      "Horizonte": "6 meses"
+    },
+    "casos_recomendados": [
+      "Planificación estratégica de iniciativas tecnológicas",
+      "Definición de visión y misión para proyectos",
+      "Comunicación de estrategias a equipos y stakeholders",
+      "Establecimiento de prioridades a mediano plazo",
+      "Alineación de objetivos tácticos con propósitos estratégicos",
+      "Formulación de planes de desarrollo de productos",
+      "Orientación de equipos en entornos de cambio rápido"
+    ],
+    "ventajas": [
+      "Mantiene el foco en el propósito fundamental de las iniciativas",
+      "Equilibra la visión a largo plazo con objetivos específicos",
+      "Proporciona claridad sobre el horizonte temporal de las expectativas",
+      "Facilita la comunicación de estrategias complejas de manera sencilla",
+      "Ayuda a prevenir la desviación de propósito durante la implementación",
+      "Conecta la planificación estratégica con la ejecución táctica",
+      "Promueve la alineación entre diferentes niveles organizacionales"
+    ]
+  },
+  {
+    "nombre_completo": "PEAS (Propósito-Resultado-Audiencia-Estilo)",
+    "acronimo": "PEAS",
+    "significado_acronimo": ["Propósito", "Resultado Final", "Audiencia", "Estilo"],
+    "componentes": [
+      {"nombre": "Propósito", "descripcion": "Define el objetivo principal que se quiere lograr con la comunicación"},
+      {"nombre": "Resultado Final", "descripcion": "Establece el resultado concreto y medible que se espera obtener"},
+      {"nombre": "Audiencia", "descripcion": "Identifica las características del público al que va dirigido el mensaje"},
+      {"nombre": "Estilo", "descripcion": "Determina el tono, formato y enfoque apropiado para la comunicación"}
+    ],
+    "descripcion_proposito": "El framework PEAS está diseñado para crear comunicaciones efectivas y orientadas a objetivos. Proporciona una estructura que asegura que cada comunicación tenga un propósito claro, un resultado definido, esté adaptada a su audiencia específica y utilice el estilo más adecuado. Es especialmente útil para estrategias de comunicación, marketing y cualquier situación donde se necesite transmitir mensajes con precisión y efectividad.",
+    "ejemplo_uso": {
+      "Propósito": "Informar sobre nueva política de seguridad informática",
+      "Resultado Final": "100% del personal comprende y cumple las nuevas normas",
+      "Audiencia": "Empleados no técnicos con acceso a datos sensibles",
+      "Estilo": "Claro, conciso, con ejemplos prácticos e infografías"
+    },
+    "casos_recomendados": [
+      "Planificación de campañas de marketing y comunicación",
+      "Desarrollo de contenidos comerciales o educativos",
+      "Comunicación corporativa interna y externa",
+      "Diseño de materiales de capacitación",
+      "Creación de presentaciones ejecutivas",
+      "Elaboración de documentación de usuario",
+      "Estrategias de comunicación en redes sociales"
+    ],
+    "ventajas": [
+      "Enfoca la comunicación en objetivos concretos",
+      "Adapta los mensajes específicamente a la audiencia objetivo",
+      "Asegura coherencia entre el propósito y el estilo utilizado",
+      "Mejora la efectividad de la comunicación al considerar todos los elementos clave",
+      "Facilita la medición del éxito de la comunicación",
+      "Optimiza recursos al dirigir el mensaje adecuado a la audiencia correcta",
+      "Proporciona una estructura clara para evaluar y mejorar comunicaciones existentes"
+    ]
+  },
+  {
+    "nombre_completo": "POWER (Problema-Oportunidades-Por qué-Ejecución-Recursos)",
+    "acronimo": "POWER",
+    "significado_acronimo": ["Problema", "Oportunidades", "Por qué", "Ejecución", "Recursos"],
+    "componentes": [
+      {"nombre": "Problema", "descripcion": "Identifica y describe claramente el problema o desafío a resolver"},
+      {"nombre": "Oportunidades", "descripcion": "Define los resultados positivos o beneficios potenciales"},
+      {"nombre": "Por qué", "descripcion": "Explica la importancia y justificación del proyecto"},
+      {"nombre": "Ejecución", "descripcion": "Detalla el plan de acción y los pasos a seguir"},
+      {"nombre": "Recursos", "descripcion": "Especifica los recursos necesarios para la implementación"}
+    ],
+    "descripcion_proposito": "El framework POWER proporciona una estructura integral para la gestión de proyectos y planificación de iniciativas. Su enfoque único conecta la identificación del problema con las oportunidades de mejora, incorporando la justificación del proyecto, un plan de ejecución claro y la asignación de recursos. Este marco es particularmente valioso para iniciativas complejas donde es importante alinear la resolución de problemas con la asignación efectiva de recursos.",
+    "ejemplo_uso": {
+      "Problema": "Tiempo de carga lento del sitio web",
+      "Oportunidades": "Mejora en conversiones y retención",
+      "Por qué": "Cada segundo de retraso reduce conversiones un 7%",
+      "Ejecución": "Plan de optimización de 3 semanas",
+      "Recursos": "Especialista en rendimiento y presupuesto para CDN"
+    },
+    "casos_recomendados": [
+      "Justificación y planificación de proyectos",
+      "Iniciativas de mejora de rendimiento",
+      "Propuestas de innovación tecnológica",
+      "Proyectos de transformación digital",
+      "Desarrollo de nuevas funcionalidades",
+      "Optimización de procesos existentes",
+      "Iniciativas que requieren asignación significativa de recursos"
+    ],
+    "ventajas": [
+      "Conecta la resolución de problemas con las oportunidades de mejora",
+      "Enfatiza la justificación como elemento clave para obtener apoyo",
+      "Proporciona un marco completo desde la identificación hasta la ejecución",
+      "Asegura la consideración de recursos necesarios desde el principio",
+      "Facilita la comunicación integral de iniciativas a stakeholders",
+      "Mejora la priorización basada en problemas, oportunidades y recursos",
+      "Equilibra la definición del problema con la planificación de la solución"
+    ]
+  },
+
+  {
+    "nombre_completo": "REACH (Requisitos-Evaluación-Aproximación-Completitud-Handover)",
+    "acronimo": "REACH",
+    "significado_acronimo": ["Requisitos", "Evaluación", "Aproximación", "Completitud", "Handover"],
+    "componentes": [
+      {"nombre": "Requisitos", "descripcion": "Define las necesidades, especificaciones y criterios a cumplir"},
+      {"nombre": "Evaluación", "descripcion": "Analiza la viabilidad, opciones y consideraciones técnicas"},
+      {"nombre": "Aproximación", "descripcion": "Establece la metodología y estrategia de implementación"},
+      {"nombre": "Completitud", "descripcion": "Verifica que todos los entregables y criterios se cumplan"},
+      {"nombre": "Handover", "descripcion": "Planifica y ejecuta la transferencia formal del proyecto o solución"}
+    ],
+    "descripcion_proposito": "El framework REACH proporciona una metodología completa para la gestión de proyectos desde la definición de requisitos hasta la entrega final. Su enfoque único incluye explícitamente la fase de transferencia (handover), asegurando una transición efectiva del proyecto al equipo operativo o cliente. Este marco es particularmente valioso para proyectos con entregables claramente definidos, donde la transferencia de conocimiento y responsabilidad es crítica para el éxito a largo plazo.",
+    "ejemplo_uso": {
+      "Requisitos": "Sistema de gestión de inventario",
+      "Evaluación": "Análisis de requisitos y viabilidad",
+      "Aproximación": "Desarrollo iterativo con Scrum",
+      "Completitud": "Entregables y documentación",
+      "Handover": "Plan de capacitación y soporte"
+    },
+    "casos_recomendados": [
+      "Desarrollo de sistemas para clientes",
+      "Implementación de soluciones empresariales",
+      "Proyectos con equipos de entrega y operación separados",
+      "Transición de sistemas de desarrollo a producción",
+      "Implementación de plataformas o aplicaciones",
+      "Proyectos con requisitos estrictos de documentación",
+      "Desarrollo de soluciones para terceros"
+    ],
+    "ventajas": [
+      "Proporciona un marco completo desde los requisitos hasta la entrega",
+      "Enfatiza la importancia de la transferencia efectiva del conocimiento",
+      "Mejora la transición de proyectos de equipos de desarrollo a operaciones",
+      "Asegura que todos los entregables y criterios estén completos",
+      "Reduce problemas post-implementación mediante una entrega estructurada",
+      "Facilita la aceptación por parte del cliente o usuario final",
+      "Establece responsabilidades claras durante todo el ciclo del proyecto"
+    ]
+  },
+  {
+    "nombre_completo": "RISE (Relevancia-Información-Solución-Evaluación)",
+    "acronimo": "RISE",
+    "significado_acronimo": ["Relevancia", "Información", "Solución", "Evaluación"],
+    "componentes": [
+      {"nombre": "Relevancia", "descripcion": "Establece la importancia y pertinencia del tema o problema"},
+      {"nombre": "Información", "descripcion": "Proporciona datos, hechos y contexto necesarios"},
+      {"nombre": "Solución", "descripcion": "Presenta las opciones o acciones recomendadas"},
+      {"nombre": "Evaluación", "descripcion": "Define cómo medir el éxito y los criterios de valoración"}
+    ],
+    "descripcion_proposito": "El framework RISE está diseñado para presentar soluciones basadas en datos de manera estructurada y convincente. Comienza estableciendo por qué el tema es importante, proporciona la información necesaria para entenderlo, ofrece soluciones concretas y establece cómo se evaluará el éxito. Es particularmente útil para presentaciones ejecutivas, informes técnicos y propuestas donde es crucial justificar las recomendaciones con datos.",
+    "ejemplo_uso": {
+      "Relevancia": "Pérdida de usuarios en app móvil (25% en 3 meses)",
+      "Información": "Análisis de embudos muestra abandono en proceso de registro",
+      "Solución": "Simplificar flujo de registro reduciendo pasos de 5 a 3",
+      "Evaluación": "Meta de aumentar conversión en registro del 45% al 70%"
+    },
+    "casos_recomendados": [
+      "Presentaciones a stakeholders o comités ejecutivos",
+      "Informes de análisis de datos con recomendaciones",
+      "Propuestas de mejora de procesos o sistemas",
+      "Documentos de toma de decisiones basadas en datos",
+      "Reportes de consultoría con recomendaciones accionables",
+      "Planes estratégicos con métricas de éxito",
+      "Informes de investigación con aplicaciones prácticas"
+    ],
+    "ventajas": [
+      "Estructura integral que conecta problema, datos y solución",
+      "Enfoque en la relevancia que ayuda a captar la atención",
+      "Basado en información para decisiones fundamentadas",
+      "Incluye criterios de evaluación para medir el impacto",
+      "Facilita la comunicación efectiva de soluciones complejas",
+      "Proporciona un marco completo desde la identificación del problema hasta la medición del éxito",
+      "Ayuda a priorizar iniciativas basándose en su relevancia e impacto potencial"
+    ]
+  },
+  {
+    "nombre_completo": "RTF (Rol-Tarea-Formato)",
+    "acronimo": "RTF",
+    "significado_acronimo": ["Rol", "Tarea", "Formato"],
+    "componentes": [
+      {"nombre": "Rol", "descripcion": "Define quién está realizando la tarea (perfil, expertise, posición)"},
+      {"nombre": "Tarea", "descripcion": "Especifica qué se debe hacer exactamente"},
+      {"nombre": "Formato", "descripcion": "Establece cómo debe presentarse o entregarse el resultado"}
+    ],
+    "descripcion_proposito": "El framework RTF es un enfoque estructurado para crear instrucciones claras y específicas basadas en roles. Ayuda a definir claramente quién debe hacer qué y cómo debe presentarse el resultado final. Es especialmente útil cuando se necesita delegar tareas o especificar trabajos que requieren un formato de entrega particular.",
+    "ejemplo_uso": {
+      "Rol": "Arquitecto de software senior",
+      "Tarea": "Diseñar sistema de alta disponibilidad",
+      "Formato": "Documento técnico detallado con diagramas"
+    },
+    "casos_recomendados": [
+      "Delegación de tareas a equipos técnicos",
+      "Especificación de entregables para consultores o contratistas",
+      "Documentación técnica y especificaciones de proyectos",
+      "Asignación de responsabilidades en equipos multidisciplinarios",
+      "Comunicación entre departamentos con diferentes especialidades",
+      "Creación de briefings para proyectos de desarrollo",
+      "Estructuración de documentos técnicos con requisitos específicos"
+    ],
+    "ventajas": [
+      "Claridad en la asignación de responsabilidades",
+      "Expectativas bien definidas para todas las partes",
+      "Facilita la medición del éxito de la tarea",
+      "Reduce malentendidos sobre el alcance y formato del entregable",
+      "Permite una comunicación más eficiente entre diferentes roles en un equipo",
+      "Establece estándares claros para la calidad y formato de los entregables",
+      "Mejora la eficiencia en la delegación y seguimiento de tareas"
+    ]
+  },
+  {
+    "nombre_completo": "SCALE (Estrategia-Capacidades-Acción-Aprendizaje-Evolución)",
+    "acronimo": "SCALE",
+    "significado_acronimo": ["Estrategia", "Capacidades", "Acción", "Aprendizaje", "Evolución"],
+    "componentes": [
+      {"nombre": "Estrategia", "descripcion": "Define el plan de alto nivel y visión para el escalamiento"},
+      {"nombre": "Capacidades", "descripcion": "Identifica los recursos, habilidades y tecnologías necesarios"},
+      {"nombre": "Acción", "descripcion": "Implementa los pasos concretos para el escalamiento"},
+      {"nombre": "Aprendizaje", "descripcion": "Recopila datos, retroalimentación y lecciones aprendidas"},
+      {"nombre": "Evolución", "descripcion": "Adapta y mejora continuamente basándose en el aprendizaje"}
+    ],
+    "descripcion_proposito": "El framework SCALE proporciona una metodología estructurada específicamente para el escalamiento de sistemas, operaciones y organizaciones. Sigue un enfoque integral que comienza con la estrategia general, identifica las capacidades necesarias, implementa acciones concretas, incorpora un ciclo de aprendizaje continuo y evoluciona basándose en los datos y experiencias. Este marco es particularmente valioso para proyectos de escalabilidad técnica, crecimiento organizacional y cualquier iniciativa que busque expandir de manera sostenible la capacidad o alcance de operaciones.",
+    "ejemplo_uso": {
+      "Estrategia": "Plan de escalabilidad cloud",
+      "Capacidades": "Autoescalado y redundancia",
+      "Acción": "Implementación de clusters K8s",
+      "Aprendizaje": "Monitoreo y telemetría",
+      "Evolución": "Mejora continua basada en datos"
+    },
+    "casos_recomendados": [
+      "Escalamiento de infraestructuras técnicas",
+      "Expansión de capacidades operativas",
+      "Crecimiento de sistemas y plataformas",
+      "Implementación de arquitecturas escalables",
+      "Transformación de operaciones para mayor volumen",
+      "Optimización de rendimiento a gran escala",
+      "Proyectos de internacionalización y expansión"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque estructurado específicamente para el escalamiento",
+      "Equilibra la planificación estratégica con la implementación táctica",
+      "Enfatiza la importancia del aprendizaje y adaptación continuos",
+      "Considera tanto las capacidades técnicas como organizacionales",
+      "Facilita la identificación de cuellos de botella y limitaciones",
+      "Promueve una mentalidad de crecimiento sostenible",
+      "Establece un ciclo de mejora continua basado en datos reales"
+    ]
+  },
+  {
+    "nombre_completo": "SCOPE (Situación-Necesidad Core-Obstáculos-Plan-Evaluación)",
+    "acronimo": "SCOPE",
+    "significado_acronimo": ["Situación", "Necesidad Core", "Obstáculos", "Plan", "Evaluación"],
+    "componentes": [
+      {"nombre": "Situación", "descripcion": "Describe el contexto actual y antecedentes relevantes"},
+      {"nombre": "Necesidad Core", "descripcion": "Identifica la necesidad fundamental o problema central a resolver"},
+      {"nombre": "Obstáculos", "descripcion": "Anticipa las dificultades, desafíos o barreras potenciales"},
+      {"nombre": "Plan", "descripcion": "Establece la estrategia y acciones para superar los obstáculos y satisfacer la necesidad"},
+      {"nombre": "Evaluación", "descripcion": "Define cómo se medirá el éxito y se evaluará el progreso"}
+    ],
+    "descripcion_proposito": "El framework SCOPE proporciona una estructura completa para abordar problemas complejos, particularmente en entornos de modernización y transformación. Su enfoque único incluye la identificación proactiva de obstáculos, lo que permite desarrollar planes más realistas y robustos. Este marco es especialmente valioso para proyectos de actualización de sistemas heredados, transformaciones tecnológicas y cualquier iniciativa que enfrente resistencia o complejidades significativas.",
+    "ejemplo_uso": {
+      "Situación": "Sistema heredado crítico",
+      "Necesidad Core": "Modernización tecnológica",
+      "Obstáculos": "Deuda técnica acumulada",
+      "Plan": "Refactorización por fases",
+      "Evaluación": "Cobertura de pruebas"
+    },
+    "casos_recomendados": [
+      "Modernización de sistemas heredados",
+      "Transformaciones tecnológicas complejas",
+      "Proyectos con alta deuda técnica",
+      "Actualizaciones de plataformas críticas",
+      "Migraciones de sistemas de alto riesgo",
+      "Implementación de cambios en entornos resistentes",
+      "Proyectos con múltiples dependencias y restricciones"
+    ],
+    "ventajas": [
+      "Proporciona una visión realista al identificar obstáculos desde el principio",
+      "Equilibra la necesidad de cambio con las complejidades de la situación",
+      "Facilita la planificación más robusta y preparada para contingencias",
+      "Promueve la transparencia sobre desafíos potenciales",
+      "Mejora la comunicación con stakeholders sobre dificultades esperadas",
+      "Ayuda a establecer expectativas realistas sobre plazos y resultados",
+      "Conecta el contexto actual con la visión futura a través de un plan práctico"
+    ]
+  },
+  {
+    "nombre_completo": "SHAPE (Situación-Historia-Análisis-Plan-Ejecución)",
+    "acronimo": "SHAPE",
+    "significado_acronimo": ["Situación", "Historia", "Análisis", "Plan", "Ejecución"],
+    "componentes": [
+      {"nombre": "Situación", "descripcion": "Describe el contexto actual o escenario presente"},
+      {"nombre": "Historia", "descripcion": "Proporciona antecedentes, evolución o desarrollo histórico"},
+      {"nombre": "Análisis", "descripcion": "Evalúa opciones, alternativas y consideraciones clave"},
+      {"nombre": "Plan", "descripcion": "Establece la estrategia y acciones a seguir"},
+      {"nombre": "Ejecución", "descripcion": "Implementa el plan mediante acciones concretas"}
+    ],
+    "descripcion_proposito": "El framework SHAPE proporciona una metodología estructurada para la planificación e implementación de cambios significativos. Su enfoque único incorpora tanto la situación actual como el contexto histórico antes de proceder al análisis y planificación, asegurando que las decisiones estén fundamentadas en una comprensión completa. Este marco es particularmente valioso para proyectos de transformación organizacional, cambios tecnológicos importantes y cualquier iniciativa donde es crucial entender tanto el presente como el pasado para diseñar un futuro efectivo.",
+    "ejemplo_uso": {
+      "Situación": "Modernización tecnológica",
+      "Historia": "Stack tecnológico actual",
+      "Análisis": "Evaluación de alternativas",
+      "Plan": "Migración por fases",
+      "Ejecución": "Sprints de 2 semanas"
+    },
+    "casos_recomendados": [
+      "Transformaciones organizacionales",
+      "Migraciones tecnológicas complejas",
+      "Reestructuración de procesos",
+      "Cambios estratégicos significativos",
+      "Modernización de plataformas heredadas",
+      "Fusiones e integraciones de sistemas",
+      "Implementación de cambios culturales"
+    ],
+    "ventajas": [
+      "Equilibra la comprensión del presente con el contexto histórico",
+      "Proporciona una base sólida para el análisis y la toma de decisiones",
+      "Facilita transiciones complejas mediante un enfoque estructurado",
+      "Mejora la aceptación del cambio al reconocer la historia y el contexto",
+      "Conecta el análisis con acciones concretas de implementación",
+      "Promueve decisiones informadas basadas en una visión completa",
+      "Facilita la comunicación del cambio a diferentes audiencias"
+    ]
+  },
+  {
+    "nombre_completo": "SMART (Específico-Medible-Alcanzable-Relevante-Temporal)",
+    "acronimo": "SMART",
+    "significado_acronimo": ["Específico", "Medible", "Alcanzable", "Relevante", "Temporal"],
+    "componentes": [
+      {"nombre": "Específico", "descripcion": "Define con precisión y claridad qué se quiere lograr"},
+      {"nombre": "Medible", "descripcion": "Establece criterios cuantitativos para evaluar el progreso y éxito"},
+      {"nombre": "Alcanzable", "descripcion": "Asegura que el objetivo sea realista y posible de lograr"},
+      {"nombre": "Relevante", "descripcion": "Confirma que el objetivo esté alineado con metas más amplias y sea importante"},
+      {"nombre": "Temporal", "descripcion": "Fija un plazo o fecha límite definida para el cumplimiento"}
+    ],
+    "descripcion_proposito": "El framework SMART es una metodología probada para establecer objetivos efectivos y accionables. Proporciona criterios para asegurar que los objetivos sean claros, cuantificables, realistas, alineados con propósitos más amplios y con plazos definidos. Esta estructura mejora significativamente la probabilidad de éxito al transformar ideas vagas en metas concretas con parámetros bien definidos para su seguimiento y evaluación.",
+    "ejemplo_uso": {
+      "Específico": "Reducir tiempo de compilación",
+      "Medible": "De 15 minutos a 5 minutos",
+      "Alcanzable": "Pruebas en paralelo",
+      "Relevante": "Mejora productividad desarrolladores",
+      "Temporal": "Próximo sprint (2 semanas)"
+    },
+    "casos_recomendados": [
+      "Planificación de proyectos y gestión de tareas",
+      "Establecimiento de objetivos personales y profesionales",
+      "Definición de KPIs y metas departamentales",
+      "Planificación estratégica de corto y mediano plazo",
+      "Evaluación de desempeño individual y de equipos",
+      "Definición de entregables de proyectos",
+      "Establecimiento de hitos en desarrollo de productos"
+    ],
+    "ventajas": [
+      "Proporciona claridad y elimina ambigüedades en los objetivos",
+      "Facilita la medición del progreso y el éxito",
+      "Aumenta la motivación al establecer metas alcanzables",
+      "Asegura que los esfuerzos se dirijan a objetivos significativos",
+      "Crea urgencia y enfoque con plazos definidos",
+      "Mejora la planificación y asignación de recursos",
+      "Facilita la comunicación y expectativas claras entre equipos"
+    ]
+  },
+  {
+    "nombre_completo": "SOLVE (Situación-Opciones-Limitaciones-Verificación-Ejecución)",
+    "acronimo": "SOLVE",
+    "significado_acronimo": ["Situación", "Opciones", "Limitaciones", "Verificación", "Ejecución"],
+    "componentes": [
+      {"nombre": "Situación", "descripcion": "Describe el contexto actual, problema o desafío a resolver"},
+      {"nombre": "Opciones", "descripcion": "Explora las diferentes alternativas o soluciones posibles"},
+      {"nombre": "Limitaciones", "descripcion": "Identifica restricciones, obstáculos o condicionantes"},
+      {"nombre": "Verificación", "descripcion": "Establece los criterios y métodos para validar la solución"},
+      {"nombre": "Ejecución", "descripcion": "Detalla el plan de implementación de la solución seleccionada"}
+    ],
+    "descripcion_proposito": "El framework SOLVE proporciona una metodología estructurada para la resolución efectiva de problemas técnicos. Su enfoque sistemático comienza con la comprensión profunda del problema, explora múltiples soluciones, considera las limitaciones reales, establece métodos de verificación y finaliza con un plan de ejecución concreto. Este marco es particularmente valioso para equipos técnicos que enfrentan desafíos complejos donde es crucial considerar tanto las alternativas como las restricciones antes de implementar una solución.",
+    "ejemplo_uso": {
+      "Situación": "Alto tiempo de respuesta",
+      "Opciones": "Optimización de consultas o caching",
+      "Limitaciones": "Presupuesto limitado",
+      "Verificación": "Pruebas de carga",
+      "Ejecución": "Despliegue gradual"
+    },
+    "casos_recomendados": [
+      "Resolución de problemas de rendimiento en sistemas",
+      "Diagnóstico y solución de incidencias técnicas",
+      "Evaluación de alternativas tecnológicas",
+      "Planificación de mejoras de infraestructura",
+      "Optimización de aplicaciones y plataformas",
+      "Desarrollo de soluciones con restricciones específicas",
+      "Implementación de cambios en sistemas críticos"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque estructurado y completo para la resolución de problemas",
+      "Fomenta la consideración de múltiples alternativas antes de decidir",
+      "Reconoce explícitamente las limitaciones para desarrollar soluciones realistas",
+      "Incorpora verificación para asegurar la efectividad de la solución",
+      "Equilibra la exploración de alternativas con la implementación práctica",
+      "Facilita la comunicación clara del proceso de solución de problemas",
+      "Mejora la calidad de las decisiones técnicas al considerar todos los factores clave"
+    ]
+  },
+  {
+    "nombre_completo": "SPARK (Estrategia-Planificación-Acción-Resultados-Conocimiento)",
+    "acronimo": "SPARK",
+    "significado_acronimo": ["Estrategia", "Planificación", "Acción", "Resultados", "Conocimiento"],
+    "componentes": [
+      {"nombre": "Estrategia", "descripcion": "Define el enfoque de alto nivel y dirección estratégica"},
+      {"nombre": "Planificación", "descripcion": "Desarrolla el plan detallado, hitos y cronograma"},
+      {"nombre": "Acción", "descripcion": "Implementa las actividades y tareas planificadas"},
+      {"nombre": "Resultados", "descripcion": "Mide y evalúa los resultados y el impacto obtenido"},
+      {"nombre": "Conocimiento", "descripcion": "Documenta aprendizajes y comparte conocimiento adquirido"}
+    ],
+    "descripcion_proposito": "El framework SPARK proporciona una metodología integral para la gestión de iniciativas de innovación y transformación. Sigue un enfoque sistemático que conecta la estrategia de alto nivel con la planificación detallada, implementación práctica, medición de resultados y gestión del conocimiento. Este marco es particularmente valioso para proyectos de innovación, transformación tecnológica o cualquier iniciativa donde es crucial mantener la alineación estratégica mientras se genera y captura nuevo conocimiento.",
+    "ejemplo_uso": {
+      "Estrategia": "Modernización de plataforma",
+      "Planificación": "Roadmap técnico 6 meses",
+      "Acción": "Implementación por módulos",
+      "Resultados": "Métricas de rendimiento",
+      "Conocimiento": "Documentación y capacitación"
+    },
+    "casos_recomendados": [
+      "Programas de innovación tecnológica",
+      "Iniciativas de transformación digital",
+      "Desarrollo de nuevas plataformas o servicios",
+      "Implementación de cambios estratégicos",
+      "Lanzamiento de nuevos productos o funcionalidades",
+      "Proyectos de mejora con captura de conocimiento",
+      "Iniciativas con componente significativo de aprendizaje"
+    ],
+    "ventajas": [
+      "Conecta directamente la estrategia con la acción y los resultados",
+      "Enfatiza la importancia de la documentación y transferencia de conocimiento",
+      "Proporciona un marco completo desde la visión hasta el aprendizaje",
+      "Facilita la comunicación entre diferentes niveles organizacionales",
+      "Mejora la sostenibilidad de las iniciativas mediante la captura de conocimiento",
+      "Asegura que las acciones estén alineadas con objetivos estratégicos",
+      "Promueve una cultura de mejora continua basada en resultados y aprendizajes"
+    ]
+  },
+  {
+    "nombre_completo": "SPIN (Situación-Problema-Implicación-Necesidad)",
+    "acronimo": "SPIN",
+    "significado_acronimo": ["Situación", "Problema", "Implicación", "Necesidad-Beneficio"],
+    "componentes": [
+      {"nombre": "Situación", "descripcion": "Describe el contexto actual o escenario de partida"},
+      {"nombre": "Problema", "descripcion": "Identifica la dificultad, desafío o área problemática específica"},
+      {"nombre": "Implicación", "descripcion": "Analiza las consecuencias o impactos negativos del problema"},
+      {"nombre": "Necesidad-Beneficio", "descripcion": "Establece la solución y sus beneficios concretos"}
+    ],
+    "descripcion_proposito": "El framework SPIN, originalmente desarrollado para ventas consultivas, es altamente efectivo para presentar soluciones técnicas de manera persuasiva. Este enfoque sigue una progresión lógica que comienza estableciendo la situación actual, identifica claramente el problema, explora las implicaciones negativas de no resolverlo, y finalmente presenta la solución destacando sus beneficios específicos. Es particularmente valioso cuando se necesita justificar inversiones en tecnología o cambios significativos en sistemas.",
+    "ejemplo_uso": {
+      "Situación": "Sistema heredado en Java 8",
+      "Problema": "Alto coste de mantenimiento",
+      "Implicación": "Riesgo de seguridad",
+      "Necesidad-Beneficio": "Actualización a Java 17"
+    },
+    "casos_recomendados": [
+      "Propuestas de modernización tecnológica",
+      "Justificación de inversiones en nuevos sistemas",
+      "Presentaciones de soluciones arquitectónicas",
+      "Documentación de necesidades de cambio",
+      "Argumentación para la adopción de nuevas tecnologías",
+      "Comunicación de mejoras técnicas a stakeholders",
+      "Análisis de casos de negocio para cambios técnicos"
+    ],
+    "ventajas": [
+      "Estructura lógica que facilita la persuasión basada en hechos",
+      "Enfatiza las consecuencias de no actuar, motivando la acción",
+      "Conecta problemas específicos con soluciones concretas",
+      "Facilita la justificación de inversiones tecnológicas",
+      "Mejora la comunicación técnica a audiencias no técnicas",
+      "Ayuda a priorizar problemas según su impacto y consecuencias",
+      "Proporciona un formato claro para propuestas y recomendaciones"
+    ]
+  },
+  {
+    "nombre_completo": "STAR (Situación-Tarea-Acción-Resultado)",
+    "acronimo": "STAR",
+    "significado_acronimo": ["Situación", "Tarea", "Acción", "Resultado"],
+    "componentes": [
+      {"nombre": "Situación", "descripcion": "Describe el contexto, el escenario o el desafío enfrentado"},
+      {"nombre": "Tarea", "descripcion": "Especifica la responsabilidad o el objetivo asignado"},
+      {"nombre": "Acción", "descripcion": "Detalla los pasos y medidas concretas que se tomaron"},
+      {"nombre": "Resultado", "descripcion": "Presenta los logros, métricas o beneficios obtenidos"}
+    ],
+    "descripcion_proposito": "El framework STAR es una metodología estructurada para documentar experiencias y logros de manera clara y medible. Proporciona un formato para narrar situaciones complejas, destacando las acciones específicas tomadas y los resultados cuantificables obtenidos. Es especialmente valioso para comunicar logros profesionales, demostrar competencias y documentar casos de éxito con un enfoque en resultados.",
+    "ejemplo_uso": {
+      "Situación": "Migración sistema heredado a la nube",
+      "Tarea": "Modernizar arquitectura monolítica",
+      "Acción": "Implementar microservicios y despliegue continuo",
+      "Resultado": "40% mejora en tiempo de implementación"
+    },
+    "casos_recomendados": [
+      "Entrevistas de trabajo y evaluaciones de desempeño",
+      "Documentación de casos de éxito de proyectos",
+      "Informes de resultados de iniciativas",
+      "Comunicación de logros a stakeholders",
+      "Redacción de currículos y perfiles profesionales",
+      "Documentación de mejores prácticas",
+      "Creación de portfolios de proyectos"
+    ],
+    "ventajas": [
+      "Estructura narrativa clara y orientada a resultados",
+      "Proporciona contexto completo de los logros",
+      "Destaca la contribución individual o del equipo",
+      "Fácil de seguir y comprender para cualquier audiencia",
+      "Enfatiza resultados medibles y cuantificables",
+      "Demuestra de manera objetiva el impacto de las acciones",
+      "Facilita la comparación de diferentes experiencias o proyectos"
+    ]
+  },
+  {
+    "nombre_completo": "TAG (Tarea-Acción-Meta)",
+    "acronimo": "TAG",
+    "significado_acronimo": ["Tarea", "Acción", "Meta"],
+    "componentes": [
+      {"nombre": "Tarea", "descripcion": "Define específicamente qué trabajo debe realizarse"},
+      {"nombre": "Acción", "descripcion": "Detalla los pasos concretos y acciones a ejecutar"},
+      {"nombre": "Meta", "descripcion": "Establece el objetivo final y los resultados esperados"}
+    ],
+    "descripcion_proposito": "El framework TAG proporciona una estructura clara y orientada a la acción para asignar y ejecutar tareas con un propósito definido. Conecta lo que debe hacerse con cómo debe hacerse y el resultado esperado. Este framework es particularmente útil para la planificación de proyectos donde se requiere claridad en los objetivos y acciones específicas.",
+    "ejemplo_uso": {
+      "Tarea": "Implementar autenticación OAuth2",
+      "Acción": "Desarrollar flujo de autorización completo",
+      "Meta": "Sistema seguro con múltiples proveedores"
+    },
+    "casos_recomendados": [
+      "Planificación de sprints en metodologías ágiles",
+      "Asignación de tareas a equipos de desarrollo",
+      "Definición de historias de usuario con criterios de aceptación",
+      "Especificación de requisitos técnicos",
+      "Documentación de procesos operativos",
+      "Planificación de proyectos con objetivos medibles",
+      "Delegación de responsabilidades con expectativas claras"
+    ],
+    "ventajas": [
+      "Enfoque directo y orientado a resultados",
+      "Evita ambigüedades sobre qué se debe hacer y por qué",
+      "Facilita el seguimiento del progreso hacia objetivos específicos",
+      "Conecta las actividades diarias con los objetivos estratégicos",
+      "Mejora la motivación al proporcionar un propósito claro para cada acción",
+      "Simplifica la asignación de responsabilidades",
+      "Promueve la eficiencia al centrar el foco en tareas relevantes"
+    ]
+  },
+  {
+    "nombre_completo": "TEAM (Tarea-Entorno-Aproximación-Métricas)",
+    "acronimo": "TEAM",
+    "significado_acronimo": ["Tarea", "Entorno", "Aproximación", "Métricas"],
+    "componentes": [
+      {"nombre": "Tarea", "descripcion": "Define el objetivo específico o actividad a realizar por el equipo"},
+      {"nombre": "Entorno", "descripcion": "Describe el contexto, infraestructura o ecosistema donde se desarrolla la tarea"},
+      {"nombre": "Aproximación", "descripcion": "Detalla la metodología, estrategia o enfoque a utilizar"},
+      {"nombre": "Métricas", "descripcion": "Establece los indicadores de éxito y sistemas de medición del progreso"}
+    ],
+    "descripcion_proposito": "El framework TEAM está diseñado específicamente para la gestión y documentación de proyectos colaborativos en entornos técnicos. Proporciona una estructura clara que define no solo qué debe hacerse, sino también el contexto operativo, la metodología a seguir y cómo se medirá el éxito. Este enfoque integral facilita la coordinación entre miembros del equipo y asegura que todos comprendan el alcance, enfoque y criterios de éxito del proyecto.",
+    "ejemplo_uso": {
+      "Tarea": "Implementar banderas de características",
+      "Entorno": "Microservicios en Kubernetes",
+      "Aproximación": "Despliegues progresivos",
+      "Métricas": "Presupuesto de errores, tasa de adopción"
+    },
+    "casos_recomendados": [
+      "Planificación de proyectos técnicos colaborativos",
+      "Documentación de implementaciones en equipo",
+      "Briefings para equipos de desarrollo",
+      "Gestión de iniciativas de DevOps",
+      "Planificación de lanzamientos de características",
+      "Coordinación de equipos distribuidos",
+      "Diseño de experimentos de producto"
+    ],
+    "ventajas": [
+      "Proporciona un marco completo para la planificación de proyectos en equipo",
+      "Facilita la alineación y comprensión compartida entre miembros del equipo",
+      "Enfatiza la importancia del contexto operativo en el éxito del proyecto",
+      "Establece indicadores claros para monitorear el progreso",
+      "Mejora la toma de decisiones basada en datos con métricas definidas",
+      "Equilibra la definición de tareas con los métodos de implementación",
+      "Ayuda a anticipar posibles desafíos al considerar el entorno específico"
+    ]
+  },
+  {
+    "nombre_completo": "THINK (Tema-Historia-Insights-SiguientesPasos-Conocimiento)",
+    "acronimo": "THINK",
+    "significado_acronimo": ["Tema", "Historia", "Insights", "Siguientes Pasos", "Conocimiento"],
+    "componentes": [
+      {"nombre": "Tema", "descripcion": "Define el asunto principal o área de enfoque"},
+      {"nombre": "Historia", "descripcion": "Proporciona antecedentes, contexto histórico o evolución"},
+      {"nombre": "Insights", "descripcion": "Presenta descubrimientos clave, patrones o conclusiones relevantes"},
+      {"nombre": "Siguientes Pasos", "descripcion": "Establece las acciones futuras recomendadas"},
+      {"nombre": "Conocimiento", "descripcion": "Identifica el conocimiento esencial o especializado necesario"}
+    ],
+    "descripcion_proposito": "El framework THINK está diseñado para el análisis estratégico y la generación de conocimiento aplicable. Proporciona una estructura que combina la comprensión contextual e histórica con insights analíticos, orienta hacia acciones concretas y reconoce el conocimiento especializado necesario. Este enfoque es particularmente valioso para análisis de tendencias, investigación aplicada y planificación estratégica donde es crucial conectar la historia y el contexto con insights accionables y conocimiento especializado.",
+    "ejemplo_uso": {
+      "Tema": "Expansión mercado LATAM",
+      "Historia": "Análisis previos de mercado",
+      "Insights": "Oportunidades identificadas",
+      "Siguientes Pasos": "Plan de entrada Q2 2024",
+      "Conocimiento": "Regulaciones locales"
+    },
+    "casos_recomendados": [
+      "Análisis de tendencias tecnológicas",
+      "Investigación de mercados y oportunidades",
+      "Planificación estratégica basada en datos",
+      "Evaluación de expansión a nuevos segmentos",
+      "Desarrollo de estrategias de innovación",
+      "Análisis competitivo y posicionamiento",
+      "Documentación de conocimiento organizacional"
+    ],
+    "ventajas": [
+      "Equilibra el análisis contextual con la acción orientada al futuro",
+      "Conecta el conocimiento histórico con insights prácticos",
+      "Proporciona un marco completo para el análisis estratégico",
+      "Facilita la transición desde el análisis hasta la acción",
+      "Reconoce explícitamente la importancia del conocimiento especializado",
+      "Mejora la toma de decisiones al incorporar tanto el contexto como insights",
+      "Estructura el pensamiento analítico de manera aplicable a la acción"
+    ]
+  },
+  {
+    "nombre_completo": "VISION (Visualizar-Identificar-Estructurar-Implementar-Optimizar-Navegar)",
+    "acronimo": "VISION",
+    "significado_acronimo": ["Visualizar", "Identificar", "Estructurar", "Implementar", "Optimizar", "Navegar"],
+    "componentes": [
+      {"nombre": "Visualizar", "descripcion": "Proyecta la visión futura o estado ideal a alcanzar"},
+      {"nombre": "Identificar", "descripcion": "Reconoce oportunidades, tendencias y potenciales áreas de innovación"},
+      {"nombre": "Estructurar", "descripcion": "Organiza conceptos, recursos y componentes en un plan coherente"},
+      {"nombre": "Implementar", "descripcion": "Ejecuta el plan estableciendo hitos y entregables concretos"},
+      {"nombre": "Optimizar", "descripcion": "Refina los procesos y resultados mediante medición y mejora continua"},
+      {"nombre": "Navegar", "descripcion": "Adapta la dirección basándose en cambios del entorno y nuevos aprendizajes"}
+    ],
+    "descripcion_proposito": "El framework VISION proporciona una metodología completa para la planificación estratégica y ejecución de iniciativas de transformación a largo plazo. Combina la proyección de futuro con la implementación práctica y la adaptabilidad, creando un ciclo completo que abarca desde la conceptualización hasta la evolución continua. Es especialmente valioso para la planificación de transformaciones tecnológicas, innovaciones disruptivas y cambios organizacionales significativos.",
+    "ejemplo_uso": {
+      "Visualizar": "Futuro del mercado software",
+      "Identificar": "Oportunidades clave",
+      "Estructurar": "Arquitectura del sistema",
+      "Implementar": "Plan trimestral",
+      "Optimizar": "Indicadores de rendimiento",
+      "Navegar": "Cambios tecnológicos"
+    },
+    "casos_recomendados": [
+      "Planificación estratégica tecnológica",
+      "Definición de iniciativas de transformación digital",
+      "Desarrollo de arquitecturas empresariales",
+      "Diseño de plataformas escalables a largo plazo",
+      "Elaboración de roadmaps plurianuales",
+      "Innovación disruptiva y nuevos productos",
+      "Gestión del cambio organizacional"
+    ],
+    "ventajas": [
+      "Combina la visión de futuro con la implementación práctica",
+      "Proporciona un marco completo desde la ideación hasta la adaptación",
+      "Equilibra la planificación a largo plazo con la flexibilidad",
+      "Establece un ciclo de mejora continua y adaptación",
+      "Facilita la comunicación de estrategias complejas",
+      "Promueve un enfoque proactivo ante los cambios del entorno",
+      "Ayuda a mantener el rumbo estratégico mientras se adapta tácticamente"
+    ]
+  },
+  {
+    "nombre_completo": "IMPACT (Intención-Mensaje-Propósito-Audiencia-Canal-Tiempo)",
+    "acronimo": "IMPACT",
+    "significado_acronimo": ["Intención", "Mensaje", "Propósito", "Audiencia", "Canal", "Tiempo"],
+    "componentes": [
+      {"nombre": "Intención", "descripcion": "Define el objetivo principal de la comunicación o iniciativa"},
+      {"nombre": "Mensaje", "descripcion": "Articula el contenido central y puntos clave a transmitir"},
+      {"nombre": "Propósito", "descripcion": "Establece el resultado esperado o cambio que se busca generar"},
+      {"nombre": "Audiencia", "descripcion": "Identifica el público objetivo con sus características específicas"},
+      {"nombre": "Canal", "descripcion": "Selecciona los medios y formatos más adecuados para la comunicación"},
+      {"nombre": "Tiempo", "descripcion": "Determina el momento óptimo y la frecuencia de la comunicación"}
+    ],
+    "descripcion_proposito": "El framework IMPACT proporciona una estructura completa para diseñar estrategias de comunicación efectivas en entornos corporativos y técnicos. Considera todos los elementos esenciales de la comunicación estratégica, desde la intención inicial hasta el momento de entrega, asegurando que el mensaje sea relevante, llegue a la audiencia correcta a través del canal adecuado y en el momento oportuno. Este enfoque integral es particularmente valioso para comunicaciones corporativas, lanzamientos de productos o iniciativas de cambio.",
+    "ejemplo_uso": {
+      "Intención": "Transformación digital",
+      "Mensaje": "Eficiencia operativa",
+      "Propósito": "Automatización de procesos",
+      "Audiencia": "Equipo de operaciones",
+      "Canal": "Intranet corporativa",
+      "Tiempo": "Lanzamiento primer trimestre 2024"
+    },
+    "casos_recomendados": [
+      "Estrategias de comunicación corporativa",
+      "Planes de lanzamiento de productos o servicios",
+      "Campañas de cambio organizacional",
+      "Comunicación de nuevas políticas o procedimientos",
+      "Estrategias de marketing interno",
+      "Difusión de innovaciones tecnológicas",
+      "Programas de adopción de nuevas herramientas"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque integral para todas las dimensiones de la comunicación",
+      "Asegura la alineación entre el objetivo, el mensaje y los resultados esperados",
+      "Optimiza la efectividad al considerar la audiencia y canales específicos",
+      "Mejora el impacto mediante la consideración estratégica del timing",
+      "Facilita la planificación de campañas de comunicación complejas",
+      "Ayuda a prevenir malentendidos o resistencia al cambio",
+      "Aumenta la probabilidad de lograr los resultados deseados de la comunicación"
+    ]
+  },
+  {
+    "nombre_completo": "LEAP (Nivel-Expectativas-Aproximación-Parámetros)",
+    "acronimo": "LEAP",
+    "significado_acronimo": ["Nivel", "Expectativas", "Aproximación", "Parámetros"],
+    "componentes": [
+      {"nombre": "Nivel", "descripcion": "Especifica el nivel de experiencia o conocimiento del equipo o audiencia"},
+      {"nombre": "Expectativas", "descripcion": "Define los resultados y estándares esperados del proyecto o entregable"},
+      {"nombre": "Aproximación", "descripcion": "Detalla el enfoque metodológico o técnico a utilizar"},
+      {"nombre": "Parámetros", "descripcion": "Establece criterios, métricas o limitaciones para evaluar el éxito"}
+    ],
+    "descripcion_proposito": "El framework LEAP está diseñado para establecer expectativas claras y alineadas en proyectos técnicos. Reconoce la importancia de considerar el nivel de experiencia del equipo, definir claramente las expectativas, acordar un enfoque y establecer parámetros medibles. Este marco resulta particularmente valioso para la planificación de proyectos técnicos donde es crucial adaptar las expectativas y metodologías al nivel de experiencia del equipo para lograr resultados exitosos.",
+    "ejemplo_uso": {
+      "Nivel": "Equipo backend senior",
+      "Expectativas": "Arquitectura limpia",
+      "Aproximación": "Diseño guiado por dominio",
+      "Parámetros": "Rendimiento y escalabilidad"
+    },
+    "casos_recomendados": [
+      "Diseño de arquitecturas de software",
+      "Planificación de proyectos técnicos",
+      "Definición de estándares de calidad",
+      "Evaluación de capacidades de equipos",
+      "Planificación estratégica de desarrollo",
+      "Establecimiento de criterios de aceptación",
+      "Alineación de expectativas entre stakeholders y equipos técnicos"
+    ],
+    "ventajas": [
+      "Adapta las expectativas al nivel real de experiencia del equipo",
+      "Establece claramente los criterios de éxito desde el inicio",
+      "Facilita la selección del enfoque técnico más apropiado",
+      "Proporciona métricas claras para evaluar el progreso y los resultados",
+      "Mejora la comunicación entre equipos técnicos y stakeholders",
+      "Ayuda a prevenir desajustes entre expectativas y capacidades",
+      "Fomenta la toma de decisiones técnicas fundamentadas en criterios definidos"
+    ]
+  },
+  {
+    "nombre_completo": "LEARN (Nivel-Experiencia-Aproximación-Recursos-SiguientesPasos)",
+    "acronimo": "LEARN",
+    "significado_acronimo": ["Nivel", "Experiencia", "Aproximación", "Recursos", "Siguientes Pasos"],
+    "componentes": [
+      {"nombre": "Nivel", "descripcion": "Define el nivel de complejidad o profundidad del aprendizaje"},
+      {"nombre": "Experiencia", "descripcion": "Describe el conocimiento o habilidades previas necesarias"},
+      {"nombre": "Aproximación", "descripcion": "Establece la metodología de enseñanza o aprendizaje"},
+      {"nombre": "Recursos", "descripcion": "Especifica los materiales, herramientas o documentación necesarios"},
+      {"nombre": "Siguientes Pasos", "descripcion": "Define la progresión o camino a seguir tras este aprendizaje"}
+    ],
+    "descripcion_proposito": "El framework LEARN está diseñado para estructurar procesos de aprendizaje y desarrollo de habilidades técnicas. Proporciona un enfoque integral que considera el punto de partida del aprendiz, adapta la metodología a su nivel, especifica los recursos necesarios y establece un camino claro de progresión. Este marco es particularmente valioso para el diseño de programas de capacitación técnica, documentación de aprendizaje y planificación de desarrollo profesional en entornos tecnológicos.",
+    "ejemplo_uso": {
+      "Nivel": "Principiante",
+      "Experiencia": "Sin experiencia previa",
+      "Aproximación": "Curso interactivo",
+      "Recursos": "Videos y documentación",
+      "Siguientes Pasos": "Realizar ejercicios prácticos"
+    },
+    "casos_recomendados": [
+      "Diseño de programas de formación técnica",
+      "Documentación para onboarding de nuevos equipos",
+      "Planificación de desarrollo de habilidades",
+      "Creación de manuales de capacitación",
+      "Estructuración de cursos o tutoriales técnicos",
+      "Planes de desarrollo profesional",
+      "Documentación de procesos de aprendizaje organizacional"
+    ],
+    "ventajas": [
+      "Adapta el aprendizaje al nivel específico de los participantes",
+      "Establece expectativas claras sobre conocimientos previos necesarios",
+      "Proporciona una estructura completa desde el inicio hasta los siguientes pasos",
+      "Facilita la selección de metodologías apropiadas según el contexto",
+      "Asegura la disponibilidad de recursos adecuados para el aprendizaje",
+      "Crea caminos claros de progresión para el desarrollo continuo",
+      "Mejora la efectividad del aprendizaje al considerar todos los factores clave"
+    ]
+  },
+  {
+    "nombre_completo": "CARE (Contexto-Acción-Resultado-Ejemplo)",
+    "acronimo": "CARE",
+    "significado_acronimo": ["Contexto", "Acción", "Resultado", "Ejemplo"],
+    "componentes": [
+      {"nombre": "Contexto", "descripcion": "Describe la situación, entorno o problema específico"},
+      {"nombre": "Acción", "descripcion": "Define las acciones concretas que se deben tomar"},
+      {"nombre": "Resultado", "descripcion": "Especifica los resultados esperados o logrados"},
+      {"nombre": "Ejemplo", "descripcion": "Proporciona un caso o escenario ilustrativo y detallado"}
+    ],
+    "descripcion_proposito": "El framework CARE es una estructura completa para comunicar y documentar soluciones o procesos. Al incluir tanto el contexto como ejemplos prácticos, CARE asegura que la información sea comprensible y aplicable en situaciones reales. Este framework es particularmente valioso cuando se necesita no solo indicar qué hacer, sino también ilustrar cómo se aplica en la práctica.",
+    "ejemplo_uso": {
+      "Contexto": "Despliegue en producción",
+      "Acción": "Implementar pipeline CI/CD",
+      "Resultado": "Despliegues automáticos seguros",
+      "Ejemplo": "Flujo detallado con GitHub Actions"
+    },
+    "casos_recomendados": [
+      "Documentación técnica para equipos",
+      "Manuales de procedimientos operativos",
+      "Guías de resolución de problemas",
+      "Capacitación de nuevos miembros del equipo",
+      "Documentos de mejores prácticas",
+      "Estudio de casos para aprendizaje",
+      "Comunicación de soluciones técnicas complejas"
+    ],
+    "ventajas": [
+      "Proporciona contexto completo para la comprensión adecuada",
+      "Especifica acciones claras y concretas",
+      "Conecta las acciones con resultados esperados",
+      "Refuerza el aprendizaje mediante ejemplos prácticos",
+      "Facilita la transferencia de conocimiento entre equipos",
+      "Mejora la aplicabilidad práctica de la información",
+      "Aumenta la retención del conocimiento mediante casos ilustrativos"
+    ]
+  },
+
+  {
+    "nombre_completo": "CLARITY (Contexto-Limitaciones-Aproximación-Requisitos-Implementación-Cronograma-Rendimiento)",
+    "acronimo": "CLARITY",
+    "significado_acronimo": ["Contexto", "Limitaciones", "Aproximación", "Requisitos", "Implementación", "Cronograma", "Rendimiento"],
+    "componentes": [
+      {"nombre": "Contexto", "descripcion": "Describe la situación, antecedentes y entorno relevante"},
+      {"nombre": "Limitaciones", "descripcion": "Identifica restricciones, condicionantes o limitaciones a considerar"},
+      {"nombre": "Aproximación", "descripcion": "Establece el enfoque metodológico o estratégico a seguir"},
+      {"nombre": "Requisitos", "descripcion": "Detalla las especificaciones técnicas y funcionales necesarias"},
+      {"nombre": "Implementación", "descripcion": "Explica cómo se construirá o desarrollará la solución"},
+      {"nombre": "Cronograma", "descripcion": "Define el marco temporal, fases e hitos del proyecto"},
+      {"nombre": "Rendimiento", "descripcion": "Especifica cómo se medirá el éxito y los resultados esperados"}
+    ],
+    "descripcion_proposito": "El framework CLARITY proporciona un enfoque exhaustivo para la planificación y documentación de proyectos técnicos complejos. Su estructura ampliada de siete componentes asegura que todos los aspectos críticos, desde el contexto hasta la medición del rendimiento, estén claramente definidos y alineados. Este marco es particularmente valioso para proyectos con múltiples restricciones, plazos ajustados o requisitos complejos, donde la claridad en todos los aspectos es esencial para el éxito.",
+    "ejemplo_uso": {
+      "Contexto": "Migración de datos críticos",
+      "Limitaciones": "Ventana de 4 horas",
+      "Aproximación": "Despliegue azul-verde",
+      "Requisitos": "Cero pérdida de datos",
+      "Implementación": "Procesamiento por lotes",
+      "Cronograma": "Fin de semana",
+      "Rendimiento": "Validación post-migración"
+    },
+    "casos_recomendados": [
+      "Migraciones de sistemas críticos",
+      "Implementación de proyectos con restricciones temporales estrictas",
+      "Desarrollo de sistemas con altos requisitos de fiabilidad",
+      "Planificación de actualizaciones con tiempo de inactividad limitado",
+      "Documentación de proyectos técnicos complejos",
+      "Comunicación de planes técnicos a stakeholders",
+      "Desarrollo de soluciones en entornos altamente regulados"
+    ],
+    "ventajas": [
+      "Proporciona una estructura integral que abarca todos los aspectos críticos del proyecto",
+      "Reconoce explícitamente las limitaciones, facilitando planes más realistas",
+      "Incluye elementos temporales y de medición de rendimiento a menudo omitidos",
+      "Mejora la alineación entre requisitos, implementación y medición de resultados",
+      "Facilita la comunicación clara entre equipos técnicos y no técnicos",
+      "Reduce riesgos al considerar sistemáticamente todos los aspectos clave",
+      "Establece expectativas realistas sobre plazos y resultados esperados"
+    ]
+  },
+  {
+    "nombre_completo": "CRAFT (Contexto-Requisitos-Aproximación-Funcionalidades-Pruebas)",
+    "acronimo": "CRAFT",
+    "significado_acronimo": ["Contexto", "Requisitos", "Aproximación", "Funcionalidades", "Pruebas"],
+    "componentes": [
+      {"nombre": "Contexto", "descripcion": "Describe el entorno, escenario o situación donde se aplicará la solución"},
+      {"nombre": "Requisitos", "descripcion": "Define las necesidades específicas y criterios a satisfacer"},
+      {"nombre": "Aproximación", "descripcion": "Establece la metodología, estrategia o enfoque de desarrollo"},
+      {"nombre": "Funcionalidades", "descripcion": "Detalla las características, componentes y capacidades principales"},
+      {"nombre": "Pruebas", "descripcion": "Especifica los métodos de validación y aseguramiento de calidad"}
+    ],
+    "descripcion_proposito": "El framework CRAFT está diseñado para el desarrollo de soluciones personalizadas y a medida. Su estructura enfatiza la importancia de comprender profundamente el contexto específico, definir requisitos detallados, establecer un enfoque adaptado, desarrollar funcionalidades precisas y validar rigurosamente. Este marco es particularmente valioso para proyectos que requieren alto grado de personalización, como desarrollo de software a medida, consultoría técnica especializada o soluciones para nichos específicos.",
+    "ejemplo_uso": {
+      "Contexto": "Proyecto a medida para cliente X",
+      "Requisitos": "Funcionalidad específica A y B",
+      "Aproximación": "Diseño personalizado",
+      "Funcionalidades": "Módulos de gestión y análisis",
+      "Pruebas": "Pruebas de aceptación con el cliente"
+    },
+    "casos_recomendados": [
+      "Desarrollo de software a medida",
+      "Creación de soluciones específicas para clientes",
+      "Consultoría técnica especializada",
+      "Implementación de sistemas personalizados",
+      "Desarrollo de componentes técnicos especializados",
+      "Proyectos con requisitos altamente específicos",
+      "Soluciones para nichos o casos de uso únicos"
+    ],
+    "ventajas": [
+      "Equilibra la comprensión profunda del contexto con la implementación práctica",
+      "Enfatiza la personalización y adaptación a necesidades específicas",
+      "Proporciona un marco completo desde el contexto hasta la validación",
+      "Facilita la comunicación con clientes y stakeholders sobre requisitos clave",
+      "Mejora la satisfacción del cliente mediante soluciones altamente ajustadas",
+      "Promueve un enfoque integral desde la comprensión hasta la entrega",
+      "Asegura la calidad mediante la inclusión explícita de estrategias de prueba"
+    ]
+  },
+  {
+    "nombre_completo": "DESIGN (Definir-Explorar-Alcance-Idear-Guiar-Reducir)",
+    "acronimo": "DESIGN",
+    "significado_acronimo": ["Definir", "Explorar", "Alcance", "Idear", "Guiar", "Reducir"],
+    "componentes": [
+      {"nombre": "Definir", "descripcion": "Establece claramente los objetivos y propósito del proyecto"},
+      {"nombre": "Explorar", "descripcion": "Investiga las necesidades de los usuarios y requisitos del mercado"},
+      {"nombre": "Alcance", "descripcion": "Determina los límites y alcance del proyecto"},
+      {"nombre": "Idear", "descripcion": "Genera soluciones creativas y posibles enfoques"},
+      {"nombre": "Guiar", "descripcion": "Establece principios y directrices para el desarrollo"},
+      {"nombre": "Reducir", "descripcion": "Prioriza y selecciona las mejores ideas para implementar"}
+    ],
+    "descripcion_proposito": "El framework DESIGN proporciona una metodología completa para el proceso de diseño y desarrollo de productos y servicios. Sigue una secuencia lógica que abarca desde la comprensión y definición inicial hasta la priorización final, pasando por la exploración, delimitación, ideación y establecimiento de directrices. Este enfoque integral es particularmente valioso para equipos multidisciplinarios que trabajan en el desarrollo de nuevos productos, plataformas o servicios.",
+    "ejemplo_uso": {
+      "Definir": "Objetivos del producto web",
+      "Explorar": "Necesidades del usuario final",
+      "Alcance": "Funcionalidades clave del MVP",
+      "Idear": "Soluciones innovadoras",
+      "Guiar": "Marco de desarrollo ágil",
+      "Reducir": "Prioridades primer sprint"
+    },
+    "casos_recomendados": [
+      "Desarrollo de nuevos productos digitales",
+      "Rediseño de plataformas existentes",
+      "Planificación de proyectos de UX/UI",
+      "Definición de MVPs y productos mínimos viables",
+      "Elaboración de roadmaps de producto",
+      "Procesos de innovación y desarrollo",
+      "Transformación digital de productos o servicios"
+    ],
+    "ventajas": [
+      "Proporciona un proceso completo desde la concepción hasta la implementación",
+      "Equilibra la exploración creativa con la priorización práctica",
+      "Fomenta la alineación entre el equipo y los stakeholders",
+      "Asegura que las soluciones respondan a necesidades reales de los usuarios",
+      "Establece límites claros que facilitan la gestión del alcance",
+      "Promueve la innovación a través de fases dedicadas a la ideación",
+      "Facilita la toma de decisiones informada mediante priorización estructurada"
+    ]
+  },
+  {
+    "nombre_completo": "DRIVE (Dirección-Recursos-Implementación-Validación-Evolución)",
+    "acronimo": "DRIVE",
+    "significado_acronimo": ["Dirección", "Recursos", "Implementación", "Validación", "Evolución"],
+    "componentes": [
+      {"nombre": "Dirección", "descripcion": "Establece la visión, rumbo o dirección estratégica a seguir"},
+      {"nombre": "Recursos", "descripcion": "Identifica y asigna los recursos humanos, técnicos y económicos necesarios"},
+      {"nombre": "Implementación", "descripcion": "Ejecuta el plan de acción mediante pasos concretos"},
+      {"nombre": "Validación", "descripcion": "Verifica y mide los resultados obtenidos"},
+      {"nombre": "Evolución", "descripcion": "Adapta y refina el enfoque basándose en los resultados y aprendizajes"}
+    ],
+    "descripcion_proposito": "El framework DRIVE proporciona una metodología integral para la gestión e implementación de iniciativas con impacto. Sigue un flujo que comienza estableciendo una dirección clara, asegura la disponibilidad de recursos adecuados, implementa acciones concretas, valida los resultados y evoluciona continuamente. Este enfoque es particularmente valioso para proyectos de transformación, programas estratégicos y cualquier iniciativa que requiera tanto claridad de dirección como capacidad de adaptación y mejora basada en resultados.",
+    "ejemplo_uso": {
+      "Dirección": "Automatización de procesos",
+      "Recursos": "Equipo DevOps y herramientas",
+      "Implementación": "Pipelines de CI/CD",
+      "Validación": "Métricas de tiempo de implementación",
+      "Evolución": "Optimización continua de procesos"
+    },
+    "casos_recomendados": [
+      "Programas de transformación digital",
+      "Implementación de estrategias tecnológicas",
+      "Proyectos de mejora organizacional",
+      "Iniciativas de optimización de procesos",
+      "Lanzamiento de productos o servicios",
+      "Gestión del cambio en entornos tecnológicos",
+      "Proyectos con alto impacto en la organización"
+    ],
+    "ventajas": [
+      "Combina la claridad estratégica con la ejecución práctica",
+      "Proporciona un marco completo desde la visión hasta la mejora continua",
+      "Equilibra la planificación inicial con la adaptabilidad basada en resultados",
+      "Incluye explícitamente la asignación adecuada de recursos",
+      "Facilita la comunicación de iniciativas a todos los niveles de la organización",
+      "Promueve la mejora continua mediante ciclos de validación y evolución",
+      "Aumenta las probabilidades de éxito mediante un enfoque estructurado y adaptativo"
+    ]
+  },
+  {
+    "nombre_completo": "PRIME (Problema-Investigación-Implementación-Monitoreo-Evaluación)",
+    "acronimo": "PRIME",
+    "significado_acronimo": ["Problema", "Investigación", "Implementación", "Monitoreo", "Evaluación"],
+    "componentes": [
+      {"nombre": "Problema", "descripcion": "Identifica y define claramente el problema o desafío a resolver"},
+      {"nombre": "Investigación", "descripcion": "Analiza datos, antecedentes y posibles soluciones"},
+      {"nombre": "Implementación", "descripcion": "Ejecuta la solución desarrollada mediante acciones concretas"},
+      {"nombre": "Monitoreo", "descripcion": "Realiza seguimiento continuo del desempeño y resultados"},
+      {"nombre": "Evaluación", "descripcion": "Valora la efectividad de la solución e identifica mejoras"}
+    ],
+    "descripcion_proposito": "El framework PRIME proporciona un ciclo completo para la resolución de problemas basada en datos. Sigue una metodología que comienza con la identificación clara del problema, continúa con una fase de investigación rigurosa, implementa soluciones fundamentadas, establece mecanismos de monitoreo continuo, y concluye con una evaluación sistemática de resultados. Este enfoque es particularmente valioso para la mejora de procesos, optimización de sistemas y cualquier iniciativa donde el análisis de datos y la medición de resultados son críticos para el éxito.",
+    "ejemplo_uso": {
+      "Problema": "Baja tasa de conversión",
+      "Investigación": "Análisis de datos de usuarios",
+      "Implementación": "Mejoras en el funnel",
+      "Monitoreo": "KPIs de conversión",
+      "Evaluación": "Informe de resultados"
+    },
+    "casos_recomendados": [
+      "Optimización de procesos y sistemas",
+      "Mejora de experiencia de usuario basada en datos",
+      "Resolución de problemas de rendimiento",
+      "Implementación de cambios en plataformas digitales",
+      "Proyectos de analítica y ciencia de datos",
+      "Iniciativas de mejora continua",
+      "Experimentos A/B y pruebas de hipótesis"
+    ],
+    "ventajas": [
+      "Enfoque basado en datos para la toma de decisiones",
+      "Ciclo completo desde la identificación del problema hasta la evaluación",
+      "Énfasis en el monitoreo continuo para ajustes oportunos",
+      "Incorpora la investigación como fase clave antes de la implementación",
+      "Facilita la medición objetiva de resultados y mejoras",
+      "Promueve la mejora continua mediante ciclos iterativos",
+      "Equilibra la profundidad del análisis con la practicidad de la implementación"
+    ]
+  },
+  {
+    "nombre_completo": "PROS (Perspectiva-Requisitos-Resultado-Solución)",
+    "acronimo": "PROS",
+    "significado_acronimo": ["Perspectiva", "Requisitos", "Resultado", "Solución"],
+    "componentes": [
+      {"nombre": "Perspectiva", "descripcion": "Establece el enfoque y punto de vista desde el que se aborda el problema"},
+      {"nombre": "Requisitos", "descripcion": "Define las necesidades, condiciones y restricciones específicas"},
+      {"nombre": "Resultado", "descripcion": "Especifica los objetivos y resultados esperados"},
+      {"nombre": "Solución", "descripcion": "Detalla la propuesta o implementación recomendada"}
+    ],
+    "descripcion_proposito": "El framework PROS es una estructura efectiva para planificar y documentar soluciones técnicas con un enfoque integral. Comienza estableciendo la perspectiva o contexto, define claramente los requisitos, establece los resultados deseados y finalmente propone una solución específica. Esta metodología asegura que las soluciones propuestas estén alineadas con las expectativas y consideren todas las restricciones relevantes, lo que la hace particularmente valiosa para proyectos técnicos y de infraestructura.",
+    "ejemplo_uso": {
+      "Perspectiva": "Modernización de infraestructura",
+      "Requisitos": "Despliegue sin interrupciones",
+      "Resultado": "99.99% de disponibilidad",
+      "Solución": "Despliegue azul-verde"
+    },
+    "casos_recomendados": [
+      "Planificación de arquitecturas de sistemas",
+      "Propuestas de soluciones de infraestructura",
+      "Documentación de estrategias de despliegue",
+      "Diseño de soluciones tecnológicas",
+      "Evaluación de alternativas técnicas",
+      "Planificación de migraciones de sistemas",
+      "Especificaciones para mejoras de rendimiento"
+    ],
+    "ventajas": [
+      "Ofrece una visión equilibrada entre requisitos y resultados",
+      "Establece claramente el contexto antes de presentar soluciones",
+      "Facilita la evaluación objetiva de diferentes propuestas",
+      "Asegura que las soluciones respondan a requisitos específicos",
+      "Mejora la comunicación entre equipos técnicos y stakeholders",
+      "Proporciona un marco completo para la documentación técnica",
+      "Ayuda a mantener el enfoque en los resultados esperados durante la implementación"
+    ]
+  },
+  {
+    "nombre_completo": "PULSE (Propósito-Entendimiento-Aprendizaje-Estrategia-Evaluación)",
+    "acronimo": "PULSE",
+    "significado_acronimo": ["Propósito", "Entendimiento", "Aprendizaje", "Estrategia", "Evaluación"],
+    "componentes": [
+      {"nombre": "Propósito", "descripcion": "Define el objetivo fundamental o razón de ser"},
+      {"nombre": "Entendimiento", "descripcion": "Analiza el contexto, situación actual y flujos"},
+      {"nombre": "Aprendizaje", "descripcion": "Identifica mejores prácticas, estándares y conocimiento relevante"},
+      {"nombre": "Estrategia", "descripcion": "Desarrolla el plan de acción e implementación"},
+      {"nombre": "Evaluación", "descripcion": "Establece métricas, indicadores y métodos de medición del éxito"}
+    ],
+    "descripcion_proposito": "El framework PULSE proporciona una metodología integral para la mejora y optimización de procesos con un enfoque en el monitoreo continuo. Comienza estableciendo un propósito claro, profundiza en el entendimiento de la situación actual, incorpora aprendizajes externos, desarrolla estrategias específicas y define métodos de evaluación continua. Este enfoque es particularmente valioso para iniciativas de mejora de procesos, optimización de flujos de trabajo y cualquier proyecto donde es crucial mantener el pulso o monitoreo constante del desempeño.",
+    "ejemplo_uso": {
+      "Propósito": "Optimización de procesos",
+      "Entendimiento": "Análisis de flujos actuales",
+      "Aprendizaje": "Mejores prácticas del sector",
+      "Estrategia": "Plan de implementación ágil",
+      "Evaluación": "KPIs de rendimiento"
+    },
+    "casos_recomendados": [
+      "Optimización de procesos existentes",
+      "Programas de mejora continua",
+      "Implementación de métricas de rendimiento",
+      "Iniciativas de transformación de operaciones",
+      "Proyectos de automatización de procesos",
+      "Implementación de metodologías ágiles",
+      "Sistemas de monitoreo y evaluación continua"
+    ],
+    "ventajas": [
+      "Enfoca los esfuerzos en un propósito claro y compartido",
+      "Equilibra el entendimiento interno con el aprendizaje externo",
+      "Conecta la estrategia directamente con la medición de resultados",
+      "Proporciona un marco completo para la mejora y optimización",
+      "Facilita el monitoreo continuo y la detección temprana de desviaciones",
+      "Promueve la integración de mejores prácticas en los procesos",
+      "Establece una cultura de mejora basada en datos y evaluación continua"
+    ]
+  },
+  {
+    "nombre_completo": "QCQA (Pregunta-Contexto-Calificación-Formato Respuesta)",
+    "acronimo": "QCQA",
+    "significado_acronimo": ["Pregunta", "Contexto", "Calificación", "Formato Respuesta"],
+    "componentes": [
+      {"nombre": "Pregunta", "descripcion": "Plantea la consulta principal o problema a resolver"},
+      {"nombre": "Contexto", "descripcion": "Proporciona información relevante, antecedentes o limitaciones"},
+      {"nombre": "Calificación", "descripcion": "Especifica los requisitos, criterios o métricas relevantes"},
+      {"nombre": "Formato Respuesta", "descripcion": "Define cómo debe estructurarse o presentarse la respuesta"}
+    ],
+    "descripcion_proposito": "El framework QCQA está diseñado para estructurar problemas complejos y asegurar respuestas precisas y útiles. Al definir no solo la pregunta sino también el contexto, las calificaciones y el formato esperado, QCQA facilita la obtención de soluciones relevantes y bien enfocadas. Es particularmente valioso para la resolución de problemas técnicos, consultas especializadas y cuando se buscan respuestas con un formato o estructura específica.",
+    "ejemplo_uso": {
+      "Pregunta": "¿Cómo mejorar el rendimiento de la API?",
+      "Contexto": "Sistema con 100 mil usuarios diarios",
+      "Calificación": "Tiempo de respuesta actual mayor a 500ms",
+      "Formato Respuesta": "Plan detallado con mediciones específicas"
+    },
+    "casos_recomendados": [
+      "Formulación de preguntas técnicas en entornos de desarrollo",
+      "Consultas a expertos o equipos especializados",
+      "Resolución estructurada de problemas complejos",
+      "Definición de criterios para evaluación de soluciones",
+      "Comunicación en entornos de soporte técnico",
+      "Documentación de requisitos para soluciones",
+      "Consultas que requieren respuestas específicas y detalladas"
+    ],
+    "ventajas": [
+      "Mejora la calidad de las respuestas al proporcionar contexto completo",
+      "Reduce el tiempo de resolución al especificar claramente lo que se busca",
+      "Evita malentendidos sobre requisitos o criterios importantes",
+      "Facilita la comparación entre diferentes soluciones propuestas",
+      "Asegura que las respuestas cumplan con el formato y nivel de detalle necesarios",
+      "Optimiza la comunicación en equipos técnicos y multidisciplinarios",
+      "Permite evaluar objetivamente si una solución cumple con los criterios establecidos"
+    ]
+  },
+  {
+    "nombre_completo": "QUEST (Pregunta-Entendimiento-Exploración-Solución-Pruebas)",
+    "acronimo": "QUEST",
+    "significado_acronimo": ["Pregunta", "Entendimiento", "Exploración", "Solución", "Pruebas"],
+    "componentes": [
+      {"nombre": "Pregunta", "descripcion": "Formula la pregunta central o problema a investigar"},
+      {"nombre": "Entendimiento", "descripcion": "Analiza a fondo el contexto, datos y factores relevantes"},
+      {"nombre": "Exploración", "descripcion": "Investiga posibles enfoques, alternativas o hipótesis"},
+      {"nombre": "Solución", "descripcion": "Desarrolla la respuesta o solución propuesta basada en la exploración"},
+      {"nombre": "Pruebas", "descripcion": "Valida la solución mediante experimentación o verificación"}
+    ],
+    "descripcion_proposito": "El framework QUEST proporciona una metodología estructurada para la investigación y resolución de problemas basada en preguntas. Sigue un proceso que comienza con la formulación clara de la pregunta, profundiza en el entendimiento del problema, explora diversas posibilidades, desarrolla una solución fundamentada y finalmente valida mediante pruebas. Este enfoque es particularmente valioso para proyectos de investigación aplicada, optimización basada en datos y cualquier iniciativa donde es importante explorar múltiples hipótesis antes de llegar a una solución.",
+    "ejemplo_uso": {
+      "Pregunta": "Optimización de conversión",
+      "Entendimiento": "Análisis de embudo actual",
+      "Exploración": "Test A/B de landing pages",
+      "Solución": "Rediseño basado en datos",
+      "Pruebas": "Grupo piloto de usuarios"
+    },
+    "casos_recomendados": [
+      "Optimización de experiencia de usuario",
+      "Investigación basada en datos",
+      "Desarrollo de estrategias de crecimiento",
+      "Resolución de problemas de producto",
+      "Mejora de métricas clave de negocio",
+      "Experimentación controlada",
+      "Análisis de comportamiento de usuarios"
+    ],
+    "ventajas": [
+      "Estructura el proceso de investigación de manera sistemática",
+      "Enfatiza la importancia de la comprensión profunda antes de la exploración",
+      "Promueve la consideración de múltiples hipótesis o enfoques",
+      "Incorpora la validación como parte integral del proceso",
+      "Equilibra la investigación rigurosa con resultados prácticos",
+      "Facilita la documentación del proceso de resolución de problemas",
+      "Mejora la calidad de las soluciones mediante un enfoque basado en datos"
+    ]
+  },
+  {
+    "nombre_completo": "DACI (Driver-Approver-Contributor-Informed)",
+    "acronimo": "DACI",
+    "significado_acronimo": ["Driver", "Approver", "Contributor", "Informed"],
+    "componentes": [
+      {"nombre": "Driver", "descripcion": "Persona responsable de liderar la iniciativa y asegurar que se tome una decisión"},
+      {"nombre": "Approver", "descripcion": "Individuo o grupo con autoridad para aprobar o vetar la decisión final"},
+      {"nombre": "Contributor", "descripcion": "Personas consultadas y que aportan información al proceso de decisión"},
+      {"nombre": "Informed", "descripcion": "Personas que deben ser informadas sobre la decisión una vez tomada"}
+    ],
+    "descripcion_proposito": "El framework DACI es una metodología para la toma de decisiones y asignación de responsabilidades en proyectos o iniciativas. Clarifica quién tiene qué rol en el proceso de decisión, estableciendo un propietario claro (Driver), definiendo quién tiene autoridad de aprobación, quiénes contribuyen con información y quiénes necesitan ser informados. Este marco es particularmente valioso para evitar ambigüedades en la toma de decisiones y asegurar que todos los interesados estén adecuadamente involucrados.",
+    "ejemplo_uso": {
+      "Driver": "Líder técnico del proyecto",
+      "Approver": "Comité de arquitectura",
+      "Contributor": "Desarrolladores e ingenieros DevOps",
+      "Informed": "Equipos de soporte y operaciones"
+    },
+    "casos_recomendados": [
+      "Toma de decisiones técnicas complejas",
+      "Cambios de arquitectura en sistemas",
+      "Selección de tecnologías o proveedores",
+      "Definición de procesos críticos",
+      "Resolución de conflictos entre equipos",
+      "Priorización de funcionalidades",
+      "Cambios que afectan a múltiples departamentos"
+    ],
+    "ventajas": [
+      "Establece claridad sobre roles y responsabilidades",
+      "Evita la paralización en la toma de decisiones",
+      "Reduce conflictos sobre quién tiene autoridad",
+      "Asegura que todas las partes relevantes sean consultadas",
+      "Mejora la comunicación entre equipos",
+      "Acelera el proceso de toma de decisiones",
+      "Facilita la rendición de cuentas posterior"
+    ]
+  },
+  {
+    "nombre_completo": "RACI (Responsable-Accountable-Consultado-Informado)",
+    "acronimo": "RACI",
+    "significado_acronimo": ["Responsable", "Accountable", "Consultado", "Informado"],
+    "componentes": [
+      {"nombre": "Responsable", "descripcion": "Persona(s) que realiza el trabajo para completar la tarea"},
+      {"nombre": "Accountable", "descripcion": "Persona que rinde cuentas por el resultado final y tiene capacidad de decisión"},
+      {"nombre": "Consultado", "descripcion": "Personas cuyas opiniones se solicitan para la toma de decisiones o ejecución"},
+      {"nombre": "Informado", "descripcion": "Personas que son mantenidas al día sobre el progreso y las decisiones"}
+    ],
+    "descripcion_proposito": "El framework RACI es una matriz para asignar y visualizar las responsabilidades de los miembros del equipo en un proyecto o proceso. Define con claridad quién hace el trabajo, quién es responsable último, quién debe ser consultado y quién debe ser informado. Este enfoque evita confusiones sobre roles, reduce vacíos de responsabilidad y mejora la coordinación en equipos multidisciplinarios, siendo particularmente valioso en gestión de proyectos complejos.",
+    "ejemplo_uso": {
+      "Responsable": "Desarrollador senior",
+      "Accountable": "Gerente de proyecto",
+      "Consultado": "Arquitecto de sistemas y usuario clave",
+      "Informado": "Equipo de gestión y stakeholders"
+    },
+    "casos_recomendados": [
+      "Gestión de proyectos tecnológicos",
+      "Definición de procesos organizacionales",
+      "Iniciativas cross-funcionales",
+      "Reestructuración de equipos",
+      "Implementación de cambios significativos",
+      "Desarrollo de nuevos productos o servicios",
+      "Proyectos con múltiples equipos involucrados"
+    ],
+    "ventajas": [
+      "Clarifica roles y responsabilidades en todas las etapas",
+      "Evita duplicación de esfuerzos y confusiones",
+      "Asegura que cada tarea tenga un responsable claro",
+      "Mejora la rendición de cuentas en equipos",
+      "Facilita la comunicación y gestión de expectativas",
+      "Optimiza flujos de trabajo entre departamentos",
+      "Reduce riesgos de que tareas queden sin asignar"
+    ]
+  },
+  {
+    "nombre_completo": "HEART (Felicidad-Compromiso-Adopción-Retención-Éxito en tareas)",
+    "acronimo": "HEART",
+    "significado_acronimo": ["Felicidad", "Compromiso", "Adopción", "Retención", "Éxito en tareas"],
+    "componentes": [
+      {"nombre": "Felicidad", "descripcion": "Mide la satisfacción, facilidad de uso y actitud de los usuarios hacia el producto"},
+      {"nombre": "Compromiso", "descripcion": "Evalúa el nivel de interacción y frecuencia de uso por parte de los usuarios"},
+      {"nombre": "Adopción", "descripcion": "Mide la adquisición de nuevos usuarios o adopción de nuevas funcionalidades"},
+      {"nombre": "Retención", "descripcion": "Analiza el porcentaje de usuarios que continúan utilizando el producto en el tiempo"},
+      {"nombre": "Éxito en tareas", "descripcion": "Evalúa la eficiencia, efectividad y tasa de éxito en completar tareas"}
+    ],
+    "descripcion_proposito": "El framework HEART, desarrollado por Google, proporciona un enfoque estructurado para medir la experiencia del usuario a gran escala. Establece métricas centradas en el usuario que abarcan desde la satisfacción subjetiva hasta el éxito objetivo en tareas, permitiendo un análisis holístico de la experiencia de usuario. Es especialmente valioso para productos digitales donde se busca equilibrar la satisfacción emocional con el rendimiento práctico.",
+    "ejemplo_uso": {
+      "Felicidad": "Encuestas de satisfacción NPS",
+      "Compromiso": "Sesiones por usuario/mes",
+      "Adopción": "Activaciones de nuevas funciones",
+      "Retención": "Usuarios activos recurrentes",
+      "Éxito en tareas": "Tasa de conversión en funnel"
+    },
+    "casos_recomendados": [
+      "Evaluación de productos y servicios digitales",
+      "Optimización de experiencia de usuario",
+      "Desarrollo de KPIs para plataformas",
+      "Evaluación de rediseños o nuevas funcionalidades",
+      "Comparativa entre diferentes versiones de un producto",
+      "Diagnóstico de problemas de retención",
+      "Establecimiento de objetivos centrados en usuario"
+    ],
+    "ventajas": [
+      "Proporciona una visión holística de la experiencia del usuario",
+      "Equilibra métricas emocionales con métricas de comportamiento",
+      "Facilita la priorización de mejoras basadas en datos",
+      "Permite identificar problemas específicos en la experiencia",
+      "Conecta métricas de usuario con objetivos de negocio",
+      "Establece un lenguaje común para discutir la calidad del producto",
+      "Proporciona estructura para sistemas de medición a gran escala"
+    ]
+  },
+  {
+    "nombre_completo": "MECE (Mutuamente Exclusivo, Colectivamente Exhaustivo)",
+    "acronimo": "MECE",
+    "significado_acronimo": ["Mutuamente", "Exclusivo", "Colectivamente", "Exhaustivo"],
+    "componentes": [
+      {"nombre": "Mutuamente Exclusivo", "descripcion": "Asegura que los elementos o categorías no se superpongan entre sí"},
+      {"nombre": "Colectivamente Exhaustivo", "descripcion": "Garantiza que la clasificación cubra todas las posibilidades sin omisiones"}
+    ],
+    "descripcion_proposito": "El framework MECE es un principio para estructurar el pensamiento y el análisis que busca crear categorías o grupos que no se superpongan (mutuamente exclusivos) y que juntos cubran todas las posibilidades (colectivamente exhaustivos). Este enfoque, popularizado por firmas de consultoría, proporciona claridad, evita redundancias y asegura la cobertura completa en análisis de problemas, diseño de soluciones o clasificación de información. Es particularmente valioso para estructurar análisis complejos de manera rigurosa y sistemática.",
+    "ejemplo_uso": {
+      "Mutuamente Exclusivo": "Segmentación de usuarios por rangos de edad no superpuestos",
+      "Colectivamente Exhaustivo": "Cobertura de todos los posibles grupos de edad"
+    },
+    "casos_recomendados": [
+      "Análisis de mercado y segmentación",
+      "Estructuración de investigaciones",
+      "Diseño de taxonomías y categorías",
+      "Resolución estructurada de problemas",
+      "Toma de decisiones basada en análisis",
+      "Diseño de arquitecturas de información",
+      "Desarrollo de estrategias comprehensivas"
+    ],
+    "ventajas": [
+      "Elimina redundancias y solapamientos en análisis",
+      "Asegura que no se omitan aspectos relevantes de un problema",
+      "Facilita la comunicación clara de estructuras complejas",
+      "Mejora la calidad y rigor del pensamiento analítico",
+      "Reduce sesgos cognitivos en la toma de decisiones",
+      "Proporciona una base sólida para priorización",
+      "Asegura la exhaustividad en cobertura de escenarios"
+    ]
+  },
+  {
+    "nombre_completo": "OODA (Observar-Orientar-Decidir-Actuar)",
+    "acronimo": "OODA",
+    "significado_acronimo": ["Observar", "Orientar", "Decidir", "Actuar"],
+    "componentes": [
+      {"nombre": "Observar", "descripcion": "Recopilar datos e información del entorno y situación actual"},
+      {"nombre": "Orientar", "descripcion": "Analizar los datos, contextualizarlos y formar una perspectiva"},
+      {"nombre": "Decidir", "descripcion": "Determinar el curso de acción basado en las alternativas disponibles"},
+      {"nombre": "Actuar", "descripcion": "Implementar la decisión y ejecutar las acciones correspondientes"}
+    ],
+    "descripcion_proposito": "El framework OODA, originado en contextos militares, es un ciclo de decisión diseñado para entornos dinámicos que requieren respuestas rápidas. Proporciona un proceso iterativo que permite observar la situación, orientarse para entenderla, decidir qué hacer y actuar en consecuencia. El objetivo es recorrer este ciclo más rápido y eficientemente que los competidores o que la velocidad de cambio del entorno. Es especialmente valioso en situaciones que requieren adaptabilidad, rapidez y eficacia en la toma de decisiones.",
+    "ejemplo_uso": {
+      "Observar": "Monitoreo de métricas de sistema en tiempo real",
+      "Orientar": "Análisis de patrones y comportamientos anómalos",
+      "Decidir": "Selección de estrategia de mitigación",
+      "Actuar": "Implementación de solución y ajustes"
+    },
+    "casos_recomendados": [
+      "Respuesta a incidentes de seguridad",
+      "Toma de decisiones en entornos cambiantes",
+      "Gestión de crisis técnicas",
+      "Desarrollo ágil de productos",
+      "Operaciones en tiempo real",
+      "Ajustes estratégicos en mercados volátiles",
+      "Resolución competitiva de problemas"
+    ],
+    "ventajas": [
+      "Facilita la toma de decisiones ágiles y adaptativas",
+      "Mejora la capacidad de respuesta en situaciones cambiantes",
+      "Promueve un enfoque basado en datos y observación continua",
+      "Reduce la parálisis por análisis excesivo",
+      "Permite ventajas competitivas en entornos dinámicos",
+      "Integra la observación con la acción en un ciclo continuo",
+      "Aumenta la velocidad y eficacia de respuesta a eventos"
+    ]
+  },
+  {
+    "nombre_completo": "PDCA (Planificar-Hacer-Verificar-Actuar)",
+    "acronimo": "PDCA",
+    "significado_acronimo": ["Planificar", "Hacer", "Verificar", "Actuar"],
+    "componentes": [
+      {"nombre": "Planificar", "descripcion": "Establecer objetivos, procesos y acciones necesarias para lograr resultados"},
+      {"nombre": "Hacer", "descripcion": "Implementar el plan, ejecutar el proceso y llevar a cabo las acciones"},
+      {"nombre": "Verificar", "descripcion": "Monitorear y evaluar los resultados contra los objetivos planificados"},
+      {"nombre": "Actuar", "descripcion": "Tomar acciones para mejorar continuamente el desempeño del proceso"}
+    ],
+    "descripcion_proposito": "El framework PDCA (también conocido como Ciclo de Deming) es una metodología para la mejora continua de procesos y productos. Proporciona un enfoque sistemático y cíclico que comienza con la planificación, continúa con la implementación, verifica los resultados y actúa para incorporar mejoras. Este ciclo iterativo promueve el aprendizaje organizacional y la optimización constante de operaciones. Es particularmente valioso para la gestión de calidad, optimización de procesos y cualquier iniciativa que requiera mejora sistemática a lo largo del tiempo.",
+    "ejemplo_uso": {
+      "Planificar": "Diseñar proceso de CI/CD",
+      "Hacer": "Implementar la infraestructura y flujos",
+      "Verificar": "Medir tiempos de despliegue y fallos",
+      "Actuar": "Optimizar cuellos de botella identificados"
+    },
+    "casos_recomendados": [
+      "Implementación de sistemas de gestión de calidad",
+      "Optimización de procesos de desarrollo",
+      "Mejora de operaciones técnicas",
+      "Reducción de errores y problemas recurrentes",
+      "Estandarización de procedimientos",
+      "Implementación de cambios organizacionales",
+      "Desarrollo de programas de mejora continua"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque estructurado para la mejora continua",
+      "Facilita la identificación y resolución sistemática de problemas",
+      "Promueve decisiones basadas en datos y mediciones",
+      "Previene la recurrencia de problemas mediante acciones correctivas",
+      "Establece una cultura de mejora y aprendizaje continuo",
+      "Permite adaptarse a cambios a través de iteraciones",
+      "Sistematiza el proceso de optimización de resultados"
+    ]
+  },
+  {
+    "nombre_completo": "VMOST (Visión-Misión-Objetivos-Estrategia-Táctica)",
+    "acronimo": "VMOST",
+    "significado_acronimo": ["Visión", "Misión", "Objetivos", "Estrategia", "Táctica"],
+    "componentes": [
+      {"nombre": "Visión", "descripcion": "Estado futuro deseado o ambición a largo plazo de la organización"},
+      {"nombre": "Misión", "descripcion": "Propósito fundamental y razón de ser que guía las actividades"},
+      {"nombre": "Objetivos", "descripcion": "Metas específicas, medibles y con plazos definidos"},
+      {"nombre": "Estrategia", "descripcion": "Enfoque general o plan para lograr los objetivos y la visión"},
+      {"nombre": "Táctica", "descripcion": "Acciones concretas y pasos específicos para ejecutar la estrategia"}
+    ],
+    "descripcion_proposito": "El framework VMOST proporciona una estructura jerárquica para alinear todos los niveles de planificación organizacional, desde la visión de alto nivel hasta las tácticas específicas. Asegura que exista coherencia y trazabilidad entre la dirección estratégica y las acciones cotidianas. Este enfoque es particularmente valioso para la planificación estratégica, el desarrollo de roadmaps tecnológicos y cualquier iniciativa que requiera una alineación clara entre visión y ejecución.",
+    "ejemplo_uso": {
+      "Visión": "Plataforma líder en procesamiento de datos",
+      "Misión": "Ofrecer insights accionables en tiempo real",
+      "Objetivos": "Reducir latencia en un 50% en 6 meses",
+      "Estrategia": "Migración a arquitectura distribuida",
+      "Táctica": "Implementar procesamiento en Edge"
+    },
+    "casos_recomendados": [
+      "Planificación estratégica de tecnología",
+      "Desarrollo de roadmaps de producto",
+      "Alineación organizacional",
+      "Comunicación de dirección estratégica",
+      "Priorización de iniciativas",
+      "Evaluación de consistencia estratégica",
+      "Desarrollo de planes departamentales alineados"
+    ],
+    "ventajas": [
+      "Asegura coherencia entre todos los niveles de planificación",
+      "Facilita la comunicación clara de la dirección estratégica",
+      "Permite identificar desalineaciones entre objetivos y acciones",
+      "Conecta la visión de largo plazo con la ejecución táctica",
+      "Proporciona un marco para evaluar iniciativas propuestas",
+      "Mejora la toma de decisiones al considerar múltiples niveles",
+      "Establece un lenguaje común para la planificación estratégica"
+    ]
+  },
+  {
+    "nombre_completo": "SWOT (Fortalezas-Debilidades-Oportunidades-Amenazas)",
+    "acronimo": "SWOT",
+    "significado_acronimo": ["Fortalezas", "Debilidades", "Oportunidades", "Amenazas"],
+    "componentes": [
+      {"nombre": "Fortalezas", "descripcion": "Capacidades, recursos y factores positivos internos que pueden aprovecharse"},
+      {"nombre": "Debilidades", "descripcion": "Limitaciones, deficiencias o aspectos negativos internos que deben abordarse"},
+      {"nombre": "Oportunidades", "descripcion": "Factores externos favorables que pueden ser aprovechados para obtener ventajas"},
+      {"nombre": "Amenazas", "descripcion": "Factores externos desfavorables que pueden representar desafíos o riesgos"}
+    ],
+    "descripcion_proposito": "El framework SWOT (también conocido como FODA en español) es una herramienta de análisis estratégico que evalúa factores internos (fortalezas y debilidades) y externos (oportunidades y amenazas) que afectan a una organización, proyecto o iniciativa. Proporciona una visión completa de la situación actual y ayuda a identificar acciones estratégicas. Es particularmente valioso para la planificación estratégica, evaluación de proyectos y cualquier contexto donde sea importante comprender la posición relativa frente a factores internos y externos.",
+    "ejemplo_uso": {
+      "Fortalezas": "Equipo técnico especializado, infraestructura robusta",
+      "Debilidades": "Procesos manuales, deuda técnica acumulada",
+      "Oportunidades": "Nuevas tecnologías disponibles, mercado en expansión",
+      "Amenazas": "Competidores innovadores, regulaciones cambiantes"
+    },
+    "casos_recomendados": [
+      "Planificación estratégica de tecnología",
+      "Evaluación de viabilidad de proyectos",
+      "Análisis competitivo",
+      "Toma de decisiones estratégicas",
+      "Identificación de áreas de mejora",
+      "Evaluación de riesgos y oportunidades",
+      "Desarrollo de planes de acción específicos"
+    ],
+    "ventajas": [
+      "Proporciona una visión holística de factores internos y externos",
+      "Facilita la identificación de ventajas competitivas",
+      "Ayuda a anticipar y mitigar riesgos potenciales",
+      "Identifica oportunidades de crecimiento o mejora",
+      "Establece una base sólida para la planificación estratégica",
+      "Promueve el pensamiento crítico y el análisis sistemático",
+      "Facilita la comunicación de situación actual y dirección estratégica"
+    ]
+  },
+  {
+    "nombre_completo": "ADKAR (Awareness-Desire-Knowledge-Ability-Reinforcement)",
+    "acronimo": "ADKAR",
+    "significado_acronimo": ["Awareness", "Desire", "Knowledge", "Ability", "Reinforcement"],
+    "componentes": [
+      {"nombre": "Awareness", "descripcion": "Conciencia sobre la necesidad de cambio y sus implicaciones"},
+      {"nombre": "Desire", "descripcion": "Deseo de participar y apoyar el cambio propuesto"},
+      {"nombre": "Knowledge", "descripcion": "Conocimiento sobre cómo cambiar y qué hacer durante la transición"},
+      {"nombre": "Ability", "descripcion": "Capacidad para implementar las habilidades y comportamientos requeridos"},
+      {"nombre": "Reinforcement", "descripcion": "Refuerzo para sostener y consolidar el cambio en el tiempo"}
+    ],
+    "descripcion_proposito": "El framework ADKAR es un modelo para gestionar el cambio organizacional centrado en las personas. Proporciona una secuencia lógica de etapas que las personas deben atravesar para lograr un cambio exitoso y sostenible, desde la conciencia inicial sobre la necesidad de cambio hasta el refuerzo continuo para mantenerlo. Es especialmente valioso para transformaciones organizacionales, implementación de nuevos sistemas o procesos, y cualquier iniciativa que requiera cambios significativos en comportamientos o prácticas de trabajo.",
+    "ejemplo_uso": {
+      "Awareness": "Comunicar razón para migrar a metodologías ágiles",
+      "Desire": "Involucrar equipos en el diseño del nuevo proceso",
+      "Knowledge": "Capacitación en Scrum y herramientas asociadas",
+      "Ability": "Coaching y práctica guiada en primeros sprints",
+      "Reinforcement": "Reconocimiento de mejoras y ajustes continuos"
+    },
+    "casos_recomendados": [
+      "Transformación digital de organizaciones",
+      "Adopción de nuevas metodologías de trabajo",
+      "Implementación de sistemas o plataformas",
+      "Fusiones y adquisiciones empresariales",
+      "Reestructuración de equipos o departamentos",
+      "Cambios culturales en la organización",
+      "Adopción de nuevas tecnologías o herramientas"
+    ],
+    "ventajas": [
+      "Enfoque centrado en las personas, no solo en los procesos",
+      "Estructura secuencial clara para gestionar el cambio",
+      "Identifica y aborda barreras específicas en cada etapa",
+      "Facilita el desarrollo de planes de cambio personalizados",
+      "Proporciona un lenguaje común para discutir el progreso del cambio",
+      "Mejora las tasas de éxito en iniciativas de transformación",
+      "Reduce resistencia al cambio mediante un enfoque estructurado"
+    ]
+  },
+  {
+    "nombre_completo": "OKR (Objectives and Key Results)",
+    "acronimo": "OKR",
+    "significado_acronimo": ["Objectives", "Key Results"],
+    "componentes": [
+      {"nombre": "Objectives", "descripcion": "Objetivos inspiradores, cualitativos y ambiciosos que definen lo que se quiere lograr"},
+      {"nombre": "Key Results", "descripcion": "Resultados clave medibles y cuantificables que determinan si se ha alcanzado el objetivo"}
+    ],
+    "descripcion_proposito": "El framework OKR es una metodología para definir y hacer seguimiento de objetivos organizacionales y sus resultados. Proporciona un enfoque para establecer metas ambiciosas (Objectives) y medirlas mediante resultados clave específicos (Key Results). Los objetivos describen QUÉ se quiere lograr, mientras que los resultados clave determinan CÓMO se medirá el progreso. Este marco es particularmente valioso para alinear equipos, establecer prioridades claras y fomentar la transparencia, siendo utilizado por empresas como Google, LinkedIn y otras organizaciones tecnológicas.",
+    "ejemplo_uso": {
+      "Objectives": "Crear la mejor experiencia de usuario en nuestra categoría",
+      "Key Results": "Aumentar NPS de 30 a 60, reducir tiempo de carga a <2s, incrementar retención en un 20%"
+    },
+    "casos_recomendados": [
+      "Alineación de objetivos organizacionales",
+      "Establecimiento de metas trimestrales o anuales",
+      "Definición de prioridades en equipos de desarrollo",
+      "Comunicación de estrategia a todos los niveles",
+      "Seguimiento de progreso en iniciativas clave",
+      "Fomento de transparencia y colaboración",
+      "Impulso de crecimiento e innovación"
+    ],
+    "ventajas": [
+      "Promueve el establecimiento de objetivos ambiciosos y aspiracionales",
+      "Facilita la medición objetiva del progreso mediante métricas claras",
+      "Alinea esfuerzos en toda la organización hacia metas comunes",
+      "Mejora la transparencia sobre prioridades y avances",
+      "Fomenta la autonomía junto con la responsabilidad",
+      "Permite ajustes ágiles basándose en resultados medibles",
+      "Separa claramente los objetivos inspiradores de sus métricas de éxito"
+    ]
+  },
+  {
+    "nombre_completo": "5W2H (What-Why-Where-When-Who-How-How much)",
+    "acronimo": "5W2H",
+    "significado_acronimo": ["What", "Why", "Where", "When", "Who", "How", "How much"],
+    "componentes": [
+      {"nombre": "What", "descripcion": "Qué se hará, cuál es la tarea o actividad principal"},
+      {"nombre": "Why", "descripcion": "Por qué se debe hacer, razón o justificación de la actividad"},
+      {"nombre": "Where", "descripcion": "Dónde se realizará, lugar o ubicación para la implementación"},
+      {"nombre": "When", "descripcion": "Cuándo se hará, fechas, plazos y cronograma"},
+      {"nombre": "Who", "descripcion": "Quién lo hará, responsables y partes involucradas"},
+      {"nombre": "How", "descripcion": "Cómo se hará, metodología, proceso o enfoque"},
+      {"nombre": "How much", "descripcion": "Cuánto costará, presupuesto, recursos necesarios o métricas de evaluación"}
+    ],
+    "descripcion_proposito": "El framework 5W2H es una herramienta de planificación y gestión que proporciona un enfoque estructurado para detallar todos los aspectos relevantes de un proyecto, tarea o problema. Mediante siete preguntas fundamentales, asegura que se definan claramente todos los elementos clave de una iniciativa, desde su justificación hasta sus recursos. Es particularmente valioso para la planificación detallada de proyectos, resolución estructurada de problemas y documentación completa de planes de acción.",
+    "ejemplo_uso": {
+      "What": "Implementación de un sistema de monitoreo en tiempo real",
+      "Why": "Para detectar y responder proactivamente a incidentes",
+      "Where": "En los servidores de producción y pre-producción",
+      "When": "Durante el próximo mes, con despliegue final el 15 de octubre",
+      "Who": "Equipo de DevOps con apoyo del equipo de Seguridad",
+      "How": "Utilizando Prometheus y Grafana con alertas automatizadas",
+      "How much": "Presupuesto de 20K para licencias y 15 días/persona de trabajo"
+    },
+    "casos_recomendados": [
+      "Planificación detallada de proyectos técnicos",
+      "Documentación de planes de implementación",
+      "Análisis y resolución estructurada de problemas",
+      "Comunicación clara de iniciativas a equipos",
+      "Elaboración de procedimientos operativos",
+      "Planificación de cambios en sistemas o procesos",
+      "Creación de planes de acción completos"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque exhaustivo que evita omitir aspectos clave",
+      "Estructura la información de manera clara y sistemática",
+      "Facilita la comunicación efectiva entre los interesados",
+      "Mejora la planificación al considerar todos los factores relevantes",
+      "Ayuda a identificar posibles obstáculos y limitaciones",
+      "Establece claridad sobre roles, responsabilidades y recursos",
+      "Sirve como checklist para verificar la completitud de un plan"
+    ]
+  },
+  {
+    "nombre_completo": "6M (Man-Machine-Material-Method-Measurement-Mother Nature/Environment)",
+    "acronimo": "6M",
+    "significado_acronimo": ["Man", "Machine", "Material", "Method", "Measurement", "Mother Nature"],
+    "componentes": [
+      {"nombre": "Man", "descripcion": "Factor humano, incluyendo habilidades, capacitación, experiencia y factores humanos"},
+      {"nombre": "Machine", "descripcion": "Equipos, herramientas, tecnología e infraestructura involucrada"},
+      {"nombre": "Material", "descripcion": "Materias primas, componentes, datos o insumos utilizados"},
+      {"nombre": "Method", "descripcion": "Procesos, procedimientos, metodologías y flujos de trabajo"},
+      {"nombre": "Measurement", "descripcion": "Métricas, indicadores, instrumentos y métodos de medición"},
+      {"nombre": "Mother Nature", "descripcion": "Factores ambientales, condiciones externas y entorno de operación"}
+    ],
+    "descripcion_proposito": "El framework 6M (o Diagrama de Ishikawa o Espina de Pescado) es una herramienta para el análisis de causa raíz que identifica sistemáticamente las posibles causas de un problema en seis categorías principales. Proporciona un enfoque estructurado para explorar todos los factores potenciales que podrían contribuir a un problema o defecto, facilitando el análisis profundo y la identificación de causas fundamentales en lugar de síntomas superficiales. Es particularmente valioso para la resolución de problemas complejos, mejora de calidad y prevención de defectos.",
+    "ejemplo_uso": {
+      "Man": "Falta de capacitación en nuevas herramientas",
+      "Machine": "Servidores sobrecargados en horas pico",
+      "Material": "Datos de entrada inconsistentes o corruptos",
+      "Method": "Proceso de validación insuficiente",
+      "Measurement": "Métricas imprecisas de rendimiento",
+      "Mother Nature": "Interferencias de red en ciertas ubicaciones"
+    },
+    "casos_recomendados": [
+      "Análisis de causa raíz de fallos en sistemas",
+      "Investigación de incidentes de seguridad",
+      "Identificación de causas de defectos de software",
+      "Mejora de procesos y calidad",
+      "Optimización de rendimiento de aplicaciones",
+      "Resolución de problemas recurrentes",
+      "Prevención de fallos en infraestructura"
+    ],
+    "ventajas": [
+      "Proporciona un enfoque sistemático y exhaustivo para el análisis",
+      "Identifica causas fundamentales en lugar de síntomas superficiales",
+      "Facilita la colaboración interdisciplinaria en la resolución de problemas",
+      "Mejora la comprensión de interrelaciones entre diferentes factores",
+      "Previene soluciones parciales al considerar múltiples categorías de causas",
+      "Estructura visualmente las relaciones causa-efecto",
+      "Promueve el pensamiento crítico y profundo en equipos"
+    ]
+  },
+  {
+    "nombre_completo": "4P (Product-Price-Place-Promotion)",
+    "acronimo": "4P",
+    "significado_acronimo": ["Product", "Price", "Place", "Promotion"],
+    "componentes": [
+      {"nombre": "Product", "descripcion": "El producto o servicio ofrecido, sus características, beneficios y propuesta de valor"},
+      {"nombre": "Price", "descripcion": "Estrategia de precios, estructura, descuentos y modelo de ingresos"},
+      {"nombre": "Place", "descripcion": "Canales de distribución, ubicación y cómo llegar a los usuarios o clientes"},
+      {"nombre": "Promotion", "descripcion": "Estrategias de comunicación, marketing y actividades para promover la oferta"}
+    ],
+    "descripcion_proposito": "El framework 4P, también conocido como Marketing Mix, es un modelo fundamental para el desarrollo y análisis de estrategias de marketing y comercialización de productos y servicios. Proporciona una estructura para considerar los cuatro elementos clave que influyen en la percepción del mercado y la decision de compra. Este enfoque, aunque originado en el marketing tradicional, es aplicable a productos digitales y servicios tecnológicos, permitiendo una visión integral de cómo posicionar y comercializar soluciones.",
+    "ejemplo_uso": {
+      "Product": "Plataforma SaaS de análisis de datos con IA integrada",
+      "Price": "Modelo freemium con niveles premium por volumen de datos",
+      "Place": "Distribución directa vía web y marketplace de integraciones",
+      "Promotion": "Marketing de contenidos técnicos y demostraciones en vivo"
+    },
+    "casos_recomendados": [
+      "Lanzamiento de nuevos productos o servicios digitales",
+      "Desarrollo de estrategias de comercialización",
+      "Análisis competitivo de soluciones tecnológicas",
+      "Optimización de canales de distribución",
+      "Evaluación y ajuste de modelos de precio",
+      "Desarrollo de estrategias de comunicación técnica",
+      "Posicionamiento estratégico de productos"
+    ],
+    "ventajas": [
+      "Proporciona una visión integral de la estrategia de marketing",
+      "Facilita la identificación de áreas de mejora en la oferta",
+      "Asegura que todos los aspectos clave sean considerados",
+      "Ayuda a alinear los diferentes elementos de la propuesta comercial",
+      "Estructura el pensamiento estratégico sobre el producto",
+      "Ofrece un lenguaje común para discutir estrategias de mercado",
+      "Permite adaptar la estrategia a diferentes segmentos y contextos"
+    ]
+  },
+  {
+    "nombre_completo": "RICE (Reach-Impact-Confidence-Effort)",
+    "acronimo": "RICE",
+    "significado_acronimo": ["Reach", "Impact", "Confidence", "Effort"],
+    "componentes": [
+      {"nombre": "Reach", "descripcion": "Número estimado de personas o usuarios que la iniciativa afectará en un período de tiempo"},
+      {"nombre": "Impact", "descripcion": "Valoración del efecto que tendrá en cada persona afectada, en una escala definida"},
+      {"nombre": "Confidence", "descripcion": "Porcentaje que refleja el nivel de certeza en las estimaciones anteriores"},
+      {"nombre": "Effort", "descripcion": "Cantidad estimada de tiempo que costará implementar, medido en persona-tiempo"}
+    ],
+    "descripcion_proposito": "El framework RICE es un modelo de priorización cuantitativo desarrollado por Intercom para evaluar y clasificar características, proyectos o iniciativas basado en cuatro factores clave. Proporciona una fórmula para calcular una puntuación objetiva: (Reach × Impact × Confidence) ÷ Effort. Este enfoque permite comparar objetivamente diferentes opciones y tomar decisiones basadas en datos sobre qué priorizar. Es particularmente valioso para equipos de producto, desarrollo y cualquier contexto donde sea necesario elegir entre múltiples iniciativas con recursos limitados.",
+    "ejemplo_uso": {
+      "Reach": "10.000 usuarios mensuales",
+      "Impact": "3 de 5 en escala definida",
+      "Confidence": "80%",
+      "Effort": "5 persona-semanas"
+    },
+    "casos_recomendados": [
+      "Priorización de funcionalidades en roadmaps de producto",
+      "Evaluación de proyectos de mejora de experiencia de usuario",
+      "Planificación de backlog en desarrollo ágil",
+      "Toma de decisiones sobre optimizaciones técnicas",
+      "Selección entre múltiples iniciativas con recursos limitados",
+      "Justificación objetiva de prioridades para stakeholders",
+      "Definición de secuencia en planificaciones trimestrales"
+    ],
+    "ventajas": [
+      "Proporciona un método cuantitativo y objetivo para la priorización",
+      "Integra factores de alcance, impacto, confianza y esfuerzo en una sola puntuación",
+      "Facilita comparaciones directas entre opciones dispares",
+      "Incorpora explícitamente el nivel de confianza en las estimaciones",
+      "Equilibra el potencial beneficio con el costo de implementación",
+      "Reduce sesgos y preferencias personales en la toma de decisiones",
+      "Proporciona un lenguaje común para discutir prioridades entre equipos"
+    ]
+  },
+  {
+    "nombre_completo": "ICE (Impact-Confidence-Ease)",
+    "acronimo": "ICE",
+    "significado_acronimo": ["Impact", "Confidence", "Ease"],
+    "componentes": [
+      {"nombre": "Impact", "descripcion": "El efecto potencial que tendrá la iniciativa en objetivos clave, normalmente en escala de 1-10"},
+      {"nombre": "Confidence", "descripcion": "Nivel de certeza en las estimaciones y predicciones de impacto, en escala de 1-10"},
+      {"nombre": "Ease", "descripcion": "Facilidad de implementación, considerando tiempo, recursos y complejidad, en escala de 1-10"}
+    ],
+    "descripcion_proposito": "El framework ICE es un modelo simplificado de priorización desarrollado por Sean Ellis para evaluar y clasificar ideas, experimentos o iniciativas. Utiliza una fórmula sencilla (Impact × Confidence × Ease) para calcular una puntuación que permite comparar diferentes opciones. Su simplicidad lo hace particularmente útil para decisiones rápidas y es ampliamente utilizado en metodologías de growth hacking, desarrollo de producto y entornos ágiles donde se necesita una forma rápida pero efectiva de decidir qué hacer primero.",
+    "ejemplo_uso": {
+      "Impact": "8/10 - Mejora significativa en retención",
+      "Confidence": "7/10 - Basado en datos de pruebas A/B previas",
+      "Ease": "6/10 - Implementación moderadamente compleja"
+    },
+    "casos_recomendados": [
+      "Priorización rápida de backlog de producto",
+      "Evaluación de experimentos de growth hacking",
+      "Toma de decisiones en sprints de desarrollo",
+      "Selección de iniciativas de mejora continua",
+      "Priorización de correcciones de bugs",
+      "Evaluación de propuestas en sesiones de brainstorming",
+      "Optimización de procesos en equipos ágiles"
+    ],
+    "ventajas": [
+      "Extremadamente sencillo de entender y aplicar",
+      "No requiere cálculos complejos ni datos extensos",
+      "Permite priorización rápida con recursos limitados",
+      "Equilibra el potencial impacto con la factibilidad de implementación",
+      "Incorpora el nivel de confianza en las estimaciones",
+      "Facilita conversaciones productivas sobre qué priorizar",
+      "Adaptable a diferentes contextos y tipos de decisiones"
+    ]
+  },
+  {
+    "nombre_completo": "RASCI (Responsible-Accountable-Supportive-Consulted-Informed)",
+    "acronimo": "RASCI",
+    "significado_acronimo": ["Responsible", "Accountable", "Supportive", "Consulted", "Informed"],
+    "componentes": [
+      {"nombre": "Responsible", "descripcion": "Personas que realizan el trabajo para completar la tarea o entregable"},
+      {"nombre": "Accountable", "descripcion": "Persona con autoridad final que rinde cuentas por el resultado (solo una)"},
+      {"nombre": "Supportive", "descripcion": "Personas que proporcionan recursos o asistencia para completar la actividad"},
+      {"nombre": "Consulted", "descripcion": "Personas cuyas opiniones se solicitan y con las que hay comunicación bidireccional"},
+      {"nombre": "Informed", "descripcion": "Personas que se mantienen al día sobre el progreso, generalmente solo tras completarse"}    
+    ],
+    "descripcion_proposito": "El framework RASCI es una variante extendida del modelo RACI que incluye un rol adicional de Soporte (Supportive). Proporciona una matriz para la asignación clara de roles y responsabilidades en proyectos y procesos. Al distinguir entre responsabilidades primarias, rendición de cuentas, apoyo, consulta e información, RASCI ayuda a establecer claridad en qué se espera de cada persona involucrada en una tarea o proyecto. Es particularmente valioso para proyectos complejos que involucran a múltiples equipos o departamentos donde el rol de soporte necesita ser explícitamente definido.",
+    "ejemplo_uso": {
+      "Responsible": "Equipo de desarrollo",
+      "Accountable": "Arquitecto de soluciones",
+      "Supportive": "Equipo de operaciones y SRE",
+      "Consulted": "Equipo de seguridad y equipo de UX",
+      "Informed": "Directores de producto y stakeholders"
+    },
+    "casos_recomendados": [
+      "Gestión de proyectos complejos multidisciplinarios",
+      "Definición de roles en transformaciones técnicas",
+      "Establecimiento de procesos DevOps y CI/CD",
+      "Implementación de sistemas empresariales",
+      "Proyectos con equipos distribuidos o globales",
+      "Iniciativas que requieren coordinación entre departamentos",
+      "Proyectos con múltiples dependencias entre equipos"
+    ],
+    "ventajas": [
+      "Mayor claridad que RACI al distinguir explícitamente el rol de soporte",
+      "Reduce confusiones sobre qué se espera de cada miembro del equipo",
+      "Mejora la coordinación y colaboración entre diferentes áreas",
+      "Elimina vacíos de responsabilidad y evita duplicación de esfuerzos",
+      "Facilita la gestión de dependencias entre equipos",
+      "Proporciona una estructura para resolver conflictos y tomar decisiones",
+      "Mejora la transparencia y rendición de cuentas en toda la organización"
+    ]
+  }
+]

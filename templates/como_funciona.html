@@ -833,8 +833,12 @@
         <h2 class="h3 mb-3"><i class="bi bi-table me-2"></i>Resumen de Frameworks</h2>
         
         <div class="d-flex justify-content-center gap-3 mb-4">
-            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tableCollapse" aria-expanded="false" aria-controls="tableCollapse">
-                <i class="bi bi-eye me-1"></i> Ver tabla completa
+            <a href="/static/frameworks/frameworks.json" download class="btn btn-outline-primary">
+                <i class="bi bi-file-earmark-code me-1"></i> Descargar JSON
+            </a>
+            
+            <button class="btn btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#jsonViewer" aria-expanded="false" aria-controls="jsonViewer">
+                <i class="bi bi-braces me-1"></i> Visualizador JSON
             </button>
             
             <button class="btn btn-outline-success" id="downloadCsvBtn">
@@ -844,6 +848,21 @@
             <a href="/download/frameworks" class="btn btn-outline-dark">
                 <i class="bi bi-file-earmark-zip me-1"></i> Descargar todos los frameworks
             </a>
+        </div>
+        
+        <!-- Visualizador JSON para frikis -->
+        <div class="collapse mb-4" id="jsonViewer">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="bi bi-code-slash me-2"></i>Visualizador de frameworks.json</h5>
+                </div>
+                <div class="card-body">
+                    <div class="text-start">
+                        <pre id="jsonPreview" class="bg-dark text-light p-3" style="max-height: 400px; overflow: auto; border-radius: 5px;"><code>Cargando JSON...</code></pre>
+                    </div>
+                    <p class="text-muted small mt-2">Este visualizador muestra el contenido completo del archivo frameworks.json que alimenta esta página.</p>
+                </div>
+            </div>
         </div>
         
         <div class="collapse" id="tableCollapse">
@@ -953,5 +972,33 @@
     
     <!-- Load page-specific JS -->
     <script src="{{ url_for('static', filename='js/como-funciona.js') }}"></script>
+    
+    <!-- Script para el visualizador JSON -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const jsonViewerBtn = document.querySelector('[data-bs-target="#jsonViewer"]');
+            const jsonPreview = document.getElementById('jsonPreview');
+            let jsonLoaded = false;
+            
+            jsonViewerBtn.addEventListener('click', function() {
+                if (!jsonLoaded) {
+                    fetch('/static/frameworks/frameworks.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            jsonPreview.innerHTML = JSON.stringify(data, null, 2);
+                            jsonLoaded = true;
+                            
+                            // Opcional: Aplicar resaltado de sintaxis si tienes una biblioteca como highlight.js
+                            if (typeof hljs !== 'undefined') {
+                                hljs.highlightElement(jsonPreview);
+                            }
+                        })
+                        .catch(error => {
+                            jsonPreview.innerHTML = `Error al cargar el JSON: ${error}`;
+                        });
+                }
+            });
+        });
+    </script>
 </div>
 {% endblock %}
