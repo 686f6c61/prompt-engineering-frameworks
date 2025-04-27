@@ -236,6 +236,87 @@ python main.py
   - **prompt_formatter.py**: Utilidades para formatear los prompts generados
   - **rate_limiter.py**: Control de límites de uso de la API
 
+## 📊 frameworks.json: Estructura para la escalabilidad
+
+La aplicación utiliza un archivo central `static/frameworks/frameworks.json` que contiene toda la información estructurada de los frameworks disponibles. Este archivo es fundamental para la escalabilidad de la aplicación, ya que permite:
+
+1. **Agregar nuevos frameworks fácilmente** sin modificar el código principal
+2. **Centralizar toda la información** de los frameworks en un solo lugar
+3. **Mantener coherencia** entre la interfaz de usuario y la lógica de procesamiento
+
+### Estructura del archivo frameworks.json
+
+```json
+[
+  {
+    "nombre_completo": "GUIDE (Meta-Usuario-Implementación-Entrega-Evaluación)",
+    "acronimo": "GUIDE",
+    "significado_acronimo": [
+      "Meta (Goal)",
+      "Usuario",
+      "Implementación",
+      "Entrega (Delivery)",
+      "Evaluación"
+    ],
+    "componentes": [
+      {"nombre": "Meta (Goal)", "descripcion": "Define el objetivo principal y los resultados deseados"},
+      {"nombre": "Usuario", "descripcion": "Identifica a los usuarios o stakeholders y sus necesidades específicas"},
+      {"nombre": "Implementación", "descripcion": "Detalla cómo se desarrollará o construirá la solución"},
+      {"nombre": "Entrega (Delivery)", "descripcion": "Especifica cómo se desplegará o entregará el producto final"},
+      {"nombre": "Evaluación", "descripcion": "Establece cómo se medirá el éxito y se recogerá feedback"}
+    ],
+    "descripcion_proposito": "El framework GUIDE proporciona una estructura centrada en el usuario para el desarrollo y entrega de productos y servicios...",
+    "ejemplo_uso": {
+      "Meta": "Lanzar MVP en 2 meses",
+      "Usuario": "Equipo de desarrollo",
+      "Implementación": "Definir requisitos y prototipos",
+      "Entrega": "Desplegar versión beta",
+      "Evaluación": "Recoger feedback y métricas de uso"
+    },
+    "casos_recomendados": [
+      "Desarrollo de productos centrados en el usuario",
+      "Lanzamiento de nuevas funcionalidades o servicios",
+      "Proyectos de mejora de experiencia de usuario"
+    ],
+    "ventajas": [
+      "Mantiene el foco en las necesidades reales de los usuarios",
+      "Proporciona un enfoque equilibrado entre objetivos, implementación y evaluación",
+      "Establece un ciclo completo desde la definición hasta el feedback"
+    ]
+  },
+  // Más frameworks...
+]
+```
+
+### Cómo extender la aplicación con nuevos frameworks
+
+Para añadir un nuevo framework a la aplicación:
+
+1. **Crear los archivos de texto**: Añadir el nuevo framework como archivo `.txt` en la carpeta `frameworks/`
+2. **Actualizar frameworks.json**: Agregar una nueva entrada en el archivo JSON siguiendo la estructura mostrada
+3. **Regenerar el archivo ZIP**: Actualizar `static/frameworks/prompt-frameworks.zip` incluyendo el nuevo archivo de texto
+4. **Actualizar la interfaz**: La aplicación detectará automáticamente el nuevo framework desde el JSON
+
+### Uso programático de frameworks.json
+
+El archivo puede ser consumido mediante una simple petición HTTP:
+
+```javascript
+// Ejemplo de cómo obtener los frameworks en JavaScript
+fetch('/static/frameworks/frameworks.json')
+  .then(response => response.json())
+  .then(data => {
+    // Trabajar con los datos de frameworks
+    console.log(`Frameworks disponibles: ${data.length}`);
+    // Filtrar frameworks por caso de uso
+    const frameworksParaProductos = data.filter(f => 
+      f.casos_recomendados.some(caso => caso.includes("producto"))
+    );
+  });
+```
+
+También está disponible una versión en CSV (`static/frameworks/frameworks.csv`) para integración con herramientas de análisis de datos o hojas de cálculo.
+
 ## 🔧 Configuración
 
 La aplicación utiliza las siguientes variables de entorno:
