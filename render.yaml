@@ -1,14 +1,22 @@
+# -----------------------------------------------------------------------------
+# Archivo de configuración para despliegue en Render.com
+# Define la arquitectura del servicio web, configuración y variables de entorno
+# -----------------------------------------------------------------------------
+
 services:
-  # Servicio web para la aplicación de Prompt Engineering Frameworks
-  - type: web
-    name: prompt-engineering-frameworks
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: sh render.sh
+  # Definición de servicio web para la plataforma de frameworks de prompt engineering
+  - type: web                               # Tipo de servicio: web app con endpoint público
+    name: prompt-engineering-frameworks     # Identificador único del servicio en Render
+    env: python                             # Entorno de ejecución basado en Python
+    buildCommand: pip install -r requirements.txt  # Comando ejecutado durante la fase de build
+    startCommand: sh render.sh              # Script que inicia el servicio tras el build
+    
+    # Configuración de variables de entorno para el servicio
     envVars:
-      - key: FLASK_SECRET_KEY
-        generateValue: true
-      - key: OPENAI_API_KEY
-        sync: false
-    healthCheckPath: /
-    autoDeploy: true
+      - key: FLASK_SECRET_KEY               
+        generateValue: true                 # Render genera automáticamente un valor seguro único
+      - key: OPENAI_API_KEY                 
+        sync: false                         # API key no sincronizada entre deployments (se configura manualmente)
+    
+    healthCheckPath: /                      # Endpoint para verificar que el servicio está operativo
+    autoDeploy: true                        # Despliegue automático cuando hay cambios en la rama principal
