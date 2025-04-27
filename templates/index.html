@@ -73,6 +73,38 @@
         .bg-light-blue {
             background-color: #e8f0fe;
         }
+        
+        /* Estilos para uniformar el tamaño de las tarjetas */
+        .framework-card .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .framework-card .card-text {
+            flex-grow: 1;
+        }
+        
+        .explanation-container {
+            height: 80px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        
+        .explanation-container:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(transparent, white);
+        }
+        
+        .card-actions {
+            margin-top: auto;
+        }
     </style>
 
     <h2 class="text-center mb-4">Elige entre los +63 framework para desarrollar tu prompting</h2>
@@ -100,9 +132,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index }}</span>
                         </div>
-                        <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
@@ -135,9 +169,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length }}</span>
                         </div>
-                        <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
@@ -170,9 +206,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length }}</span>
                         </div>
-                        <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
@@ -204,9 +242,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length }}</span>
                         </div>
-                        <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
@@ -238,9 +278,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length }}</span>
                         </div>
-                        <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
@@ -275,9 +317,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length }}</span>
                         </div>
-                        <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text small mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
@@ -312,9 +356,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length }}</span>
                         </div>
-                        <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text small mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
@@ -361,9 +407,11 @@
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length + frameworks_cat7|length }}</span>
                         </div>
-                        <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <div class="explanation-container">
+                            <p class="card-text small mb-0"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        </div>
                         <p class="card-text small mb-2"><strong>Ideal para:</strong> {{ framework[3] }}</p>
-                        <div class="mt-auto">
+                        <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
                             </button>
