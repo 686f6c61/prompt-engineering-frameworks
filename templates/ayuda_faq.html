@@ -17,6 +17,514 @@
         </div>
     </div>
     
+    <!-- Nueva sección: El poder de los frameworks de prompting -->
+    <div class="row mb-5">
+        <div class="col-lg-10 mx-auto">
+            <div class="card bg-light border-primary mb-4">
+                <div class="card-body">
+                    <h3 class="h5 text-primary"><i class="bi bi-lightning-charge me-2"></i>El poder de los frameworks de prompting</h3>
+                    <p class="mb-3">Prompt Agent utiliza un sistema avanzado de análisis para seleccionar el framework ideal entre nuestra colección de 63 marcos especializados. Cada framework está diseñado para maximizar la efectividad de tus interacciones con modelos de lenguaje como OpenAI, Claude, Llama, Deepseek y otros LLMs.</p>
+                    
+                    <h4 class="h6 mt-4 text-primary"><i class="bi bi-stars me-2"></i>¿Por qué necesitamos buenos prompts?</h4>
+                    <p class="mb-3">Los modelos de lenguaje (LLM) dependen enormemente de la calidad y estructura de los prompts que reciben. Un prompt bien estructurado puede:</p>
+                    <ul class="mb-3">
+                        <li><strong>Reducir la ambigüedad</strong> - Permitiendo respuestas más precisas y relevantes</li>
+                        <li><strong>Mejorar la consistencia</strong> - Estructurando la información de manera lógica y coherente</li>
+                        <li><strong>Optimizar tokens</strong> - Ahorrando costos al reducir la necesidad de iteraciones y correcciones</li>
+                    </ul>
+                    
+                    <h4 class="h6 mt-4 text-primary"><i class="bi bi-graph-up me-2"></i>Beneficios para Bolt y Lovable</h4>
+                    <p>Cuando utilizas Prompt Agent para generar especificaciones para plataformas como <a href="https://bolt.new" target="_blank">Bolt</a> y <a href="https://lovable.dev/?via=prompt-agent" target="_blank">Lovable</a>, obtienes:</p>
+                    <ul>
+                        <li><strong>Ahorro de tokens</strong> - Las instrucciones claras y estructuradas reducen el procesamiento necesario</li>
+                        <li><strong>Mayor precisión</strong> - La estructura correcta ayuda a Bolt/Lovable a entender exactamente qué desarrollar</li>
+                        <li><strong>Desarrollo más rápido</strong> - Especificaciones claras reducen el tiempo de implementación</li>
+                        <li><strong>Menos iteraciones</strong> - Prompts bien estructurados reducen la necesidad de correcciones y ajustes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card border-primary shadow-sm text-center mb-5 mx-auto" style="max-width: 600px;">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="h5 mb-0"><i class="bi bi-arrow-right-circle me-2"></i>Proceso</h3>
+                </div>
+                <div class="card-body py-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-primary rounded-circle me-2">1</span>
+                                    <span>Describes tu objetivo</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-primary rounded-circle me-2">2</span>
+                                    <span>Nuestro sistema analiza tu necesidad</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-primary rounded-circle me-2">3</span>
+                                    <span>Selecciona el framework más apropiado</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-primary rounded-circle me-2">4</span>
+                                    <span>Proporciona una explicación detallada</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-primary rounded-circle me-2">5</span>
+                                    <span>Muestra un ejemplo práctico de uso</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Resumen de Frameworks -->
+    <div class="row mb-5">
+        <div class="col-lg-10 mx-auto">
+            <div class="text-center mb-4">
+                <h2 class="h3 mb-3"><i class="bi bi-table me-2"></i>Resumen de Frameworks</h2>
+                
+                <div class="d-flex justify-content-center gap-3 mb-4">
+                    <a href="/static/frameworks/frameworks.json" download class="btn btn-outline-primary">
+                        <i class="bi bi-file-earmark-code me-1"></i> Descargar JSON
+                    </a>
+                    
+                    <button class="btn btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#jsonViewer" aria-expanded="false" aria-controls="jsonViewer">
+                        <i class="bi bi-braces me-1"></i> Visualizador JSON
+                    </button>
+                    
+                    <button class="btn btn-outline-success" id="downloadCsvBtn">
+                        <i class="bi bi-file-earmark-spreadsheet me-1"></i> Descargar CSV
+                    </button>
+                    
+                    <a href="/download/frameworks" class="btn btn-outline-dark">
+                        <i class="bi bi-file-earmark-zip me-1"></i> Descargar todos los frameworks
+                    </a>
+                </div>
+                
+                <!-- Visualizador JSON para frikis -->
+                <div class="collapse mb-4" id="jsonViewer">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0"><i class="bi bi-code-slash me-2"></i>Visualizador de frameworks.json</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-start">
+                                <pre id="jsonPreview" class="bg-dark text-light p-3" style="max-height: 400px; overflow: auto; border-radius: 5px;"><code>Cargando JSON...</code></pre>
+                            </div>
+                            <p class="text-muted small mt-2">Este visualizador muestra el contenido completo del archivo frameworks.json que alimenta esta página.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón para mostrar/ocultar la tabla de frameworks -->
+                <div class="text-center mb-4">
+                    <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#tableCollapse" aria-expanded="false" aria-controls="tableCollapse">
+                        <i class="bi bi-table me-1"></i> Ver tabla de todos los frameworks
+                    </button>
+                </div>
+                
+                <!-- Tabla de frameworks (colapsable) -->
+                <div class="collapse" id="tableCollapse">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th scope="col" class="text-center">#</th>
+                                    <th scope="col">Framework</th>
+                                    <th scope="col">Componentes</th>
+                                    <th scope="col">Ideal para</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td><strong>RTF</strong></td>
+                                    <td>Role, Task, Format</td>
+                                    <td>Generación de contenido estructurado y tareas específicas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td><strong>PARA</strong></td>
+                                    <td>Purpose, Action, Result, Assessment</td>
+                                    <td>Planificación y evaluación de proyectos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td><strong>SMART</strong></td>
+                                    <td>Specific, Measurable, Achievable, Relevant, Time-bound</td>
+                                    <td>Definición de objetivos y metas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td><strong>ERQ</strong></td>
+                                    <td>Experience, Requirements, Qualifiers</td>
+                                    <td>Definición de perfiles y requisitos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">5</td>
+                                    <td><strong>CODE</strong></td>
+                                    <td>Context, Objective, Details, Examples</td>
+                                    <td>Documentación técnica y guías</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">6</td>
+                                    <td><strong>PROS</strong></td>
+                                    <td>Perspective, Requirements, Outcome, Scope</td>
+                                    <td>Planificación de proyectos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">7</td>
+                                    <td><strong>TEAM</strong></td>
+                                    <td>Task, Environment, Approach, Metrics</td>
+                                    <td>Trabajo en equipo y colaboración</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">8</td>
+                                    <td><strong>IDEA</strong></td>
+                                    <td>Identify, Define, Execute, Assess</td>
+                                    <td>Resolución de problemas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">9</td>
+                                    <td><strong>CARE</strong></td>
+                                    <td>Context, Action, Result, Example</td>
+                                    <td>Instrucciones detalladas y aprendizaje</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">10</td>
+                                    <td><strong>RISE</strong></td>
+                                    <td>Role, Input, Steps, Expectation</td>
+                                    <td>Procesos y flujos de trabajo</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">11</td>
+                                    <td><strong>LOGIC</strong></td>
+                                    <td>Layout, Objective, Guidelines, Implementation, Criteria</td>
+                                    <td>Desarrollo de sistemas y procesos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">12</td>
+                                    <td><strong>SCOPE</strong></td>
+                                    <td>Situation, Core Need, Obstacles, Plan, Evaluation</td>
+                                    <td>Definición y gestión de alcance</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">13</td>
+                                    <td><strong>FOCUS</strong></td>
+                                    <td>Frame, Objective, Constraints, Understanding, Solution</td>
+                                    <td>Resolución estructurada de problemas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">14</td>
+                                    <td><strong>CLARITY</strong></td>
+                                    <td>Context, Limitations, Approach, Requirements, Implementation, Timeline, Yield</td>
+                                    <td>Gestión de proyectos complejos y migraciones</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">15</td>
+                                    <td><strong>EXPERT</strong></td>
+                                    <td>Expertise, Context, Purpose, Execution, Results, Testing</td>
+                                    <td>Proyectos técnicos especializados</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">16</td>
+                                    <td><strong>GUIDE</strong></td>
+                                    <td>Goal, User, Implementation, Delivery, Evaluation</td>
+                                    <td>Desarrollo de productos y servicios</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">17</td>
+                                    <td><strong>PATH</strong></td>
+                                    <td>Purpose, Approach, Target, Horizon</td>
+                                    <td>Planificación estratégica</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">18</td>
+                                    <td><strong>LEARN</strong></td>
+                                    <td>Level, Experience, Approach, Resources, Next steps</td>
+                                    <td>Planes de formación y desarrollo</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">19</td>
+                                    <td><strong>SOLVE</strong></td>
+                                    <td>Situation, Options, Limitations, Verification, Execution</td>
+                                    <td>Resolución de problemas complejos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">20</td>
+                                    <td><strong>PRIME</strong></td>
+                                    <td>Problem, Research, Implementation, Monitoring, Evaluation</td>
+                                    <td>Proyectos de investigación y desarrollo</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">21</td>
+                                    <td><strong>ADAPT</strong></td>
+                                    <td>Analysis, Design, Approach, Progress, Testing</td>
+                                    <td>Proyectos adaptativos y ágiles</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">22</td>
+                                    <td><strong>BUILD</strong></td>
+                                    <td>Baseline, Understanding, Implementation, Learning, Delivery</td>
+                                    <td>Desarrollo de nuevos productos o servicios</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">23</td>
+                                    <td><strong>CRAFT</strong></td>
+                                    <td>Context, Requirements, Approach, Features, Testing</td>
+                                    <td>Desarrollo de soluciones a medida</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">24</td>
+                                    <td><strong>SCALE</strong></td>
+                                    <td>Strategy, Capabilities, Action, Learning, Evolution</td>
+                                    <td>Escalamiento de proyectos y operaciones</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">25</td>
+                                    <td><strong>THINK</strong></td>
+                                    <td>Topic, History, Insights, Next steps, Knowledge</td>
+                                    <td>Análisis estratégico y toma de decisiones</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">26</td>
+                                    <td><strong>GROW</strong></td>
+                                    <td>Goal, Reality, Options, Way Forward</td>
+                                    <td>Coaching y desarrollo personal</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">27</td>
+                                    <td><strong>QUEST</strong></td>
+                                    <td>Question, Understanding, Exploration, Solution, Testing</td>
+                                    <td>Investigación y resolución de problemas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">28</td>
+                                    <td><strong>DRIVE</strong></td>
+                                    <td>Direction, Resources, Implementation, Validation, Evolution</td>
+                                    <td>Gestión de proyectos innovadores</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">29</td>
+                                    <td><strong>SHAPE</strong></td>
+                                    <td>Situation, History, Analysis, Plan, Execution</td>
+                                    <td>Transformación organizacional</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">30</td>
+                                    <td><strong>REACH</strong></td>
+                                    <td>Requirements, Evaluation, Approach, Completion, Handover</td>
+                                    <td>Gestión de proyectos end-to-end</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">31</td>
+                                    <td><strong>BLEND</strong></td>
+                                    <td>Baseline, Learning, Evolution, Navigation, Delivery</td>
+                                    <td>Proyectos híbridos y metodologías mixtas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">32</td>
+                                    <td><strong>SPARK</strong></td>
+                                    <td>Strategy, Planning, Action, Results, Knowledge</td>
+                                    <td>Iniciativas de innovación</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">33</td>
+                                    <td><strong>PULSE</strong></td>
+                                    <td>Purpose, Understanding, Learning, Strategy, Evaluation</td>
+                                    <td>Monitoreo y mejora continua</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">34</td>
+                                    <td><strong>FAST</strong></td>
+                                    <td>Focus, Audience, Scope, Tone</td>
+                                    <td>Documentación técnica y guías de usuario</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">35</td>
+                                    <td><strong>TAG</strong></td>
+                                    <td>Tarea, Acción, Meta</td>
+                                    <td>Proyectos con objetivos medibles y acciones concretas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">36</td>
+                                    <td><strong>BAB</strong></td>
+                                    <td>Antes, Después, Puente</td>
+                                    <td>Mostrar cambios y mejoras con un plan claro</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">37</td>
+                                    <td><strong>PEAS</strong></td>
+                                    <td>Propósito, Resultado, Audiencia, Estilo</td>
+                                    <td>Estrategias de comunicación y marketing</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">38</td>
+                                    <td><strong>STAR</strong></td>
+                                    <td>Situación, Tarea, Acción, Resultado</td>
+                                    <td>Documentar logros y experiencias</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">39</td>
+                                    <td><strong>QCQA</strong></td>
+                                    <td>Pregunta, Contexto, Calificación, Respuesta</td>
+                                    <td>Consultas estructuradas para resolver problemas paso a paso</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">40</td>
+                                    <td><strong>AIDA</strong></td>
+                                    <td>Atención, Interés, Deseo, Acción</td>
+                                    <td>Marketing persuasivo y creación de campañas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">41</td>
+                                    <td><strong>LEAP</strong></td>
+                                    <td>Nivel, Expectativas, Enfoque, Parámetros</td>
+                                    <td>Planificación estratégica</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">42</td>
+                                    <td><strong>SPIN</strong></td>
+                                    <td>Situación, Problema, Implicación, Necesidad</td>
+                                    <td>Ventas consultivas y negociación</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">43</td>
+                                    <td><strong>DESIGN</strong></td>
+                                    <td>Define, Explore, Scope, Ideate, Guide, Narrow</td>
+                                    <td>Procesos de diseño y desarrollo</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">44</td>
+                                    <td><strong>VISION</strong></td>
+                                    <td>Visualize, Identify, Structure, Implement, Optimize, Navigate</td>
+                                    <td>Planificación estratégica</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">45</td>
+                                    <td><strong>IMPACT</strong></td>
+                                    <td>Intent, Message, Purpose, Audience, Channel, Timing</td>
+                                    <td>Estrategias de comunicación</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">46</td>
+                                    <td><strong>MASTER</strong></td>
+                                    <td>Mission, Approach, Strategy, Tactics, Execution, Review</td>
+                                    <td>Gestión de proyectos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">47</td>
+                                    <td><strong>POWER</strong></td>
+                                    <td>Problem, Outcome, Why, Execution, Resources</td>
+                                    <td>Resolución de problemas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">48</td>
+                                    <td><strong>CREATE</strong></td>
+                                    <td>Context, Requirements, Examples, Alternatives, Testing, Evaluation</td>
+                                    <td>Procesos creativos y desarrollo de soluciones</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">49</td>
+                                    <td><strong>FLOW</strong></td>
+                                    <td>Focus, Limits, Outcomes, Work</td>
+                                    <td>Optimización de procesos y productividad</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">50</td>
+                                    <td><strong>BOLT</strong></td>
+                                    <td>Business, Operations, Legal, Technical</td>
+                                    <td>Análisis empresarial integral</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">51</td>
+                                    <td><strong>PACE</strong></td>
+                                    <td>Purpose, Audience, Content, Expression</td>
+                                    <td>Comunicación efectiva y presentaciones</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">52</td>
+                                    <td><strong>AGILE</strong></td>
+                                    <td>Adaptable, Goal-oriented, Iterative, Lightweight, Efficient</td>
+                                    <td>Desarrollo ágil y gestión de proyectos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">53</td>
+                                    <td><strong>SEED</strong></td>
+                                    <td>Situation, Expectation, Execution, Delivery</td>
+                                    <td>Implementación de proyectos desde cero</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">54</td>
+                                    <td><strong>SHIFT</strong></td>
+                                    <td>Situation, Hurdles, Innovation, Framework, Transition</td>
+                                    <td>Gestión del cambio y transformación</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">55</td>
+                                    <td><strong>LIFT</strong></td>
+                                    <td>Learning, Implementation, Feedback, Transformation</td>
+                                    <td>Mejora continua y aprendizaje</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">56</td>
+                                    <td><strong>PATHS</strong></td>
+                                    <td>Problem, Alternatives, Tradeoffs, Hypothesis, Solution</td>
+                                    <td>Toma de decisiones complejas</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">57</td>
+                                    <td><strong>FASTER</strong></td>
+                                    <td>Focus, Analysis, Solution, Testing, Evaluation, Refinement</td>
+                                    <td>Desarrollo rápido y optimización</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">58</td>
+                                    <td><strong>VALUE</strong></td>
+                                    <td>Vision, Approach, Leverage, Understanding, Execution</td>
+                                    <td>Creación de valor empresarial</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">59</td>
+                                    <td><strong>SMARTER</strong></td>
+                                    <td>Specific, Measurable, Achievable, Relevant, Time-bound, Evaluate, Reassess</td>
+                                    <td>Definición y seguimiento de objetivos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">60</td>
+                                    <td><strong>GRIT</strong></td>
+                                    <td>Goal, Resources, Impediments, Timeline</td>
+                                    <td>Gestión de proyectos con objetivos desafiantes</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">61</td>
+                                    <td><strong>GLIDE</strong></td>
+                                    <td>Goal, Limitations, Implementation, Development, Evaluation</td>
+                                    <td>Desarrollo de productos de forma eficiente</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">62</td>
+                                    <td><strong>PIVOT</strong></td>
+                                    <td>Problem, Investigation, Verification, Opportunity, Transformation</td>
+                                    <td>Adaptación y gestión del cambio</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">63</td>
+                                    <td><strong>EPIC</strong></td>
+                                    <td>Expectation, Plan, Implementation, Completion</td>
+                                    <td>Gestión de proyectos con entregables claros</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Sección de FAQ -->
     <div class="row mb-5">
         <div class="col-lg-10 mx-auto">
@@ -118,7 +626,7 @@
                         <div class="accordion-body">
                             <div class="mb-4">
                                 <h5>¿Cómo se seleccionan los frameworks para mi objetivo?</h5>
-                                <p>Prompt Agent analiza tu objetivo utilizando algoritmos de procesamiento de lenguaje natural para identificar patrones, intenciones y contexto. Basándose en este análisis, el sistema selecciona el framework más adecuado de nuestra biblioteca de 47+ frameworks especializados para diferentes tipos de tareas.</p>
+                                <p>Prompt Agent analiza tu objetivo utilizando algoritmos de procesamiento de lenguaje natural para identificar patrones, intenciones y contexto. Basándose en este análisis, el sistema selecciona el framework más adecuado de nuestra biblioteca de 63 frameworks especializados para diferentes tipos de tareas.</p>
                             </div>
                             
                             <div class="mb-4">
@@ -128,7 +636,7 @@
                             
                             <div>
                                 <h5>¿Puedo descargar todos los frameworks para estudiarlos?</h5>
-                                <p>Sí, ofrecemos la opción de descargar la colección completa de frameworks en formato ZIP desde la sección "¿Cómo funciona?". Esto te permite estudiar cada estructura en detalle y aplicarlas manualmente si lo prefieres.</p>
+                                <p>Sí, ofrecemos la opción de descargar la colección completa de frameworks en formato ZIP desde la sección "Resumen de Frameworks" en esta página. Esto te permite estudiar cada estructura en detalle y aplicarlas manualmente si lo prefieres.</p>
                             </div>
                         </div>
                     </div>
@@ -562,6 +1070,70 @@ document.addEventListener('DOMContentLoaded', function() {
         // Disparar el evento change para actualizar cualquier lógica dependiente
         const event = new Event('change');
         asuntoSelect.dispatchEvent(event);
+    });
+    
+    // Script para el visualizador JSON
+    const jsonViewerBtn = document.querySelector('[data-bs-target="#jsonViewer"]');
+    const jsonPreview = document.getElementById('jsonPreview');
+    let jsonLoaded = false;
+    
+    jsonViewerBtn.addEventListener('click', function() {
+        if (!jsonLoaded) {
+            fetch('/static/frameworks/frameworks.json')
+                .then(response => response.json())
+                .then(data => {
+                    jsonPreview.innerHTML = JSON.stringify(data, null, 2);
+                    jsonLoaded = true;
+                    
+                    // Opcional: Aplicar resaltado de sintaxis si tienes una biblioteca como highlight.js
+                    if (typeof hljs !== 'undefined') {
+                        hljs.highlightElement(jsonPreview);
+                    }
+                })
+                .catch(error => {
+                    jsonPreview.innerHTML = `Error al cargar el JSON: ${error}`;
+                });
+        }
+    });
+    
+    // Script para descargar CSV
+    document.getElementById('downloadCsvBtn').addEventListener('click', function() {
+        fetch('/static/frameworks/frameworks.json')
+            .then(response => response.json())
+            .then(data => {
+                // Convertir JSON a CSV
+                let csv = 'ID,Framework,Componentes,Ideal para\n';
+                
+                data.forEach((item, index) => {
+                    const row = [
+                        index + 1,
+                        item.name,
+                        item.components.join('-'),
+                        item.ideal_for
+                    ];
+                    
+                    // Escapar comillas y contenido con comas
+                    csv += row.map(field => {
+                        if (field === undefined || field === null) return '""';
+                        return '"' + String(field).replace(/"/g, '""') + '"';
+                    }).join(',') + '\n';
+                });
+                
+                // Crear enlace de descarga
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.setAttribute('href', url);
+                link.setAttribute('download', 'frameworks_list.csv');
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            })
+            .catch(error => {
+                console.error('Error al generar CSV:', error);
+                alert('Error al generar el archivo CSV. Por favor intenta nuevamente.');
+            });
     });
 });
 </script>
