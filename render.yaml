@@ -17,6 +17,20 @@ services:
         generateValue: true                 # Render genera automáticamente un valor seguro único
       - key: OPENAI_API_KEY                 
         sync: false                         # API key no sincronizada entre deployments (se configura manualmente)
+      - key: RESEND_API_KEY
+        sync: false                         # API key para el servicio de envío de correos
+      - key: EMAIL_FROM
+        value: "info@promptagent.info"      # Dirección de correo remitente
+      - key: EMAIL_TO
+        value: "contacto@promptagent.info"  # Dirección de correo destinatario
+      - key: PORT
+        value: "10000"                      # Puerto en el que se ejecutará la aplicación
+      - key: FLASK_ENV
+        value: "production"                 # Entorno de ejecución (production/development)
+      - key: PROMO_CODE1
+        sync: false                         # Código promocional 1 (no sincronizado por seguridad)
+      - key: PROMO_CODE2
+        sync: false                         # Código promocional 2 (no sincronizado por seguridad)
     
     healthCheckPath: /                      # Endpoint para verificar que el servicio está operativo
     autoDeploy: true                        # Despliegue automático cuando hay cambios en la rama principal
