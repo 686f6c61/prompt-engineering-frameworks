@@ -47,6 +47,27 @@
                             </div>
                             {% endif %}
                             
+                            <!-- Sistema de captcha para prevenir ataques de fuerza bruta -->
+                            <div class="mt-3" style="max-width: 400px;">
+                                <label class="form-label">Verificación de seguridad <small class="text-muted">(protección anti-bot)</small></label>
+                                <div class="row g-0 align-items-center">
+                                    <div class="col-auto">
+                                        <div class="bg-light px-3 py-2 rounded-start d-flex align-items-center captcha-question" id="captchaQuestion" style="height: 38px; user-select: none;">
+                                            <span class="captcha-text">Resuelve: </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-4">
+                                        <input type="text" class="form-control rounded-start-0" id="captchaAnswer" name="captcha_answer" placeholder="Respuesta" required autocomplete="off">
+                                    </div>
+                                    <div class="col-auto ps-2">
+                                        <button type="button" class="btn btn-outline-secondary btn-sm" id="refreshCaptcha" title="Generar nuevo captcha">
+                                            <i class="bi bi-arrow-clockwise"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <small class="text-muted" id="captchaInstruccion"></small>
+                            </div>
+                            
                             <div class="form-text text-muted mt-2">
                                 <i class="bi bi-info-circle me-1"></i>
                                 Introduce un código promocional válido para aumentar tu límite de solicitudes de 10 a 30 por hora.
@@ -201,6 +222,156 @@ document.addEventListener('DOMContentLoaded', function() {
                 promoSection.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         }
+    }
+    
+    // Sistema de captcha para el formulario de códigos promocionales
+    if (document.getElementById('captchaQuestion')) {
+        // Función para generar captcha aleatorio
+        function generarCaptcha() {
+            // Diferentes tipos de captcha
+            const captchaTypes = [
+                'suma', 'resta', 'multiplicacion', 'palabra', 'secuencia'
+            ];
+            
+            // Elegir aleatoriamente el tipo de captcha
+            const captchaType = captchaTypes[Math.floor(Math.random() * captchaTypes.length)];
+            let instruccion = '';
+            let correctAnswer;
+            let captchaDisplay = '';
+            
+            // Generar captcha según el tipo
+            switch(captchaType) {
+                case 'suma':
+                    const num1Suma = Math.floor(Math.random() * 20) + 10; // 10-30
+                    const num2Suma = Math.floor(Math.random() * 15) + 5;  // 5-20
+                    correctAnswer = num1Suma + num2Suma;
+                    captchaDisplay = `${obfuscarNumero(num1Suma)} + ${obfuscarNumero(num2Suma)}`;
+                    instruccion = "Calcula la suma";
+                    break;
+                    
+                case 'resta':
+                    const num1Resta = Math.floor(Math.random() * 30) + 30; // 30-60
+                    const num2Resta = Math.floor(Math.random() * 20) + 5;  // 5-25
+                    correctAnswer = num1Resta - num2Resta;
+                    captchaDisplay = `${obfuscarNumero(num1Resta)} - ${obfuscarNumero(num2Resta)}`;
+                    instruccion = "Calcula la resta";
+                    break;
+                    
+                case 'multiplicacion':
+                    const num1Mult = Math.floor(Math.random() * 8) + 2;  // 2-10
+                    const num2Mult = Math.floor(Math.random() * 5) + 2;  // 2-7
+                    correctAnswer = num1Mult * num2Mult;
+                    captchaDisplay = `${obfuscarNumero(num1Mult)} × ${obfuscarNumero(num2Mult)}`;
+                    instruccion = "Calcula la multiplicación";
+                    break;
+                    
+                case 'palabra':
+                    // Palabras simples invertidas
+                    const palabras = ['casa', 'mesa', 'libro', 'reloj', 'campo', 'cifra', 'mundo', 'clave', 'pista', 'forma'];
+                    const palabraSeleccionada = palabras[Math.floor(Math.random() * palabras.length)];
+                    const palabraInvertida = palabraSeleccionada.split('').reverse().join('');
+                    
+                    captchaDisplay = `${palabraInvertida}`;
+                    correctAnswer = palabraSeleccionada;
+                    instruccion = "Escribe esta palabra al revés";
+                    break;
+                    
+                case 'secuencia':
+                    // Secuencia de números
+                    const inicioSecuencia = Math.floor(Math.random() * 5) + 1; // 1-6
+                    const incremento = Math.floor(Math.random() * 3) + 1;     // 1-4
+                    const secuencia = [
+                        inicioSecuencia,
+                        inicioSecuencia + incremento,
+                        inicioSecuencia + (incremento * 2),
+                        inicioSecuencia + (incremento * 3)
+                    ];
+                    const siguienteNumero = inicioSecuencia + (incremento * 4);
+                    
+                    captchaDisplay = `${secuencia.join(', ')}, ?`;
+                    correctAnswer = siguienteNumero.toString();
+                    instruccion = "¿Cuál es el siguiente número en la secuencia?";
+                    break;
+            }
+            
+            // Actualizar display
+            const captchaElement = document.getElementById('captchaQuestion');
+            captchaElement.innerHTML = `<span class="captcha-text">Resuelve: </span><span class="challenge">${captchaDisplay}</span>`;
+            document.getElementById('captchaInstruccion').textContent = instruccion;
+            
+            // Guardar la respuesta correcta y el tipo
+            captchaElement.dataset.correctAnswer = correctAnswer.toString();
+            captchaElement.dataset.captchaType = captchaType;
+        }
+        
+        // Función para ofuscar números (para dificultar scraping)
+        function obfuscarNumero(num) {
+            // Convertir a string y añadir espacios invisibles o entidades unicode
+            const numStr = num.toString();
+            let resultado = '';
+            
+            for (let i = 0; i < numStr.length; i++) {
+                resultado += numStr[i];
+                // Añadir caracteres invisibles entre dígitos
+                if (i < numStr.length - 1) {
+                    // Agregar un espacio de ancho cero ocasionalmente
+                    if (Math.random() > 0.5) {
+                        resultado += '&#8203;';
+                    }
+                }
+            }
+            
+            return resultado;
+        }
+        
+        // Generar captcha al cargar la página
+        generarCaptcha();
+        
+        // Botón de refrescar captcha
+        document.getElementById('refreshCaptcha').addEventListener('click', function() {
+            generarCaptcha();
+            document.getElementById('captchaAnswer').value = '';
+            document.getElementById('captchaAnswer').classList.remove('is-invalid');
+        });
+        
+        // Validación del formulario
+        const form = document.getElementById('promoCodeForm');
+        
+        form.addEventListener('submit', function(event) {
+            // Verificar captcha
+            const captchaAnswer = document.getElementById('captchaAnswer').value.trim().toLowerCase();
+            const correctAnswer = document.getElementById('captchaQuestion').dataset.correctAnswer.toLowerCase();
+            const captchaType = document.getElementById('captchaQuestion').dataset.captchaType;
+            
+            // Para mayor seguridad, comprobar específicamente según el tipo
+            let isValid = false;
+            
+            if (captchaType === 'palabra') {
+                // Para palabras, verificar que coincidan exactamente (ignorando mayúsculas/minúsculas)
+                isValid = captchaAnswer === correctAnswer;
+            } else if (['suma', 'resta', 'multiplicacion', 'secuencia'].includes(captchaType)) {
+                // Para operaciones numéricas, verificar el valor como número
+                isValid = parseInt(captchaAnswer) === parseInt(correctAnswer);
+            } else {
+                // Fallback para otros tipos
+                isValid = captchaAnswer === correctAnswer;
+            }
+            
+            if (!isValid) {
+                event.preventDefault();
+                document.getElementById('captchaAnswer').classList.add('is-invalid');
+                // Generar un nuevo captcha para evitar intentos repetidos
+                generarCaptcha();
+                return false;
+            }
+            
+            // Si el captcha es válido, el formulario se envía normalmente
+        });
+        
+        // Restablecer estado del captcha cuando se modifica
+        document.getElementById('captchaAnswer').addEventListener('input', function() {
+            this.classList.remove('is-invalid');
+        });
     }
 });
 </script>
