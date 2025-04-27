@@ -229,7 +229,7 @@ python main.py
   - **base.html**: Plantilla base con estructura común
   - **index.html**: Página principal con los frameworks
   - **bolt_lovable.html**: Interfaz para el generador de especificaciones Bolt/Lovable
-  - **como_funciona.html**: Documentación y guía de uso
+  - **ayuda_faq.html**: Documentación, guía de uso y preguntas frecuentes
 - **utils/**: Módulos de utilidad
   - **openai_helper.py**: Funciones para interactuar con la API de OpenAI
   - **bolt_lovable_helper.py**: Funciones específicas para generar especificaciones detalladas para Bolt/Lovable
