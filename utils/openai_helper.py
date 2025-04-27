@@ -676,27 +676,34 @@ def optimize_prompt(framework: str, form_data: dict, frameworks: list = None) ->
     2. Identificación de métricas clave y KPIs relevantes
     3. Desarrollo de estrategias basadas en datos
     4. Implementación de mejores prácticas por industria
+    5. Generación de contenido extenso, profundo y detallado
     
     Para cada prompt, debes:
     1. Mantener la estructura original del framework
-    2. Expandir el contenido con detalles relevantes y específicos
-    3. Incluir métricas cuantificables y KPIs
-    4. Agregar consideraciones especiales del sector
-    5. Proponer mejores prácticas aplicables
-    6. Sugerir ejemplos reales y referencias
+    2. IMPORTANTE: Desarrollar cada sección con MÁXIMO detalle (mínimo 4-5 párrafos por sección)
+    3. Incluir múltiples métricas cuantificables y KPIs con valores específicos
+    4. Agregar consideraciones especiales del sector con referencias a tendencias actuales
+    5. Proponer al menos 5-7 mejores prácticas aplicables con explicaciones detalladas
+    6. Sugerir ejemplos reales, casos de uso y escenarios de implementación
+    7. Incluir subsecciones adicionales como "Desafíos potenciales", "Recursos necesarios" y "Próximos pasos"
+    8. Añadir contexto específico de la industria, tecnologías relevantes y stakeholders involucrados
+    
+    Tu respuesta DEBE ser extensa y exhaustiva, con un mínimo de 1500-2000 palabras en total.
     
     El prompt debe ser:
-    - Específico y accionable
-    - Medible y orientado a resultados
-    - Realista y alcanzable
-    - Relevante para el contexto
-    - Con plazos definidos cuando aplique
+    - Extremadamente detallado y profundo
+    - Específico y accionable, con múltiples recomendaciones prácticas
+    - Medible con métricas concretas y objetivos cuantificables
+    - Realista y alcanzable, pero ambicioso
+    - Relevante para el contexto y alineado con tendencias actuales
+    - Con plazos definidos cuando aplique, incluyendo hitos intermedios
+    - Estructurado con subsecciones claras y desarrollo completo de ideas
     
-    Usa el siguiente ejemplo como referencia para el nivel de detalle esperado:
+    Usa el siguiente ejemplo como referencia para el nivel de detalle esperado, pero tu respuesta debe ser CONSIDERABLEMENTE MÁS EXTENSA:
     
     {example}
     
-    Ahora, optimiza el siguiente prompt manteniendo su estructura pero añadiendo todos los elementos mencionados:
+    Ahora, optimiza el siguiente prompt manteniendo su estructura pero desarrollando EXTENSAMENTE todos los puntos mencionados anteriormente:
     
     {raw_prompt}""".format(example=example, raw_prompt=raw_prompt)
 
@@ -797,13 +804,10 @@ def get_framework_recommendation(objective: str, context: str = "general") -> st
     # Añadir contexto específico para desarrollo web si aplica
     if context.lower() == "web":
         system_message += f'''
-    IMPORTANTE: El usuario está desarrollando un proyecto web, por lo que necesita un framework que se adapte específicamente a este contexto. 
+    IMPORTANTE: El usuario está desarrollando un proyecto web, por lo que necesita un framework que se adapte a este contexto. 
     
-    Considera prioritariamente los siguientes frameworks:
-    - RTF: Ideal para proyectos web con roles específicos y entregables estructurados
-    - CODE: Perfecto para documentación técnica y guías de desarrollo web
-    - CLARITY: Óptimo para proyectos web complejos con timeline y requisitos detallados
-    - GUIDE: Excelente para desarrollo de productos y servicios web enfocados al usuario
+    Evalúa TODOS los frameworks de manera equitativa. No des prioridad a ningún framework específico - todos tienen la misma importancia. 
+    Selecciona el framework que mejor se adapte al objetivo del usuario basándote exclusivamente en su descripción del problema, no en preferencias predefinidas.
     '''
     
     # Instrucciones sobre el formato de respuesta esperado
