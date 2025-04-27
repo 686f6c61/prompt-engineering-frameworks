@@ -313,12 +313,12 @@ def count_tokens_route():
 @app.route('/como-funciona')
 def como_funciona():
     """
-    Ruta que renderiza la página de explicación del funcionamiento.
+    Ruta que redirige a la página de ayuda y FAQ.
     
     Returns:
-        template: Renderiza como_funciona.html
+        redirect: Redirige a ayuda_faq
     """
-    return render_template('como_funciona.html')
+    return redirect(url_for('ayuda_faq'))
 
 @app.route('/ayuda-faq')
 def ayuda_faq():

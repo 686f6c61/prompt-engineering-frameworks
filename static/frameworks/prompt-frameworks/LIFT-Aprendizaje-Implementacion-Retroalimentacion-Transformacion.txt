@@ -1,0 +1,28 @@
+# Framework LIFT
+
+## Descripción
+
+Framework para lift.
+
+## Componentes
+
+- **Componente 1**: Descripción
+- **Componente 2**: Descripción
+- **Componente 3**: Descripción
+
+## Ejemplo de uso
+
+- **Ejemplo 1**: Descripción
+- **Ejemplo 2**: Descripción
+
+## Casos recomendados
+
+- Caso 1
+- Caso 2
+- Caso 3
+
+## Ventajas
+
+- Ventaja 1
+- Ventaja 2
+- Ventaja 3
