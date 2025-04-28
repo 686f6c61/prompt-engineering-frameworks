@@ -70,12 +70,12 @@ El modo Razonador funciona siguiendo estos pasos:
 Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada para acceder a modelos más potentes como GPT-4o, aunque también funciona con GPT-3.5.
 
 ### 🧠 Modelos de IA disponibles
-- **GPT-3.5 Turbo (Gratis)**: Disponible para todos los usuarios sin coste
-  - Recomendaciones de frameworks básicas
-  - Respuestas rápidas
-  - Hasta 4096 tokens por consulta
+- **GPT-4o-mini (Gratis)**: Disponible para todos los usuarios sin coste
+  - Recomendaciones de frameworks precisas
+  - Respuestas de alta calidad
+  - Hasta 4000 tokens por consulta
   - Limitado a 10 solicitudes por hora (para uso gratuito)
-- **GPT-4o-mini (API Key propia)**: Para usuarios que desean resultados premium
+- **GPT-4o (API Key propia)**: Para usuarios que desean resultados premium
   - Recomendaciones más precisas y detalladas
   - Mayor comprensión del contexto
   - Requiere tu propia API Key de OpenAI

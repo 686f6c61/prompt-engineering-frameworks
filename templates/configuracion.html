@@ -91,40 +91,41 @@
                             <label class="form-label fw-bold">Elige el modelo a utilizar:</label>
                             
                             <div class="d-flex flex-column gap-3 mt-3">
-                                <!-- Opción para GPT-3.5 Turbo -->
+                                <!-- Opción para GPT-4o-mini -->
                                 <div class="card model-option {% if not use_custom_api_key %}border-primary active{% endif %}" id="free-model">
                                     <div class="card-body">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="model_option" id="model_free" value="free" {% if not use_custom_api_key %}checked{% endif %}>
                                             <label class="form-check-label fw-bold" for="model_free">
-                                                GPT-3.5 Turbo <span class="badge bg-success">Gratis</span>
+                                                GPT-4o-mini <span class="badge bg-success">Gratis</span>
                                             </label>
                                         </div>
                                         <p class="text-muted ms-4 mb-0 mt-2">
-                                            Utiliza el modelo GPT-3.5 Turbo de forma gratuita. Ideal para la mayoría de los casos de uso.
+                                            Utiliza el modelo GPT-4o-mini de forma gratuita. Ideal para la mayoría de los casos de uso.
                                         </p>
                                         <ul class="ms-4 mt-2 mb-0 text-muted">
                                             <li>Velocidad de respuesta rápida</li>
-                                            <li>Hasta 4096 tokens por consulta</li>
+                                            <li>Hasta 4000 tokens por consulta</li>
                                             <li>Recomendaciones básicas de frameworks</li>
                                         </ul>
                                     </div>
                                 </div>
                                 
-                                <!-- Opción para GPT-4o-mini con API Key -->
+                                <!-- Opción para GPT-4o con API Key -->
                                 <div class="card model-option {% if use_custom_api_key %}border-primary active{% endif %}" id="premium-model">
                                     <div class="card-body">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="model_option" id="model_premium" value="premium" {% if use_custom_api_key %}checked{% endif %}>
                                             <label class="form-check-label fw-bold" for="model_premium">
-                                                GPT-4o-mini <span class="badge bg-warning text-dark">API Key propia</span>
+                                                GPT-4o <span class="badge bg-warning text-dark">API Key propia</span>
                                             </label>
                                         </div>
                                         <p class="text-muted ms-4 mb-0 mt-2">
-                                            Utiliza el modelo GPT-4o-mini para obtener recomendaciones más precisas y detalladas.
+                                            Utiliza el modelo GPT-4o para obtener recomendaciones más precisas y detalladas.
                                         </p>
                                         <ul class="ms-4 mt-2 mb-0 text-muted">
                                             <li>Mayor calidad en las respuestas</li>
+                                            <li>Hasta 8000 tokens por consulta</li>
                                             <li>Recomendaciones más precisas</li>
                                             <li>Más capacidad para entender tu objetivo</li>
                                         </ul>

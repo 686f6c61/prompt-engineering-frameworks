@@ -27,11 +27,11 @@ from flask import session
 load_dotenv()
 
 # Configuraciones de modelos
-DEFAULT_MODEL = "gpt-3.5-turbo"
-PREMIUM_MODEL = "gpt-4o-mini"
+DEFAULT_MODEL = "gpt-4o-mini"
+PREMIUM_MODEL = "gpt-4o"
 MAX_TOKENS = {
-    "gpt-3.5-turbo": 4096,
-    "gpt-4o-mini": 4096
+    "gpt-4o-mini": 4000,
+    "gpt-4o": 8000
 }
 
 # ===================================
@@ -737,7 +737,7 @@ def count_tokens(text: str) -> int:
         messages=[
             {"role": "user", "content": text}
         ],
-        max_tokens=100
+        max_tokens=1000
     )
     return response.usage.prompt_tokens
 

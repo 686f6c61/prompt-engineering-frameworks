@@ -10,10 +10,10 @@
         <!-- Indicador del modelo actual -->
         <div class="model-info-container mt-4 py-2 px-3 bg-light rounded-pill d-inline-flex align-items-center border">
             <div class="model-status d-flex align-items-center me-3">
-                <i class="bi {% if is_custom %}bi-stars{% else %}bi-lightning{% endif %} me-2 {% if is_custom %}text-warning{% else %}text-success{% endif %}"></i>
-                <span class="fw-medium">
-                    Usando {{ current_model }}
-                    <span class="ms-1 text-secondary">{% if is_custom %}(API Key personalizada){% else %}(Gratis){% endif %}</span>
+                <span class="badge {% if is_custom %}bg-warning text-dark{% else %}bg-success{% endif %} p-2">
+                    <i class="bi {% if is_custom %}bi-stars{% else %}bi-lightning{% endif %} me-1"></i>
+                    Usando Familia OpenAI 4o
+                    {% if is_custom %}(API Key personalizada){% else %}(Gratis){% endif %}
                 </span>
             </div>
             <a href="/configuracion" class="btn btn-sm btn-primary rounded-pill">

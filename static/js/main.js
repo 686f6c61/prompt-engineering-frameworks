@@ -1390,20 +1390,27 @@ function updateUsageDisplay(data) {
         if (data.limited || data.remaining <= 0) {
             statusClass = 'text-danger';
             icon = 'bi-exclamation-triangle';
-            message = `Has alcanzado el límite de ${maxLimit} usos por hora para GPT-3.5. Podrás realizar más solicitudes en: ${data.reset_time}`;
+            message = `Has alcanzado el límite de ${maxLimit} usos por hora para Familia OpenAI 4o. Podrás realizar más solicitudes en: ${data.reset_time}`;
         } else if (data.remaining <= Math.max(3, maxLimit * 0.2)) { // Avisar cuando queden menos del 20%
             statusClass = 'text-warning';
             icon = 'bi-exclamation-circle';
-            message = `Atención: Te quedan solo ${data.remaining} usos de GPT-3.5 para esta hora.`;
+            message = `Atención: Te quedan solo ${data.remaining} usos de Familia OpenAI 4o para esta hora.`;
         } else {
             statusClass = 'text-success';
             icon = 'bi-lightning';
-            message = `Usos disponibles de GPT-3.5: ${data.remaining}/${maxLimit} para esta hora.`;
-            
-            // Mostrar insignia de código promocional si está activo
-            if (hasPromo) {
-                message += ' <span class="badge bg-success ms-1">Código promocional activo</span>';
-            }
+            message = `Usos disponibles de Familia OpenAI 4o: ${data.remaining}/${maxLimit} para esta hora.`;
+        }
+        
+        let promoHTML = '';
+        if (hasPromo) {
+            promoHTML = `
+                <div class="text-center mt-2">
+                    <div class="d-inline-block bg-success text-white px-4 py-2 rounded">
+                        <i class="bi bi-gift me-2"></i>
+                        Código promocional activo
+                    </div>
+                </div>
+            `;
         }
         
         usageContainer.innerHTML = `
@@ -1413,6 +1420,7 @@ function updateUsageDisplay(data) {
                         <i class="bi ${icon} ${statusClass} me-2"></i>
                         <span class="fw-medium">${message}</span>
                     </div>
+                    ${promoHTML}
                 </div>
             </div>
         `;
@@ -1422,7 +1430,7 @@ function updateUsageDisplay(data) {
     }
 }
 
-// Actualizar el contador después de cada generación con GPT-3.5
+// Actualizar el contador después de cada generación con Familia OpenAI 4o
 function updateUsageCounter() {
     checkUsageLimit();
 }
