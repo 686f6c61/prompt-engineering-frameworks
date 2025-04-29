@@ -177,6 +177,7 @@ Para obtener resultados óptimos se recomienda utilizar una API Key propia confi
 - **Configuración de privacidad**: Las API Keys nunca se almacenan en el servidor, solo en la sesión del navegador
 - **Formulario de contacto**: Sistema de contacto integrado usando Resend para el envío de emails
 - **Analítica web**: Seguimiento de uso mediante Google Analytics para mejorar la experiencia
+- **Banner de consentimiento de cookies**: Sistema compacto para gestionar el consentimiento de cookies esenciales y de análisis (Google Analytics)
 
 ## 🛠️ Tecnologías
 
