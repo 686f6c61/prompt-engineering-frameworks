@@ -4,7 +4,7 @@
   <img src="static/img/Frameworks-Prompt.png" alt="Frameworks Prompt" width="500">
 </div>
 
-Una aplicación web para generar prompts efectivos utilizando 63 frameworks especializados de prompt engineering.
+Una aplicación web para generar prompts efectivos utilizando 75 frameworks especializados de prompt engineering.
 
 ## 🌟 Características
 
@@ -152,6 +152,18 @@ Para obtener resultados óptimos se recomienda utilizar una API Key propia confi
 | **[G-L-I-D-E](static/frameworks/prompt-frameworks/GLIDE-Meta-Limitaciones-Implementacion-Desarrollo-Evaluacion.txt)** | Goal, Limitations, Implementation, Development, Evaluation | Desarrollo de productos de forma eficiente. |
 | **[P-I-V-O-T](static/frameworks/prompt-frameworks/PIVOT-Problema-Investigacion-Verificacion-Oportunidad-Transformacion.txt)** | Problem, Investigation, Verification, Opportunity, Transformation | Adaptación y gestión del cambio. |
 | **[E-P-I-C](static/frameworks/prompt-frameworks/EPIC-Expectativa-Plan-Implementacion-Completacion.txt)** | Expectation, Plan, Implementation, Completion | Gestión de proyectos con entregables claros. |
+| **[SCQA](static/frameworks/prompt-frameworks/SCQA-Situacion-Complicacion-Pregunta-Respuesta.txt)** | Situation, Complication, Question, Answer | Comunicación persuasiva y presentaciones. |
+| **[SOAR](static/frameworks/prompt-frameworks/SOAR-Fortalezas-Oportunidades-Aspiraciones-Resultados.txt)** | Strengths, Opportunities, Aspirations, Results | Planificación estratégica positiva. |
+| **[CFT](static/frameworks/prompt-frameworks/CFT-Contexto-Foco-Transformacion.txt)** | Context, Focus, Transformation | Gestión del cambio y transformaciones. |
+| **[TAR](static/frameworks/prompt-frameworks/TAR-Disparador-Accion-Resultado.txt)** | Trigger, Action, Result | Análisis conductual y cambio de hábitos. |
+| **[PACE](static/frameworks/prompt-frameworks/PACE-ObjetivoPrincipal-Alternativas-Consecuencias-Entorno.txt)** | Primary goal, Alternatives, Consequences, Environment | Toma de decisiones complejas. |
+| **[FAB](static/frameworks/prompt-frameworks/FAB-Caracteristicas-Ventajas-Beneficios.txt)** | Features, Advantages, Benefits | Marketing y comunicación de producto. |
+| **[AOR](static/frameworks/prompt-frameworks/AOR-Accion-Resultado-Reflexion.txt)** | Action, Outcome, Reflection | Aprendizaje experiencial y mejora. |
+| **[SPQA](static/frameworks/prompt-frameworks/SPQA-Situacion-Problema-Pregunta-Respuesta.txt)** | Situation, Problem, Question, Answer | Resolución estructurada de problemas. |
+| **[SARA](static/frameworks/prompt-frameworks/SARA-Shock-Enojo-Resistencia-Aceptacion.txt)** | Shock, Anger, Resistance, Acceptance | Gestión del cambio y transiciones. |
+| **[GEAR](static/frameworks/prompt-frameworks/GEAR-Meta-Ejecutar-Evaluar-Reflexionar.txt)** | Goal, Execute, Assess, Reflect | Mejora continua y ciclos de aprendizaje. |
+| **[BRIDGE](static/frameworks/prompt-frameworks/BRIDGE-Antecedentes-Razon-Informacion-Decision-Meta-Evaluacion.txt)** | Background, Reason, Information, Decision, Goal, Evaluation | Comunicaciones corporativas y cambios organizacionales. |
+| **[CLEAR](static/frameworks/prompt-frameworks/CLEAR-Conectar-Escuchar-Explorar-Accion-Reflexionar.txt)** | Connect, Listen, Explore, Action, Reflect | Comunicación interpersonal y coaching. |
 
 ### 🛠️ Características técnicas
 - **Generación de prompts**: Creación automática según el framework seleccionado
@@ -459,20 +471,14 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 📋 Historial de versiones recientes
 
-### V.08 (Abril 2025)
+### Version 0.8 (Abril 2024)
 - Ampliación a 63 frameworks disponibles para prompt engineering
 - Aumento en los créditos de uso para usuarios gratuitos
 - Mejoras en algoritmo de recomendación para incluir nuevos frameworks
 - Optimización del sistema de búsqueda de frameworks
 
-### V.07 (Abril 2025)
-- Implementación de sistema de códigos promocionales para aumentar límites gratuitos
-- Mejora en la sección de configuración para usar modelos premium con API propia
-- Actualización de interfaz para solicitar aumento de límites gratuitos
-- Correcciones en validación de códigos promocionales
-
-### V.06 (10 Abril 2025)
-- Adición de sección de modelos razonadores para análisis lógico avanzado
-- Soporte para uso de API personal del usuario con modelos razonadores
-- Mejoras en rendimiento y tiempo de respuesta
-- Correcciones de bugs menores y mejoras de UX
+### Version 0.8 (Abril 2024)
+- Ampliación a 75 frameworks disponibles para prompt engineering
+- Aumento en los créditos de uso para usuarios gratuitos
+- Mejoras en algoritmo de recomendación para incluir nuevos frameworks
+- Optimización del sistema de búsqueda de frameworks

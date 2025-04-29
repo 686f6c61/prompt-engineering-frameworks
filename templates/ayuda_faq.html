@@ -1170,29 +1170,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Script para descargar CSV
     document.getElementById('downloadCsvBtn').addEventListener('click', function() {
-        fetch('/static/frameworks/frameworks.json')
-            .then(response => response.json())
-            .then(data => {
-                // Convertir JSON a CSV
-                let csv = 'ID,Framework,Componentes,Ideal para\n';
-                
-                data.forEach((item, index) => {
-                    const row = [
-                        index + 1,
-                        item.name,
-                        item.components.join('-'),
-                        item.ideal_for
-                    ];
-                    
-                    // Escapar comillas y contenido con comas
-                    csv += row.map(field => {
-                        if (field === undefined || field === null) return '""';
-                        return '"' + String(field).replace(/"/g, '""') + '"';
-                    }).join(',') + '\n';
-                });
-                
+        // Utilizar directamente el archivo CSV preparado en lugar de generar desde JSON
+        fetch('/static/frameworks/frameworks.csv')
+            .then(response => response.blob())
+            .then(blob => {
                 // Crear enlace de descarga
-                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
                 const url = URL.createObjectURL(blob);
                 const link = document.createElement('a');
                 link.setAttribute('href', url);
@@ -1203,8 +1185,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.removeChild(link);
             })
             .catch(error => {
-                console.error('Error al generar CSV:', error);
-                alert('Error al generar el archivo CSV. Por favor intenta nuevamente.');
+                console.error('Error al descargar CSV:', error);
+                alert('Error al descargar el archivo CSV. Por favor intenta nuevamente.');
             });
     });
 });

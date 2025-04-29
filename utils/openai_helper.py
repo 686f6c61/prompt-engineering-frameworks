@@ -120,7 +120,8 @@ AVAILABLE_FRAMEWORKS = [
     'logic', 'scope', 'focus', 'expert', 'clarity',
     'guide', 'path', 'learn', 'solve', 'prime', 'adapt', 'build', 'craft', 'scale', 'think', 'quest', 'drive', 'shape', 'reach', 'blend', 'spark', 'pulse', 'bolt_lovable',
     'daci', 'raci', 'heart', 'mece', 'ooda', 'pdca', 'vmost', 'swot', 'adkar', 'okr', '5w2h', '6m', '4p', 'rice', 'ice', 'rasci',
-    'create', 'flow', 'bolt', 'pace', 'agile', 'seed', 'shift', 'lift', 'paths', 'faster', 'value', 'smarter', 'grit', 'glide', 'pivot', 'epic'
+    'create', 'flow', 'bolt', 'pace', 'agile', 'seed', 'shift', 'lift', 'paths', 'faster', 'value', 'smarter', 'grit', 'glide', 'pivot', 'epic',
+    'scqa', 'soar', 'cft', 'tar', 'pace2', 'fab', 'aor', 'spqa', 'sara', 'gear', 'bridge', 'clear'
 ]
 
 """
@@ -192,7 +193,35 @@ framework_templates = {
     '4p': "Product: {product}\nPrice: {price}\nPlace: {place}\nPromotion: {promotion}",
     'rice': "Reach: {reach}\nImpact: {impact}\nConfidence: {confidence}\nEffort: {effort}",
     'ice': "Impact: {impact}\nConfidence: {confidence}\nEase: {ease}",
-    'rasci': "Responsable: {responsable}\nAccountable: {accountable}\nSupportive: {supportive}\nConsulted: {consulted}\nInformed: {informed}"
+    'rasci': "Responsable: {responsable}\nAccountable: {accountable}\nSupportive: {supportive}\nConsulted: {consulted}\nInformed: {informed}",
+    'create': "Concepto: {concept}\nRazón: {reason}\nExploración: {exploration}\nAcción: {action}\nTransformación: {transformation}\nEvaluación: {evaluation}",
+    'flow': "Fundamentos: {fundamentals}\nLimitaciones: {limitations}\nOportunidades: {opportunities}\nObjetivos: {objectives}",
+    'bolt': "Base: {base}\nObjetivo: {objective}\nLímites: {limits}\nTiempo: {time}",
+    'pace': "Problema: {problem}\nAnálisis: {analysis}\nConsecuencias: {consequences}\nEjecución: {execution}",
+    'agile': "Adaptabilidad: {adaptability}\nGeneración: {generation}\nIteración: {iteration}\nLigereza: {lightness}\nEvidencia: {evidence}",
+    'seed': "Situación: {situation}\nExpectativas: {expectations}\nEjecución: {execution}\nDetalles: {details}",
+    'shift': "Situación: {situation}\nHipótesis: {hypothesis}\nInsights: {insights}\nFoco: {focus}\nTransformación: {transformation}",
+    'lift': "Limitaciones: {limitations}\nIdeas: {ideas}\nFundamentos: {fundamentals}\nTransformación: {transformation}",
+    'paths': "Problema: {problem}\nAnálisis: {analysis}\nTransformación: {transformation}\nHabilitadores: {habilitadores}\nSolución: {solution}",
+    'faster': "Foco: {focus}\nAnálisis: {analysis}\nSolución: {solution}\nTáctica: {tactics}\nEjecución: {execution}\nRevisión: {review}",
+    'value': "Visión: {vision}\nAcción: {action}\nLiderazgo: {leadership}\nUnidad: {unity}\nEvaluación: {evaluation}",
+    'smarter': "Específico: {specific}\nMedible: {measurable}\nAlcanzable: {achievable}\nRelevante: {relevant}\nTemporal: {time_bound}\nEvaluable: {evaluable}\nReajustable: {readjustable}",
+    'grit': "Meta: {goal}\nRealismo: {realism}\nInfluencia: {influence}\nTiempo: {time}",
+    'glide': "Meta: {goal}\nLímites: {limits}\nInsights: {insights}\nDecisiones: {decisions}\nEjecución: {execution}",
+    'pivot': "Problema: {problem}\nImpacto: {impact}\nVisión: {vision}\nOpciones: {options}\nTácticas: {tactics}",
+    'epic': "Exploración: {exploration}\nPropuesta: {proposal}\nImplementación: {implementation}\nConsolidación: {consolidation}",
+    'clear': "Challenge: {challenge}\nLocation: {location}\nExposure: {exposure}\nAction: {action}\nResult: {result}",
+    'bridge': "Background: {background}\nRequirement: {requirement}\nInsight: {insight}\nDecision: {decision}\nGuidance: {guidance}\nExecution: {execution}",
+    'gear': "Goal: {goal}\nExpectation: {expectation}\nApproach: {approach}\nResult: {result}",
+    'sara': "Situation: {situation}\nAnalysis: {analysis}\nRecommendation: {recommendation}\nAction: {action}",
+    'spqa': "Situation: {situation}\nProblem: {problem}\nQuestion: {question}\nAnswer: {answer}",
+    'aor': "Action: {action}\nOutcome: {outcome}\nReflection: {reflection}",
+    'fab': "Features: {features}\nAdvantages: {advantages}\nBenefits: {benefits}",
+    'pace2': "Problem: {problem}\nAnalysis: {analysis}\nConclusion: {conclusion}\nExecution: {execution}",
+    'tar': "Task: {task}\nAction: {action}\nResult: {result}",
+    'cft': "Context: {context}\nFraming: {framing}\nTask: {task}",
+    'soar': "Strengths: {strengths}\nOpportunities: {opportunities}\nAspirations: {aspirations}\nResults: {results}",
+    'scqa': "Situation: {situation}\nComplication: {complication}\nQuestion: {question}\nAnswer: {answer}"
 }
 
 """
@@ -623,7 +652,78 @@ Accountable: Arquitecto de Soluciones
 Supportive: Equipo de QA y UX
 Consulted: Seguridad y Compliance
 Informed: Management y Stakeholders
-"""
+""",
+    'clear': {
+        'challenge': 'Implementar un nuevo sistema de gestión de clientes',
+        'location': 'Departamento de ventas',
+        'exposure': 'Alta rotación de clientes y pérdida de información',
+        'action': 'Desarrollo e implementación de CRM personalizado con capacitación al personal',
+        'result': 'Reducción del 30% en pérdida de clientes y mejora del 25% en retención'
+    },
+    'bridge': {
+        'background': 'Empresa en crecimiento con procesos de comunicación ineficientes',
+        'requirement': 'Mejorar la comunicación interdepartamental',
+        'insight': 'Los equipos trabajan en silos sin compartir información crítica',
+        'decision': 'Implementar una plataforma de colaboración centralizada',
+        'guidance': 'Capacitar a todos los equipos en el uso de la nueva plataforma',
+        'execution': 'Lanzamiento por fases con retroalimentación constante para ajustes'
+    },
+    'gear': {
+        'goal': 'Aumentar el tráfico del sitio web en un 50% durante el próximo trimestre',
+        'expectation': 'Implementar estrategia SEO y campaña en redes sociales',
+        'approach': 'Optimización de palabras clave, mejora de UX y contenido semanal de valor',
+        'result': 'Aumento del 65% en tráfico orgánico y 40% de incremento en conversiones'
+    },
+    'sara': {
+        'situation': 'Proceso de onboarding ineficiente para nuevos empleados',
+        'analysis': 'El proceso actual toma 3 semanas y causa frustración en los nuevos contratados',
+        'recommendation': 'Digitalizar el proceso y crear material de capacitación estructurado',
+        'action': 'Implementar plataforma LMS con contenido personalizado por departamento'
+    },
+    'spqa': {
+        'situation': 'Empresa con alta rotación de personal técnico',
+        'problem': 'Pérdida de conocimiento institucional y altos costos de contratación',
+        'question': '¿Cómo podemos mejorar la retención y transferencia de conocimiento?',
+        'answer': 'Implementar programa de mentorías, documentación estructurada y mejora de compensaciones'
+    },
+    'aor': {
+        'action': 'Implementación de sistema de trabajo remoto durante la pandemia',
+        'outcome': 'Mantenimiento de productividad y mejora del balance vida-trabajo',
+        'reflection': 'El modelo híbrido es viable a largo plazo y podría reducir costos operativos'
+    },
+    'fab': {
+        'features': 'Plataforma con IA para análisis predictivo de datos de clientes',
+        'advantages': 'Procesamiento en tiempo real y patrones de comportamiento personalizados',
+        'benefits': 'Aumento de ventas cruzadas, mejor retención y experiencia de cliente mejorada'
+    },
+    'pace2': {
+        'problem': 'Tiempos de carga lentos en aplicación móvil causando abandono de usuarios',
+        'analysis': 'Consultas ineficientes a base de datos y recursos no optimizados',
+        'conclusion': 'Necesidad de refactorizar el backend y optimizar activos frontend',
+        'execution': 'Implementar caché, compresión de imágenes y rediseñar la arquitectura de datos'
+    },
+    'tar': {
+        'task': 'Rediseñar la experiencia de checkout del ecommerce',
+        'action': 'Análisis de embudos, pruebas A/B e implementación de diseño simplificado',
+        'result': 'Aumento del 23% en tasa de conversión y reducción del 45% en abandonos'
+    },
+    'cft': {
+        'context': 'Startup en fase de expansión con recursos limitados',
+        'framing': 'Necesidad de priorizar mercados y funcionalidades del producto',
+        'task': 'Desarrollar matriz de priorización basada en potencial de mercado y esfuerzo requerido'
+    },
+    'soar': {
+        'strengths': 'Equipo técnico altamente cualificado y tecnología propietaria',
+        'opportunities': 'Mercado emergente con pocos competidores establecidos',
+        'aspirations': 'Convertirse en líder de mercado en soluciones de IA para salud',
+        'results': 'Triplicar la base de clientes y establecer alianzas estratégicas en el sector'
+    },
+    'scqa': {
+        'situation': 'Startup con producto innovador pero ventas estancadas',
+        'complication': 'El mensaje de marketing no conecta con las necesidades reales del cliente',
+        'question': '¿Cómo podemos reformular nuestro posicionamiento para aumentar conversiones?',
+        'answer': 'Desarrollar nuevo mensaje basado en beneficios claros y casos de uso específicos'
+    }
 }
 
 # ===================================

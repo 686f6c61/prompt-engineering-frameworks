@@ -569,6 +569,13 @@ def get_usage_limit_info():
     """
     try:
         usage_info = get_usage_info()
+        
+        # Añadir información sobre el modelo en uso y sus tokens máximos
+        from utils.openai_helper import get_model_to_use, MAX_TOKENS
+        current_model = get_model_to_use()
+        usage_info['model'] = current_model
+        usage_info['max_tokens'] = MAX_TOKENS.get(current_model, 4000)
+        
         return jsonify({"success": True, "usage_info": usage_info})
     except Exception as e:
         console.error("Error al obtener información de uso", str(e))
@@ -587,6 +594,10 @@ def serve_framework(framework_name):
     """
     # Construir la ruta del archivo
     framework_path = os.path.join('static/frameworks/prompt-frameworks', framework_name)
+    
+    # Agregar diagnóstico
+    print(f"Ruta solicitada: {framework_path}")
+    print(f"¿Existe el archivo? {os.path.isfile(framework_path)}")
     
     # Verificar si el archivo existe
     if not os.path.isfile(framework_path):

@@ -1,0 +1,50 @@
+# T-A-R Framework
+## Disparador (Trigger) - Acción - Resultado
+
+TAR es un framework simple pero efectivo para analizar y estructurar comportamientos, respuestas o secuencias de eventos en diversos contextos. Su enfoque en la causalidad y los resultados lo hace particularmente útil para comprender patrones de comportamiento, diseñar procesos de respuesta y evaluar el impacto de acciones específicas.
+
+## Componentes del framework:
+
+### T - Trigger (Disparador)
+Identifica el evento, estímulo, situación o condición que inicia la secuencia. Este componente describe qué ocurre primero y actúa como catalizador o punto de partida para una respuesta o acción. Responde a la pregunta "¿Qué desencadena este proceso o comportamiento?".
+
+### A - Action (Acción)
+Especifica la respuesta, actividad, comportamiento o conjunto de pasos que se ejecutan como consecuencia del disparador. Esta sección detalla qué se hace exactamente, cómo se responde y qué medidas se toman. Responde a la pregunta "¿Qué hacemos en respuesta al disparador?".
+
+### R - Result (Resultado)
+Documenta las consecuencias, efectos, impactos o cambios que se producen debido a la acción tomada. Este componente evalúa la efectividad de la respuesta y determina si se logró el objetivo deseado. Responde a la pregunta "¿Qué ocurre como consecuencia de nuestra acción?".
+
+## Ejemplo práctico:
+
+**T - Disparador**:
+Sistema de monitorización detecta una caída del 30% en la tasa de conversión del embudo de compras en la aplicación móvil, con un incremento del 45% en el abandono específicamente en la página de confirmación de pedido. La alerta se activa cuando la anomalía persiste durante más de 15 minutos, superando 2 desviaciones estándar respecto al comportamiento normal.
+
+**A - Acción**:
+1. El equipo de respuesta a incidentes recibe la alerta y activa el protocolo de emergencia
+2. Primer nivel realiza una evaluación rápida (5 minutos) verificando en paralelo:
+   - Logs de errores en servidores de aplicación y bases de datos
+   - Estado de la pasarela de pagos a través de su dashboard y API de status
+   - Métricas de rendimiento y latencia en servicios críticos
+   - Pruebas automatizadas del flujo de compra en ambientes de producción
+3. Al identificarse errores 5xx en la integración con el procesador de pagos, se ejecuta el procedimiento de conmutación por error (failover) hacia el proveedor secundario
+4. Se implementa temporalmente una página de espera informativa para usuarios afectados
+5. Se notifica al proveedor principal del problema detectado
+
+**R - Resultado**:
+- Tiempo total de detección a resolución: 12 minutos
+- Impacto mitigado: procesamiento de pagos restaurado en menos de 7 minutos tras la detección
+- Transacciones recuperadas: 85% de las compras afectadas completadas tras la conmutación
+- Pérdida financiera estimada: $4,200 durante el incidente
+- Pérdida evitada estimada: $28,000 gracias a la respuesta rápida
+- Mejora del proceso: se identificó la necesidad de implementar un sistema de detección más temprana para este tipo específico de fallos en la pasarela de pagos
+
+## Aplicaciones:
+
+- **Análisis de incidentes**: Comprender la cadena de eventos en fallos o problemas
+- **Diseño de procesos**: Estructurar flujos de trabajo y respuestas automatizadas
+- **Cambio conductual**: Identificar patrones y modificar comportamientos
+- **Gestión de crisis**: Planificar respuestas a situaciones de emergencia
+- **Mejora de experiencia de usuario**: Analizar interacciones y optimizar interfaces
+- **Automatización**: Diseñar sistemas que respondan a eventos específicos
+
+TAR es especialmente valioso en entornos operativos donde se necesitan protocolos de respuesta claros y eficientes ante eventos predecibles, o cuando se quiere comprender y mejorar la cadena causal de acontecimientos en un sistema complejo. 

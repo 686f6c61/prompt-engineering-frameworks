@@ -1,0 +1,43 @@
+# S-C-Q-A Framework
+## Situación - Complicación - Pregunta - Respuesta
+
+SCQA es un potente framework narrativo para comunicación estructurada, presentaciones y resolución de problemas. Desarrollado originalmente por Barbara Minto, este enfoque proporciona una estructura clara para presentar información de forma persuasiva y lógica, guiando al receptor a través de un razonamiento completo.
+
+## Componentes del framework:
+
+### S - Situación
+Establece el contexto inicial y el punto de partida. Describe los hechos conocidos y el escenario actual que todos pueden reconocer y aceptar como verdadero. Esta sección responde a "¿Dónde estamos ahora?" o "¿Cuál es el estado actual?".
+
+### C - Complicación
+Introduce el elemento disruptivo, el problema, desafío o cambio que ha alterado la situación estable. Esta sección crea tensión narrativa y establece la necesidad de acción. La complicación describe por qué la situación actual no puede continuar sin intervención.
+
+### Q - Pregunta
+Formula la pregunta clave que surge naturalmente de la tensión entre la situación y la complicación. Esta pregunta debe ser clara y específica, dirigiendo el pensamiento del receptor hacia la solución. Define precisamente qué necesita resolverse.
+
+### A - Respuesta
+Proporciona la solución lógica a la pregunta planteada. Esta sección ofrece una resolución completa, presenta el plan de acción recomendado, y explica por qué esta respuesta es la más adecuada dadas las circunstancias.
+
+## Ejemplo práctico:
+
+**S - Situación**: Nuestra plataforma digital ha experimentado un crecimiento constante del 15% anual durante los últimos tres años, con una base actual de 250,000 usuarios activos mensuales. El nivel de satisfacción del cliente ha sido consistentemente alto, con un NPS de 45.
+
+**C - Complicación**: En los últimos cuatro meses, hemos observado un incremento del 200% en los tiempos de carga de la aplicación durante horas pico, lo que ha provocado un aumento del 35% en la tasa de abandono y una caída del 28% en el NPS. Los análisis preliminares sugieren que nuestra arquitectura actual no está escalando adecuadamente con el crecimiento de usuarios.
+
+**Q - Pregunta**: ¿Cómo podemos rediseñar nuestra infraestructura tecnológica para restaurar los tiempos de respuesta óptimos y recuperar los niveles de satisfacción del cliente, sin interrumpir el servicio durante la transición?
+
+**A - Respuesta**: Debemos implementar una estrategia de migración progresiva a una arquitectura de microservicios en la nube con balanceo de carga dinámico. El plan se ejecutará en tres fases durante los próximos 4 meses:
+1. Fase 1 (Mes 1): Despliegue de componentes no críticos con patrón estrangulador
+2. Fase 2 (Meses 2-3): Migración gradual de módulos principales con pruebas A/B
+3. Fase 3 (Mes 4): Transición completa con optimización de caché y CDN global
+
+Este enfoque nos permitirá mejorar los tiempos de carga en un 70% y restaurar el NPS a niveles previos, manteniendo una disponibilidad del 99.9% durante todo el proceso.
+
+## Aplicaciones:
+
+- **Comunicación ejecutiva**: Presentaciones a directivos o stakeholders
+- **Propuestas de proyectos**: Estructuración clara del problema y solución
+- **Documentos técnicos**: Explicación de cambios o mejoras complejas
+- **Comunicación de cambios**: Anuncios de nuevas iniciativas o transformaciones
+- **Reportes de análisis**: Presentación estructurada de hallazgos y recomendaciones
+
+SCQA es particularmente efectivo cuando necesitas establecer un caso sólido para un cambio, inversión o nueva iniciativa. Su estructura lógica facilita la comprensión y aceptación de tus propuestas. 

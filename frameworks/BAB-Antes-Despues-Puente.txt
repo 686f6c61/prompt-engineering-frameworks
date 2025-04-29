@@ -1,19 +1,26 @@
 # Framework BAB (Antes-Después-Puente)
 
-## Componentes
-- **B - Antes (Before)**: Describe la situación actual o el estado inicial
-- **A - Después (After)**: Presenta el estado deseado o la visión futura
-- **B - Puente (Bridge)**: Detalla el plan o estrategia para pasar del antes al después
+## Componentes del framework
 
-## Descripción y propósito
-El framework BAB es una poderosa herramienta para comunicar y planificar cambios y transformaciones. Permite contrastar claramente la situación actual con la visión futura, y lo más importante, proporciona un camino claro para llegar de un punto a otro. Es especialmente útil para proyectos de transformación, mejora continua o cuando se necesita justificar inversiones o cambios significativos.
+### Antes
+Este componente describe la situación actual o el estado inicial. Permite establecer claramente cuál es el punto de partida, la realidad presente o la condición existente que se desea transformar. Proporciona contexto y una referencia con la que contrastar los cambios propuestos.
 
-## Ejemplo de uso
-```
-Antes: Sistema de monolito PHP
-Después: Arquitectura de microservicios
-Puente: Plan de migración gradual 6 meses
-```
+### Después
+Presenta el estado deseado o la visión futura. Este componente define con claridad el objetivo a alcanzar, cómo se verá el éxito o cuál es la transformación que se busca lograr. Permite visualizar el destino y los beneficios que se obtendrán.
+
+### Puente
+Detalla el plan o estrategia para pasar del antes al después. Este componente es crucial pues establece el camino concreto, los pasos necesarios, recursos requeridos y la metodología para lograr la transformación deseada.
+
+## Uso del framework
+El framework BAB es ideal para comunicar y planificar cambios y transformaciones de manera clara. Su estructura permite contrastar el estado actual con la visión futura, y lo más importante, proporciona un camino claro para llegar de un punto a otro.
+
+## Ejemplo de aplicación
+
+**Antes:** Sistema monolítico en PHP que presenta problemas de escalabilidad y mantenimiento.
+
+**Después:** Arquitectura de microservicios en la nube con mayor capacidad de escala y facilidad de mantenimiento.
+
+**Puente:** Plan de migración gradual durante 6 meses, comenzando por los componentes menos críticos, implementando patrones de estrangulamiento y asegurando la operación continua durante la transición.
 
 ## Casos recomendados
 - Presentaciones de proyectos de transformación digital
@@ -24,7 +31,7 @@ Puente: Plan de migración gradual 6 meses
 - Documentación de estrategias de evolución de productos
 - Propuestas de valor para clientes o inversores
 
-## Ventajas
+## Ventajas del framework
 - Presenta una narrativa clara del cambio
 - Facilita la comprensión de la necesidad de transformación
 - Proporciona contexto completo: de dónde venimos, a dónde vamos y cómo llegaremos

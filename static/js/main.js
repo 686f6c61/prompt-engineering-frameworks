@@ -1,6 +1,7 @@
 // Global variables
 let selectedFrameworks = [];
 let tokenCount = 0;
+let maxTokensDisplay = 4000; // Valor predeterminado de tokens máximos para modelo gpt-4o-mini
 
 // Field translations
 const fieldTranslations = {
@@ -117,7 +118,6 @@ const fieldTranslations = {
     research: 'Investigación',
     monitoring: 'Monitoreo',
     analysis: 'Análisis',
-    analyze: 'Analizar',
     progress: 'Progreso',
     baseline: 'Línea Base',
     base: 'Base',
@@ -196,7 +196,38 @@ const fieldTranslations = {
     confidence: 'Confidence',
     effort: 'Effort',
     ease: 'Ease',
-    supportive: 'Supportive'
+    supportive: 'Supportive',
+    // Nuevas traducciones
+    complication: 'Complicación',
+    strengths: 'Fortalezas',
+    opportunities: 'Oportunidades',
+    aspirations: 'Aspiraciones',
+    results: 'Resultados',
+    framing: 'Encuadre',
+    task: 'Tarea',
+    action: 'Acción',
+    result: 'Resultado',
+    problem: 'Problema',
+    analysis: 'Análisis',
+    conclusion: 'Conclusión',
+    execution: 'Ejecución',
+    features: 'Características',
+    advantages: 'Ventajas',
+    benefits: 'Beneficios',
+    outcome: 'Resultado',
+    reflection: 'Reflexión',
+    recommendation: 'Recomendación',
+    goal: 'Meta',
+    expectation: 'Expectativa',
+    approach: 'Enfoque',
+    background: 'Antecedentes',
+    requirement: 'Requisito',
+    insight: 'Insight',
+    decision: 'Decisión',
+    guidance: 'Guía',
+    challenge: 'Desafío',
+    location: 'Ubicación',
+    exposure: 'Exposición'
 };
 
 // Framework definitions
@@ -263,8 +294,23 @@ const frameworks = {
     '4p': ['product', 'price', 'place', 'promotion'],
     'rice': ['reach', 'impact', 'confidence', 'effort'],
     'ice': ['impact', 'confidence', 'ease'],
-    'rasci': ['responsable', 'accountable', 'supportive', 'consulted', 'informed']
+    'rasci': ['responsable', 'accountable', 'supportive', 'consulted', 'informed'],
+    'scqa': ['situation', 'complication', 'question', 'answer'],
+    'soar': ['strengths', 'opportunities', 'aspirations', 'results'],
+    'cft': ['context', 'framing', 'task'],
+    'tar': ['task', 'action', 'result'],
+    'pace2': ['problem', 'analysis', 'conclusion', 'execution'],
+    'fab': ['features', 'advantages', 'benefits'],
+    'aor': ['action', 'outcome', 'reflection'],
+    'spqa': ['situation', 'problem', 'question', 'answer'],
+    'sara': ['situation', 'analysis', 'recommendation', 'action'],
+    'gear': ['goal', 'expectation', 'approach', 'result'],
+    'bridge': ['background', 'requirement', 'insight', 'decision', 'guidance', 'execution'],
+    'clear': ['challenge', 'location', 'exposure', 'action', 'result']
 };
+
+// Movido después de la definición de frameworks
+let totalFrameworks = Object.keys(frameworks).length; // Número total de frameworks disponibles
 
 // Placeholders for each framework
 const frameworkPlaceholders = {
@@ -674,11 +720,82 @@ const frameworkPlaceholders = {
         ease: "Ej: 6/10 - Implementación moderadamente compleja"
     },
     'rasci': {
-        responsable: "Ej: Equipo de desarrollo",
-        accountable: "Ej: Arquitecto de soluciones",
-        supportive: "Ej: Equipo de operaciones y SRE",
-        consulted: "Ej: Equipo de seguridad y equipo de UX",
-        informed: "Ej: Directores de producto y stakeholders"
+        responsable: 'Quién es responsable de ejecutar la tarea',
+        accountable: 'Quién rinde cuentas por el éxito/fracaso',
+        supportive: 'Quién brinda recursos o apoyo',
+        consulted: 'Quién debe ser consultado antes de tomar decisiones',
+        informed: 'Quién debe ser informado después de tomar decisiones'
+    },
+    'scqa': {
+        situation: 'La situación actual',
+        complication: 'El problema o complicación que ha surgido',
+        question: 'La pregunta clave que debemos responder',
+        answer: 'La respuesta o solución propuesta'
+    },
+    'soar': {
+        strengths: 'Fortalezas actuales',
+        opportunities: 'Oportunidades disponibles',
+        aspirations: 'Aspiraciones y metas deseadas',
+        results: 'Resultados medibles que se buscan'
+    },
+    'cft': {
+        context: 'El contexto o antecedentes de la situación',
+        framing: 'El encuadre o perspectiva a considerar',
+        task: 'La tarea específica a realizar'
+    },
+    'tar': {
+        task: 'La tarea o responsabilidad asignada',
+        action: 'Las acciones específicas que se tomaron',
+        result: 'El resultado o impacto de las acciones'
+    },
+    'pace2': {
+        problem: 'El problema que debe abordarse',
+        analysis: 'Análisis detallado del problema',
+        conclusion: 'Conclusiones derivadas del análisis',
+        execution: 'Plan de ejecución para implementar la solución'
+    },
+    'fab': {
+        features: 'Características o elementos técnicos',
+        advantages: 'Ventajas comparativas',
+        benefits: 'Beneficios para el usuario o cliente'
+    },
+    'aor': {
+        action: 'Acción que fue tomada',
+        outcome: 'Resultado obtenido',
+        reflection: 'Reflexión sobre lo aprendido'
+    },
+    'spqa': {
+        situation: 'La situación o contexto actual',
+        problem: 'El problema específico a resolver',
+        question: 'La pregunta central que debe responderse',
+        answer: 'La respuesta o solución propuesta'
+    },
+    'sara': {
+        situation: 'La situación o contexto actual',
+        analysis: 'Análisis de la situación',
+        recommendation: 'Recomendación basada en el análisis',
+        action: 'Acciones específicas a tomar'
+    },
+    'gear': {
+        goal: 'El objetivo principal a lograr',
+        expectation: 'Las expectativas específicas',
+        approach: 'El enfoque o método a utilizar',
+        result: 'El resultado esperado'
+    },
+    'bridge': {
+        background: 'Antecedentes o contexto de la situación',
+        requirement: 'Requisitos o necesidades a satisfacer',
+        insight: 'Insights o descubrimientos clave',
+        decision: 'Decisión tomada basada en los insights',
+        guidance: 'Orientación o directrices para la implementación',
+        execution: 'Plan de ejecución'
+    },
+    'clear': {
+        challenge: 'El desafío o problema a abordar',
+        location: 'Dónde se encuentra o se manifiesta el desafío',
+        exposure: 'Quién está expuesto al desafío y cómo',
+        action: 'Acciones para abordar el desafío',
+        result: 'Resultados esperados después de la acción'
     }
 };
 
@@ -1006,11 +1123,17 @@ function searchFramework() {
     });
 }
 
+// Reemplazar la función showFrameworkExample completa con esta versión corregida
 function showFrameworkExample(framework) {
     const exampleModal = document.getElementById('exampleModal');
     const modalTitle = document.getElementById('exampleModalLabel');
     const exampleContent = document.getElementById('framework-example');
     const btn = document.querySelector(`.view-example-btn[data-framework="${framework}"]`);
+    
+    if (!btn) {
+        console.error(`Botón no encontrado para framework: ${framework}`);
+        return;
+    }
     
     btn.classList.add('btn-loading');
     btn.disabled = true;
@@ -1051,7 +1174,6 @@ function showFrameworkExample(framework) {
         'spark': 'SPARK-Estrategia-Planificacion-Accion-Resultados-Conocimiento',
         'pulse': 'PULSE-Proposito-Entendimiento-Aprendizaje-Estrategia-Evaluacion',
         'fast': 'FAST-Enfoque-Audiencia-Alcance-Tono',
-        'tag': 'TAG-Tarea-Accion-Meta',
         'bab': 'BAB-Antes-Despues-Puente',
         'peas': 'PEAS-Proposito-Resultado-Audiencia-Estilo',
         'star': 'STAR-Situacion-Tarea-Accion-Resultado',
@@ -1079,11 +1201,45 @@ function showFrameworkExample(framework) {
         '4p': '4P-Product-Price-Place-Promotion',
         'rice': 'RICE-Reach-Impact-Confidence-Effort',
         'ice': 'ICE-Impact-Confidence-Ease',
-        'rasci': 'RASCI-Responsible-Accountable-Supportive-Consulted-Informed'
+        'rasci': 'RASCI-Responsible-Accountable-Supportive-Consulted-Informed',
+        'scqa': 'SCQA-Situacion-Complicacion-Pregunta-Respuesta',
+        'soar': 'SOAR-Fortalezas-Oportunidades-Aspiraciones-Resultados',
+        'cft': 'CFT-Contexto-Foco-Transformacion',
+        'tar': 'TAR-Disparador-Accion-Resultado',
+        'pace2': 'PACE2-ObjetivoPrincipal-Alternativas-Consecuencias-Entorno',
+        'fab': 'FAB-Caracteristicas-Ventajas-Beneficios',
+        'aor': 'AOR-Accion-Resultado-Reflexion',
+        'spqa': 'SPQA-Situacion-Problema-Pregunta-Respuesta',
+        'sara': 'SARA-Shock-Enojo-Resistencia-Aceptacion',
+        'gear': 'GEAR-Meta-Ejecutar-Evaluar-Reflexionar',
+        'bridge': 'BRIDGE-Antecedentes-Razon-Informacion-Decision-Meta-Evaluacion',
+        'clear': 'CLEAR-Conectar-Escuchar-Explorar-Accion-Reflexionar',
+        'epic': 'EPIC-Expectativa-Plan-Implementacion-Completacion',
+        'glide': 'GLIDE-Meta-Limitaciones-Implementacion-Desarrollo-Evaluacion',
+        'grit': 'GRIT-Meta-Recursos-Impedimentos-Tiempo',
+        'pivot': 'PIVOT-Problema-Investigacion-Verificacion-Oportunidad-Transformacion',
+        'agile': 'AGILE-Adaptable-Orientado-Iterativo-Ligero-Eficiente',
+        'bolt': 'BOLT-Negocio-Operaciones-Legal-Tecnico',
+        'faster': 'FASTER-Enfoque-Analisis-Solucion-Prueba-Evaluacion-Refinamiento',
+        'flow': 'FLOW-Enfoque-Limites-Resultados-Trabajo',
+        'lift': 'LIFT-Aprendizaje-Implementacion-Retroalimentacion-Transformacion',
+        'pace': 'PACE-Proposito-Audiencia-Contenido-Expresion',
+        'paths': 'PATHS-Problema-Alternativas-Compensaciones-Hipotesis-Solucion',
+        'seed': 'SEED-Situacion-Expectativa-Ejecucion-Entrega',
+        'shift': 'SHIFT-Situacion-Obstaculos-Innovacion-Marco-Transicion',
+        'smarter': 'SMARTER-Especifico-Medible-Alcanzable-Relevante-Temporal-Evaluar-Reevaluar',
+        'value': 'VALUE-Vision-Aproximacion-Aprovechamiento-Comprension-Ejecucion',
+        'create': 'CREATE-Contexto-Requisitos-Ejemplos-Alternativas-Pruebas-Evaluacion',
+        'tag': 'TAG-Tarea-Accion-Meta'
     };
 
     // Obtener el nombre completo del archivo
-    const frameworkFileName = frameworkMap[framework.toLowerCase()];
+    let frameworkFileName = frameworkMap[framework.toLowerCase()];
+    
+    // Si no se encuentra el framework en el mapa, usar directamente el nombre en mayúsculas
+    if (!frameworkFileName) {
+        frameworkFileName = framework.toUpperCase();
+    }
     
     exampleContent.innerHTML = `
         <div class="d-flex justify-content-center">
@@ -1094,11 +1250,19 @@ function showFrameworkExample(framework) {
         <p class="text-center">Cargando información del framework...</p>
     `;
 
-    // Cargar directamente el archivo txt
-    fetch(`/frameworks/${frameworkFileName}.txt`)
+    // Actualizar el título del modal
+    modalTitle.textContent = framework.toUpperCase();
+    
+    // Mostrar el modal
+    new bootstrap.Modal(exampleModal).show();
+
+    console.log(`Intentando cargar: /static/frameworks/prompt-frameworks/${frameworkFileName}.txt`);
+    
+    // Cargar directamente el archivo txt desde la carpeta estática
+    fetch(`/static/frameworks/prompt-frameworks/${frameworkFileName}.txt`)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Error al cargar el framework: ${response.statusText}`);
+                throw new Error(`Error al cargar el framework: ${response.status} ${response.statusText}`);
             }
             return response.text();
         })
@@ -1108,24 +1272,38 @@ function showFrameworkExample(framework) {
             
             // Formatear el contenido y mostrarlo
             exampleContent.innerHTML = marked.parse(text);
-            
-            // Actualizar el título del modal
-            modalTitle.textContent = framework.toUpperCase();
-            
-            // Mostrar el modal
-            new bootstrap.Modal(exampleModal).show();
+            console.log(`Framework cargado exitosamente: ${frameworkFileName}`);
         })
         .catch(error => {
             console.error('Error:', error);
+            console.error('Framework solicitado:', frameworkFileName);
+            
+            // Intentar con otra ruta alternativa
+            console.log(`Intentando ruta alternativa: frameworks/prompt-frameworks/${frameworkFileName}.txt`);
+            
+            fetch(`frameworks/prompt-frameworks/${frameworkFileName}.txt`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error en ruta alternativa: ${response.status} ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    exampleContent.setAttribute('data-raw-example', text);
+                    exampleContent.innerHTML = marked.parse(text);
+                    console.log(`Framework cargado exitosamente con ruta alternativa: ${frameworkFileName}`);
+                })
+                .catch(secondError => {
+                    console.error('Error en ruta alternativa:', secondError);
             exampleContent.innerHTML = `
                 <div class="alert alert-danger" role="alert">
                     <i class="bi bi-exclamation-triangle-fill me-2"></i>
                     Error al cargar la información del framework. Por favor, inténtalo de nuevo.
                 </div>
+                        <p class="text-center">Framework solicitado: ${frameworkFileName || framework}.txt</p>
+                        <p class="text-center text-muted">Detalles del error: ${error.message}</p>
             `;
-            
-            // Mostrar el modal incluso si hay un error
-            new bootstrap.Modal(exampleModal).show();
+                });
         })
         .finally(() => {
             btn.classList.remove('btn-loading');
@@ -1342,6 +1520,11 @@ function updateUsageInfo() {
 // Manejar información de uso en respuestas
 function updateUsageInfoFromResponse(data) {
     if (data && data.usage) {
+        // Actualizar el máximo de tokens si el modelo lo proporciona
+        if (data.usage.max_tokens) {
+            updateMaxTokensDisplay(data.usage.max_tokens);
+        }
+        
         updateUsageDisplay({
             remaining: data.usage.remaining,
             reset_time: data.usage.reset_time,
@@ -1400,9 +1583,9 @@ function updateUsageDisplay(data) {
             icon = 'bi-lightning';
             message = `Usos disponibles de Familia OpenAI 4o: ${data.remaining}/${maxLimit} para esta hora.`;
         }
-        
+            
         let promoHTML = '';
-        if (hasPromo) {
+            if (hasPromo) {
             promoHTML = `
                 <div class="text-center mt-2">
                     <div class="d-inline-block bg-success text-white px-4 py-2 rounded">
@@ -1435,6 +1618,15 @@ function updateUsageCounter() {
     checkUsageLimit();
 }
 
+// Función para actualizar el máximo de tokens mostrado en la interfaz
+function updateMaxTokensDisplay(max = 4000) {
+    const maxTokensElement = document.getElementById('max-tokens');
+    if (maxTokensElement) {
+        maxTokensElement.textContent = max;
+        maxTokensDisplay = max;
+    }
+}
+
 // DOM Content Loaded Event Handler
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize tooltips
@@ -1442,6 +1634,15 @@ document.addEventListener('DOMContentLoaded', function() {
     tooltipTriggerList.forEach(tooltipTriggerEl => {
         new bootstrap.Tooltip(tooltipTriggerEl);
     });
+    
+    // Actualizar dinámicamente el número de frameworks
+    const frameworkCountElements = document.querySelectorAll('.framework-count');
+    if (frameworkCountElements.length > 0) {
+        const totalFrameworks = Object.keys(frameworks).length;
+        frameworkCountElements.forEach(el => {
+            el.textContent = totalFrameworks;
+        });
+    }
     
     // Get DOM elements
     const searchBtn = document.getElementById('search-btn');
@@ -1518,4 +1719,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cargar información de uso
     checkUsageLimit();
+
+    // Inicializar el contador de tokens máximos
+    updateMaxTokensDisplay();
 });

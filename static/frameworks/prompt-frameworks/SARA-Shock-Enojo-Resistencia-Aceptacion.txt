@@ -1,0 +1,79 @@
+# S-A-R-A Framework
+## Shock - Anger - Resistance - Acceptance
+
+SARA es un framework para comprender y gestionar las respuestas emocionales durante procesos de cambio, inspirado en el modelo de las etapas del duelo. Ayuda a anticipar, reconocer y navegar las reacciones humanas naturales ante transformaciones significativas, facilitando una transición más efectiva hacia la aceptación y adaptación.
+
+## Componentes del framework:
+
+### S - Shock (Shock)
+La fase inicial de sorpresa, confusión o incredulidad ante el anuncio de un cambio. En esta etapa, las personas pueden sentirse desorientadas, paralizadas o incapaces de procesar completamente la información. Este componente se caracteriza por respuestas como negación, minimización o incluso ignorar el cambio anunciado.
+
+### A - Anger (Enojo)
+La fase emocional reactiva donde surgen sentimientos de frustración, indignación o resentimiento. Durante esta etapa, las personas pueden expresar descontento, buscar culpables o cuestionar la necesidad o justicia del cambio. Las manifestaciones pueden variar desde críticas abiertas hasta resistencia pasiva.
+
+### R - Resistance (Resistencia)
+La fase de oposición activa o pasiva al cambio. En esta etapa, las personas intentan mantener el statu quo, encuentran razones para demorar o sabotear la implementación, o desarrollan argumentos contra el cambio. Esta resistencia puede ser individual o colectiva, explícita o encubierta.
+
+### A - Acceptance (Aceptación)
+La fase final de asimilación y adaptación donde las personas reconocen la inevitabilidad o los beneficios del cambio. Durante esta etapa, se desarrolla un nuevo equilibrio, se incorporan nuevos comportamientos y mentalidades, y se comienza a trabajar constructivamente dentro del nuevo paradigma.
+
+## Ejemplo práctico:
+
+**Contexto: Migración de un sistema heredado a una nueva plataforma tecnológica**
+
+**S - Shock**:
+Tras el anuncio de la migración del sistema ERP utilizado durante 8 años a una nueva plataforma basada en la nube, los equipos mostraron signos claros de shock. Muchos empleados simplemente continuaron con sus rutinas habituales, ignorando los correos sobre las próximas sesiones de capacitación. Otros reaccionaron con escepticismo: "Ya hemos oído esto antes, probablemente se cancele como el proyecto del año pasado". Los gerentes de departamento solicitaron repetidamente "más información" antes de comprometerse con cualquier plan de transición, mientras mantenían la creencia de que podrían seguir operando con el sistema actual "un par de años más".
+
+**A - Enojo**:
+Después de las primeras sesiones de demostración, emergieron reacciones de enojo y frustración. Los usuarios experimentados se quejaron: "Tardé años en dominar el sistema actual, y ahora quieren que empiece de cero". Los equipos comenzaron a enumerar todas las características que les gustaban del sistema actual y que "obviamente faltaban" en la nueva plataforma. Se produjeron críticas sobre el calendario "irrazonable" de implementación, con comentarios como: "Es evidente que quien planeó esto nunca ha usado el sistema en un día normal de trabajo". Algunos departamentos empezaron a documentar exhaustivamente problemas menores en la nueva interfaz y circularon estos informes ampliamente.
+
+**R - Resistencia**:
+A medida que avanzaba el proyecto, emergieron patrones de resistencia. Varios equipos comenzaron a solicitar extensiones o excepciones: "Nuestro departamento tiene necesidades únicas que esta solución genérica no puede satisfacer". Los usuarios encontraron formas creativas de continuar utilizando el sistema antiguo, como mantener hojas de cálculo paralelas o posponer la entrada de datos en el nuevo sistema. La asistencia a las sesiones de capacitación comenzó a disminuir, con justificaciones como "carga de trabajo prioritaria". Algunos grupos desarrollaron elaboradas propuestas para sistemas alternativos o para personalizar extensivamente la nueva plataforma, efectivamente retrasando la adopción completa.
+
+**A - Aceptación**:
+Aproximadamente cuatro meses después del inicio de la implementación, comenzaron a surgir signos de aceptación. Los primeros adoptantes empezaron a compartir consejos y atajos con sus colegas. Se formaron comunidades de práctica informales donde los usuarios intercambiaban soluciones a problemas comunes. Los departamentos comenzaron a proponer mejoras constructivas en lugar de simplemente criticar. Un punto de inflexión ocurrió cuando uno de los críticos más vocales descubrió y compartió una funcionalidad que simplificaba significativamente un proceso mensual que solía tomar tres días. Los indicadores de uso mostraron un aumento constante, y el lenguaje en las reuniones cambió de "el sistema anterior" y "el nuevo sistema" a simplemente "nuestro sistema".
+
+## Estrategias para cada fase:
+
+**Para la fase de Shock:**
+- Comunicar con anticipación y transparencia
+- Proporcionar contextualización clara de la necesidad del cambio
+- Permitir tiempo para procesar la información
+- Crear espacios seguros para preguntas y clarificaciones
+- Reconocer abiertamente el impacto potencial
+
+**Para la fase de Enojo:**
+- Escuchar activamente sin actitud defensiva
+- Validar las preocupaciones y emociones expresadas
+- Separar las críticas constructivas de las reacciones emocionales
+- Evitar confrontaciones públicas o debates polarizantes
+- Ofrecer canales estructurados para recibir feedback
+
+**Para la fase de Resistencia:**
+- Identificar y abordar preocupaciones legítimas
+- Involucrar a los resistentes en la búsqueda de soluciones
+- Demostrar pequeñas victorias y beneficios tangibles
+- Crear incentivos para la adopción temprana
+- Establecer fechas límite claras con consecuencias comprensibles
+
+**Para la fase de Aceptación:**
+- Celebrar y visibilizar ejemplos de adopción exitosa
+- Reconocer públicamente a los impulsores del cambio
+- Institucionalizar las nuevas prácticas en procesos formales
+- Recopilar y compartir casos de éxito y lecciones aprendidas
+- Iniciar la planificación para mejoras continuas y evolución
+
+## Aplicaciones:
+
+- **Transformación digital**: Gestión del cambio tecnológico en organizaciones
+- **Reorganizaciones estructurales**: Fusiones, adquisiciones y reestructuraciones
+- **Implementación de políticas**: Introducción de nuevas normas o regulaciones
+- **Cambios culturales**: Transformación de valores organizacionales o prácticas establecidas
+- **Migraciones de productos**: Transición de clientes a nuevas versiones o plataformas
+
+SARA es especialmente valioso para líderes y equipos que:
+1. Implementan cambios significativos que afectan hábitos y rutinas establecidas
+2. Necesitan anticipar y gestionar respuestas emocionales de forma proactiva
+3. Buscan reducir la resistencia y acelerar la adopción de nuevas iniciativas
+4. Desean crear entornos psicológicamente seguros durante transiciones
+5. Quieren desarrollar una cultura organizacional adaptativa y resiliente frente al cambio 

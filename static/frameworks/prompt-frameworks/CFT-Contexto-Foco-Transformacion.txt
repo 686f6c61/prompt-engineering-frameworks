@@ -1,0 +1,42 @@
+# C-F-T Framework
+## Contexto - Foco - Transformación
+
+CFT es un framework conciso pero potente para gestionar procesos de cambio y transformación organizacional o técnica. Su estructura simple pero profunda permite establecer una base sólida para cualquier iniciativa transformadora mediante la comprensión integral del contexto, la definición precisa del foco de cambio y la articulación del proceso transformativo.
+
+## Componentes del framework:
+
+### C - Contexto
+Establece el panorama completo y los antecedentes relevantes. Describe la situación actual, el entorno, la historia, las condiciones existentes y todos los factores que influyen en la necesidad de cambio. Este componente responde a la pregunta "¿Dónde estamos y cómo llegamos aquí?".
+
+### F - Foco
+Define con precisión el área específica, proceso, tecnología o aspecto organizacional que se transformará. Determina los límites y alcance del cambio, identificando claramente qué cambiará y qué permanecerá igual. Este componente responde a "¿Qué exactamente vamos a transformar?".
+
+### T - Transformación
+Articula el proceso de cambio deseado, describiendo el estado futuro objetivo, la metodología para la transición, y cómo se gestionará el proceso de cambio. Incluye tanto el resultado final como el camino para llegar a él. Este componente responde a "¿Cómo se realizará el cambio y cuál será el resultado final?".
+
+## Ejemplo práctico:
+
+**C - Contexto**:
+Nuestra plataforma de comercio electrónico lleva operando 6 años con una arquitectura monolítica basada en PHP/MySQL que ha crecido orgánicamente. Inicialmente diseñada para 1,000 transacciones diarias, ahora procesa más de 50,000, lo que ha resultado en tiempos de respuesta que han aumentado de 300ms a 3 segundos en el último año. Experimentamos caídas recurrentes durante eventos promocionales, y los nuevos desarrollos tardan un promedio de 6 semanas en llegar a producción debido a la complejidad del código existente y las interdependencias. Nuestro equipo de desarrollo ha crecido de 3 a 25 personas, y la coordinación se ha vuelto un desafío significativo.
+
+**F - Foco**:
+La transformación se centrará exclusivamente en la capa de backend, específicamente en la arquitectura del sistema de procesamiento de órdenes y gestión de inventario. No modificaremos la interfaz de usuario, los sistemas de pago, ni los procesos operativos de cumplimiento de pedidos en esta fase. El cambio afectará principalmente a tres equipos de desarrollo (15 personas) y requerirá modificaciones en aproximadamente el 40% de la base de código actual.
+
+**T - Transformación**:
+Implementaremos una migración gradual hacia una arquitectura de microservicios utilizando el patrón estrangulador (strangler pattern). El proceso se ejecutará en tres fases durante los próximos 6 meses:
+
+1. Fase 1 (Meses 1-2): Análisis del dominio y definición de límites de contexto, estableciendo los microservicios que reemplazarán el monolito.
+2. Fase 2 (Meses 2-4): Desarrollo e implementación paralela de microservicios prioritarios (inventario y procesamiento de órdenes), con pruebas exhaustivas.
+3. Fase 3 (Meses 5-6): Transición gradual del tráfico hacia los nuevos microservicios y desmantelamiento progresivo de las partes correspondientes del monolito.
+
+La arquitectura resultante deberá soportar 200,000 transacciones diarias con tiempos de respuesta inferiores a 500ms, permitir despliegues independientes para cada microservicio, y reducir el tiempo de entrega de nuevas funcionalidades a 1-2 semanas.
+
+## Aplicaciones:
+
+- **Transformación digital**: Modernización de sistemas y procesos
+- **Reingeniería de arquitectura técnica**: Migración entre paradigmas tecnológicos
+- **Cambio organizacional**: Reestructuración de equipos o departamentos
+- **Optimización de procesos**: Mejora de flujos de trabajo existentes
+- **Gestión de transiciones**: Cambios de plataforma o tecnología
+
+CFT es particularmente efectivo cuando se necesita una comunicación clara y estructurada sobre iniciativas de cambio, especialmente en entornos donde múltiples stakeholders necesitan comprender tanto el panorama general como los detalles específicos del proceso de transformación. 
