@@ -4,7 +4,7 @@
 <div class="container">
     <!-- Header principal -->
     <div class="text-center my-5">
-        <h1 class="display-4 mb-3">Prompt Engineering con +63 Frameworks</h1>
+        <h1 class="display-4 mb-3">Prompt Engineering con +75 Frameworks</h1>
         <p class="lead text-muted">Selecciona el framework más adecuado para crear prompts efectivos y profesionales.</p>
         
         <!-- Indicador del modelo actual -->
@@ -106,7 +106,7 @@
         }
     </style>
 
-    <h2 class="text-center mb-4">Elige entre los +63 framework para desarrollar tu prompting</h2>
+    <h2 class="text-center mb-4">Elige entre los +75 framework para desarrollar tu prompting</h2>
     <p class="text-center text-muted mb-4">Haz clic en el framework que quieres usar. Podrás ver ejemplos en cada uno de ellos.</p>
     
     <!-- Organización por categorías -->
@@ -359,41 +359,169 @@
 
     <!-- Categoría 8: Frameworks especializados -->
     <div class="category-section mb-5">
-        <h3 class="mb-3"><i class="bi bi-gear-wide-connected me-2 text-dark"></i>Frameworks especializados</h3>
-        <p class="text-muted mb-3">Frameworks adicionales para casos de uso específicos y soluciones a medida</p>
+        <h3 class="mb-3"><i class="bi bi-gear-wide-connected me-2 text-dark"></i>Frameworks para desarrollo de productos</h3>
+        <p class="text-muted mb-3">Para diseñar y desarrollar soluciones técnicas con enfoque estructurado</p>
         <div class="row">
             {% set frameworks_cat8 = [
-                ('erq', 'E-R-Q', 'Sistema para definir perfiles profesionales que detalla experiencia necesaria, requisitos técnicos específicos y cualificaciones adicionales valoradas.', 'Para definir roles y requisitos'),
-                ('pros', 'P-R-O-S', 'Metodología que establece la perspectiva del proyecto, requisitos fundamentales, resultados esperados y alcance definido de implementación.', 'Para definición y alcance'),
-                ('team', 'T-E-A-M', 'Estructura para trabajo colaborativo que clarifica la tarea común, entorno de trabajo, aproximación metodológica y métricas de evaluación.', 'Para proyectos colaborativos'),
-                ('idea', 'I-D-E-A', 'Proceso de mejora que comienza identificando oportunidades, define soluciones específicas, ejecuta cambios planificados y evalúa resultados obtenidos.', 'Para procesos de mejora'),
-                ('fast', 'F-A-S-T', 'Estrategia comunicativa que adapta el enfoque del mensaje, perfil de audiencia, alcance de contenido y tono de comunicación según objetivos.', 'Para estrategias de comunicación'),
-                ('logic', 'L-O-G-I-C', 'Framework de desarrollo estructurado que enlaza diseño conceptual con objetivos, directrices implementables, criterios de éxito y plan de ejecución.', 'Para desarrollo estructurado'),
-                ('expert', 'E-X-P-E-R-T', 'Metodología para documentación técnica que combina experiencia especializada, contextualización del problema y plan detallado de implementación y pruebas.', 'Para documentación técnica'),
+                ('craft', 'C-R-A-F-T', 'Enfoque para soluciones a medida que integra el contexto específico, requisitos del cliente, aproximación metodológica y plan de pruebas personalizado.', 'Para soluciones a medida'),
                 ('guide', 'G-U-I-D-E', 'Sistema de desarrollo orientado al usuario que define metas del producto, perfil de usuarios, plan de implementación y criterios de evaluación.', 'Para desarrollo de productos'),
                 ('prime', 'P-R-I-M-E', 'Proceso de I+D que parte de la identificación del problema, investigación extensiva, implementación controlada, monitoreo continuo y evaluación rigurosa.', 'Para investigación y desarrollo'),
-                ('craft', 'C-R-A-F-T', 'Enfoque para soluciones a medida que integra el contexto específico, requisitos del cliente, aproximación metodológica y plan de pruebas personalizado.', 'Para soluciones a medida'),
-                ('scale', 'S-C-A-L-E', 'Metodología de crecimiento que equilibra estrategia, desarrollo de capacidades, implementación de acciones, aprendizaje continuo y evolución adaptativa.', 'Para escalamiento de proyectos'),
-                ('drive', 'D-R-I-V-E', 'Sistema para gestionar proyectos innovadores estableciendo dirección clara, asignando recursos, implementando soluciones, validando resultados y planificando evolución.', 'Para proyectos innovadores'),
-                ('shape', 'S-H-A-P-E', 'Proceso de transformación que analiza la situación actual, proporciona contexto histórico y desarrolla plan analítico para implementar cambios organizacionales.', 'Para transformación organizacional'),
+                ('logic', 'L-O-G-I-C', 'Framework de desarrollo estructurado que enlaza diseño conceptual con objetivos, directrices implementables, criterios de éxito y plan de ejecución.', 'Para desarrollo estructurado'),
                 ('reach', 'R-E-A-C-H', 'Framework end-to-end que define requisitos iniciales, evalúa opciones, implementa aproximaciones óptimas y gestiona completitud y entrega final.', 'Para gestión end-to-end'),
-                ('blend', 'B-L-E-N-D', 'Metodología mixta que establece una base sólida, fomenta aprendizaje continuo, adaptación evolutiva y procesos de navegación y entrega eficientes.', 'Para metodologías mixtas'),
-                ('spark', 'S-P-A-R-K', 'Sistema para innovación que integra estrategia, planificación detallada, implementación de acciones, evaluación de resultados y gestión del conocimiento.', 'Para iniciativas de innovación'),
-                ('pulse', 'P-U-L-S-E', 'Metodología de mejora continua que define propósito, facilita comprensión contextual, promueve aprendizaje iterativo y estrategias de evaluación.', 'Para mejora continua'),
-                ('qcqa', 'Q-C-Q-A', 'Estructura para consultas efectivas que articula la pregunta específica, proporciona contexto relevante, establece cualificaciones del respondiente y formato de respuesta deseado.', 'Para consultas estructuradas'),
-                ('bab', 'B-A-B', 'Técnica narrativa para escenarios de transformación que contrasta situación anterior, estado posterior deseado y establece puente estratégico entre ambos.', 'Para mostrar cambios y mejoras'),
-                ('rise', 'R-I-S-E', 'Sistema para procesos paso a paso que define el rol responsable, entradas necesarias, secuencia detallada de pasos y expectativas de resultados.', 'Para procesos paso a paso')
+                ('expert', 'E-X-P-E-R-T', 'Metodología para documentación técnica que combina experiencia especializada, contextualización del problema y plan detallado de implementación y pruebas.', 'Para documentación técnica'),
+                ('drive', 'D-R-I-V-E', 'Sistema para gestionar proyectos innovadores estableciendo dirección clara, asignando recursos, implementando soluciones, validando resultados y planificando evolución.', 'Para proyectos innovadores'),
+                ('blend', 'B-L-E-N-D', 'Metodología mixta que establece una base sólida, fomenta aprendizaje continuo, adaptación evolutiva y procesos de navegación y entrega eficientes.', 'Para metodologías mixtas')
             ] %}
             {% for framework in frameworks_cat8 %}
-            <div class="col-md-3 mb-3">
+            <div class="col-md-4 mb-3">
                 <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">{{ framework[1] }}</h5>
                             <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length + frameworks_cat7|length }}</span>
                         </div>
-                        <p class="card-text small explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
-                        <p class="card-text small"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Categoría 9: Comunicación y presentación -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3"><i class="bi bi-chat-dots me-2 text-success"></i>Frameworks de comunicación y presentación</h3>
+        <p class="text-muted mb-3">Para estructurar comunicaciones efectivas y presentaciones persuasivas</p>
+        <div class="row">
+            {% set frameworks_cat9 = [
+                ('fast', 'F-A-S-T', 'Estrategia comunicativa que adapta el enfoque del mensaje, perfil de audiencia, alcance de contenido y tono de comunicación según objetivos.', 'Para estrategias de comunicación'),
+                ('scqa', 'S-C-Q-A', 'Método de comunicación estructurada que presenta la situación actual, introduce la complicación o problema, plantea la pregunta clave y ofrece una respuesta o solución.', 'Para comunicación persuasiva y presentaciones'),
+                ('qcqa', 'Q-C-Q-A', 'Estructura para consultas efectivas que articula la pregunta específica, proporciona contexto relevante, establece cualificaciones del respondiente y formato de respuesta deseado.', 'Para consultas estructuradas'),
+                ('fab', 'F-A-B', 'Estrategia de marketing que presenta características técnicas, articula sus ventajas comparativas y comunica los beneficios concretos para el usuario.', 'Para marketing y comunicación de producto'),
+                ('clear', 'C-L-E-A-R', 'Metodología de comunicación efectiva que establece conexión, fomenta escucha activa, promueve exploración profunda, define acciones concretas y facilita reflexión posterior.', 'Para comunicación interpersonal y coaching'),
+                ('bridge', 'B-R-I-D-G-E', 'Estructura de comunicación integral que proporciona antecedentes, explica razones, presenta información clave, detalla decisiones, define objetivos y establece criterios de evaluación.', 'Para comunicaciones corporativas y cambios organizacionales'),
+                ('spqa', 'S-P-Q-A', 'Método de resolución de problemas que describe la situación actual, define el problema específico, formula preguntas clave y desarrolla respuestas accionables.', 'Para resolución estructurada de problemas'),
+                ('pace', 'P-A-C-E', 'Metodología de toma de decisiones que considera el objetivo primario, evalúa alternativas disponibles, analiza consecuencias potenciales y examina el entorno operativo.', 'Para toma de decisiones complejas')
+            ] %}
+            {% for framework in frameworks_cat9 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length + frameworks_cat7|length + frameworks_cat8|length }}</span>
+                        </div>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Categoría 10: Mejora continua y aprendizaje -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3"><i class="bi bi-graph-up-arrow me-2 text-info"></i>Frameworks de mejora continua y aprendizaje</h3>
+        <p class="text-muted mb-3">Para optimizar procesos, promover mejora continua y aprendizaje</p>
+        <div class="row">
+            {% set frameworks_cat10 = [
+                ('idea', 'I-D-E-A', 'Proceso de mejora que comienza identificando oportunidades, define soluciones específicas, ejecuta cambios planificados y evalúa resultados obtenidos.', 'Para procesos de mejora'),
+                ('pulse', 'P-U-L-S-E', 'Metodología de mejora continua que define propósito, facilita comprensión contextual, promueve aprendizaje iterativo y estrategias de evaluación.', 'Para mejora continua'),
+                ('gear', 'G-E-A-R', 'Ciclo de mejora que establece el objetivo deseado, ejecuta el plan de acción, evalúa los resultados obtenidos y reflexiona sobre el proceso completo.', 'Para mejora continua y ciclos de aprendizaje'),
+                ('aor', 'A-O-R', 'Sistema de aprendizaje que documenta acciones implementadas, analiza resultados obtenidos y promueve reflexión sobre lecciones aprendidas.', 'Para aprendizaje experiencial y mejora'),
+                ('scale', 'S-C-A-L-E', 'Metodología de crecimiento que equilibra estrategia, desarrollo de capacidades, implementación de acciones, aprendizaje continuo y evolución adaptativa.', 'Para escalamiento de proyectos'),
+                ('spark', 'S-P-A-R-K', 'Sistema para innovación que integra estrategia, planificación detallada, implementación de acciones, evaluación de resultados y gestión del conocimiento.', 'Para iniciativas de innovación'),
+                ('soar', 'S-O-A-R', 'Enfoque estratégico positivo que identifica fortalezas existentes, analiza oportunidades disponibles, define aspiraciones compartidas y establece resultados medibles.', 'Para planificación estratégica positiva')
+            ] %}
+            {% for framework in frameworks_cat10 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length + frameworks_cat7|length + frameworks_cat8|length + frameworks_cat9|length }}</span>
+                        </div>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Categoría 11: Gestión de equipos y roles -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3"><i class="bi bi-people me-2 text-warning"></i>Frameworks de gestión de equipos y roles</h3>
+        <p class="text-muted mb-3">Para definir roles, estructurar equipos y coordinar trabajo colaborativo</p>
+        <div class="row">
+            {% set frameworks_cat11 = [
+                ('erq', 'E-R-Q', 'Sistema para definir perfiles profesionales que detalla experiencia necesaria, requisitos técnicos específicos y cualificaciones adicionales valoradas.', 'Para definir roles y requisitos'),
+                ('team', 'T-E-A-M', 'Estructura para trabajo colaborativo que clarifica la tarea común, entorno de trabajo, aproximación metodológica y métricas de evaluación.', 'Para proyectos colaborativos'),
+                ('pros', 'P-R-O-S', 'Metodología que establece la perspectiva del proyecto, requisitos fundamentales, resultados esperados y alcance definido de implementación.', 'Para definición y alcance'),
+                ('rise', 'R-I-S-E', 'Sistema para procesos paso a paso que define el rol responsable, entradas necesarias, secuencia detallada de pasos y expectativas de resultados.', 'Para procesos paso a paso'),
+                ('tar', 'T-A-R', 'Estructura de análisis conductual que identifica el disparador o estímulo, define la acción o comportamiento resultante y evalúa los resultados o consecuencias.', 'Para análisis conductual y cambio de hábitos')
+            ] %}
+            {% for framework in frameworks_cat11 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length + frameworks_cat7|length + frameworks_cat8|length + frameworks_cat9|length + frameworks_cat10|length }}</span>
+                        </div>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
+                                <i class="bi bi-eye"></i> Ver ejemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Categoría 12: Gestión del cambio y transformación -->
+    <div class="category-section mb-5">
+        <h3 class="mb-3"><i class="bi bi-arrow-repeat me-2 text-danger"></i>Frameworks de transformación y cambio</h3>
+        <p class="text-muted mb-3">Para facilitar transiciones y gestionar procesos de cambio organizacional</p>
+        <div class="row">
+            {% set frameworks_cat12 = [
+                ('bab', 'B-A-B', 'Técnica narrativa para escenarios de transformación que contrasta situación anterior, estado posterior deseado y establece puente estratégico entre ambos.', 'Para mostrar cambios y mejoras'),
+                ('shape', 'S-H-A-P-E', 'Proceso de transformación que analiza la situación actual, proporciona contexto histórico y desarrolla plan analítico para implementar cambios organizacionales.', 'Para transformación organizacional'),
+                ('cft', 'C-F-T', 'Sistema de transformación que establece el contexto completo, define el foco específico de cambio y detalla el proceso de transformación deseado.', 'Para gestión del cambio y transformaciones'),
+                ('sara', 'S-A-R-A', 'Modelo de gestión emocional del cambio que reconoce las fases de shock inicial, enojo o resistencia, adaptación progresiva y aceptación final.', 'Para gestión del cambio y transiciones')
+            ] %}
+            {% for framework in frameworks_cat12 %}
+            <div class="col-md-4 mb-3">
+                <div class="card framework-card h-100" data-framework="{{ framework[0] }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ framework[3] }}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">{{ framework[1] }}</h5>
+                            <span class="badge bg-light text-dark">{{ loop.index + frameworks_cat1|length + frameworks_cat2|length + frameworks_cat3|length + frameworks_cat4|length + frameworks_cat5|length + frameworks_cat6|length + frameworks_cat7|length + frameworks_cat8|length + frameworks_cat9|length + frameworks_cat10|length + frameworks_cat11|length }}</span>
+                        </div>
+                        <p class="card-text explanation-text"><strong>Explicación:</strong> {{ framework[2] }}</p>
+                        <p class="card-text"><strong>Ideal para:</strong> {{ framework[3] }}</p>
                         <div class="card-actions">
                             <button class="btn btn-outline-primary btn-sm view-example-btn" data-framework="{{ framework[0] }}">
                                 <i class="bi bi-eye"></i> Ver ejemplo
@@ -424,7 +552,7 @@
     <div class="prompt-preview mt-4 mx-auto">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h5 class="mb-0">Prompt generado</h5>
-            <span>Tokens: <span id="token-count" class="token-counter">0</span>/3000</span>
+            <span>Tokens: <span id="token-count" class="token-counter">0</span>/<span id="max-tokens">4000</span></span>
         </div>
         <div class="prompt-content bg-white p-3 rounded border mb-3">
             <p id="prompt-preview" class="mb-0"></p>
