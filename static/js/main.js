@@ -1187,7 +1187,7 @@ function showFrameworkExample(framework) {
         'master': 'MASTER-Mision-Aproximacion-Estrategia-Tacticas-Ejecucion-Revision',
         'power': 'POWER-Problema-Resultado-PorQue-Ejecucion-Recursos',
         'daci': 'DACI-Driver-Approver-Contributor-Informed',
-        'raci': 'RACI-Responsable-Accountable-Consultado-Informado',
+        'raci': 'RACI-Responsable-Accountable-Consultado-Informed',
         'heart': 'HEART-Felicidad-Compromiso-Adopcion-Retencion-Exitoentareas',
         'mece': 'MECE-MutuamenteExclusivo-ColectivamenteExhaustivo',
         'ooda': 'OODA-Observar-Orientar-Decidir-Actuar',
@@ -1271,7 +1271,21 @@ function showFrameworkExample(framework) {
             exampleContent.setAttribute('data-raw-example', text);
             
             // Formatear el contenido y mostrarlo
-            exampleContent.innerHTML = marked.parse(text);
+            let formattedHtml = marked.parse(text);
+            
+            // --- Añadir iconos a elementos específicos ---
+            formattedHtml = formattedHtml.replace(/<h2>(.*?)<\/h2>/g, '<h2><i class="bi bi-file-earmark-text"></i> $1</h2>');
+            formattedHtml = formattedHtml.replace(/<h3>(.*?)<\/h3>/g, '<h3><i class="bi bi-arrow-right-short"></i> $1</h3>');
+            formattedHtml = formattedHtml.replace(/<h4>(.*?)<\/h4>/g, '<h4><i class="bi bi-chevron-right"></i> $1</h4>');
+            // Añadir icono a elementos de lista (ul y ol)
+            formattedHtml = formattedHtml.replace(/<li>(.*?)<\/li>/g, '<li><i class="bi bi-dot"></i> $1</li>');
+            // Añadir icono a bloques de código (antes del contenido)
+            formattedHtml = formattedHtml.replace(/<pre>/g, '<pre><i class="bi bi-code-slash code-icon"></i>');
+            // Añadir icono a citas (antes del contenido del párrafo dentro)
+            formattedHtml = formattedHtml.replace(/<blockquote>\s*<p>/g, '<blockquote><p><i class="bi bi-chat-left-quote"></i> ');
+            
+            // Mostrar el HTML procesado
+            exampleContent.innerHTML = formattedHtml;
             console.log(`Framework cargado exitosamente: ${frameworkFileName}`);
         })
         .catch(error => {
@@ -1290,7 +1304,15 @@ function showFrameworkExample(framework) {
                 })
                 .then(text => {
                     exampleContent.setAttribute('data-raw-example', text);
-                    exampleContent.innerHTML = marked.parse(text);
+                    let formattedHtml = marked.parse(text);
+                    // Aplicar también aquí el procesamiento de iconos
+                    formattedHtml = formattedHtml.replace(/<h2>(.*?)<\/h2>/g, '<h2><i class="bi bi-file-earmark-text"></i> $1</h2>');
+                    formattedHtml = formattedHtml.replace(/<h3>(.*?)<\/h3>/g, '<h3><i class="bi bi-arrow-right-short"></i> $1</h3>');
+                    formattedHtml = formattedHtml.replace(/<h4>(.*?)<\/h4>/g, '<h4><i class="bi bi-chevron-right"></i> $1</h4>');
+                    formattedHtml = formattedHtml.replace(/<li>(.*?)<\/li>/g, '<li><i class="bi bi-dot"></i> $1</li>');
+                    formattedHtml = formattedHtml.replace(/<pre>/g, '<pre><i class="bi bi-code-slash code-icon"></i>');
+                    formattedHtml = formattedHtml.replace(/<blockquote>\s*<p>/g, '<blockquote><p><i class="bi bi-chat-left-quote"></i> ');
+                    exampleContent.innerHTML = formattedHtml;
                     console.log(`Framework cargado exitosamente con ruta alternativa: ${frameworkFileName}`);
                 })
                 .catch(secondError => {

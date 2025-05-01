@@ -104,6 +104,90 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+
+        /* Estilos para el contenido del modal de ejemplo */
+        .framework-example-content {
+            font-family: 'Courier New', Courier, monospace; /* Mantiene fuente monoespaciada si se desea */
+            white-space: pre-wrap;       /* Conserva saltos de línea y espacios */
+            word-wrap: break-word;       /* Asegura que las palabras largas no desborden */
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        .framework-example-content h2,
+        .framework-example-content h3,
+        .framework-example-content h4 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Fuente estándar para encabezados */
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .framework-example-content h2 { font-size: 1.4rem; }
+        .framework-example-content h3 { font-size: 1.2rem; }
+        .framework-example-content h4 { font-size: 1.1rem; }
+        
+        .framework-example-content strong {
+            font-weight: bold;
+            color: #0d6efd; /* Azul primario de Bootstrap para resaltar */
+        }
+
+        .framework-example-content ul, 
+        .framework-example-content ol {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        .framework-example-content li {
+            margin-bottom: 0.3rem;
+        }
+        
+        /* Estilos generales para iconos */
+        .framework-example-content i.bi {
+            margin-right: 8px; /* Espacio entre icono y texto */
+            color: #6c757d; /* Color secundario de Bootstrap para iconos */
+            font-size: 1.1em; /* Tamaño ligeramente mayor */
+            vertical-align: -0.1em; /* Ajuste fino de alineación vertical */
+            opacity: 0.8; /* Hacerlos ligeramente menos prominentes */
+        }
+
+        /* Iconos en encabezados un poco más oscuros */
+        .framework-example-content h2 > i.bi,
+        .framework-example-content h3 > i.bi,
+        .framework-example-content h4 > i.bi {
+            color: #495057; /* Gris más oscuro */
+            opacity: 1;
+        }
+
+        /* Estilo para bloques de código */
+        .framework-example-content pre {
+            background-color: #f8f9fa; /* Fondo ligeramente gris */
+            border: 1px solid #dee2e6; /* Borde sutil */
+            padding: 1rem;
+            border-radius: 0.25rem;
+            position: relative; /* Para posicionar el icono */
+        }
+
+        .framework-example-content pre i.code-icon {
+            position: absolute; /* Posicionar el icono de código */
+            top: 0.5rem;
+            right: 0.5rem;
+            color: #adb5bd; /* Gris claro */
+            font-size: 1rem;
+        }
+
+        /* Estilo para citas */
+        .framework-example-content blockquote {
+            border-left: 4px solid #adb5bd; /* Borde izquierdo distintivo */
+            padding-left: 1rem;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 1rem;
+            color: #495057; /* Color de texto ligeramente atenuado */
+        }
+
+        .framework-example-content blockquote i.bi {
+            margin-right: 5px;
+            color: #adb5bd; /* Mismo color que el borde */
+        }
     </style>
 
     <h2 class="text-center mb-4">Elige entre los +75 framework para desarrollar tu prompting</h2>
@@ -583,7 +667,7 @@
                         <i class="bi bi-check-circle me-2"></i>
                         <span>¡Ejemplo copiado con éxito!</span>
                     </div>
-                    <pre id="framework-example" class="bg-light p-3 rounded"></pre>
+                    <div id="framework-example" class="bg-light p-3 rounded framework-example-content"></div>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <button id="copy-example-btn" type="button" class="btn btn-primary">
