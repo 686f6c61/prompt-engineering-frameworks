@@ -67,7 +67,7 @@ El modo Razonador funciona siguiendo estos pasos:
 4. El sistema genera un prompt ultradetallado optimizado para obtener el mejor razonamiento posible
 5. Utiliza este prompt con modelos avanzados para obtener análisis sistemáticos y profundos
 
-Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada para acceder a modelos más potentes como GPT-4o, aunque también funciona con GPT-3.5.
+Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada para acceder a modelos más potentes como GPT-4o, aunque también funciona con GPT-4o-mini.
 
 ### 🧠 Modelos de IA disponibles
 - **GPT-4o-mini (Gratis)**: Disponible para todos los usuarios sin coste
@@ -171,7 +171,7 @@ Para obtener resultados óptimos se recomienda utilizar una API Key propia confi
 - **Contador de tokens**: Monitorización en tiempo real del uso de tokens
 - **Sistema de limitación de tasa**: Control de uso para el modelo gratuito (10 solicitudes/hora)
 - **Interfaz responsiva**: Diseño adaptable para cualquier dispositivo
-- **Selección de modelos**: Opción para usar GPT-3.5 Turbo (gratis) o GPT-4o-mini (con API key propia)
+- **Selección de modelos**: Opción para usar GPT-4o-mini (gratis) o GPT-4o (con API key propia)
 - **Almacenamiento local**: Guarda tus prompts favoritos
 - **Ejemplos interactivos**: Biblioteca de casos de uso para cada framework
 - **Configuración de privacidad**: Las API Keys nunca se almacenan en el servidor, solo en la sesión del navegador
@@ -182,7 +182,7 @@ Para obtener resultados óptimos se recomienda utilizar una API Key propia confi
 ## 🛠️ Tecnologías
 
 - **Backend**: Python 3.9+ con Flask
-- **IA**: OpenAI GPT-3.5 Turbo (gratis) o GPT-4o-mini (con API key propia)
+- **IA**: OpenAI GPT-4o-mini (gratis) o GPT-4o (con API key propia)
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Estilos**: Bootstrap 5
 - **Documentación**: Markdown
@@ -376,7 +376,7 @@ El formulario de contacto utiliza Resend para enviar correos electrónicos:
 
 ### 📊 Sistema de limitación de uso (Rate Limiting)
 
-El sistema implementa un control de uso para el modelo gratuito GPT-3.5 Turbo:
+El sistema implementa un control de uso para el modelo gratuito GPT-4o-mini:
 
 - **Límite estándar**: 10 solicitudes por hora por usuario
 - **Contador visual**: Muestra las solicitudes restantes en la interfaz
@@ -386,7 +386,7 @@ El sistema implementa un control de uso para el modelo gratuito GPT-3.5 Turbo:
 
 Para usar el sistema sin limitaciones:
 1. Haz clic en "Cambiar modelo" en la barra superior
-2. Selecciona la opción "Usar GPT-4o-mini con mi API Key"
+2. Selecciona la opción "Usar GPT-4o con mi API Key"
 3. Introduce tu API Key de OpenAI
 4. Confirma para eliminar las restricciones de uso
 
@@ -454,7 +454,7 @@ La nueva sección de personalización estética te permite:
 - Aplicar valores estéticos predefinidos con un solo clic
 - Añadir referencias a sitios web de inspiración
 
-Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada en la sección "Configuración", aunque también se obtienen excelentes resultados con la versión gratuita (GPT-3.5).
+Para obtener resultados óptimos se recomienda utilizar una API Key propia configurada en la sección "Configuración", aunque también se obtienen excelentes resultados con la versión gratuita (GPT-4o-mini).
 
 ## 🤝 Contribuciones
 
