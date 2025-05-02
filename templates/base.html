@@ -2,14 +2,16 @@
 <html lang="es">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYM5KDT6C6"></script>
+    {% if config.GOOGLE_ANALYTICS_ID %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.GOOGLE_ANALYTICS_ID }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-BYM5KDT6C6');
+      gtag('config', '{{ config.GOOGLE_ANALYTICS_ID }}');
     </script>
+    {% endif %}
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -268,7 +270,8 @@
     {% block extra_scripts %}{% endblock %}
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLV2V7L6SH"></script>
+    {% if config.GOOGLE_ANALYTICS_ID %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.GOOGLE_ANALYTICS_ID }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -279,10 +282,11 @@
         
         if (!cookieConsent || !JSON.parse(cookieConsent).analytics) {
             // Si no hay consentimiento o el usuario ha rechazado analytics, desactivar GA
-            window['ga-disable-G-HLV2V7L6SH'] = true;
+            window['ga-disable-{{ config.GOOGLE_ANALYTICS_ID }}'] = true;
         }
         
-        gtag('config', 'G-HLV2V7L6SH');
+        gtag('config', '{{ config.GOOGLE_ANALYTICS_ID }}');
     </script>
+    {% endif %}
 </body>
 </html>

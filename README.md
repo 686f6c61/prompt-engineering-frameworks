@@ -218,8 +218,15 @@ pip install -r requirements.txt
 4. Configura las variables de entorno:
 
 ```bash
-cp .env.example .env
-# Edita .env y añade tu OPENAI_API_KEY
+# Crea un archivo .env con las siguientes variables
+OPENAI_API_KEY=tu_clave_de_api_de_openai
+FLASK_SECRET_KEY=una_clave_secreta_para_flask
+RESEND_API_KEY=tu_clave_de_api_de_resend
+FLASK_ENV=development
+PORT=5000
+EMAIL_FROM=onboarding@resend.dev
+EMAIL_TO=tu_email@example.com
+GOOGLE_ANALYTICS_ID=tu_id_de_google_analytics
 ```
 
 5. Ejecuta la aplicación:
@@ -339,25 +346,18 @@ La aplicación utiliza las siguientes variables de entorno:
 - `RESEND_API_KEY`: Clave de API de Resend para el envío de correos
 - `FLASK_ENV`: Entorno de Flask (development/production)
 - `PORT`: Puerto para el servidor (por defecto 8000)
+- `GOOGLE_ANALYTICS_ID`: ID de seguimiento de Google Analytics (Ej: G-XXXXXXXXXX)
 
 ### Configuración del seguimiento analítico
 
-La aplicación incluye por defecto el código de Google Analytics. Si deseas usar tu propio código:
+La aplicación utiliza Google Analytics para el seguimiento analítico. Para configurarlo:
 
-1. Localiza en el archivo `templates/base.html` el siguiente bloque:
-```html
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0000000"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '000000');
-</script>
-```
-
-2. Sustituye el ID `000000` por tu propio ID de Google Analytics
+1. Obtén tu ID de seguimiento de Google Analytics
+2. Configura la variable de entorno `GOOGLE_ANALYTICS_ID` en tu archivo `.env`:
+   ```
+   GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+   ```
+3. Si no se proporciona esta variable, el seguimiento de Google Analytics se desactivará automáticamente.
 
 ### Configuración del sistema de contacto
 

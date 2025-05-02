@@ -31,6 +31,9 @@ app.secret_key = os.environ.get('FLASK_SECRET_KEY', secrets.token_hex(16))
 # Configurar sesión para que dure 30 días
 app.config['PERMANENT_SESSION_LIFETIME'] = 60 * 60 * 24 * 30
 
+# Configuración de Google Analytics
+app.config['GOOGLE_ANALYTICS_ID'] = os.environ.get('GOOGLE_ANALYTICS_ID', '')
+
 @app.route('/')
 def index():
     """
